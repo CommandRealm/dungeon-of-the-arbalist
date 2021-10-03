@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:oak_sign"
+        },
+        "title": {
+            "text": "Conversational!",
+            "color": "dark_aqua",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Talk to an NPC in the lobby.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:lobby-swim",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

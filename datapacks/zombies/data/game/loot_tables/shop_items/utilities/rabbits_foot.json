@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:rabbit_foot",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shop_item:1b,display:{Name:'[{\"text\":\"Rabbit\\'s\",\"color\":\"#c3c274\",\"italic\":false},{\"text\":\" Foot\",\"color\":\"#49e22b\",\"italic\":false}]',Lore:['[{\"text\":\"Maxes out all damage rolls until hit.\",\"color\":\"gray\",\"italic\":false}]']},needs_initialization:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

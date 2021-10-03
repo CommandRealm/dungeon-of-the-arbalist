@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:red_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shop_item:1b,stat_boost:1b,display:{Name:'[{\"text\":\"Health\",\"color\":\"red\",\"italic\":false},{\"text\":\" Booster\",\"color\":\"gray\"}]',Lore:['[{\"text\":\"Obtain to increase your health booster.\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"Increases your max health.\",\"color\":\"gray\",\"italic\":false}]']},needs_initialization:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

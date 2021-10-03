@@ -1,0 +1,6 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1,invalid_click:1}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Fire ","color":"#f1390e","italic":false,"bold":false},{"text":"upgrades ","color":"gold"},{"text":"used","color":"gray"},{"text":": ","color":"gray"},{"score":{"objective":"global_fire","name":"@s"},"color":"#f1390e","italic":false,"bold":true}] }], 
+              "name": "minecraft:magma_block" } ] } ] }

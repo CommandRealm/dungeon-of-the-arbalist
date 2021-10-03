@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:white_stained_glass"
+        },
+        "title": {
+            "text": "A breath of fresh air!",
+            "color": "red",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Use an air upgrade.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:upgrade-earth",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:structure_void"
+        },
+        "title": {
+            "text": "",
+            "color": "red",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden":true,
+        "description": {
+            "text": "",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:hidden/hidden-titles",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

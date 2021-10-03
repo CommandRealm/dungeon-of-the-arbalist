@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:magma_block"
+        },
+        "title": {
+            "text": "Fired up!",
+            "color": "red",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Use a fire upgrade.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:root",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

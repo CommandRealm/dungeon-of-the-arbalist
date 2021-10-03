@@ -1,0 +1,944 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Tybalt","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Rowan","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Borin","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Alice","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Matilda","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Joan","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Beatrice","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Victoria","color":"gold","bold":true,"talic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Agatha","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Alban","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Aldo","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Ambrose","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Baldwin","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Benedict","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Bartholomew","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Barnabas","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Edmund","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Edgar","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Ferdinand","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Florian","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Gavin","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Hugh","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Ivar","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Leopold","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Maxim","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Palmer","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Peregine","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Quintin","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Rudolf","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Sebastian","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Aquila","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Clement","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Laria","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Petra","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Viola","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Robert","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Clare","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Erik","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Marcella","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Cammi","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"August","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Ermo","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Georgei","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Hann","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Larkin","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Amice","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Elena","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Gisella","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Johanne","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Royse","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Aldus","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Stace","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Wilmot","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Guardia","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Idin","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Omid","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Ryon","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"William","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"George","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Lichsten","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Frederick","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Moses","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Abraham","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Amir","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Francis","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Jacob","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Jason","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Isaac","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Casaer","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Charles","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Travis","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Calvin","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Fabien","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Gabriel","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Lucio","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Gustav","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Jose","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Pedro","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Aran","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Timotheus","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Martin","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Conchobhar","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Abdurrahman","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Jevun","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": [{"text":"Loukas","color":"gold","bold":true,"italic":false}]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

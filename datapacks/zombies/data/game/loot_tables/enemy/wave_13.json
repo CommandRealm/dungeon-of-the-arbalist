@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:empty",
+    "pools": [
+      {
+        "rolls": {
+          "min": 0,
+          "max": 31
+        },
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "stone"
+          }
+        ]
+      }
+    ]
+  }

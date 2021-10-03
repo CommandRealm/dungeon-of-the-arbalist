@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:chiseled_nether_bricks"
+        },
+        "title": {
+            "text": "Victorious!",
+            "color": "green",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Defeat a boss.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:game-miniboss",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

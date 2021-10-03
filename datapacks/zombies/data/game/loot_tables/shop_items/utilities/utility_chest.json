@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_chest",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{droppable:1b,shop_item:1b,display:{Name:'[{\"text\":\"Utility \",\"color\":\"#a26ec3\",\"italic\":false},{\"text\":\"Chest \",\"color\":\"#a87a21\",\"italic\":false},{\"text\":\"<\",\"color\":\"dark_gray\",\"bold\":true},{\"keybind\":\"key.drop\",\"color\":\"gray\",\"bold\":false},{\"text\":\">\",\"color\":\"dark_gray\",\"bold\":true}]',Lore:['[{\"text\":\"Drop to open; chest gives 0-2 random utility items.\",\"color\":\"gray\",\"italic\":false}]']},needs_initialization:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

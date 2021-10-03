@@ -1,0 +1,7 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:5024541,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:127},{Id:32,Duration:2,Amplifier:73}]}}],Charged:1b,Unbreakable:1b,delay:6,reload_delay:70,quiver:20}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#aea28c","bold":true},{"text":"3","color":"#ac353b","bold":false},{"text":") ","color":"#aea28c","bold":true},{"text":"Radioactive","color":"#4cab1d","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] },
+              {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Damages you after every ten shots.","color":"gray","italic":false}]}], 
+              "name": "minecraft:crossbow" } ] } ] }

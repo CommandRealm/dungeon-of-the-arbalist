@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function":"minecraft:set_nbt",
+              "entity":"this",
+              "tag":"{clickable:1,invalid_click:1,SkullOwner:{Id:[I;1122684591,-655602890,-1588126521,-287951236],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTU1ODJlZDUxMmE4Y2VhOWIxN2ZmYzMxY2ExMmI4NmYyYWJjY2Y4M2E2MjJmYjdkMTViNWYxNzFmNTFiYjY0In19fQ==\"}]}}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"40","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Cobalt King","color":"red","bold":true}]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [{"text":"A king of the Cobalt Castle.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_cobalt_king","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

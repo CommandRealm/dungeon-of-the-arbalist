@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shop_item:1b,display:{Name:'[{\"text\":\"Regeneration\",\"color\":\"#f47dff\",\"italic\":false},{\"text\":\" Potion\",\"color\":\"#ad16bb\",\"italic\":false}]',Lore:['[{\"text\":\"Use to splash regeneration.\",\"color\":\"gray\",\"italic\":false}]']},needs_initialization:1b,CustomPotionEffects:[{Id:10,Duration:120,Amplifier:1}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"display":{"icon":{"item":"minecraft:gold_ingot"},"title":{"text":"The Completionist","color":"gold","bold":true},"show_toast":true,"announce_to_chat":false,"background":"minecraft:textures/block/netherite_block.png","hidden":true,"description":{"text":"Complete all advancements.","color":"yellow","bold":false}},"criteria":{"impossible":{"trigger":"minecraft:impossible"}}}

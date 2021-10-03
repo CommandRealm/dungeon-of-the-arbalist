@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:chiseled_polished_blackstone"
+        },
+        "title": {
+            "text": "Who turned off the lights?",
+            "color": "red",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Use a darkness upgrade.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:upgrade-nature",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

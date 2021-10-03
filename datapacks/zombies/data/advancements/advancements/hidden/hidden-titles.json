@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:diamond_chestplate"
+        },
+        "title": {
+            "text": "Title master!",
+            "color": "red",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden":true,
+        "description": {
+            "text": "Collect all of the titles.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:hidden/hidden-nightmare",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

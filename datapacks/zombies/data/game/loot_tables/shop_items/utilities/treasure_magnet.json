@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:hopper",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shop_item:1b,Damage:50,display:{Name:'[{\"text\":\"Treasure\",\"color\":\"yellow\",\"italic\":false},{\"text\":\" Magnet\",\"color\":\"red\"}]',Lore:['[{\"text\":\"Hold to pull nearby treasure towards you.\",\"color\":\"gray\",\"italic\":false}]']},needs_initialization:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

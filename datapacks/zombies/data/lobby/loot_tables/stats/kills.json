@@ -1,0 +1,6 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1,invalid_click:1}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Kills","color":"#7d2c30","italic":false,"bold":false},{"text":": ","color":"gray"},{"score":{"objective":"global_kills","name":"@s"},"color":"#664244","italic":false,"bold":true}] }], 
+              "name": "minecraft:mule_spawn_egg" } ] } ] }

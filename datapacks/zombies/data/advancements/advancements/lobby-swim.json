@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:water_bucket"
+        },
+        "title": {
+            "text": "Say hello to the fishies!",
+            "color": "dark_aqua",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Go for a swim in the lobby.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:root",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

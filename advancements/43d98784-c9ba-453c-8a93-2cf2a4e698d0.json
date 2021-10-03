@@ -1,0 +1,27 @@
+{
+  "advancements:hidden/root": {
+    "criteria": {
+      "requirement": "2021-05-05 20:38:06 -0400"
+    },
+    "done": true
+  },
+  "game:inventory_changed": {
+    "criteria": {
+      "requirement": "2021-05-05 20:38:06 -0400"
+    },
+    "done": true
+  },
+  "advancements:root": {
+    "criteria": {
+      "requirement": "2021-05-05 20:38:06 -0400"
+    },
+    "done": true
+  },
+  "journal:root": {
+    "criteria": {
+      "requirement": "2021-05-05 20:38:06 -0400"
+    },
+    "done": true
+  },
+  "DataVersion": 2586
+}

@@ -1,0 +1,7 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:4589181,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:105},{Id:29,Duration:2,Amplifier:0},{Id:13,Duration:2,Amplifier:26}]}}],Charged:1b,Unbreakable:1b,delay:10,reload_delay:50,quiver:30}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#aea28c","bold":true},{"text":"3","color":"#ac353b","bold":false},{"text":") ","color":"#aea28c","bold":true},{"text":"Antimatter","color":"#46067d","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] },
+              {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Repeatedly targeting a single enemy deals more damage.","color":"gray","italic":false}]}], 
+              "name": "minecraft:crossbow" } ] } ] }

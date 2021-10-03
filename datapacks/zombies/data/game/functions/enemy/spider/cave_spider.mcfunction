@@ -1,0 +1,5 @@
+execute if entity @a[team=game,distance=..30] run summon minecraft:cave_spider ~ ~ ~ {ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:1388575},Enchantments:[{id:"minecraft:depth_strider",lvl:5}]}},{},{},{id:"minecraft:stone_button",Count:1b}],Attributes:[{Name:"generic.movement_speed",Base:0.3d},{Name:"generic.follow_range",Base:1024d},{Name:"generic.attack_damage",Base:0.75}],Tags:["die_between_games","enemy","cave_spider","needs_initialization","default_name"],CustomNameVisible:1b}
+scoreboard players set @e[type=cave_spider,tag=cave_spider,tag=needs_initialization] enemy_health 40
+scoreboard players set @e[type=cave_spider,tag=cave_spider,tag=needs_initialization] enemy_loot_table 2
+execute as @e[type=cave_spider,tag=cave_spider,tag=needs_initialization] at @s run function game:enemy/initialize
+scoreboard players set @s spider_timer 0

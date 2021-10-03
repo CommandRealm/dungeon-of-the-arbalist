@@ -1,0 +1,7 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{Enchantments:[{id:\"minecraft:piercing\",lvl:2}],HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:15782991,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:45},{Id:4,Duration:2,Amplifier:5}]}}],Charged:1b,Unbreakable:1b,delay:10,reload_delay:50,quiver:16}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#7a8f77","bold":true},{"text":"1","color":"#fffeaf","bold":false},{"text":") ","color":"#7a8f77","bold":true},{"text":"Lightning","color":"#f0d44f","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}]},
+                {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Piercing II","color":"gray","italic":false}] }], 
+              "name": "minecraft:crossbow" } ] } ] }

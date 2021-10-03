@@ -1,0 +1,60 @@
+##Starting the ender chest cosmetics screen
+
+##Clear Function
+function lobby:chest_menu/clear_chest
+
+##Setting screen
+scoreboard players set @s screen 18
+
+
+##Locked
+item replace entity @s enderchest.2 with iron_bars{invalid_click:1,clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Locked","bold":false,"italic":false,"color":"red"}]'}}
+item replace entity @s enderchest.3 with iron_bars{invalid_click:1,clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Locked","bold":false,"italic":false,"color":"red"}]'}}
+item replace entity @s enderchest.4 with iron_bars{invalid_click:1,clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Locked","bold":false,"italic":false,"color":"red"}]'}}
+item replace entity @s enderchest.5 with iron_bars{invalid_click:1,clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Locked","bold":false,"italic":false,"color":"red"}]'}}
+item replace entity @s enderchest.6 with iron_bars{invalid_click:1,clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Locked","bold":false,"italic":false,"color":"red"}]'}}
+
+item replace entity @s enderchest.10 with iron_bars{invalid_click:1,clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Locked","bold":false,"italic":false,"color":"red"}]'}}
+item replace entity @s enderchest.11 with iron_bars{invalid_click:1,clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Locked","bold":false,"italic":false,"color":"red"}]'}}
+item replace entity @s enderchest.12 with iron_bars{invalid_click:1,clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Locked","bold":false,"italic":false,"color":"red"}]'}}
+
+item replace entity @s enderchest.14 with iron_bars{invalid_click:1,clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Locked","bold":false,"italic":false,"color":"red"}]'}}
+item replace entity @s enderchest.15 with iron_bars{invalid_click:1,clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Locked","bold":false,"italic":false,"color":"red"}]'}}
+item replace entity @s enderchest.16 with iron_bars{invalid_click:1,clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Locked","bold":false,"italic":false,"color":"red"}]'}}
+
+##Unlocked
+item replace entity @s[advancements={advancements:wins-all=true}] enderchest.2 with golden_chestplate{clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Gold","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by completing a row of advancements.","italic":false,"color":"gray"}]']}}
+item replace entity @s[advancements={advancements:hidden/hidden-parkour=true}] enderchest.3 with elytra{clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Elytra","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by completing the parkour in under thirty-five seconds.","italic":false,"color":"gray"}]']}}
+item replace entity @s[advancements={advancements:hidden/hidden-hardcore=true}] enderchest.4 with chainmail_chestplate{clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Chainmail","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by beating the game on Hardcore.","italic":false,"color":"gray"}]']}}
+item replace entity @s[advancements={advancements:hidden/hidden-nightmare=true}] enderchest.5 with netherite_chestplate{clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Netherite","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by beating the game on Nightmare.","italic":false,"color":"gray"}]']}}
+item replace entity @s[advancements={advancements:hidden/hidden-titles=true}] enderchest.6 with diamond_chestplate{clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Diamond","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by obtaining every title.","italic":false,"color":"gray"}]']}}
+
+
+item replace entity @s[advancements={advancements:lobby-all=true}] enderchest.10 with oak_sign{clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Lobby Prefix","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by completing a row of advancements.","italic":false,"color":"gray"}]']}}
+item replace entity @s[advancements={advancements:game-all=true}] enderchest.11 with podzol{clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Punch Kill Effect","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by completing a row of advancements.","italic":false,"color":"gray"}]']}}
+item replace entity @s[advancements={minecraft:completionist/completionist=true}] enderchest.12 with gold_ingot{clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Completionist Particles","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by completing non-hidden advancements.","italic":false,"color":"gray"}]']}}
+
+item replace entity @s[advancements={advancements:upgrade-all=true}] enderchest.14 with name_tag{clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"E","color":"#f1390e","bold":true,"italic":false},{"text":"l","color":"#0e8ef1","bold":true},{"text":"e","color":"#b27565","bold":true},{"text":"m","color":"#d6d6d6","bold":true},{"text":"e","color":"#6fe6ff","bold":true},{"text":"n","color":"#f0d44f","bold":true},{"text":"t","color":"#17b00c","bold":true},{"text":"a","color":"#3e2e51","bold":true},{"text":"l","color":"#544c4c","bold":true}]',Lore:['[{"text":"Unlocked by completing a row of advancements.","italic":false,"color":"gray"}]']}}
+item replace entity @s[advancements={advancements:hidden/hidden-journal=true}] enderchest.15 with name_tag{clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"C","color":"white","bold":true,"italic":false},{"text":"h","color":"#d8d8d8","bold":true},{"text":"r","color":"white","bold":true},{"text":"o","color":"#d8d8d8","bold":true},{"text":"n","color":"white","bold":true},{"text":"i","color":"#d8d8d8","bold":true},{"text":"c","color":"white","bold":true},{"text":"l","color":"#d8d8d8","bold":true},{"text":"e","color":"white","bold":true},{"text":"r","color":"#d8d8d8","bold":true}]',Lore:['[{"text":"Unlocked by completing the journal.","italic":false,"color":"gray"}]']}}
+item replace entity @s[advancements={advancements:hidden/hidden-titles=true}] enderchest.16 with name_tag{clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Chosen ","color":"red","bold":true,"italic":false,"underlined":true},{"text":"One","color":"gold","bold":true,"underlined":true}]',Lore:['[{"text":"Unlocked by obtaining every title.","italic":false,"color":"gray"}]']}}
+
+
+##Selected
+item replace entity @s[scores={armor=14}] enderchest.2 with golden_chestplate{invalid_click:1,Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Gold","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by completing a row of advancements.","italic":false,"color":"gray"}]','[{"text":"Selected","italic":false,"color":"blue"}]']}}
+item replace entity @s[scores={armor=15}] enderchest.3 with elytra{invalid_click:1,Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Elytra","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by completing the parkour in under thirty-five seconds.","italic":false,"color":"gray"}]','[{"text":"Selected","italic":false,"color":"blue"}]']}}
+item replace entity @s[scores={armor=16}] enderchest.4 with chainmail_chestplate{invalid_click:1,Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Chainmail","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by beating the game on Hardcore.","italic":false,"color":"gray"}]','[{"text":"Selected","italic":false,"color":"blue"}]']}}
+item replace entity @s[scores={armor=17}] enderchest.5 with netherite_chestplate{invalid_click:1,Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Netherite","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by beating the game on Nightmare.","italic":false,"color":"gray"}]','[{"text":"Selected","italic":false,"color":"blue"}]']}}
+item replace entity @s[scores={armor=18}] enderchest.6 with diamond_chestplate{invalid_click:1,Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Diamond","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by obtaining every title.","italic":false,"color":"gray"}]','[{"text":"Selected","italic":false,"color":"blue"}]']}}
+
+
+item replace entity @s[team=unlock] enderchest.10 with oak_sign{invalid_click:1,Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Lobby Prefix","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by completing a row of advancements.","italic":false,"color":"gray"}]','[{"text":"Selected","italic":false,"color":"blue"}]']}}
+item replace entity @s[scores={cosmetics_punch=18}] enderchest.11 with podzol{invalid_click:1,Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Punch Kill Effect","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by completing a row of advancements.","italic":false,"color":"gray"}]','[{"text":"Selected","italic":false,"color":"blue"}]']}}
+item replace entity @s[tag=!no_completionist_particles,advancements={minecraft:completionist/completionist=true}] enderchest.12 with gold_ingot{Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Completionist Particles","bold":true,"italic":false,"color":"gold"}]',Lore:['[{"text":"Unlocked by completing non-hidden advancements.","italic":false,"color":"gray"}]','[{"text":"Selected","italic":false,"color":"blue"}]']}}
+
+item replace entity @s[team=title_elemental] enderchest.14 with name_tag{invalid_click:1,Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"E","color":"#f1390e","bold":true,"italic":false},{"text":"l","color":"#0e8ef1","bold":true},{"text":"e","color":"#b27565","bold":true},{"text":"m","color":"#d6d6d6","bold":true},{"text":"e","color":"#6fe6ff","bold":true},{"text":"n","color":"#f0d44f","bold":true},{"text":"t","color":"#17b00c","bold":true},{"text":"a","color":"#3e2e51","bold":true},{"text":"l","color":"#544c4c","bold":true}]',Lore:['[{"text":"Unlocked by completing a row of advancements.","italic":false,"color":"gray"}]','[{"text":"Selected","italic":false,"color":"blue"}]']}}
+item replace entity @s[team=title_journal] enderchest.15 with name_tag{invalid_click:1,Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"C","color":"white","bold":true,"italic":false},{"text":"h","color":"#d8d8d8","bold":true},{"text":"r","color":"white","bold":true},{"text":"o","color":"#d8d8d8","bold":true},{"text":"n","color":"white","bold":true},{"text":"i","color":"#d8d8d8","bold":true},{"text":"c","color":"white","bold":true},{"text":"l","color":"#d8d8d8","bold":true},{"text":"e","color":"white","bold":true},{"text":"r","color":"#d8d8d8","bold":true}]',Lore:['[{"text":"Unlocked by completing the journal.","italic":false,"color":"gray"}]','[{"text":"Selected","italic":false,"color":"blue"}]']}}
+item replace entity @s[team=title_chosen_one] enderchest.16 with name_tag{invalid_click:1,Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],clickable:1,cosmetic:1,HideFlags:63,display:{Name:'[{"text":"Chosen ","color":"red","bold":true,"italic":false,"underlined":true},{"text":"One","color":"gold","bold":true,"underlined":true}]',Lore:['[{"text":"Unlocked by obtaining every title.","italic":false,"color":"gray"}]','[{"text":"Selected","italic":false,"color":"blue"}]']}}
+
+
+item replace entity @s enderchest.18 with barrier{clickable:1,HideFlags:63,display:{Name:'[{"text":"Back","bold":true,"italic":false,"color":"#ff0000"}]'}}
+

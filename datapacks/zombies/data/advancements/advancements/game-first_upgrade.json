@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:crossbow"
+        },
+        "title": {
+            "text": "New and improved!",
+            "color": "green",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Use an upgrade.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:game-boss_door",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

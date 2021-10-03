@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:player_head",
+            "nbt": "{CustomModelData:0,SkullOwner:{Id:[I;-566027055,-1373812234,-1824937619,-1364409557],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzg3M2MxMmJmZmI1MjUxYTBiODhkNWFlNzVjNzI0N2NiMzlhNzVmZjFhODFjYmU0YzhhMzliMzExZGRlZGEifX19\"}]}}}"
+        },
+        "title": {
+            "text": "Check out our socials!",
+            "color": "dark_aqua",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Click the buttons in the lobby to look at our socials.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:lobby-cr",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:light_blue_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shop_item:1b,stat_boost:1b,display:{Name:'[{\"text\":\"Speed\",\"color\":\"#3eefff\",\"italic\":false},{\"text\":\" Booster\",\"color\":\"gray\"}]',Lore:['[{\"text\":\"Obtain to increase your speed booster.\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"Increases movement speed.\",\"color\":\"gray\",\"italic\":false}]']},needs_initialization:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

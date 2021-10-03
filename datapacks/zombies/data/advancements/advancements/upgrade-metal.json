@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:iron_block"
+        },
+        "title": {
+            "text": "Forging forward!",
+            "color": "red",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Use a metal upgrade.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:upgrade-darkness",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

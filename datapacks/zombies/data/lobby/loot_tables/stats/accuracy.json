@@ -1,0 +1,6 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1,invalid_click:1}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Accuracy","color":"#d7141d","italic":false,"bold":false},{"text":": ","color":"gray"},{"score":{"objective":"global_accuracy","name":"@s"},"color":"gray","italic":false,"bold":true},{"text":"%","color":"gray","bold":true}] }], 
+              "name": "minecraft:mooshroom_spawn_egg" } ] } ] }

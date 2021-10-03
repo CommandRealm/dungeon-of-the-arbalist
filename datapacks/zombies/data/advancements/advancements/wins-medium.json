@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:yellow_concrete"
+        },
+        "title": {
+            "text": "Getting harder!",
+            "color": "gold",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Beat the game on medium or higher.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:wins-easy",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

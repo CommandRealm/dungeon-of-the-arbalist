@@ -1,0 +1,7 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:8224125,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:27}]}}],Charged:1b,Unbreakable:1b,delay:9,reload_delay:50,quiver:7}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"white","bold":true},{"text":"0","color":"gray","bold":false},{"text":") ","color":"white","bold":true},{"text":"Crossbow","color":"#6a430f","italic":false,"bold":false}] },
+              {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Default crossbow; can be upgraded with any element.","color":"gray","italic":false}]}], 
+              "name": "minecraft:crossbow" } ] } ] }

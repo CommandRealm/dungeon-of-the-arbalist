@@ -1,0 +1,7 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:9038046,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:127},{Id:32,Duration:2,Amplifier:33},{Id:13,Duration:2,Amplifier:19}]}}],Charged:1b,Unbreakable:1b,delay:15,reload_delay:100,quiver:25}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#aea28c","bold":true},{"text":"3","color":"#ac353b","bold":false},{"text":") ","color":"#aea28c","bold":true},{"text":"Iceberg","color":"#89e8de","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] },
+              {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Freezes hit enemies; does not freeze bosses or minibosses.","color":"gray","italic":false}]}], 
+              "name": "minecraft:crossbow" } ] } ] }

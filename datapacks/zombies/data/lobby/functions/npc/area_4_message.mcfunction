@@ -1,0 +1,4 @@
+#NPC A (Cassius)
+    execute if entity @e[type=pillager,tag=lobby_npc,tag=lobby_pillager,distance=..10,sort=nearest,limit=1,tag=npc_a,tag=temporary_chat_tag] if score @s chat_timer matches 0 run data modify storage lobby:npc random_shout set value "I am above all of this silly war and- what do you call it? Dungeoneering?"
+    execute if entity @e[type=pillager,tag=lobby_npc,tag=lobby_pillager,distance=..10,sort=nearest,limit=1,tag=npc_a,tag=temporary_chat_tag] if score @s chat_timer matches 1 run data modify storage lobby:npc random_shout set value "I come from a far away land full of riches and llamas like you've never seen..."
+    execute if entity @e[type=pillager,tag=lobby_npc,tag=lobby_pillager,distance=..10,sort=nearest,limit=1,tag=npc_a,tag=temporary_chat_tag] if score @s chat_timer matches 2 run data modify storage lobby:npc random_shout set value "Everything I sell helps you, but not as much as it's going to help me!"

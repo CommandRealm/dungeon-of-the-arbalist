@@ -1,0 +1,2 @@
+tag @s add armor_7
+tellraw @s [{"text":"- - - - - - - - - - - - - - - - - - - - - - - - - - -","color":"gray","bold":true},{"text":"\nYou have unlocked an EPIC Armor Type!","color":"light_purple","bold":false},{"text":"\nArmor ","color":"gray","bold":true},{"text":"- ","color":"gray","bold":true},{"text":"Aqua","color":"white","bold":true},{"text":"\nYou can select it inside the Menu Ender Chest!","color":"green","bold":false}]

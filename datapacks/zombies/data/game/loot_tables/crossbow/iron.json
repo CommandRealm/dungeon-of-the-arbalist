@@ -1,0 +1,7 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{Enchantments:[{id:\"minecraft:multishot\",lvl:1}],HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:3b,tag:{CustomPotionColor:5524556,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:53},{Id:4,Duration:2,Amplifier:8}]}},{id:\"minecraft:tipped_arrow\",Count:3b,tag:{CustomPotionColor:5524556,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:53},{Id:4,Duration:2,Amplifier:8}]}},{id:\"minecraft:tipped_arrow\",Count:3b,tag:{CustomPotionColor:5524556,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:53},{Id:4,Duration:2,Amplifier:8}]}},],Charged:1b,Unbreakable:1b,delay:10,reload_delay:75,quiver:24}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#a57f81","bold":true},{"text":"2","color":"#cffffd","bold":false},{"text":") ","color":"#a57f81","bold":true},{"text":"Iron","color":"#544c4c","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] },
+              {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Multishot","color":"gray","italic":false}]}], 
+              "name": "minecraft:crossbow" } ] } ] }

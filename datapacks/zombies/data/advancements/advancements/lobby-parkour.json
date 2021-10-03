@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:tipped_arrow",
+            "nbt": "{CustomPotionColor:6717527}"
+        },
+        "title": {
+            "text": "You did it!",
+            "color": "dark_aqua",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Complete the parkour in the lobby.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:lobby-talk",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

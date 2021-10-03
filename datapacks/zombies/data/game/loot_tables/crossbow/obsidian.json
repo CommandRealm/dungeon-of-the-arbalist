@@ -1,0 +1,6 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:3876692,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:88},{Id:29,Duration:2,Amplifier:0}]}}],Charged:1b,Unbreakable:1b,delay:7,reload_delay:80,quiver:18}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#aea28c","bold":true},{"text":"3","color":"#ac353b","bold":false},{"text":") ","color":"#aea28c","bold":true},{"text":"Obsidian","color":"#3b2754","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] }], 
+              "name": "minecraft:crossbow" } ] } ] }

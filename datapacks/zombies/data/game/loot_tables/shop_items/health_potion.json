@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shop_item:1b,display:{Name:'[{\"text\":\"Health\",\"color\":\"#d84ada\",\"italic\":false},{\"text\":\" Potion\",\"color\":\"#9a0abe\"}]',Lore:['[{\"text\":\"Use to heal two full hearts.\",\"color\":\"gray\",\"italic\":false}]']},Potion:\"healing\",needs_initialization:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

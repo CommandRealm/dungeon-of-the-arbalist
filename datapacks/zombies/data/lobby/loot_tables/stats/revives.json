@@ -1,0 +1,6 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1,invalid_click:1}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Revives","color":"dark_purple","italic":false,"bold":false},{"text":": ","color":"gray"},{"score":{"objective":"global_revives","name":"@s"},"color":"light_purple","italic":false,"bold":true}] }], 
+              "name": "minecraft:shulker_spawn_egg" } ] } ] }

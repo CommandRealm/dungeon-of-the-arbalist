@@ -1,0 +1,1 @@
+execute as @e[type=villager,tag=lobby_npc,tag=lobby_villager,tag=lobby_area_4,tag=npc_a] at @s run tp @e[type=pillager,tag=lobby_npc,tag=lobby_pillager,tag=npc_a,tag=lobby_area_4] ~ ~50 ~ ~ ~

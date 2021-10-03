@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:warped_wart_block"
+        },
+        "title": {
+            "text": "Saved Kingdom",
+            "color": "gold",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Beat the Corrupted Kingdom.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:wins-pug",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

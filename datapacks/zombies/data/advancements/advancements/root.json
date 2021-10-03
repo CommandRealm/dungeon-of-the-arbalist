@@ -1,0 +1,54 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:zombie_head"
+    },
+    "title": [
+      {
+        "color": "#626269",
+        "bold": true,
+        "text": "Dungeon of"
+      },
+      {
+        "color": "#53535c",
+        "bold": true,
+        "text": " the Arbalist"
+      }
+    ],
+    "description": {
+      "text": "By the ",
+      "color": "white",
+      "underlined": false,
+      "extra": [
+        {
+          "text": "Command",
+          "color": "aqua",
+          "bold": true,
+          "extra": [
+            {
+              "text": " Realm",
+              "color": "dark_aqua",
+              "extra": [
+                {
+                  "text": " Team",
+                  "bold": false,
+                  "color": "white"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "background": "minecraft:textures/block/stone_bricks.png",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

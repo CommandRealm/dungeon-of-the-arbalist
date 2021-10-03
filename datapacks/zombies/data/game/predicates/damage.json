@@ -1,0 +1,9 @@
+{
+  "condition": "minecraft:damage_source_properties",
+  "predicate": {
+    "source_entity": {
+      "type": "minecraft:player",
+      "flags": {}
+    }
+  }
+}

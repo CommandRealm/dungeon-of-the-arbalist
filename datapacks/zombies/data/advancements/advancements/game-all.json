@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:podzol"
+        },
+        "title": {
+            "text": "Exclusive Punch Kill Effect",
+            "color": "green",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Complete this row to unlock.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:game-boss",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+  "armor_statues:enable": {
+    "criteria": {
+      "tick": "2021-05-05 22:47:43 -0400"
+    },
+    "done": true
+  },
+  "vanillatweaks:armor_statues": {
+    "criteria": {
+      "tick": "2021-05-05 22:47:43 -0400"
+    },
+    "done": true
+  },
+  "vanillatweaks:root": {
+    "criteria": {
+      "tick": "2021-05-05 22:47:43 -0400"
+    },
+    "done": true
+  },
+  "advancements:hidden/root": {
+    "criteria": {
+      "requirement": "2021-05-05 21:12:57 -0400"
+    },
+    "done": true
+  },
+  "game:inventory_changed": {
+    "criteria": {
+      "requirement": "2021-05-05 21:12:57 -0400"
+    },
+    "done": true
+  },
+  "advancements:root": {
+    "criteria": {
+      "requirement": "2021-05-05 21:12:57 -0400"
+    },
+    "done": true
+  },
+  "journal:root": {
+    "criteria": {
+      "requirement": "2021-05-05 21:12:57 -0400"
+    },
+    "done": true
+  },
+  "DataVersion": 2586
+}

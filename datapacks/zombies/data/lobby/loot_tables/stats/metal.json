@@ -1,0 +1,6 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1,invalid_click:1}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Metal ","color":"#544c4c","italic":false,"bold":false},{"text":"upgrades ","color":"gold"},{"text":"used","color":"gray"},{"text":": ","color":"gray"},{"score":{"objective":"global_metal","name":"@s"},"color":"#544c4c","italic":false,"bold":true}] }], 
+              "name": "minecraft:iron_block" } ] } ] }

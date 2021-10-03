@@ -1,0 +1,6 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1,invalid_click:1}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Treasure ","color":"yellow","italic":false,"bold":false},{"text":"spent","color":"red"},{"text":": ","color":"gray"},{"score":{"objective":"global_spent","name":"@s"},"color":"gold","italic":false,"bold":true}] }], 
+              "name": "minecraft:cat_spawn_egg" } ] } ] }

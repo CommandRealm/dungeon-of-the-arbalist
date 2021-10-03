@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:golden_chestplate"
+        },
+        "title": {
+            "text": "Looking good!",
+            "color": "dark_aqua",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Equip a cosmetic of each type.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:lobby-parkour",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "title": [
+      {
+        "color": "#626269",
+        "bold": true,
+        "text": "The Quests"
+      },
+      {
+        "color": "#53535c",
+        "bold": true,
+        "text": " of the Arbalist"
+      }
+    ],
+    "description": {
+      "text": "By the ",
+      "color": "white",
+      "underlined": false,
+      "extra": [
+        {
+          "text": "Command",
+          "color": "aqua",
+          "bold": true,
+          "extra": [
+            {
+              "text": " Realm",
+              "color": "dark_aqua",
+              "extra": [
+                {
+                  "text": " Team",
+                  "bold": false,
+                  "color": "white"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "background": "minecraft:textures/block/polished_blackstone_bricks.png",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+tag @s add punch_12
+tellraw @s [{"text":"- - - - - - - - - - - - - - - - - - - - - - - - - - -","color":"gray","bold":true},{"text":"\nYou have unlocked an EPIC Punch Kill Effect!","color":"light_purple","bold":false},{"text":"\nPunch Kill Effect ","color":"gray","bold":true},{"text":"- ","color":"gray","bold":true},{"text":"Respawn Anchor","color":"white","bold":true},{"text":"\nYou can select it inside the Menu Ender Chest!","color":"green","bold":false}]

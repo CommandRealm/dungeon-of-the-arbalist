@@ -1,0 +1,6 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1,invalid_click:1}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Shots ","color":"red","italic":false,"bold":false},{"text":"hit","color":"#605852"},{"text":": ","color":"gray"},{"score":{"objective":"global_hits","name":"@s"},"color":"#9e252b","italic":false,"bold":true}] }], 
+              "name": "minecraft:strider_spawn_egg" } ] } ] }

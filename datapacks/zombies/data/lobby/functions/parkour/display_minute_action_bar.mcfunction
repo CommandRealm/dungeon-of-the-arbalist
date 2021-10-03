@@ -1,0 +1,4 @@
+##called to display the minute action bar.
+
+execute if score $second calculate matches 10.. run title @s actionbar [{"text":"☀ ","color":"gray"},{"text":"Time:","color":"green","underlined": true},{"text":" "},{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]
+execute if score $second calculate matches ..9 run title @s actionbar [{"text":"☀ ","color":"gray"},{"text":"Time:","color":"green","underlined": true},{"text":" "},{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"text":"0","color":"yellow"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]

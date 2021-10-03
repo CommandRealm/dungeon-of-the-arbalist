@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:chainmail_chestplate"
+        },
+        "title": {
+            "text": "What a challenge!",
+            "color": "red",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden":true,
+        "description": {
+            "text": "Beat the game on the Hardcore difficulty.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:hidden/hidden-journal",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

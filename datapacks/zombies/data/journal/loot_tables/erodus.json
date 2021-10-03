@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function":"minecraft:set_nbt",
+              "entity":"this",
+              "tag":"{clickable:1,invalid_click:1,SkullOwner:{Id:[I;843221916,29705375,-1861374816,442116303],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzI1YzkyZDc1YmI3MTAzYmEwNWYyZTJlZWU5NjJhNTc4NWUwNjljN2Q4ZGRkNTI2ZTE5MmMxMjdlZmI3MzNjYyJ9fX0=\"}]}}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"35","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Erodus the Devourer","color":"dark_red","bold":true}]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [{"text":"A stone monster. Consumes dirt and stone which is shot as a projectile.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_erodus","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

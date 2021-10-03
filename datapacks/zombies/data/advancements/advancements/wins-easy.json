@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:lime_concrete"
+        },
+        "title": {
+            "text": "That was easy!",
+            "color": "gold",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Beat the game on easy or higher.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:wins-supereasy",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

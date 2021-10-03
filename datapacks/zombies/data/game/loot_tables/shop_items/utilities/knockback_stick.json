@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wooden_sword",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shop_item:1b,Damage:50,display:{Name:'[{\"text\":\"Knockback\",\"color\":\"#936800\",\"italic\":false},{\"text\":\" Stick\",\"color\":\"#614a14\"}]',Lore:['[{\"text\":\"Use to knockback mobs.\",\"color\":\"gray\",\"italic\":false}]']},Enchantments:[{id:\"knockback\",lvl:7}],needs_initialization:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

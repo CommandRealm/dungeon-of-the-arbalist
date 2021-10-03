@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:yellow_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shop_item:1b,stat_boost:1b,display:{Name:'[{\"text\":\"Looting\",\"color\":\"#fffc00\",\"italic\":false},{\"text\":\" Booster\",\"color\":\"gray\"}]',Lore:['[{\"text\":\"Obtain to increase your looting booster.\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"Increases your treasure multiplier.\",\"color\":\"gray\",\"italic\":false}]']},needs_initialization:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:orange_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shop_item:1b,stat_boost:1b,display:{Name:'[{\"text\":\"Quiver\",\"color\":\"#fca50d\",\"italic\":false},{\"text\":\" Booster\",\"color\":\"gray\"}]',Lore:['[{\"text\":\"Obtain to increase your quiver booster.\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"Increases your max quiver size.\",\"color\":\"gray\",\"italic\":false}]']},needs_initialization:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

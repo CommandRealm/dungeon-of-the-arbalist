@@ -1,0 +1,2 @@
+execute as @e[type=spider,tag=spider_miniboss] at @s run scoreboard players add @s spider_timer 1
+execute as @e[type=spider,tag=spider_miniboss] at @s if score @s spider_timer matches 100.. run function game:enemy/spider/cave_spider
