@@ -58,7 +58,7 @@ item replace entity @s[team=title_59] enderchest.9 with name_tag{clickable:1,inv
 item replace entity @s[team=title_60] enderchest.10 with name_tag{clickable:1,invalid_click:1,HideFlags:63,display:{Name:'[{"text":"Indestructable (Netherite)","color":"#4c4143","italic":false,"bold":true}]',Lore:['[{"text":"Selected","color":"blue","italic":false}]']},Enchantments:[{id:"aqua_affinity",lvl:1}]}
 item replace entity @s[team=title_61] enderchest.11 with name_tag{clickable:1,invalid_click:1,HideFlags:63,display:{Name:'[{"text":"Negative (Antimatter)","color":"#46067d","italic":false,"bold":true}]',Lore:['[{"text":"Selected","color":"blue","italic":false}]']},Enchantments:[{id:"aqua_affinity",lvl:1}]}
 item replace entity @s[team=title_62] enderchest.12 with name_tag{clickable:1,invalid_click:1,HideFlags:63,display:{Name:'[{"text":"Withered (Radioactive)","color":"#4cab1d","italic":false,"bold":true}]',Lore:['[{"text":"Selected","color":"blue","italic":false}]']},Enchantments:[{id:"aqua_affinity",lvl:1}]}
-item replace entity @s[team=title_63] enderchest.12 with name_tag{clickable:1,invalid_click:1,HideFlags:63,display:{Name:'[{"text":"Sweltered (Inferno)","color":"#b33300","italic":false,"bold":true}]',Lore:['[{"text":"Selected","color":"blue","italic":false}]']},Enchantments:[{id:"aqua_affinity",lvl:1}]}
+item replace entity @s[team=title_63] enderchest.13 with name_tag{clickable:1,invalid_click:1,HideFlags:63,display:{Name:'[{"text":"Sweltered (Inferno)","color":"#b33300","italic":false,"bold":true}]',Lore:['[{"text":"Selected","color":"blue","italic":false}]']},Enchantments:[{id:"aqua_affinity",lvl:1}]}
 
 
 

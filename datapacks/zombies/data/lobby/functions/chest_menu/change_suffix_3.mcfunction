@@ -14,7 +14,7 @@ execute unless data entity @s[tag=title_59] EnderItems[{Slot:9b,id:"minecraft:na
 execute unless data entity @s[tag=title_60] EnderItems[{Slot:10b,id:"minecraft:name_tag"}] run scoreboard players set @s prefix 260
 execute unless data entity @s[tag=title_61] EnderItems[{Slot:11b,id:"minecraft:name_tag"}] run scoreboard players set @s prefix 261
 execute unless data entity @s[tag=title_62] EnderItems[{Slot:12b,id:"minecraft:name_tag"}] run scoreboard players set @s prefix 262
-execute unless data entity @s[tag=title_63] EnderItems[{Slot:12b,id:"minecraft:name_tag"}] run scoreboard players set @s prefix 267
+execute unless data entity @s[tag=title_63] EnderItems[{Slot:13b,id:"minecraft:name_tag"}] run scoreboard players set @s prefix 267
 
 ##Rank
 function general:rank

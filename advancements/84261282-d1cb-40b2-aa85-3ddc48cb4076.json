@@ -1,27 +1,45 @@
 {
+  "journal:zombie": {
+    "criteria": {
+      "requirement": "2021-12-01 14:53:47 -0800"
+    },
+    "done": true
+  },
   "journal:void": {
     "criteria": {
-      "impossible": "2021-08-27 09:12:34 -0700"
+      "impossible": "2021-09-16 17:50:19 -0700"
+    },
+    "done": true
+  },
+  "advancements:game-shop": {
+    "criteria": {
+      "impossible": "2021-12-01 14:53:59 -0800"
+    },
+    "done": true
+  },
+  "advancements:game-spruce_door": {
+    "criteria": {
+      "impossible": "2021-12-01 14:53:56 -0800"
     },
     "done": true
   },
   "game:inventory_changed": {
     "criteria": {
-      "requirement": "2021-08-27 09:12:33 -0700"
+      "requirement": "2021-12-01 15:38:43 -0800"
     },
     "done": true
   },
   "journal:root": {
     "criteria": {
-      "requirement": "2021-08-27 09:12:34 -0700"
+      "requirement": "2021-09-16 17:50:19 -0700"
     },
     "done": true
   },
   "advancements:root": {
     "criteria": {
-      "requirement": "2021-08-27 09:12:34 -0700"
+      "requirement": "2021-09-16 17:50:19 -0700"
     },
     "done": true
   },
-  "DataVersion": 2730
+  "DataVersion": 2860
 }
