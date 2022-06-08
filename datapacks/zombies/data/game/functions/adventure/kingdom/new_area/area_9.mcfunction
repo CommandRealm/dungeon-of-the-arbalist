@@ -6,7 +6,7 @@ function game:enemy/spawn_enemy
 
 
 ##Shops
-summon vindicator 3013 92 174 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"James","color":"gold","bold":true}]'}
+summon vindicator 3013 92 174 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"James","color":"gold","bold":true}]'}
 
 loot spawn 3014 93 174 loot game:shop_items/stats/damage
 scoreboard players set @e[type=item,x=3014,y=93,z=174,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 135
@@ -14,7 +14,7 @@ scoreboard players set @e[type=item,x=3014,y=93,z=174,distance=..5,limit=1,sort=
 execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
 
 
-summon vindicator 3018 93 205 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Harper","color":"gold","bold":true}]'}
+summon vindicator 3018 93 205 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Harper","color":"gold","bold":true}]'}
 
 
 loot spawn 3022 94 205 loot game:shop_items/stats/speed
@@ -35,7 +35,7 @@ execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run fu
 
 
 
-summon vindicator 3046 93 205 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Elijah","color":"gold","bold":true}]'}
+summon vindicator 3046 93 205 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Elijah","color":"gold","bold":true}]'}
 
 loot spawn 3050 94 205 loot game:shop_items/health_potion
 scoreboard players set @e[type=item,x=3050,y=94,z=205,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 100

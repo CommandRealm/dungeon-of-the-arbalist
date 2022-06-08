@@ -1,7 +1,7 @@
 ##Called to give the stray a bow.
 
 item replace entity @e[type=stray,tag=boss] weapon.mainhand with bow
-item replace entity @e[type=stray,tag=boss] weapon.offhand with tipped_arrow{CustomPotionEffects:[{Id:2b,Duration:100,Amplifier:2b}],CustomPotionColor:6057074}
+item replace entity @e[type=stray,tag=boss] weapon.offhand with tipped_arrow{CustomPotionEffects:[{Id:2,Duration:100,Amplifier:2b}],CustomPotionColor:6057074}
 
 ##Sound and particles
 execute at @e[type=stray,tag=boss] run playsound minecraft:item.crossbow.loading_start master @a ~ ~ ~ 1 1

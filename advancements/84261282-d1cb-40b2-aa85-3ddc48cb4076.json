@@ -1,27 +1,27 @@
 {
   "journal:void": {
     "criteria": {
-      "impossible": "2021-12-13 14:24:15 -0800"
+      "impossible": "2022-06-07 23:11:00 -0700"
     },
     "done": true
   },
   "game:inventory_changed": {
     "criteria": {
-      "requirement": "2021-12-13 14:24:15 -0800"
+      "requirement": "2022-06-07 23:11:01 -0700"
     },
     "done": true
   },
   "journal:root": {
     "criteria": {
-      "requirement": "2021-12-13 14:24:15 -0800"
+      "requirement": "2022-06-07 23:11:00 -0700"
     },
     "done": true
   },
   "advancements:root": {
     "criteria": {
-      "requirement": "2021-12-13 14:24:15 -0800"
+      "requirement": "2022-06-07 23:11:00 -0700"
     },
     "done": true
   },
-  "DataVersion": 2865
+  "DataVersion": 3105
 }

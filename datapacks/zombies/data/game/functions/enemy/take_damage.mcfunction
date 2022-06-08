@@ -1,7 +1,7 @@
 ##Called when an enemy takes damage.
 
 ##Getting the amplifier of luck
-execute if data entity @s ActiveEffects[{Id:26b}].Amplifier store result score @s calculate_2 run data get entity @s ActiveEffects[{Id:26b}].Amplifier 1
+execute if data entity @s ActiveEffects[{Id:26}].Amplifier store result score @s calculate_2 run data get entity @s ActiveEffects[{Id:26}].Amplifier 1
 
 ##If there is a player with luck
 execute if entity @a[tag=playing,gamemode=adventure,team=game,scores={boost_damage=1..}] run function game:enemy/check_damage_changes
@@ -9,21 +9,21 @@ execute if entity @a[tag=playing,gamemode=adventure,team=game,scores={boost_dama
 
 ######Effects. (it's done here so that it can affect the damage.)
 ##Seeing if we need to check our ID.
-execute store result score @s calculate run data get entity @s ActiveEffects[{Id:29b}].Amplifier 1
-execute if score @s calculate matches 0.. if data entity @s ActiveEffects[{Id:29b}].Amplifier run function game:enemy/check_id_damage
+execute store result score @s calculate run data get entity @s ActiveEffects[{Id:29}].Amplifier 1
+execute if score @s calculate matches 0.. if data entity @s ActiveEffects[{Id:29}].Amplifier run function game:enemy/check_id_damage
 
 
 ##Seeing if we have additional things that need to happen
-execute store result score @s calculate run data get entity @s ActiveEffects[{Id:13b}].Amplifier 1
-execute if score @s calculate matches 0.. if data entity @s ActiveEffects[{Id:13b}].Amplifier run function game:enemy/effect/find_effect
+execute store result score @s calculate run data get entity @s ActiveEffects[{Id:13}].Amplifier 1
+execute if score @s calculate matches 0.. if data entity @s ActiveEffects[{Id:13}].Amplifier run function game:enemy/effect/find_effect
 
 ##Specific element damage
-execute store result score @s calculate run data get entity @s ActiveEffects[{Id:4b}].Amplifier 1
-execute if entity @s[scores={calculate=0..}] if data entity @s ActiveEffects[{Id:4b}].Amplifier run function game:enemy/elemental_damage
+execute store result score @s calculate run data get entity @s ActiveEffects[{Id:4}].Amplifier 1
+execute if entity @s[scores={calculate=0..}] if data entity @s ActiveEffects[{Id:4}].Amplifier run function game:enemy/elemental_damage
 
 ##Extra damage
-execute store result score @s calculate run data get entity @s ActiveEffects[{Id:32b}].Amplifier 1
-execute if entity @s[scores={calculate=0..}] if data entity @s ActiveEffects[{Id:32b}].Amplifier run scoreboard players operation @s calculate_2 += @s calculate
+execute store result score @s calculate run data get entity @s ActiveEffects[{Id:32}].Amplifier 1
+execute if entity @s[scores={calculate=0..}] if data entity @s ActiveEffects[{Id:32}].Amplifier run scoreboard players operation @s calculate_2 += @s calculate
 
 
 ##If we're a husk and we haven't taken damage yet.

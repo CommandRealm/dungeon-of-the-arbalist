@@ -6,7 +6,7 @@ tag @e[type=marker,tag=area_6c] add unlocked
 
 
 ##Shops
-summon vindicator 3139 71.5 100 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Henry","color":"gold","bold":true}]'}
+summon vindicator 3139 71.5 100 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Henry","color":"gold","bold":true}]'}
 
 loot spawn 3140 72 100 loot game:shop_items/stats/speed
 scoreboard players set @e[type=item,x=3140,y=72,z=100,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 135

@@ -6,7 +6,7 @@ function game:enemy/spawn_enemy
 
 
 ##Shops
-execute unless score $difficulty settings matches 5.. run summon vindicator 3034 91 14 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Kit","color":"gold","bold":true}]'}
+execute unless score $difficulty settings matches 5.. run summon vindicator 3034 91 14 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Kit","color":"gold","bold":true}]'}
 
 loot spawn 3034 92.5 15 loot game:shop_items/stats/health
 scoreboard players set @e[type=item,x=3034,y=92,z=15,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 125

@@ -6,7 +6,7 @@ function game:enemy/spawn_enemy
 
 
 ##Shops
-summon witch 4991 89 42 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Mirkha","color":"gold","bold":true}]'}
+summon witch 4991 89 42 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Mirkha","color":"gold","bold":true}]'}
 
 loot spawn 4993 90 44 loot game:shop_items/stats/health
 scoreboard players set @e[type=item,x=4993,y=90,z=44,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 90
@@ -35,7 +35,7 @@ execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,
 
 
 
-summon witch 4974 94 6 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Millicent","color":"gold","bold":true}]'}
+summon witch 4974 94 6 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Millicent","color":"gold","bold":true}]'}
 
 
 

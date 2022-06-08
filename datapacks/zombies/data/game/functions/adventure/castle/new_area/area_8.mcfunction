@@ -6,7 +6,7 @@ function game:enemy/spawn_enemy
 
 
 ##Shops
-summon witch 5111 90 -32 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Ravenna","color":"gold","bold":true}]'}
+summon witch 5111 90 -32 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Ravenna","color":"gold","bold":true}]'}
 
 loot spawn 5112 91 -31 loot game:shop_items/stats/looting
 scoreboard players set @e[type=item,x=5112,y=91,z=-31,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 100

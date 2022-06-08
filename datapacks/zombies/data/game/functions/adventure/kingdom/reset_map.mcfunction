@@ -807,14 +807,14 @@ execute positioned 3172 73 171 run function game:adventure/create/wave_9_spawnpo
 tag @e[type=marker,tag=zombie_spawnpoint,tag=!unlocked,tag=!area_1,tag=!area_2,tag=!area_2a,tag=!area_2b,tag=!area_3,tag=!area_5,tag=!area_5b,tag=!area_5d,tag=!area_6,tag=!area_6a,tag=!area_6b,tag=!area_6c,tag=!area_6d,tag=!area_7,tag=!area_8,tag=!area_9,tag=!area_9a,tag=!area_10,tag=!area_6e] add area_6e
 
 ##First area stuff
-summon vindicator 3113 66 23 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Jeremiah","color":"gold","bold":true}]'}
+summon vindicator 3113 66 23 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Jeremiah","color":"gold","bold":true}]'}
 loot spawn 3113 67 21 loot game:shop_items/stats/quiver
 scoreboard players set @e[type=item,x=3113,y=67,z=21,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 130
 scoreboard players set @e[type=item,x=3113,y=67,z=21,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_quantity 2147483647
 execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
 
 
-summon vindicator 3104 69 63 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Vanny","color":"gold","bold":true}]'}
+summon vindicator 3104 69 63 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Vanny","color":"gold","bold":true}]'}
 
 
 loot spawn 3106 70 62 loot game:shop_items/utilities/shield

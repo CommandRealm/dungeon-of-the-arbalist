@@ -4,7 +4,7 @@
 
 
 
-execute if entity @s[tag=!non_melee_damage] unless entity @s[nbt={ActiveEffects:[{Id:26b}]}] run function game:enemy/take_melee_damage
+execute if entity @s[tag=!non_melee_damage] unless entity @s[nbt={ActiveEffects:[{Id:26}]}] run function game:enemy/take_melee_damage
 
 tag @s remove non_melee_damage
 

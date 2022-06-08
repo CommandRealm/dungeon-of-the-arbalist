@@ -64,9 +64,9 @@ execute as @e[type=arrow] at @s store result score @s calculate run data get ent
 execute as @e[type=arrow] at @s if score @s calculate = @p[tag=shot_bow] calculate run tag @s add temporary_match_3
 
 ##Adding effect that stores the ID
-data modify entity @e[type=arrow,tag=temporary_match_0,tag=temporary_match_1,tag=temporary_match_2,tag=temporary_match_3,limit=1] CustomPotionEffects prepend value {Id:30b,Amplifier:0b,Duration:2,ShowParticles:0b}
+data modify entity @e[type=arrow,tag=temporary_match_0,tag=temporary_match_1,tag=temporary_match_2,tag=temporary_match_3,limit=1] CustomPotionEffects prepend value {Id:30,Amplifier:0b,Duration:2,ShowParticles:0b}
 ##Changing the amplifier to be our ID
-execute store result entity @e[type=arrow,tag=temporary_match_0,tag=temporary_match_1,tag=temporary_match_2,tag=temporary_match_3,limit=1] CustomPotionEffects[{Id:30b}].Amplifier byte 1 run scoreboard players get @s id
+execute store result entity @e[type=arrow,tag=temporary_match_0,tag=temporary_match_1,tag=temporary_match_2,tag=temporary_match_3,limit=1] CustomPotionEffects[{Id:30}].Amplifier byte 1 run scoreboard players get @s id
 
 ##Copying id
 scoreboard players operation @e[type=arrow,tag=temporary_match_0,tag=temporary_match_1,tag=temporary_match_2,tag=temporary_match_3,limit=1] id = @s id

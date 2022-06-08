@@ -5,7 +5,7 @@ tag @e[type=marker,tag=area_4,sort=random,limit=3] add temporary_tag
 function game:enemy/spawn_enemy
 
 ##Shop
-summon witch 4978 100 50 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Helga","color":"gold","bold":true}]'}
+summon witch 4978 100 50 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Helga","color":"gold","bold":true}]'}
 
 loot spawn 4980 101 46 loot game:crossbow/earth
 data merge entity @e[type=item,x=4980,y=101,z=46,distance=..5,limit=1,sort=nearest,nbt={Item:{id:"minecraft:crossbow"}}] {Item:{tag:{crossbow_id:3,needs_initialization:1b,Motion:[0.0d,0.0d,0.0d]}}}

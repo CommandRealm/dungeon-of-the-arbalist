@@ -2,7 +2,7 @@
 
 kill @e[type=pillager,tag=shopkeeper,x=0,y=66,z=0,distance=..500]
 kill @e[type=item,tag=shop_item,x=0,y=66,z=0,distance=..500]
-summon pillager 8 82 -28.0 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11b,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games","tutorial_shopkeeper"],CustomNameVisible:1b,CustomName:'[{"text":"Bertram","color":"gold","bold":true}]'}
+summon pillager 8 82 -28.0 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games","tutorial_shopkeeper"],CustomNameVisible:1b,CustomName:'[{"text":"Bertram","color":"gold","bold":true}]'}
 
 loot spawn 7 83 -30 loot game:shop_items/utilities/shield
 scoreboard players set @e[type=item,x=7,y=83,z=-30,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 3

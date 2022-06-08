@@ -30,7 +30,7 @@ title @s[scores={possible_upgrade=26}] subtitle [{"text":"Drop to upgrade to a "
 title @s[scores={possible_upgrade=27}] subtitle [{"text":"Drop to upgrade to an ","color":"gray"},{"text":"Erratics","color":"#4c9490","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}]
 
 title @s[scores={possible_upgrade=28}] subtitle [{"text":"Drop to upgrade to a ","color":"gray"},{"text":"Volcanic","color":"#f1390e","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}]
-title @s[scores={possible_upgrade=29}] subtitle [{"text":"Drop to upgrade to a ","color":"gray"},{"text":"Rain","color":"#0e8ef1","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}]
+title @s[scores={possible_upgrade=29}] subtitle [{"text":"Drop to upgrade to a ","color":"gray"},{"text":"Wave","color":"#0e8ef1","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}]
 title @s[scores={possible_upgrade=30}] subtitle [{"text":"Drop to upgrade to a ","color":"gray"},{"text":"Cavern","color":"#b27565","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}]
 title @s[scores={possible_upgrade=31}] subtitle [{"text":"Drop to upgrade to an ","color":"gray"},{"text":"Atmopshere","color":"#d6d6d6","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}]
 title @s[scores={possible_upgrade=32}] subtitle [{"text":"Drop to upgrade to a ","color":"gray"},{"text":"Glacier","color":"#6fe6ff","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}]
