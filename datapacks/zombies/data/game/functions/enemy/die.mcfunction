@@ -35,13 +35,16 @@ execute if entity @s[tag=skeleton_miniboss,type=skeleton_horse] run loot spawn ~
 execute if entity @s[type=bee,tag=miniboss] run loot spawn ~ ~ ~ loot game:enemy_drops/knight
 execute if entity @s[type=bee,tag=miniboss] unless entity @e[type=bee,tag=miniboss] run tellraw @a[tag=playing] [{"text":"☠ ","color":"dark_gray"},{"text":"The ","color":"gray"},{"text":"Scary Swarm","color":"red","bold":true},{"text":" has been defeated.","color":"gray"}]
 
+execute if entity @s[type=#game:piglins,tag=miniboss] run loot spawn ~ ~ ~ loot game:enemy_drops/piglins
+execute if entity @s[type=#game:piglins,tag=miniboss] unless entity @e[type=#game:piglins,tag=miniboss] run tellraw @a[tag=playing] [{"text":"☠ ","color":"dark_gray"},{"text":"The ","color":"gray"},{"text":"Piglin Horde","color":"red","bold":true},{"text":" has been defeated.","color":"gray"}]
+
 execute if entity @s[type=slime,tag=miniboss] run function game:enemy/slime/die
 execute if entity @s[type=slime,tag=miniboss] run loot spawn ~ ~ ~ loot game:enemy_drops/knight
 execute if entity @s[type=slime,tag=miniboss] unless entity @e[type=slime,tag=miniboss] run tellraw @a[tag=playing] [{"text":"☠ ","color":"dark_gray"},{"text":"The ","color":"gray"},{"text":"Static Splitters","color":"red","bold":true},{"text":" has been defeated.","color":"gray"}]
 
 
 ##If we're a miniboss  drop stat boosters
-execute if entity @s[tag=miniboss,type=!bee] unless entity @s[type=slime,scores={slime_sizes=..3}] unless entity @s[tag=polar_bear_miniboss,tag=!big_polar_bear] unless entity @s[tag=skeleton_miniboss,type=skeleton_horse] run function game:enemy/miniboss_die
+execute if entity @s[tag=miniboss,type=!bee,type=!#game:piglins] unless entity @s[type=slime,scores={slime_sizes=..3}] unless entity @s[tag=polar_bear_miniboss,tag=!big_polar_bear] unless entity @s[tag=skeleton_miniboss,type=skeleton_horse] run function game:enemy/miniboss_die
 execute if entity @s[tag=miniboss_key] run function game:enemy/summon_miniboss_key
 
 ##Counting those who have a punch kill
