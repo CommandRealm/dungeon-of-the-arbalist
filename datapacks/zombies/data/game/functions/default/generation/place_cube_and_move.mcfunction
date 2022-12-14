@@ -1,5 +1,7 @@
 ##Random segment
-function game:default/generation/random/random_cube
+execute if score $generation_type settings matches 0 run function game:default/generation/random/random_cube
+##Minibosses only
+execute if score $generation_type settings matches -1 run function game:default/generation/random/minibosses_only
 
 ##Place cube
 function game:default/generation/place_cube

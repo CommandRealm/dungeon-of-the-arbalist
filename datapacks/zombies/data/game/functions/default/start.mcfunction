@@ -27,6 +27,7 @@ title @a[tag=playing] title [{"text":""}]
 ##Resetting wave score
 scoreboard players set $wave game 0
 
+execute if score $generation_type settings matches -1 run scoreboard players set $wave game 7
 
 ##Crossbow id
 scoreboard players set @a[tag=playing] crossbow_id 0
