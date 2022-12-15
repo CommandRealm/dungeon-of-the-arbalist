@@ -1,8 +1,10 @@
 ##called for the early generation end
 
+
+
 ##Marking hallways.
-execute as @e[type=area_effect_cloud,tag=!base_generation_marker,tag=generation_marker] at @s align xz positioned ~-18.5 62 ~0 run summon area_effect_cloud ~ ~ ~ {Tags:["doorway","die_between_games","east_west"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
-execute as @e[type=area_effect_cloud,tag=!base_generation_marker,tag=generation_marker] at @s align xz positioned ~0 62 ~18.5 run summon area_effect_cloud ~ ~ ~ {Tags:["doorway","die_between_games","north_south"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute as @e[type=area_effect_cloud,tag=!base_generation_marker,tag=generation_marker] at @s align xz positioned ~-18.5 62 ~0 run summon marker ~ ~ ~ {Tags:["doorway","die_between_games","east_west"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute as @e[type=area_effect_cloud,tag=!base_generation_marker,tag=generation_marker] at @s align xz positioned ~0 62 ~18.5 run summon marker ~ ~ ~ {Tags:["doorway","die_between_games","north_south"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
 ##
 

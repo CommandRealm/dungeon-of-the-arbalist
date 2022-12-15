@@ -37,10 +37,10 @@ execute if entity @s[tag=tutorial_2a_1] run fill 14 86 -27 14 86 -30 stone_brick
 execute if entity @s[tag=tutorial_2a_1] run fill 11 86 -27 11 86 -30 stone_brick_slab[type=top] replace air
 execute if entity @s[tag=tutorial_2a_1] run fill 14 82 -28 11 86 -28 spruce_planks replace polished_blackstone
 execute if entity @s[tag=tutorial_2a_1] run fill 14 82 -28 11 86 -28 oak_log replace chiseled_polished_blackstone
-execute if entity @s[tag=tutorial_2a_1] run kill @e[type=area_effect_cloud,tag=doorway,x=0,y=66,z=0,distance=..500]
-execute if entity @s[tag=tutorial_2a_1] run summon area_effect_cloud 13.0 82 -28 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
-execute if entity @s[tag=tutorial_2a_1] as @e[type=area_effect_cloud,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 15
-execute if entity @s[tag=tutorial_2a_1] positioned 12 83 -28 as @e[type=area_effect_cloud,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
+execute if entity @s[tag=tutorial_2a_1] run kill @e[type=marker,tag=doorway,x=0,y=66,z=0,distance=..500]
+execute if entity @s[tag=tutorial_2a_1] run summon marker 13.0 82 -28 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute if entity @s[tag=tutorial_2a_1] as @e[type=marker,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 15
+execute if entity @s[tag=tutorial_2a_1] positioned 12 83 -28 as @e[type=marker,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
 
 
 #endregion

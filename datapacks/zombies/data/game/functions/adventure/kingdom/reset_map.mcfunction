@@ -830,13 +830,13 @@ scoreboard players set @e[type=item,x=3104,y=70,z=62,distance=..5,limit=1,sort=n
 execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
 
 
-summon area_effect_cloud 3081 70 83 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
-execute as @e[type=area_effect_cloud,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 700
-execute positioned 3081 70 83 as @e[type=area_effect_cloud,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
+summon marker 3081 70 83 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute as @e[type=marker,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 700
+execute positioned 3081 70 83 as @e[type=marker,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
 
-summon area_effect_cloud 3045 80 37 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
-execute as @e[type=area_effect_cloud,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 150
-execute positioned 3045 80 37 as @e[type=area_effect_cloud,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
+summon marker 3045 80 37 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute as @e[type=marker,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 150
+execute positioned 3045 80 37 as @e[type=marker,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
 
 
 

@@ -33,4 +33,4 @@ clear @a[tag=playing] tripwire_hook{key:"storage"}
 
 ##Upgrade
 execute positioned 3165 93.5 113 run function game:mechanics/upgrade/create/air_upgrade_spot
-execute as @e[type=area_effect_cloud,tag=upgrade_spot,tag=inactive] at @s run function game:mechanics/upgrade/activate_upgrade_spot
+execute as @e[type=marker,tag=upgrade_spot,tag=inactive] at @s run function game:mechanics/upgrade/activate_upgrade_spot

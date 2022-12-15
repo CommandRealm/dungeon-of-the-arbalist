@@ -27,8 +27,8 @@ execute as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass m
 
 
 ##Creating the price and displaying that price.
-execute as @e[type=area_effect_cloud,tag=boss_door,x=0,y=66,z=0,distance=500..] at @s run function game:default/door/late_generation/create_boss_price_marker
+execute as @e[type=marker,tag=boss_door,x=0,y=66,z=0,distance=500..] at @s run function game:default/door/late_generation/create_boss_price_marker
 
 
 ##raycast tag
-tag @e[type=area_effect_cloud,tag=boss_door,x=0,y=66,z=0,distance=500..] add openable
+tag @e[type=marker,tag=boss_door,x=0,y=66,z=0,distance=500..] add openable

@@ -9,3 +9,4 @@ execute if score @s attack matches 3.. run function game:shops/shopkeeper/conver
 particle angry_villager ~ ~1 ~ 0.4 0.8 0.4 0.33 20
 
 playsound minecraft:entity.pillager.hurt master @a ~ ~ ~ 1 0.8
+

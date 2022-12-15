@@ -49,6 +49,7 @@ scoreboard objectives add pregame_click minecraft.used:minecraft.knowledge_book
 
 ##Number objective
 scoreboard objectives add number dummy
+scoreboard objectives add count dummy
 
 scoreboard players set $60 number 60
 scoreboard players set $6 number 6

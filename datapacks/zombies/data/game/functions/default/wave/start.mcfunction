@@ -18,6 +18,7 @@ scoreboard players reset $enemies_spawned game
 ##Adding in additional time for the wave.
 scoreboard players operation $calculate calculate = $wave game
 scoreboard players remove $calculate calculate 1
+execute if score $calculate calculate matches 9.. run scoreboard players set $calculate calculate 9
 scoreboard players operation $calculate calculate *= $100 number
 scoreboard players operation $wave_length game += $calculate calculate
 
@@ -45,7 +46,7 @@ function game:default/wave/update_bossbar_ui
 execute if score $wave game matches 1 run effect give @a[tag=playing] night_vision 70 0 true
 
 
-execute as @e[type=area_effect_cloud,tag=doorway] at @s if block ~ ~ ~ polished_andesite run kill @s
+execute as @e[type=marker,tag=doorway] at @s if block ~ ~ ~ polished_andesite run kill @s
 
 ##Removing tags
 tag @e[type=marker] remove no_delay_spawn

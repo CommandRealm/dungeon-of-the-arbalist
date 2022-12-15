@@ -315,3 +315,6 @@ scoreboard objectives add run dummy
 
 ##Kill switch
 scoreboard players set $game_end_countdown game 72000
+
+# removing shopkeeper death tag
+tag @a remove anger_shopkeepers

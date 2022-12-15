@@ -3,6 +3,8 @@
 tp @e[tag=die_between_games] 0 0 0
 
 kill @e[tag=die_between_games]
+# clearing schedules
+schedule clear game:mechanics/active_efficient
 
 ##Sets game state to 0
 scoreboard players set $game state 0

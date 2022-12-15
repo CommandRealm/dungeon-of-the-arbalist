@@ -21,24 +21,24 @@ execute unless entity @e[type=marker,tag=area_3,tag=unlocked] run clone 2956 79 
 ##Upgrade
 execute positioned 3032 78 27 run function game:mechanics/upgrade/create/fire_upgrade_spot
 execute positioned 2993 82 78 run function game:mechanics/upgrade/create/metal_upgrade_spot
-execute as @e[type=area_effect_cloud,tag=upgrade_spot,tag=inactive] at @s run function game:mechanics/upgrade/activate_upgrade_spot
+execute as @e[type=marker,tag=upgrade_spot,tag=inactive] at @s run function game:mechanics/upgrade/activate_upgrade_spot
 
 
 
 ##Marking doorways.
-execute if block 3024 77 102 stripped_spruce_wood unless entity @e[type=area_effect_cloud,tag=doorway,x=3024,y=77,z=102,distance=..5] run summon area_effect_cloud 3022 77 104 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
-execute as @e[type=area_effect_cloud,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 400
-execute as @e[type=area_effect_cloud,tag=doorway] at @s unless score @s price_increment matches 0.. run function game:door/get_price_increment
+execute if block 3024 77 102 stripped_spruce_wood unless entity @e[type=marker,tag=doorway,x=3024,y=77,z=102,distance=..5] run summon marker 3022 77 104 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute as @e[type=marker,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 400
+execute as @e[type=marker,tag=doorway] at @s unless score @s price_increment matches 0.. run function game:door/get_price_increment
 
-summon area_effect_cloud 3023 76 22 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
-execute as @e[type=area_effect_cloud,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 250
-execute positioned 3023 76 22 as @e[type=area_effect_cloud,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
-
-
+summon marker 3023 76 22 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute as @e[type=marker,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 250
+execute positioned 3023 76 22 as @e[type=marker,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
 
 
-tag @e[type=area_effect_cloud,tag=doorway] add raycast
+
+
+tag @e[type=marker,tag=doorway] add raycast
 
 ##Updating name
-execute as @e[type=area_effect_cloud,tag=doorway] at @s run function game:door/update_name
+execute as @e[type=marker,tag=doorway] at @s run function game:door/update_name
 

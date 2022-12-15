@@ -4,8 +4,8 @@ tag @s add opened
 
 
 ##Finding upgrade spots.
-execute unless entity @s[tag=selected_spawnpoint] positioned ~-16 ~-16 ~-16 as @e[type=area_effect_cloud,tag=upgrade_spot,dx=31,dy=31,dz=31,tag=inactive] at @s run function game:mechanics/upgrade/activate_upgrade_spot
-execute if entity @s[tag=selected_spawnpoint] positioned ~-16 ~-16 ~-16 run kill @e[type=area_effect_cloud,tag=upgrade_spot,dx=31,dy=31,dz=31,tag=inactive]
+execute unless entity @s[tag=selected_spawnpoint] positioned ~-16 ~-16 ~-16 as @e[type=marker,tag=upgrade_spot,dx=31,dy=31,dz=31,tag=inactive] at @s run function game:mechanics/upgrade/activate_upgrade_spot
+execute if entity @s[tag=selected_spawnpoint] positioned ~-16 ~-16 ~-16 run kill @e[type=marker,tag=upgrade_spot,dx=31,dy=31,dz=31,tag=inactive]
 
 
 ##If this room has a shop, set it up.

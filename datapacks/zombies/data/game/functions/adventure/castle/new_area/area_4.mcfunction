@@ -41,9 +41,9 @@ execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,
 
 
 ##Marking doorways.
-summon area_effect_cloud 4963 100 54 {Tags:["doorway","die_between_games","north_south","boss_door","raycast","openable"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
-execute as @e[type=area_effect_cloud,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 300
-execute positioned 4963 100 54 as @e[type=area_effect_cloud,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
+summon marker 4963 100 54 {Tags:["doorway","die_between_games","north_south","boss_door","raycast","openable"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute as @e[type=marker,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 300
+execute positioned 4963 100 54 as @e[type=marker,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
 
 ##Updating name
-execute as @e[type=area_effect_cloud,tag=doorway] at @s run function game:door/update_name
+execute as @e[type=marker,tag=doorway] at @s run function game:door/update_name

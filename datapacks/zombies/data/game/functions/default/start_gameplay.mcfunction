@@ -13,6 +13,8 @@ scoreboard players set $time game 900
 
 effect give @a[tag=playing] night_vision 15 0 true
 
+# removing forceloads
+forceload remove all
 
 ##Impossible's damage
 execute if score $difficulty settings matches 6 run effect give @a[tag=playing] minecraft:wither 2 0 true

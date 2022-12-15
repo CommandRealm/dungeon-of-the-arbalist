@@ -8,5 +8,5 @@ function random:reset_chest
 scoreboard players operation $boss_door game = $rand random
 
 
-execute as @e[type=area_effect_cloud,tag=boss_door] at @s run function game:default/generation/door/boss/create_wave_marker
-execute as @e[type=area_effect_cloud,tag=boss_door] at @s run function game:default/generation/door/boss/generate_boss_door_price
+execute as @e[type=marker,tag=boss_door] at @s run function game:default/generation/door/boss/create_wave_marker
+execute as @e[type=marker,tag=boss_door] at @s run function game:default/generation/door/boss/generate_boss_door_price

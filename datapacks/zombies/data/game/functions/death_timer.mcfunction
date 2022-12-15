@@ -1,7 +1,7 @@
 ##Death timer function
 
 ##If there is a door opening:
-execute if score $mode settings matches 0 if entity @e[type=area_effect_cloud,tag=doorway,scores={death_timer=1..}] run function game:default/door/animation/main
+execute if score $mode settings matches 0 if entity @e[type=marker,tag=doorway,scores={death_timer=1..}] run function game:default/door/animation/main
 
 
 

@@ -7,7 +7,7 @@ tellraw @a[team=spectator] [{"text":"Wave ","color":"dark_green"},{"score":{"obj
 tellraw @a[tag=playing,team=game] [{"text":"The next wave will begin shortly. Click ","color":"#46623b"},{"text":"[here]","color":"#799d76","bold":true,"clickEvent":{"action":"run_command","value":"/trigger vote_end set 1"}},{"text":" or drop your compass to vote to skip the delay. ","color":"#46623b"}]
 
 ##Killing remaining enemies
-execute as @e[tag=enemy] at @s run function game:death_timer_over
+execute as @e[tag=enemy,tag=!shopkeeper] at @s run function game:death_timer_over
 
 ##Setting timer for next wave
 scoreboard players set $time game 799

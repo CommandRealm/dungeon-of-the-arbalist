@@ -11,6 +11,7 @@ execute at @a[tag=playing] run scoreboard players set $time game 1
 
 tag @a[tag=playing] add mechanics
 
+function game:mechanics/active_efficient
 
 tp @a[tag=playing] 2000 1 0 90 90
 gamemode adventure @a[tag=playing]

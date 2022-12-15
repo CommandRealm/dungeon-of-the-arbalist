@@ -50,7 +50,7 @@ execute if score $game state matches 0 run scoreboard players remove @e[scores={
 execute if score $game state matches 0 as @e[scores={death_timer=..0}] at @s run function game:death_timer_over
 
 ##If there is no upgrade
-execute unless entity @e[type=area_effect_cloud,tag=upgrade_spot,x=0,y=66,z=0,distance=..500] unless score $upgrade tutorial matches 1.. run scoreboard players set $upgrade tutorial 50
+execute unless entity @e[type=marker,tag=upgrade_spot,x=0,y=66,z=0,distance=..500] unless score $upgrade tutorial matches 1.. run scoreboard players set $upgrade tutorial 50
 execute if score $upgrade tutorial matches 1.. run function lobby:tutorial/upgrade/main
 
 

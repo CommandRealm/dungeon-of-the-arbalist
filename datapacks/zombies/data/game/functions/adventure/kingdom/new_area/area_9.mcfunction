@@ -56,26 +56,26 @@ execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run fu
 ##Upgrade
 execute positioned 3032 78 27 run function game:mechanics/upgrade/create/fire_upgrade_spot
 execute positioned 2993 82 78 run function game:mechanics/upgrade/create/metal_upgrade_spot
-execute as @e[type=area_effect_cloud,tag=upgrade_spot,tag=inactive] at @s run function game:mechanics/upgrade/activate_upgrade_spot
+execute as @e[type=marker,tag=upgrade_spot,tag=inactive] at @s run function game:mechanics/upgrade/activate_upgrade_spot
 
 
 
 ##Marking doorways.
-summon area_effect_cloud 3011 92 194 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
-execute as @e[type=area_effect_cloud,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 20
-execute positioned 3011 92 194 as @e[type=area_effect_cloud,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
+summon marker 3011 92 194 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute as @e[type=marker,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 20
+execute positioned 3011 92 194 as @e[type=marker,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
 
 
 
-execute if block 3035 92 170 oak_planks unless entity @e[type=area_effect_cloud,x=3035.0,y=92,z=170,distance=..5,tag=doorway] run summon area_effect_cloud 3035.0 92 170 {Tags:["doorway","die_between_games","default_door","raycast","needs_adjustments"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
-execute as @e[type=area_effect_cloud,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 200
-execute positioned 3035.0 92 170 as @e[type=area_effect_cloud,tag=doorway,limit=1,sort=nearest,tag=needs_adjustments] at @s run function game:door/get_price_increment
-tag @e[type=area_effect_cloud,tag=doorway,limit=1,sort=nearest,tag=needs_adjustments] remove needs_adjustments
+execute if block 3035 92 170 oak_planks unless entity @e[type=area_effect_cloud,x=3035.0,y=92,z=170,distance=..5,tag=doorway] run summon marker 3035.0 92 170 {Tags:["doorway","die_between_games","default_door","raycast","needs_adjustments"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute as @e[type=marker,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 200
+execute positioned 3035.0 92 170 as @e[type=marker,tag=doorway,limit=1,sort=nearest,tag=needs_adjustments] at @s run function game:door/get_price_increment
+tag @e[type=marker,tag=doorway,limit=1,sort=nearest,tag=needs_adjustments] remove needs_adjustments
 
 
 
-tag @e[type=area_effect_cloud,tag=doorway] add raycast
+tag @e[type=marker,tag=doorway] add raycast
 
 ##Updating name
-execute as @e[type=area_effect_cloud,tag=doorway] at @s run function game:door/update_name
+execute as @e[type=marker,tag=doorway] at @s run function game:door/update_name
 

@@ -25,41 +25,41 @@ execute at @s run playsound minecraft:entity.wither.shoot master @a ~ ~ ~ 0.5 0
 execute at @s run playsound minecraft:entity.wither.hurt master @a ~ ~ ~ 1 0
 
 ##Particles
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=fire_upgrade_spot] at @s run particle lava ~ ~0.75 ~ 0.25 0.5 0.25 0.15 5
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=water_upgrade_spot] at @s run particle rain ~ ~0.75 ~ 0.25 0.5 0.25 0.25 25
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=earth_upgrade_spot] at @s run particle block granite ~ ~0.75 ~ 0.25 0.5 0.25 0.25 8
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=earth_upgrade_spot] at @s run particle block polished_granite ~ ~0.75 ~ 0.25 0.5 0.25 0.25 7
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=earth_upgrade_spot] at @s run particle block stone ~ ~0.75 ~ 0.25 0.5 0.25 0.25 5
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=air_upgrade_spot] at @s run particle cloud ~ ~0.75 ~ 0.25 0.5 0.25 0.15 5
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=ice_upgrade_spot] at @s run particle block ice ~ ~0.75 ~ 0.25 0.5 0.25 0.25 15
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=lightning_upgrade_spot] at @s run particle item yellow_stained_glass ~ ~0.75 ~ 0.25 0.5 0.25 0.2 15
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=lightning_upgrade_spot] at @s run particle item yellow_wool ~ ~0.75 ~ 0.25 0.5 0.25 0.15 15
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=nature_upgrade_spot] at @s run particle item green_concrete_powder ~ ~0.75 ~ 0.25 0.5 0.25 0.15 5
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=nature_upgrade_spot] at @s run particle item grass ~ ~0.75 ~ 0.25 0.5 0.25 0.25 10
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=nature_upgrade_spot] at @s run particle item lime_terracotta ~ ~0.75 ~ 0.25 0.5 0.25 0.2 5
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=darkness_upgrade_spot] at @s run particle squid_ink ~ ~0.75 ~ 0.25 0.5 0.25 0.1 5
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=metal_upgrade_spot] at @s run particle item iron_block ~ ~0.75 ~ 0.25 0.5 0.25 0.15 5
+execute if entity @e[tag=hit,type=marker,tag=fire_upgrade_spot] at @s run particle lava ~ ~0.75 ~ 0.25 0.5 0.25 0.15 5
+execute if entity @e[tag=hit,type=marker,tag=water_upgrade_spot] at @s run particle rain ~ ~0.75 ~ 0.25 0.5 0.25 0.25 25
+execute if entity @e[tag=hit,type=marker,tag=earth_upgrade_spot] at @s run particle block granite ~ ~0.75 ~ 0.25 0.5 0.25 0.25 8
+execute if entity @e[tag=hit,type=marker,tag=earth_upgrade_spot] at @s run particle block polished_granite ~ ~0.75 ~ 0.25 0.5 0.25 0.25 7
+execute if entity @e[tag=hit,type=marker,tag=earth_upgrade_spot] at @s run particle block stone ~ ~0.75 ~ 0.25 0.5 0.25 0.25 5
+execute if entity @e[tag=hit,type=marker,tag=air_upgrade_spot] at @s run particle cloud ~ ~0.75 ~ 0.25 0.5 0.25 0.15 5
+execute if entity @e[tag=hit,type=marker,tag=ice_upgrade_spot] at @s run particle block ice ~ ~0.75 ~ 0.25 0.5 0.25 0.25 15
+execute if entity @e[tag=hit,type=marker,tag=lightning_upgrade_spot] at @s run particle item yellow_stained_glass ~ ~0.75 ~ 0.25 0.5 0.25 0.2 15
+execute if entity @e[tag=hit,type=marker,tag=lightning_upgrade_spot] at @s run particle item yellow_wool ~ ~0.75 ~ 0.25 0.5 0.25 0.15 15
+execute if entity @e[tag=hit,type=marker,tag=nature_upgrade_spot] at @s run particle item green_concrete_powder ~ ~0.75 ~ 0.25 0.5 0.25 0.15 5
+execute if entity @e[tag=hit,type=marker,tag=nature_upgrade_spot] at @s run particle item grass ~ ~0.75 ~ 0.25 0.5 0.25 0.25 10
+execute if entity @e[tag=hit,type=marker,tag=nature_upgrade_spot] at @s run particle item lime_terracotta ~ ~0.75 ~ 0.25 0.5 0.25 0.2 5
+execute if entity @e[tag=hit,type=marker,tag=darkness_upgrade_spot] at @s run particle squid_ink ~ ~0.75 ~ 0.25 0.5 0.25 0.1 5
+execute if entity @e[tag=hit,type=marker,tag=metal_upgrade_spot] at @s run particle item iron_block ~ ~0.75 ~ 0.25 0.5 0.25 0.15 5
 
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=fire_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_fire 1
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=water_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_water 1
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=earth_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_earth 1
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=air_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_air 1
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=ice_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_ice 1
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=lightning_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_lightning 1
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=nature_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_nature 1
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=darkness_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_darkness 1
-execute if entity @e[tag=hit,type=area_effect_cloud,tag=metal_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_metal 1
+execute if entity @e[tag=hit,type=marker,tag=fire_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_fire 1
+execute if entity @e[tag=hit,type=marker,tag=water_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_water 1
+execute if entity @e[tag=hit,type=marker,tag=earth_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_earth 1
+execute if entity @e[tag=hit,type=marker,tag=air_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_air 1
+execute if entity @e[tag=hit,type=marker,tag=ice_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_ice 1
+execute if entity @e[tag=hit,type=marker,tag=lightning_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_lightning 1
+execute if entity @e[tag=hit,type=marker,tag=nature_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_nature 1
+execute if entity @e[tag=hit,type=marker,tag=darkness_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_darkness 1
+execute if entity @e[tag=hit,type=marker,tag=metal_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_metal 1
 
 ##Advancements
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=area_effect_cloud,tag=fire_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-fire
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=area_effect_cloud,tag=water_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-water
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=area_effect_cloud,tag=earth_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-earth
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=area_effect_cloud,tag=air_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-air
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=area_effect_cloud,tag=ice_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-ice
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=area_effect_cloud,tag=lightning_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-lightning
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=area_effect_cloud,tag=nature_upgrade_spot] at @s run advancement grant @s[tag=!tutorial] only advancements:upgrade-nature
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=area_effect_cloud,tag=darkness_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-darkness
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=area_effect_cloud,tag=metal_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-metal
+execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=fire_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-fire
+execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=water_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-water
+execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=earth_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-earth
+execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=air_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-air
+execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=ice_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-ice
+execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=lightning_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-lightning
+execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=nature_upgrade_spot] at @s run advancement grant @s[tag=!tutorial] only advancements:upgrade-nature
+execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=darkness_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-darkness
+execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=metal_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-metal
 execute unless score $difficulty settings matches -1 run advancement grant @s[advancements={advancements:upgrade-fire=true,advancements:upgrade-water=true,advancements:upgrade-earth=true,advancements:upgrade-air=true,advancements:upgrade-ice=true,advancements:upgrade-lightning=true,advancements:upgrade-nature=true,advancements:upgrade-darkness=true,advancements:upgrade-metal=true}] only advancements:upgrade-all
 
 
@@ -72,10 +72,10 @@ execute if entity @s[tag=temporary_tag] run function game:mechanics/reload
 tag @s remove temporary_tag
 
 ##removing that upgrade spot
-execute as @e[type=area_effect_cloud,tag=hit,tag=upgrade_spot] at @s run particle campfire_cosy_smoke ~ ~ ~ 0 0 0 0.15 15
-execute if score $mode settings matches 0 run execute as @e[type=area_effect_cloud,tag=hit,tag=upgrade_spot] at @s run kill @e[type=area_effect_cloud,tag=upgrade_text,sort=nearest,limit=1]
-execute if score $mode settings matches 0 run execute as @e[type=area_effect_cloud,tag=hit,tag=upgrade_spot] at @s run kill @e[type=armor_stand,tag=upgrade_marker,sort=nearest,limit=1]
-execute if score $mode settings matches 0 run kill @e[type=area_effect_cloud,tag=hit,tag=upgrade_spot]
+execute as @e[type=marker,tag=hit,tag=upgrade_spot] at @s run particle campfire_cosy_smoke ~ ~ ~ 0 0 0 0.15 15
+execute if score $mode settings matches 0 run execute as @e[type=marker,tag=hit,tag=upgrade_spot] at @s run kill @e[type=area_effect_cloud,tag=upgrade_text,sort=nearest,limit=1]
+execute if score $mode settings matches 0 run execute as @e[type=marker,tag=hit,tag=upgrade_spot] at @s run kill @e[type=armor_stand,tag=upgrade_marker,sort=nearest,limit=1]
+execute if score $mode settings matches 0 run kill @e[type=marker,tag=hit,tag=upgrade_spot]
 
 ##Resetting times shot, because it's a new crossbow
 scoreboard players reset @s times_shot

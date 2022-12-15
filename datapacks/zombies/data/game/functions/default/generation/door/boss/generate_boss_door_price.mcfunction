@@ -8,7 +8,7 @@ scoreboard players operation $rand random *= $10 number
 
 ##Adding in our distance to the middle.
 scoreboard players add $rand random 1000
-scoreboard players operation @e[type=area_effect_cloud,tag=doorway,tag=boss_door] price_left = $rand random
+scoreboard players operation @e[type=marker,tag=doorway,tag=boss_door] price_left = $rand random
 
 
 

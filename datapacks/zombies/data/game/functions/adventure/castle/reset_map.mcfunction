@@ -427,23 +427,23 @@ tag @e[type=marker,tag=zombie_spawnpoint,tag=!unlocked,tag=!area_2,tag=!area_3,t
 clone 4981 129 73 4987 133 77 4981 82 73
 
 ##Marking doorways.
-summon area_effect_cloud 4993 89 23 {Tags:["doorway","die_between_games","east_west","default_door"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
-execute as @e[type=area_effect_cloud,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 100
+summon marker 4993 89 23 {Tags:["doorway","die_between_games","east_west","default_door"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute as @e[type=marker,tag=doorway] at @s unless score @s price_left matches 0.. run scoreboard players set @s price_left 100
 
 
 
-summon area_effect_cloud 5007 89 23 {Tags:["doorway","die_between_games","east_west","key_door"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+summon marker 5007 89 23 {Tags:["doorway","die_between_games","east_west","key_door"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
 
 
 
 ##Initializing the doorways.
-execute as @e[type=area_effect_cloud,tag=doorway] at @s run function game:door/get_price_increment
+execute as @e[type=marker,tag=doorway] at @s run function game:door/get_price_increment
 
 
-tag @e[type=area_effect_cloud,tag=doorway] add raycast
+tag @e[type=marker,tag=doorway] add raycast
 
 ##Updating name
-execute as @e[type=area_effect_cloud,tag=doorway] at @s run function game:door/update_name
+execute as @e[type=marker,tag=doorway] at @s run function game:door/update_name
 
 bossbar remove game:boss
 bossbar add game:boss [{"text":""}]

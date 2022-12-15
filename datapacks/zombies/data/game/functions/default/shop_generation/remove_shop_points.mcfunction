@@ -24,7 +24,7 @@ execute if score $rand_2 random matches 14 run item replace entity @e[type=armor
 execute if score $rand_2 random matches 15 run item replace entity @e[type=armor_stand,tag=banner_shop_marker,sort=nearest,limit=1] armor.head with black_banner{BlockEntityTag:{Patterns:[{Pattern:"sku",Color:0}]}}
 
 ##Killing nearby item points
-kill @e[type=area_effect_cloud,distance=..6,tag=shop_item_point,limit=5,sort=nearest]
+kill @e[type=marker,distance=..6,tag=shop_item_point,limit=5,sort=nearest]
 
 
 

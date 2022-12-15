@@ -2,7 +2,7 @@
 
 execute positioned 2000 60 0 run kill @e[type=area_effect_cloud,sort=nearest,limit=8,tag=door_text]
 execute positioned 2000 60 0 run kill @e[type=armor_stand,sort=nearest,limit=8,tag=armor_stand_door_text_marker]
-##@e[type=area_effect_cloud,tag=raycast,tag=doorway,sort=nearest,limit=1]
+##@e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1]
 ##killing purchase texts
 
 ##Marking it as open.

@@ -21,8 +21,8 @@ execute as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp m
 execute as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 1.059463
 
 ##Creating the price and displaying that price.
-execute as @e[type=area_effect_cloud,tag=dark_door] at @s run function game:default/door/late_generation/create_dark_price_marker
+execute as @e[type=marker,tag=dark_door] at @s run function game:default/door/late_generation/create_dark_price_marker
 
 
 ##raycast tag
-tag @e[type=area_effect_cloud,tag=dark_door] add openable
+tag @e[type=marker,tag=dark_door] add openable
