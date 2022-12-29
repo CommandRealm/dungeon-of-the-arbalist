@@ -1,0 +1,25 @@
+
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:purple_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display_booster:1b,display:{Name:'[{\"text\":\"Damage\",\"color\":\"#a000eb\",\"italic\":false},{\"text\":\" Boosters\",\"color\":\"gray\"}]'},needs_initialization:1b}"
+            },
+            {
+              "function":"minecraft:set_lore",
+              "entity":"this",
+              "lore":[{"text":"Makes your crossbow deal more damage.","italic":false,"color":"gray"},{"text":"✰ ","color":"#9c7948","italic":false,"extra":[{"text":"Prestige","italic":false,"color":"#c0a379","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"prestige_damage","name":"@s"},"color":"gold","bold":true}]}]}]},{"text":"Level","italic":false,"color":"#a000eb","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"boost_damage","name":"@s"},"color":"gold","bold":true,"extra":[{"text":"/","color":"gray","bold":true,"extra":[{"text":"5","color":"gold","bold":true}]}]}]}]}]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

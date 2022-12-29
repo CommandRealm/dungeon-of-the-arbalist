@@ -8,7 +8,7 @@ tag @s add temporary_tag
 
 
 ##if it's a stat booster, make sure it's not maxed out.
-execute as @e[type=item,sort=nearest,limit=1,tag=shop_item] at @s if data entity @s {Item:{tag:{stat_boost:1b}}} run function game:shops/raycast/check_stat_boosts
+# execute as @e[type=item,sort=nearest,limit=1,tag=shop_item] at @s if data entity @s {Item:{tag:{stat_boost:1b}}} run function game:shops/raycast/check_stat_boosts
 
 ##showing item.
 title @s[tag=!temporary_tag_2] title [{"nbt":"Item.tag.display.Name","entity":"@e[type=item,sort=nearest,limit=1,tag=shop_item]","interpret":true}]

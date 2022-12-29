@@ -25,3 +25,8 @@ execute as @e[type=area_effect_cloud,tag=spin_2,limit=1] at @s run tp @s ~ ~ ~ ~
 
 ##Killing tnt
 kill @e[type=tnt,nbt={Fuse:1s}]
+
+
+# daylight cycle
+execute store result score $time day_time run time query daytime
+execute if score $time day_time matches 22600 run time set 13360

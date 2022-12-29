@@ -125,6 +125,18 @@ scoreboard players set @a[tag=playing] boost_damage 0
 scoreboard players set @a[tag=playing] boost_speed 0
 scoreboard players set @a[tag=playing] boost_revive 0
 
+
+scoreboard players set @a[tag=playing] prestige_health 0
+scoreboard players set @a[tag=playing] prestige_quiver 0
+scoreboard players set @a[tag=playing] prestige_treasure 0
+scoreboard players set @a[tag=playing] prestige_damage 0
+scoreboard players set @a[tag=playing] prestige_speed 0
+scoreboard players set @a[tag=playing] prestige_revive 0
+
+scoreboard players set @a[tag=playing] revive_remainder 0
+scoreboard players set @a[tag=playing] b_revive_time 0
+scoreboard players set @a[tag=playing] b_damage 0
+
 execute as @a[tag=playing] at @s run function game:mechanics/stat_boosts/update_attributes
 
 scoreboard players set @a[tag=playing] color 16777215
@@ -318,3 +330,6 @@ scoreboard players set $game_end_countdown game 72000
 
 # removing shopkeeper death tag
 tag @a remove anger_shopkeepers
+
+# removing shop reset tag
+tag @a remove shop_reset

@@ -21,10 +21,10 @@ execute if score $wave game matches 8 run scoreboard players set $time game 659
 execute if score $wave game matches 9 run scoreboard players set $time game 639
 execute if score $wave game matches 10 run scoreboard players set $time game 619
 execute if score $wave game matches 11 run scoreboard players set $time game 609
-execute if score $wave game matches 12 run scoreboard players set $time game 599
-execute if score $wave game matches 13 run scoreboard players set $time game 589
-execute if score $wave game matches 14 run scoreboard players set $time game 579
-execute if score $wave game matches 15.. run scoreboard players set $time game 569
+execute if score $wave game matches 12.. run scoreboard players set $time game 599
+## execute if score $wave game matches 13 run scoreboard players set $time game 589
+## execute if score $wave game matches 14 run scoreboard players set $time game 579
+## execute if score $wave game matches 15.. run scoreboard players set $time game 569
 
 ##removing bossbar
 bossbar remove game:wave
@@ -56,3 +56,18 @@ tag @a remove sent_vote_end_message
 
 ##clearing night vision
 effect clear @a[tag=playing] night_vision
+
+
+# shop resets
+tag @a remove shop_reset
+execute if score $wave game matches 14 run tag @a[tag=playing] add shop_reset
+
+execute if score $wave game matches 29 run tag @a[tag=playing] add shop_reset
+
+execute if score $wave game matches 44 run tag @a[tag=playing] add shop_reset
+
+execute if score $wave game matches 59 run tag @a[tag=playing] add shop_reset
+
+execute if score $wave game matches 74 run tag @a[tag=playing] add shop_reset
+
+execute if score $wave game matches 89 run tag @a[tag=playing] add shop_reset

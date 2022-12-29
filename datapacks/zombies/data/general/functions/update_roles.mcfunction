@@ -23,7 +23,7 @@
 ##tag Mastiff add help
 ##tag chiploop add bld
 ##tag BobaFate add srbld
-##tag knad add bld
+##tag admius add bld
 ##tag taalaingg add help
 
 
@@ -59,7 +59,7 @@ tag CommanderBadBear add has_test
 tag MarshmallowMan71 add has_test
 tag chiploop add has_test
 tag BobaFate add has_test
-tag knad add has_test
+tag admius add has_test
 tag AmyMialee add has_test
 tag Bemo97 add has_test
 tag c_t_l add has_test
@@ -157,7 +157,7 @@ tag That_Man add has_help
 tag Mastiff add has_help
 tag chiploop add has_help
 tag BobaFate add has_help
-tag knad add has_help
+tag admius add has_help
 tag taalaingg add has_help
 tag TheRangerMark add has_help
 
@@ -177,7 +177,7 @@ tag That_Man add has_bld
 
 tag chiploop add has_bld
 tag BobaFate add has_bld
-tag knad add has_bld
+tag admius add has_bld
 tag Calverin add has_bld
 tag TheRegularMex add has_bld
 
@@ -193,7 +193,7 @@ tag pcgus add has_srbld
 tag EdLePug add has_srbld
 tag Connop add has_sr_bld
 tag Focii_ add has_srbld
-tag knad add has_sr_bld
+tag admius add has_sr_bld
 tag Captonium add has_sr_bld
 
 ##Those who have programmer
@@ -239,6 +239,6 @@ tag EdLePug add has_cr
 tag Bagee add has_cr
 tag That_Man add has_cr
 tag BobaFate add has_cr
-tag knad add has_cr
+tag admius add has_cr
 tag OwenEquinox add has_cr
 tag taalaingg add has_cr

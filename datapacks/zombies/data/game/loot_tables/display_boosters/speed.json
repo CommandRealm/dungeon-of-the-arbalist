@@ -1,0 +1,26 @@
+
+
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:light_blue_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display_booster:1b,display:{Name:'[{\"text\":\"Speed\",\"color\":\"#3eefff\",\"italic\":false},{\"text\":\" Boosters\",\"color\":\"gray\"}]'},needs_initialization:1b}"
+            },
+            {
+              "function":"minecraft:set_lore",
+              "entity":"this",
+              "lore":[{"text":"Increases movement speed.","italic":false,"color":"gray"},{"text":"Prestige","italic":false,"color":"#3eefff","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"prestige_speed","name":"@s"},"color":"gold","bold":true}]}]},{"text":"Level","italic":false,"color":"#3eefff","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"boost_speed","name":"@s"},"color":"gold","bold":true,"extra":[{"text":"/","color":"gray","bold":true,"extra":[{"text":"5","color":"gold","bold":true}]}]}]}]}]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 ##Gamerules
 
 gamerule commandBlockOutput false
-gamerule doDaylightCycle false
+gamerule doDaylightCycle true
 gamerule doFireTick false
 gamerule doInsomnia false
 gamerule doLimitedCrafting true
@@ -69,8 +69,10 @@ scoreboard players set $-1 number -1
 scoreboard players set $wave_spawn_time number 8
 scoreboard players set $minute number 1200
 scoreboard players set $40 number 40
+scoreboard players set $50 number 50
 scoreboard players set $-40 number -40
 scoreboard players set $75 number 75
+scoreboard players set $110 number 110
 
 ##Settings
 scoreboard objectives add settings dummy
@@ -253,6 +255,12 @@ scoreboard objectives add loot_multiplier dummy
 ##Loot multiplier remainder
 scoreboard objectives add loot_remainder dummy
 
+##Loot multiplier remainder
+scoreboard objectives add revive_remainder dummy
+
+##actual revive multiplier
+scoreboard objectives add b_revive_time dummy
+
 ##Additional mob damage
 scoreboard objectives add extra_damage dummy
 
@@ -342,6 +350,17 @@ scoreboard objectives add boost_damage dummy
 scoreboard objectives add boost_speed dummy
 scoreboard objectives add boost_revive dummy
 
+# stat boost prestige
+scoreboard objectives add prestige_health dummy
+scoreboard objectives add prestige_quiver dummy
+scoreboard objectives add prestige_treasure dummy
+scoreboard objectives add prestige_damage dummy
+scoreboard objectives add prestige_speed dummy
+scoreboard objectives add prestige_revive dummy
+
+# damage obj
+scoreboard objectives add b_damage dummy
+
 ##stat colors
 
 scoreboard objectives add color dummy
@@ -368,8 +387,14 @@ scoreboard objectives add desc_delay dummy
 ##
 scoreboard objectives add resetting dummy
 
+# day time
+scoreboard objectives add day_time dummy
+
 ##Time
 time set 18000
+scoreboard players set $time day_time 18000
+scoreboard players set $target_time day_time 18000
+schedule clear game:day_time/recursive_add_time
 
 ##killing lobby die things
 tp @e[tag=lobby_die] 0 0 0
@@ -950,3 +975,6 @@ function completionist:setup
 scoreboard objectives add reload_percent dummy
 
 scoreboard objectives add radioactive_miss dummy
+
+# adding objective to see if player is dangling over the edge
+scoreboard objectives add player_pos_check dummy

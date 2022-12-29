@@ -53,6 +53,14 @@ execute if score $difficulty settings matches 2.. run scoreboard players set @s 
 execute if score $difficulty settings matches 2.. run scoreboard players set @s boost_damage 0
 execute if score $difficulty settings matches 2.. run scoreboard players set @s boost_speed 0
 execute if score $difficulty settings matches 2.. run scoreboard players set @s boost_revive 0
+
+execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_health 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_quiver 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_looting 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_damage 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_speed 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_revive 0
+
 execute if score $difficulty settings matches 2.. run function game:mechanics/stat_boosts/update_attributes
 
 ##Resetting armor.

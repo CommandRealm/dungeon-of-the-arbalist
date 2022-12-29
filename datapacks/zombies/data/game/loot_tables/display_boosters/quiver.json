@@ -1,0 +1,26 @@
+
+
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:orange_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display_booster:1b,display:{Name:'[{\"text\":\"Quiver\",\"color\":\"#fca50d\",\"italic\":false},{\"text\":\" Boosters\",\"color\":\"gray\"}]'},needs_initialization:1b}"
+            },
+            {
+              "function":"minecraft:set_lore",
+              "entity":"this",
+              "lore":[{"text":"Increases your max quiver size.","italic":false,"color":"gray"},{"text":"Prestige","italic":false,"color":"#fca50d","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"prestige_quiver","name":"@s"},"color":"gold","bold":true}]}]},{"text":"Level","italic":false,"color":"#fca50d","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"boost_quiver","name":"@s"},"color":"gold","bold":true,"extra":[{"text":"/","color":"gray","bold":true,"extra":[{"text":"5","color":"gold","bold":true}]}]}]}]}]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

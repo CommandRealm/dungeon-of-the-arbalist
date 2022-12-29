@@ -46,6 +46,10 @@ execute unless score $difficulty settings matches -1 run advancement grant @s[ta
 ##removing the quantity of the item.
 scoreboard players remove @e[type=item,sort=nearest,limit=1,tag=shop_item] item_quantity 1
 
+# summong an item point so we can refill it
+execute at @e[type=item,sort=nearest,limit=1,tag=shop_item] run summon marker ~ ~ ~ {Tags:["die_between_games","shop_item_point"]}
+
+
 ##If there is no more available for this item.
 execute as @e[type=item,sort=nearest,limit=1,tag=shop_item] if score @s item_quantity matches ..0 run particle cloud ~ ~ ~ 0 0 0 0.05 5
 execute as @e[type=item,sort=nearest,limit=1,tag=shop_item] if score @s item_quantity matches ..0 run kill @s

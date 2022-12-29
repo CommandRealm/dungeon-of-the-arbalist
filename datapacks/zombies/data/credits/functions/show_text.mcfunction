@@ -21,7 +21,7 @@ execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity 
 execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=boba,distance=..0.5] run title @s subtitle {"text":"Senior Builder","color":"gray"}
 
 execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_chipl,distance=..0.5] run title @s title {"text":"chiploop","color":"dark_green"}
-execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_knad,distance=..0.5] run title @s title {"text":"knad","color":"dark_green"}
+execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_admius,distance=..0.5] run title @s title {"text":"admius","color":"dark_green"}
 execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_taalaingg,distance=..0.5] run title @s title {"text":"taalaingg","color":"dark_green"}
 execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_mastiff,distance=..0.5] run title @s title {"text":"Mastiff","color":"dark_green"}
 execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_gus,distance=..0.5] run title @s title {"text":"pcgus","color":"dark_green"}
@@ -38,7 +38,7 @@ execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity 
 execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_mark,distance=..0.5] run title @s title {"text":"TheRangerMark","color":"dark_green"}
 execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_that,distance=..0.5] run title @s title {"text":"That_Man","color":"dark_green"}
 
-execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_knad,distance=..0.5] run title @s subtitle {"text":"Senior Builder","color":"gray"}
+execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_admius,distance=..0.5] run title @s subtitle {"text":"Senior Builder","color":"gray"}
 execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_taalaingg,distance=..0.5] run title @s subtitle {"text":"Helper","color":"gray"}
 execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_mastiff,distance=..0.5] run title @s subtitle {"text":"Helper","color":"gray"}
 execute at @e[type=armor_stand,tag=show_details,sort=nearest,limit=1] if entity @e[type=armor_stand,tag=show_details,sort=nearest,limit=1,tag=credits_gus,distance=..0.5] run title @s subtitle {"text":"Senior Builder","color":"gray"}

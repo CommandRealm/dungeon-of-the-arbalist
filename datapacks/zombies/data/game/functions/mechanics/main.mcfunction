@@ -73,7 +73,7 @@ execute as @a[gamemode=adventure,tag=mechanics,scores={try_purchase=1..}] at @s 
 
 
 ##Clearing out subtitle if we're not in range of the door.
-execute unless score $countdown pregame matches 1.. as @a[gamemode=adventure,tag=mechanics,tag=!in_boss_room] at @s unless entity @s[y=0,distance=..20] unless entity @e[tag=raycast,distance=..6] run title @s subtitle [{"text":""}]
+execute unless score $countdown pregame matches 1.. as @a[gamemode=adventure,tag=mechanics,tag=!in_boss_room] at @s unless entity @s[y=0,distance=..20] unless entity @e[tag=raycast,distance=..6] unless score $time game matches 1000..1040 run title @s subtitle [{"text":""}]
 
 
 ##Upgrade marker function
@@ -221,3 +221,5 @@ execute if score $spawn_in_progress game matches 1 if entity @e[type=marker,tag=
 ##If there is a skeleton with levitation.
 execute if entity @e[type=skeleton,nbt={ActiveEffects:[{Id:25}]},tag=base_skeleton] run function game:mechanics/skeleton_with_levitation
 
+# seeing if a player is dangling over the edge
+execute as @a[tag=playing,nbt={OnGround:1b}] at @s run function game:mechanics/player_position_check/run

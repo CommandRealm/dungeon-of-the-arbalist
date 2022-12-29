@@ -18,8 +18,8 @@ scoreboard players reset $enemies_spawned game
 ##Adding in additional time for the wave.
 scoreboard players operation $calculate calculate = $wave game
 scoreboard players remove $calculate calculate 1
-execute if score $calculate calculate matches 9.. run scoreboard players set $calculate calculate 9
-scoreboard players operation $calculate calculate *= $100 number
+execute if score $calculate calculate matches 11.. run scoreboard players set $calculate calculate 11
+scoreboard players operation $calculate calculate *= $110 number
 scoreboard players operation $wave_length game += $calculate calculate
 
 ##Saving the wave length in bossbar time so we can compare it when we summon minibosses.
@@ -31,6 +31,8 @@ execute if score $dark_door game = $wave game run function game:default/door/lat
 
 execute if score $boss_door game = $wave game run function game:default/door/late_generation/open_boss_doors
 
+#if there is a shop reset
+execute if entity @a[tag=shop_reset,tag=playing] as @e[type=pillager,tag=shopkeeper,team=!enemy] at @s run function game:shops/refill/refill_shop
 
 ##Adding in the bossbar
 bossbar remove game:wave

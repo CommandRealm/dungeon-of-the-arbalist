@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lime_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display_booster:1b,display:{Name:'[{\"text\":\"Revive\",\"color\":\"green\",\"italic\":false},{\"text\":\" Boosters\",\"color\":\"gray\"}]'},needs_initialization:1b}"
+            },
+            {
+              "function":"minecraft:set_lore",
+              "entity":"this",
+              "lore":[{"text":"Makes reviving other players faster.","italic":false,"color":"gray"},{"text":"Prestige","italic":false,"color":"green","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"prestige_revive","name":"@s"},"color":"gold","bold":true}]}]},{"text":"Level","italic":false,"color":"green","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"boost_revive","name":"@s"},"color":"gold","bold":true,"extra":[{"text":"/","color":"gray","bold":true,"extra":[{"text":"5","color":"gold","bold":true}]}]}]}]}]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

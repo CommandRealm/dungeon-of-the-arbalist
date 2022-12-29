@@ -47,6 +47,9 @@ execute if entity @s[type=slime,tag=miniboss] unless entity @e[type=slime,tag=mi
 execute if entity @s[tag=miniboss,type=!bee,type=!#game:piglins] unless entity @s[type=slime,scores={slime_sizes=..3}] unless entity @s[tag=polar_bear_miniboss,tag=!big_polar_bear] unless entity @s[tag=skeleton_miniboss,type=skeleton_horse] run function game:enemy/miniboss_die
 execute if entity @s[tag=miniboss_key] run function game:enemy/summon_miniboss_key
 
+# if we're a shopkeeper
+# execute if entity @s[tag=shopkeeper] run function game:enemy/booster_drops
+
 ##Counting those who have a punch kill
 execute store result score $calculate calculate if entity @a[tag=playing,advancements={game:punch_kill=true}]
 
