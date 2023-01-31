@@ -23,6 +23,7 @@ gamerule sendCommandFeedback false
 gamerule showDeathMessages false
 gamerule spectatorsGenerateChunks false
 gamerule universalAnger false
+gamerule doWardenSpawning false
 
 ##Basic game objectives
 
@@ -285,7 +286,7 @@ scoreboard objectives add action_bar_delay dummy
 
 ##new treasure amt
 scoreboard objectives add new_treasure dummy
-
+scoreboard objectives add remove_treasure dummy
 
 ##store objectives
 scoreboard objectives add item_price dummy

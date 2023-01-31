@@ -1,5 +1,4 @@
 
-
 {
   "pools": [
     {
@@ -16,7 +15,7 @@
             {
               "function":"minecraft:set_lore",
               "entity":"this",
-              "lore":[{"text":"Increases movement speed.","italic":false,"color":"gray"},{"text":"Prestige","italic":false,"color":"#3eefff","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"prestige_speed","name":"@s"},"color":"gold","bold":true}]}]},{"text":"Level","italic":false,"color":"#3eefff","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"boost_speed","name":"@s"},"color":"gold","bold":true,"extra":[{"text":"/","color":"gray","bold":true,"extra":[{"text":"5","color":"gold","bold":true}]}]}]}]}]
+              "lore":[{"text":"Increases movement speed.","italic":false,"color":"gray"},{"text":"Level","italic":false,"color":"#3eefff","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"boost_revive","name":"@s"},"color":"gold","bold":true,"extra":[{"text":"/","color":"gray","bold":true,"extra":[{"text":"5","color":"gold","bold":true}]}]}]}]},{"text":"✰ ","color":"#9c7948","italic":false,"extra":[{"text":"Prestige","italic":false,"color":"#c0a379","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"prestige_speed","name":"@s"},"color":"gold","bold":true}]}]}]}]
             }
           ]
         }

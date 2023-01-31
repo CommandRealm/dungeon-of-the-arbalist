@@ -1,7 +1,8 @@
 ##Called to purchase the door.
 
 ##Subtracting our treasure (unless we used a key.)
-execute unless score @s drop_key matches 1.. run scoreboard players operation @s treasure -= @e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1] price_increment
+execute unless score @s drop_key matches 1.. run scoreboard players operation @s remove_treasure = @e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1] price_increment
+execute unless score @s drop_key matches 1.. run function game:mechanics/lose_treasure
 execute unless score @s drop_key matches 1.. run scoreboard players operation @s global_spent += @e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1] price_increment
 execute unless score @s drop_key matches 1.. run scoreboard players operation @s local_spent += @e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1] price_increment
 

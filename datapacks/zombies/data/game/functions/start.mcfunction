@@ -37,7 +37,7 @@ scoreboard objectives setdisplay list health
 scoreboard objectives setdisplay belowName health
 
 advancement revoke @a only game:kill_miniboss
-
+advancement revoke @a only game:enemy_damage/wither_skeleton
 
 
 ##Death count objective
@@ -76,6 +76,7 @@ scoreboard players reset @a get_kill
 
 ##Resetting new treasure score
 scoreboard players reset @a new_treasure
+scoreboard players reset @a remove_treasure
 
 ##armor objective 
 scoreboard players add @a[tag=playing] armor 0
@@ -333,3 +334,7 @@ tag @a remove anger_shopkeepers
 
 # removing shop reset tag
 tag @a remove shop_reset
+
+# seeing if volition is active
+scoreboard players set $volition game 0
+execute if score $mode settings matches 0 if score $difficulty settings matches 3.. run scoreboard players set $volition game 1

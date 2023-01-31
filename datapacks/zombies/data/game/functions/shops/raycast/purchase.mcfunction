@@ -1,7 +1,8 @@
 ##Called to purchase the door.
 
 ##Subtracting our treasure
-scoreboard players operation @s treasure -= @e[type=item,sort=nearest,limit=1,tag=shop_item] item_price
+scoreboard players operation @s remove_treasure = @e[type=item,sort=nearest,limit=1,tag=shop_item] item_price
+function game:mechanics/lose_treasure
 scoreboard players operation @s global_spent += @e[type=item,sort=nearest,limit=1,tag=shop_item] item_price
 scoreboard players operation @s local_spent += @e[type=item,sort=nearest,limit=1,tag=shop_item] item_price
 

@@ -53,6 +53,9 @@ execute if entity @s[tag=miniboss_key] run function game:enemy/summon_miniboss_k
 ##Counting those who have a punch kill
 execute store result score $calculate calculate if entity @a[tag=playing,advancements={game:punch_kill=true}]
 
+# if we are a spawner
+execute if entity @s[tag=mob_spawner_hitbox] run function game:enemy/volition/mob_spawner/die
+
 ##If we're a magma cube, tp us first
 tp @s[type=magma_cube] 0 0 0
 

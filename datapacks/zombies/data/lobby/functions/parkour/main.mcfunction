@@ -20,5 +20,5 @@ execute as @a[tag=parkour,gamemode=adventure,x=-15,y=79,z=77,distance=45..] at @
 clear @a[tag=parkour] ender_pearl
 
 ##Finishing the parkour.
-execute as @a[x=-13,y=81,z=53,distance=..1] at @s run function lobby:parkour/finish
+execute as @a[tag=parkour,x=-13,y=81,z=53,distance=..1] at @s run function lobby:parkour/finish
 

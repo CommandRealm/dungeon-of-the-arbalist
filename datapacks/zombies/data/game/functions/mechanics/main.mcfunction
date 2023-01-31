@@ -223,3 +223,7 @@ execute if entity @e[type=skeleton,nbt={ActiveEffects:[{Id:25}]},tag=base_skelet
 
 # seeing if a player is dangling over the edge
 execute as @a[tag=playing,nbt={OnGround:1b}] at @s run function game:mechanics/player_position_check/run
+
+
+# when the player gets damaged
+execute as @a[advancements={game:enemy_damage/check=true}] at @s run function game:mechanics/enemy_damage_effects/check

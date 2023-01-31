@@ -7,7 +7,7 @@ execute as @e[type=zombie,scores={conversion_timer=100..}] at @s run function ga
 
 
 ##If there are leaping zombies
-execute if entity @e[type=zombie,tag=leaper_zombie] run function game:enemy/leaper/main
+execute if entity @e[type=#minecraft:leapers,tag=leaper_zombie] run function game:enemy/leaper/main
 
 ##If there are witch zombies
 execute if entity @e[type=zombie,tag=witch_zombie] run function game:enemy/witch/main
@@ -20,7 +20,10 @@ execute as @e[team=enemy,tag=enemy,scores={burning_timer=1..}] at @s run functio
 
 
 ##Extra damage timer
-execute if entity @e[team=enemy,tag=enemy,scores={e_damage_timer=1..},limit=1] run function game:enemy/extra_damage/main
+execute as @e[team=enemy,tag=enemy,scores={e_damage_timer=1..},limit=1] at @s run function game:enemy/extra_damage/main
 
 ##if an enemy has a spontaneous timer active
 execute if entity @e[team=enemy,tag=enemy,scores={spontaneous_time=1..},limit=1] run function game:enemy/effect/spontaneous/main
+
+# if volition is active
+execute if score $volition game matches 1 run function game:enemy/volition/main
