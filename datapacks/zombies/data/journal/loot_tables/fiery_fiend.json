@@ -20,7 +20,7 @@
             {
               "function": "minecraft:set_lore",
               "entity": "this",
-              "lore": [{"text":"Shoots fireballs at you while hovering over the ground.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_fiery_fiend","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+              "lore": [{"text":"Living flame that shoots fireballs while hovering over the ground.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_fiery_fiend","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
             }
           ]
         }

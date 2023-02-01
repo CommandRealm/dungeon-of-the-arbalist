@@ -20,7 +20,7 @@
             {
               "function": "minecraft:set_lore",
               "entity": "this",
-              "lore": [{"text":"Summons its cave spider underlings to attack you.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_spider_queen","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+              "lore": [{"text":"Summons cave spider underlings to attack all who enter her domain.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_spider_queen","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
             }
           ]
         }

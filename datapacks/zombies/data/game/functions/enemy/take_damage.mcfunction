@@ -71,6 +71,13 @@ scoreboard players operation @s calculate_2 += @s extra_damage
 scoreboard players add @s[tag=forest_essence_controlled] calculate_2 80
 
 
+## HARROWED HOODLUM MINIBOSS
+# Cancelling damage if it's an invisible hoodie
+execute if entity @s[type=zombie,tag=hoodie_miniboss,tag=invisible_hoodie] run scoreboard players set @s calculate_2 0
+# Turning the hooded zombie invisible if another one exists
+execute if entity @s[type=zombie,tag=hoodie_miniboss,tag=!invisible_hoodie] if entity @e[type=zombie,tag=hoodie_miniboss,tag=invisible_hoodie] run function game:enemy/hoodies/change_visibility
+
+
 ##Removing our damage score.
 scoreboard players operation @s[tag=!boss] enemy_health -= @s calculate_2
 scoreboard players operation @s[tag=forest_essence_controlled] enemy_health -= @s calculate_2

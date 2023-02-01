@@ -20,7 +20,7 @@
             {
               "function": "minecraft:set_lore",
               "entity": "this",
-              "lore": [{"text":"Charges up a speed boost then attacks at lightning speeds.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_gravedigger","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+              "lore": [{"text":"Charges up speed to rise from the ground at lightning speeds.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_gravedigger","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
             }
           ]
         }

@@ -20,7 +20,7 @@
             {
               "function": "minecraft:set_lore",
               "entity": "this",
-              "lore": [{"text":"Electric slimes that spark electricity when split.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_static_split","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+              "lore": [{"text":"Shocking slimes that crackle with electricity when hit.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_static_split","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
             }
           ]
         }

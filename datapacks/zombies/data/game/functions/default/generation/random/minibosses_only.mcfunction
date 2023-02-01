@@ -2,7 +2,7 @@
 
 ##Random number
 scoreboard players add $miniboss generation 1
-execute if score $miniboss generation matches 11.. run scoreboard players set $miniboss generation 0
+execute if score $miniboss generation matches 12.. run scoreboard players set $miniboss generation 0
 
 ##Clearing storage
 data remove storage minecraft:generation name
@@ -20,3 +20,4 @@ execute if score $miniboss generation matches 7 run data modify storage minecraf
 execute if score $miniboss generation matches 8 run data modify storage minecraft:generation name set value "minecraft:cube_miniboss_spider"
 execute if score $miniboss generation matches 9 run data modify storage minecraft:generation name set value "minecraft:cube_miniboss_slime"
 execute if score $miniboss generation matches 10 run data modify storage minecraft:generation name set value "minecraft:cube_miniboss_piglins"
+execute if score $miniboss generation matches 11 run data modify storage minecraft:generation name set value "minecraft:cube_miniboss_hoodies"

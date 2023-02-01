@@ -20,7 +20,7 @@
             {
               "function": "minecraft:set_lore",
               "entity": "this",
-              "lore": [{"text":"An enraged swarm of bees that stings you with no mercy.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_scary_swarm","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+              "lore": [{"text":"An enraged swarm of bees that sting intruders with no mercy.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_scary_swarm","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
             }
           ]
         }

@@ -20,7 +20,7 @@
             {
               "function": "minecraft:set_lore",
               "entity": "this",
-              "lore": [{"text":"Inflicts blindness, goes invisible, and creates clones to attack you.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_daring_dancer","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+              "lore": [{"text":"Uses the power of illusion to fool the eyes in more ways than one.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_daring_dancer","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
             }
           ]
         }

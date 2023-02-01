@@ -20,7 +20,7 @@
             {
               "function": "minecraft:set_lore",
               "entity": "this",
-              "lore": [{"text":"Creates a poison cloud when hit in its red form.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_furious_fungus","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+              "lore": [{"text":"Dangerous being that emits a poison cloud when hit in its red form.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_furious_fungus","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
             }
           ]
         }

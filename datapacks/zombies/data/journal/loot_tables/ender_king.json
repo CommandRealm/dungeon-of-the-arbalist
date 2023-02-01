@@ -20,7 +20,7 @@
             {
               "function": "minecraft:set_lore",
               "entity": "this",
-              "lore": [{"text":"Teleports to a nearby random player when hit.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_ender_king","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+              "lore": [{"text":"Harnesses dark power to warp to those that attempt to flee.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_ender_king","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
             }
           ]
         }

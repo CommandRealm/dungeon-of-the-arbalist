@@ -20,7 +20,7 @@
             {
               "function": "minecraft:set_lore",
               "entity": "this",
-              "lore": [{"text":"Very fast mini-polar bears on top of a tanky polar bear.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_polar_family","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+              "lore": [{"text":"Extremely fast mini-polar bears on top of a tanky polar bear.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_polar_family","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
             }
           ]
         }

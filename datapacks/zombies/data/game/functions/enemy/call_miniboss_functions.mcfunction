@@ -7,6 +7,7 @@ execute if entity @e[type=mooshroom,tag=miniboss] run function game:enemy/mooshr
 execute if entity @e[type=bee,tag=miniboss] run function game:enemy/bee/main
 execute if entity @e[type=spider,tag=miniboss] run function game:enemy/spider/main
 execute if entity @e[type=slime,tag=miniboss] run function game:enemy/slime/main
+execute if entity @e[type=zombie,tag=hoodie_miniboss,tag=miniboss] run function game:enemy/hoodies/main
 execute if entity @e[tag=pug_illagers_miniboss,tag=miniboss] run schedule function game:enemy/pug_illagers/main 1t
 execute if entity @e[tag=pug_golem_miniboss,tag=miniboss] run function game:enemy/pug_golem/main
 execute if entity @e[tag=cpt_forge_miniboss,tag=miniboss] run function game:enemy/cpt_forge/main

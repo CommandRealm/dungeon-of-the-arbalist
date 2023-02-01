@@ -20,7 +20,7 @@
             {
               "function": "minecraft:set_lore",
               "entity": "this",
-              "lore": [{"text":"Remains of a royal guard aboard a skeleton horse.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_royal_archer","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+              "lore": [{"text":"Remains of a noble guard aboard a skeleton horse.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_royal_archer","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
             }
           ]
         }

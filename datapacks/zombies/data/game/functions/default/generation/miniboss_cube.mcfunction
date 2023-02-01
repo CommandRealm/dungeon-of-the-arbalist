@@ -23,6 +23,7 @@ execute if score $rand random matches 7 run data modify block ~ ~-16 ~ name set 
 execute if score $rand random matches 8 run data modify block ~ ~-16 ~ name set value "minecraft:cube_miniboss_spider"
 execute if score $rand random matches 9 run data modify block ~ ~-16 ~ name set value "minecraft:cube_miniboss_slime"
 execute if score $rand random matches 10 run data modify block ~ ~-16 ~ name set value "minecraft:cube_miniboss_piglins"
+execute if score $rand random matches 11 run data modify block ~ ~-16 ~ name set value "minecraft:cube_miniboss_hoodies"
 
 
 
