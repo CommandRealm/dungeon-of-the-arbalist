@@ -32,18 +32,15 @@ execute if entity @s[tag=polar_bear_miniboss,tag=!big_polar_bear] run loot spawn
 
 execute if entity @s[tag=skeleton_miniboss,type=skeleton_horse] run loot spawn ~ ~ ~ loot game:enemy_drops/skeleton_horse
 
-execute if entity @s[type=bee,tag=miniboss] run loot spawn ~ ~ ~ loot game:enemy_drops/knight
-execute if entity @s[type=bee,tag=miniboss] unless entity @e[type=bee,tag=miniboss] run tellraw @a[tag=playing] [{"text":"☠ ","color":"dark_gray"},{"text":"The ","color":"gray"},{"text":"Scary Swarm","color":"red","bold":true},{"text":" has been defeated.","color":"gray"}]
+execute if entity @s[type=bee,tag=miniboss] run function game:enemy/bee/die
 
-execute if entity @s[type=#game:piglins,tag=miniboss] run loot spawn ~ ~ ~ loot game:enemy_drops/piglins
-execute if entity @s[type=#game:piglins,tag=miniboss] unless entity @e[type=#game:piglins,tag=miniboss] run tellraw @a[tag=playing] [{"text":"☠ ","color":"dark_gray"},{"text":"The ","color":"gray"},{"text":"Piglin Horde","color":"red","bold":true},{"text":" has been defeated.","color":"gray"}]
+execute if entity @s[type=#game:piglins,tag=miniboss] run function game:enemy/piglins/die
 
-execute if entity @s[type=zombie,tag=hoodie_miniboss,tag=miniboss] run loot spawn ~ ~ ~ loot game:enemy_drops/hoodies
-execute if entity @s[type=zombie,tag=hoodie_miniboss,tag=miniboss] unless entity @e[type=zombie,tag=hoodie_miniboss,tag=miniboss] run tellraw @a[tag=playing] [{"text":"☠ ","color":"dark_gray"},{"text":"The ","color":"gray"},{"text":"Harrowed Hoodlums","color":"red","bold":true},{"text":" have been defeated.","color":"gray"}]
+execute if entity @s[type=zombie,tag=hoodie_miniboss,tag=miniboss] run function game:enemy/hoodies/die
 
 execute if entity @s[type=slime,tag=miniboss] run function game:enemy/slime/die
 execute if entity @s[type=slime,tag=miniboss] run loot spawn ~ ~ ~ loot game:enemy_drops/knight
-execute if entity @s[type=slime,tag=miniboss] unless entity @e[type=slime,tag=miniboss] run tellraw @a[tag=playing] [{"text":"☠ ","color":"dark_gray"},{"text":"The ","color":"gray"},{"text":"Static Splitters","color":"red","bold":true},{"text":" has been defeated.","color":"gray"}]
+execute if entity @s[type=slime,tag=miniboss] unless entity @e[type=slime,tag=miniboss,distance=1..] run tellraw @a[tag=playing] [{"text":"☠ ","color":"dark_gray"},{"text":"The ","color":"gray"},{"text":"Static Splitters","color":"red","bold":true},{"text":" has been defeated.","color":"gray"}]
 
 
 ##If we're a miniboss  drop stat boosters

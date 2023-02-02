@@ -7,9 +7,13 @@ function random:reset_chest
 ##Clearing storage
 data remove storage minecraft:generation name
 
+# Lock miniboss
+execute if score $lock_miniboss settings matches 0.. run scoreboard players operation $rand random = $lock_miniboss settings
+scoreboard players set $lock_miniboss settings -1
+
 ##If there is already one of this miniboss out there, change this one.
 execute if score $miniboss_1 game = $rand random run scoreboard players add $rand random 1
-execute if score $rand random matches 11.. run scoreboard players set $rand random 0
+execute if score $rand random matches 12.. run scoreboard players set $rand random 0
 
 ##Setting string
 execute if score $rand random matches 0 run data modify block ~ ~-16 ~ name set value "minecraft:cube_miniboss_husk"
