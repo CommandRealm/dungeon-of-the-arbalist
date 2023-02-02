@@ -16,7 +16,7 @@ execute if score $calculate calculate matches 11 run tellraw @s ["",{"text":"Min
 
 ##Description
 execute if score $calculate calculate matches 0 run tellraw @s [{"text":"- ","color":"dark_gray"},{"text":"Charges up speed to rise from the ground at lightning speeds.","color":"gray"}]
-execute if score $calculate calculate matches 1 run tellraw @s [{"text":"- ","color":"dark_gray"},{"text":"Extremely fast mini-polar bears on top of a tanky polar bear.","color":"gray"}]
+execute if score $calculate calculate matches 1 run tellraw @s [{"text":"- ","color":"dark_gray"},{"text":"Extremely fast and small white bears on top of a frosty behemoth.","color":"gray"}]
 execute if score $calculate calculate matches 2 run tellraw @s [{"text":"- ","color":"dark_gray"},{"text":"Living flame that shoots fireballs while hovering over the ground.","color":"gray"}]
 execute if score $calculate calculate matches 3 run tellraw @s [{"text":"- ","color":"dark_gray"},{"text":"Harnesses dark power to warp to those that attempt to flee.","color":"gray"}]
 execute if score $calculate calculate matches 4 run tellraw @s [{"text":"- ","color":"dark_gray"},{"text":"Remains of a noble guard aboard a skeleton horse.","color":"gray"}]
