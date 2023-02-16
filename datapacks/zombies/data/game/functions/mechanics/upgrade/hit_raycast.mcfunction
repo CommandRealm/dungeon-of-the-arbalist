@@ -44,10 +44,10 @@ execute unless score @s possible_upgrade matches ..-1 if entity @s[predicate=min
 ##CHecking AEC
 execute if score $mode settings matches 1.. if entity @e[type=area_effect_cloud,tag=used_upgrade,distance=..7] run function game:mechanics/upgrade/check_use
 
-title @s title [{"text":""}]
+title @s[tag=!play_alternate_title] title [{"text":""}]
 title @s[scores={possible_upgrade=-100,crossbow_id=..27}] subtitle [{"text":"⚠ ","color":"dark_red"},{"text":"Incompatible upgrade!","color":"red"}]
 title @s[scores={possible_upgrade=-101,crossbow_id=..27}] subtitle [{"text":"⚠ ","color":"dark_red"},{"text":"Already used!","color":"red"}]
-title @s[scores={crossbow_id=28..}] subtitle [{"text":"(","color":"#b18e00"},{"text":"!","color":"gold"},{"text":") ","color":"#b18e00"},{"text":"Max upgrade!","color":"yellow"}]
+title @s[scores={crossbow_id=28..},tag=!play_alternate_title] subtitle [{"text":"(","color":"#b18e00"},{"text":"!","color":"gold"},{"text":") ","color":"#b18e00"},{"text":"Max upgrade!","color":"yellow"}]
 execute if entity @s[scores={possible_upgrade=1..,crossbow_id=..27}] run function game:mechanics/upgrade/upgrade_title
 
 ##temporary tag so we know we hit something

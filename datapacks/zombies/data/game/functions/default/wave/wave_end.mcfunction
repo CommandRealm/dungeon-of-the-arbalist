@@ -62,12 +62,21 @@ effect clear @a[tag=playing] night_vision
 tag @a remove shop_reset
 execute if score $wave game matches 14 run tag @a[tag=playing] add shop_reset
 
-execute if score $wave game matches 29 run tag @a[tag=playing] add shop_reset
+execute if score $wave game matches 24 run tag @a[tag=playing] add shop_reset
+
+execute if score $wave game matches 34 run tag @a[tag=playing] add shop_reset
 
 execute if score $wave game matches 44 run tag @a[tag=playing] add shop_reset
 
-execute if score $wave game matches 59 run tag @a[tag=playing] add shop_reset
+execute if score $wave game matches 54 run tag @a[tag=playing] add shop_reset
 
-execute if score $wave game matches 74 run tag @a[tag=playing] add shop_reset
+execute if score $wave game matches 64 run tag @a[tag=playing] add shop_reset
 
-execute if score $wave game matches 89 run tag @a[tag=playing] add shop_reset
+
+tag @a[tag=playing,tag=shop_reset] add play_alternate_title
+#if there is a shop reset
+execute if entity @a[tag=shop_reset,tag=playing] as @e[type=pillager,tag=shopkeeper,team=!enemy] at @s run function game:shops/refill/refill_shop
+
+# if there is a shop reset
+scoreboard players set $shop_reset game 20
+execute if entity @a[tag=shop_reset,tag=playing] run function game:default/wave/intro/shop_reset/main

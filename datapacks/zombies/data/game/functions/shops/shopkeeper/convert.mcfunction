@@ -27,3 +27,5 @@ execute as @e[type=item,tag=shop_item,sort=nearest,limit=1,distance=..10] at @s 
 # tagging players to trigger more shopkeepers
 execute at @e[type=area_effect_cloud,tag=generation_marker,sort=nearest,limit=1] positioned ~-16 ~-16 ~-16 as @a[tag=playing,gamemode=adventure,team=game,dx=31,dy=31,dz=31,tag=!anger_shopkeepers] at @s run function game:shops/shopkeeper/steal/tag_player
 execute at @e[type=area_effect_cloud,tag=generation_marker,sort=nearest,limit=1] positioned ~-16 ~-16 ~-16 unless entity @a[tag=playing,gamemode=adventure,team=game,dx=31,dy=31,dz=31,tag=!anger_shopkeepers] as @p[tag=playing,gamemode=adventure,team=game] unless entity @s[tag=anger_shopkeepers] run function game:shops/shopkeeper/steal/tag_player
+
+scoreboard players set @s attack 100

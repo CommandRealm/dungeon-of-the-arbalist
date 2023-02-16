@@ -74,6 +74,7 @@ scoreboard players set $50 number 50
 scoreboard players set $-40 number -40
 scoreboard players set $75 number 75
 scoreboard players set $110 number 110
+scoreboard players set $3 number 3
 
 ##Settings
 scoreboard objectives add settings dummy

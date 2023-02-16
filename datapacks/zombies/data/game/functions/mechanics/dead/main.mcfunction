@@ -2,14 +2,19 @@
 
 
 ##When we shoot a bow.
-execute as @a[tag=playing,team=enemy,scores={shoot_bow=1..}] at @s run function game:mechanics/dead/shoot_bow
+execute if score @s shoot_bow matches 1.. run function game:mechanics/dead/shoot_bow
 
-execute as @a[tag=playing,team=enemy,advancements={game:dead_player_hit_player=true}] at @s run function game:mechanics/dead/hit_player
+execute if entity @s[tag=playing,team=enemy,advancements={game:dead_player_hit_player=true}] run function game:mechanics/dead/hit_player
 
 
 ##if someone has a revive timer
-execute if entity @a[tag=playing,team=enemy,scores={respawn_timer=1..}] run function game:mechanics/dead/respawn/main
+execute if score @s respawn_timer matches 1.. run function game:mechanics/dead/respawn/main
 
 
 ##Particles
-execute at @a[tag=playing,team=enemy,scores={dead_particle=0},gamemode=adventure] run particle cloud ~ ~1.25 ~ 0.05 0.05 0.05 0.05 1
+particle cloud ~ ~1.25 ~ 0.05 0.05 0.05 0.05 1
+
+
+# if they sneak give them glowing
+execute if predicate minecraft:sneaking run effect give @s glowing 1 0 true
+execute unless predicate minecraft:sneaking run effect clear @s glowing

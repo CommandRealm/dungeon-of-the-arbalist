@@ -3,7 +3,9 @@
     "minecraft:gold_nugget",
     "minecraft:iron_nugget",
     "minecraft:emerald",
-    "leather_helmet"
+    "leather_helmet",
+    "echo_shard",
+    "diamond"
     
   ]
 }

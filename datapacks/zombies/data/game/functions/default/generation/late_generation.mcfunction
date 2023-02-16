@@ -74,7 +74,8 @@ execute as @e[type=area_effect_cloud,tag=generation_marker,tag=!base_generation_
 execute as @e[type=area_effect_cloud,tag=generation_marker,tag=!base_generation_marker] at @s if score @s grid_x = $up generation positioned ~ 42 ~ run fill ~19 ~20 ~4 ~17 ~26 ~-4 iron_block replace gold_block
 execute as @e[type=area_effect_cloud,tag=generation_marker,tag=!base_generation_marker] at @s if score @s grid_x = $up generation positioned ~ 42 ~ run fill ~19 ~20 ~4 ~17 ~26 ~-5 air replace #minecraft:handle
 
-
+# finding the andesite walls (this is for plague zombie bois so they cant camp in the corridors.)
+schedule function game:default/generation/door/create_edge_doors 3t
 
 execute at @e[type=area_effect_cloud,tag=generation_marker,tag=!base_generation_marker] run fill ~ ~-23 ~ ~ ~-16 ~ air
 

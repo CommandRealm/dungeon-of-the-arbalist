@@ -11,7 +11,7 @@ tag @s add temporary_tag
 # execute as @e[type=item,sort=nearest,limit=1,tag=shop_item] at @s if data entity @s {Item:{tag:{stat_boost:1b}}} run function game:shops/raycast/check_stat_boosts
 
 ##showing item.
-title @s[tag=!temporary_tag_2] title [{"nbt":"Item.tag.display.Name","entity":"@e[type=item,sort=nearest,limit=1,tag=shop_item]","interpret":true}]
+title @s[tag=!temporary_tag_2,tag=!play_alternate_title] title [{"nbt":"Item.tag.display.Name","entity":"@e[type=item,sort=nearest,limit=1,tag=shop_item]","interpret":true}]
 
 
 
@@ -19,11 +19,11 @@ title @s[tag=!temporary_tag_2] title [{"nbt":"Item.tag.display.Name","entity":"@
 tag @e[type=item,sort=nearest,limit=1,tag=shop_item] add temporary_tag
 
 ##showing price
-execute as @e[type=item,sort=nearest,limit=1,tag=shop_item] at @s unless entity @s[nbt={Item:{id:"minecraft:crossbow"}}] run title @p[tag=temporary_tag,tag=!filled_hotbar] subtitle [{"text":"Drop to buy this item for ","color":"gray"},{"score":{"objective":"item_price","name":"@e[type=item,sort=nearest,limit=1,tag=shop_item]"},"color":"yellow","bold":true},{"text":" treasure","color":"gold"}]
-execute as @e[type=item,sort=nearest,limit=1,tag=shop_item] at @s if entity @s[nbt={Item:{id:"minecraft:crossbow"}}] run title @p[tag=temporary_tag,tag=!filled_hotbar] subtitle [{"text":"Drop to buy this item for ","color":"gray"},{"score":{"objective":"item_price","name":"@e[type=item,sort=nearest,limit=1,tag=shop_item]"},"color":"yellow","bold":true},{"text":" treasure","color":"gold"},{"text":" + your crossbow","color":"red"}]
+execute as @e[type=item,sort=nearest,limit=1,tag=shop_item] at @s unless entity @s[nbt={Item:{id:"minecraft:crossbow"}}] run title @p[tag=temporary_tag,tag=!filled_hotbar,tag=!play_alternate_title] subtitle [{"text":"Drop to buy this item for ","color":"gray"},{"score":{"objective":"item_price","name":"@e[type=item,sort=nearest,limit=1,tag=shop_item]"},"color":"yellow","bold":true},{"text":" treasure","color":"gold"}]
+execute as @e[type=item,sort=nearest,limit=1,tag=shop_item] at @s if entity @s[nbt={Item:{id:"minecraft:crossbow"}}] run title @p[tag=temporary_tag,tag=!filled_hotbar,tag=!play_alternate_title] subtitle [{"text":"Drop to buy this item for ","color":"gray"},{"score":{"objective":"item_price","name":"@e[type=item,sort=nearest,limit=1,tag=shop_item]"},"color":"yellow","bold":true},{"text":" treasure","color":"gold"},{"text":" + your crossbow","color":"red"}]
 
-execute if entity @s[tag=filled_hotbar] unless entity @e[type=item,sort=nearest,limit=1,tag=temporary_tag,nbt={Item:{id:"minecraft:crossbow"}}] run title @s subtitle [{"text":"⚠ ","color":"yellow"},{"text":"Your hotbar is full","color":"red"}]
-execute if entity @s[tag=filled_hotbar] unless entity @e[type=item,sort=nearest,limit=1,tag=temporary_tag,nbt={Item:{id:"minecraft:crossbow"}}] run title @s subtitle [{"text":"You cannot purchase this item.","color":"gray"}]
+execute if entity @s[tag=filled_hotbar] unless entity @e[type=item,sort=nearest,limit=1,tag=temporary_tag,nbt={Item:{id:"minecraft:crossbow"}},tag=!play_alternate_title] run title @s subtitle [{"text":"⚠ ","color":"yellow"},{"text":"Your hotbar is full","color":"red"}]
+execute if entity @s[tag=filled_hotbar] unless entity @e[type=item,sort=nearest,limit=1,tag=temporary_tag,nbt={Item:{id:"minecraft:crossbow"}},tag=!play_alternate_title] run title @s subtitle [{"text":"You cannot purchase this item.","color":"gray"}]
 ##Waiting for the player to sneak
 execute if entity @s[predicate=minecraft:sneaking,tag=!shown_item_message] run function game:shops/raycast/check_sneak
 

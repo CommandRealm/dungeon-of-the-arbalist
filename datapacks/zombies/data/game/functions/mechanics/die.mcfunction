@@ -20,7 +20,7 @@ gamemode spectator @s
 execute as @a[tag=playing] at @s run playsound minecraft:entity.skeleton.death master @s ~ ~ ~ 1 0.67
 
 ##Title
-title @s title [{"text":""}]
+title @s[tag=!play_alternate_title] title [{"text":""}]
 title @s subtitle [{"text":"You died.","color":"red"}]
 execute if entity @a[tag=playing,team=game,gamemode=adventure] run title @s subtitle [{"text":"You have fallen.","color":"red"}]
 

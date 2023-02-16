@@ -31,8 +31,6 @@ execute if score $dark_door game = $wave game run function game:default/door/lat
 
 execute if score $boss_door game = $wave game run function game:default/door/late_generation/open_boss_doors
 
-#if there is a shop reset
-execute if entity @a[tag=shop_reset,tag=playing] as @e[type=pillager,tag=shopkeeper,team=!enemy] at @s run function game:shops/refill/refill_shop
 
 ##Adding in the bossbar
 bossbar remove game:wave
@@ -48,8 +46,11 @@ function game:default/wave/update_bossbar_ui
 execute if score $wave game matches 1 run effect give @a[tag=playing] night_vision 70 0 true
 
 
-execute as @e[type=marker,tag=doorway] at @s if block ~ ~ ~ polished_andesite run kill @s
+execute as @e[type=marker,tag=doorway,tag=!edge_doorway] at @s if block ~ ~ ~ polished_andesite run kill @s
 
 ##Removing tags
 tag @e[type=marker] remove no_delay_spawn
 scoreboard players reset @e[type=marker] spawn_delay
+
+
+tag @a remove play_alternate_title

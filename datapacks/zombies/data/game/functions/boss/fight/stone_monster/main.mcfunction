@@ -12,7 +12,7 @@ execute as @e[type=wither_skeleton,tag=boss,nbt={HurtTime:9s}] at @s run functio
 effect clear @a[tag=playing,tag=in_boss_room] wither
 
 ##Particles
-execute at @e[type=silverfish,tag=boss_block_base] run particle block iron_block ~ ~.75 ~ 0.25 0.25 0.25 0.35 15
+execute at @e[type=zombie,tag=boss_block_base] run particle block iron_block ~ ~.75 ~ 0.25 0.25 0.25 0.35 15
 
 ##Activating the crossbow
 execute as @e[type=area_effect_cloud,tag=crossbow_purchasable] at @s unless score $crossbow boss matches 1.. if entity @a[tag=playing,nbt={Inventory:[{id:"minecraft:spectral_arrow"}]},distance=..7,gamemode=adventure] run function game:boss/fight/stone_monster/crossbow/activate
