@@ -9,5 +9,6 @@ execute if score $mode settings matches 2 run particle smoke 3160 54 261 0.25 0.
 
 ##Specific boss functions
 execute if score $boss boss matches 2 run function game:boss/fight/stray/delay
+execute if score $boss boss matches 5 run function game:boss/fight/ghast/delay
 
 execute if score $delay boss matches 0 run function game:boss/fight/start

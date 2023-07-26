@@ -9,6 +9,7 @@ execute if score $boss boss matches 1 run function game:boss/fight/guardian/star
 execute if score $boss boss matches 2 run function game:boss/fight/stray/start
 execute if score $boss boss matches 3 run function game:boss/fight/magma_cube/start
 execute if score $boss boss matches 4 run function game:boss/fight/forest_essence/start
+execute if score $boss boss matches 5 run function game:boss/fight/ghast/start
 execute if score $mode settings matches 1 run function game:boss/fight/stone_monster/start
 execute if score $mode settings matches 2 run function game:boss/fight/mummy/start
 effect give @e[tag=boss] resistance 10000 127 true

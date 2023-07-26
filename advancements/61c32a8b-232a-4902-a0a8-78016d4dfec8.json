@@ -1,63 +1,51 @@
 {
-  "journal:vex": {
+  "journal:void": {
     "criteria": {
-      "requirement": "2021-04-23 02:12:19 -0400"
+      "impossible": "2022-07-12 22:22:31 -0400"
     },
     "done": true
   },
-  "journal:zombie": {
+  "advancements:lobby-talk": {
     "criteria": {
-      "requirement": "2021-04-23 10:10:55 -0400"
+      "impossible": "2022-07-12 22:25:41 -0400"
     },
     "done": true
   },
-  "armor_statues:enable": {
+  "advancements:lobby-swim": {
     "criteria": {
-      "tick": "2021-05-06 00:32:11 -0400"
+      "impossible": "2022-07-12 22:26:17 -0400"
     },
     "done": true
   },
-  "vanillatweaks:armor_statues": {
+  "game:hit": {
     "criteria": {
-      "tick": "2021-05-06 00:32:11 -0400"
-    },
-    "done": true
-  },
-  "vanillatweaks:root": {
-    "criteria": {
-      "tick": "2021-05-06 00:32:11 -0400"
-    },
-    "done": true
-  },
-  "advancements:hidden/root": {
-    "criteria": {
-      "requirement": "2021-04-21 20:59:48 -0400"
-    },
-    "done": true
-  },
-  "journal:daring_dancer": {
-    "criteria": {
-      "requirement": "2021-04-23 02:12:19 -0400"
+      "requirement": "2022-07-12 22:26:49 -0400"
     },
     "done": true
   },
   "game:inventory_changed": {
     "criteria": {
-      "requirement": "2021-04-30 00:46:21 -0400"
-    },
-    "done": true
-  },
-  "advancements:root": {
-    "criteria": {
-      "requirement": "2021-04-21 20:59:48 -0400"
+      "requirement": "2022-07-12 22:22:31 -0400"
     },
     "done": true
   },
   "journal:root": {
     "criteria": {
-      "requirement": "2021-04-21 20:59:48 -0400"
+      "requirement": "2022-07-12 22:22:31 -0400"
     },
     "done": true
   },
-  "DataVersion": 2586
+  "advancements:root": {
+    "criteria": {
+      "requirement": "2022-07-12 22:22:31 -0400"
+    },
+    "done": true
+  },
+  "journal:kills/shopkeeper": {
+    "criteria": {
+      "requirement": "2022-07-12 22:26:51 -0400"
+    },
+    "done": true
+  },
+  "DataVersion": 2975
 }

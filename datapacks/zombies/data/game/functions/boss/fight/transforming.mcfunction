@@ -7,6 +7,7 @@ execute if score $boss boss matches 1 run function game:boss/fight/guardian/tran
 execute if score $boss boss matches 2 run function game:boss/fight/stray/transforming
 execute if score $boss boss matches 3 run function game:boss/fight/magma_cube/transforming
 execute if score $boss boss matches 4 run function game:boss/fight/forest_essence/transforming
+execute if score $boss boss matches 5 run function game:boss/fight/ghast/transforming
 execute if score $mode settings matches 2 run function game:boss/fight/mummy/transforming
 
 ##NoAI (it's constant so that ends of attacks don't disable it.)
