@@ -1,6 +1,6 @@
 { "type":"minecraft:generic", "pools" : 
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:954097,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:42},{Id:4,Duration:2,Amplifier:1}]}}],Charged:1b,Unbreakable:1b,delay:7,reload_delay:60,quiver:25}"},
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:954097,custom_potion_effects:[{id:\"minecraft:luck\",duration:2,amplifier:42},{id:\"minecraft:mining_fatigue\",duration:2,amplifier:1}]}}],Charged:1b,Unbreakable:1b,delay:7,reload_delay:60,quiver:25}"},
               {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#7a8f77","bold":true},{"text":"1","color":"#fffeaf","bold":false},{"text":") ","color":"#7a8f77","bold":true},{"text":"Water","color":"#0e8ef1","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] }], 
               "name": "minecraft:crossbow" } ] } ] }

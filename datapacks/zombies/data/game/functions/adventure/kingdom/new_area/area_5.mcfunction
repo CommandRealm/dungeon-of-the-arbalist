@@ -6,7 +6,7 @@ function game:enemy/spawn_enemy
 
 
 ##Shops
-summon vindicator 3046 72 175 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Rich","color":"gold","bold":true}]'}
+summon vindicator 3046 72 175 {PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:resistance",duration:10000,amplifier:126,show_particles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Rich","color":"gold","bold":true}]'}
 
 loot spawn 3045 73.5 175 loot game:shop_items/stats/looting
 scoreboard players set @e[type=item,x=3045,y=73.5,z=175,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 140

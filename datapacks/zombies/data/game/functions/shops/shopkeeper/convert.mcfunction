@@ -2,8 +2,8 @@
 
 
 item replace entity @s[type=pillager] weapon.mainhand with crossbow{Enchantments:[{id:"minecraft:quick_charge",lvl:4},{id:"minecraft:multishot",lvl:1}]}
-execute if score $difficulty settings matches 3.. run item replace entity @s[type=pillager] weapon.offhand with tipped_arrow{CustomPotionEffects:[{Id:7,Amplifier:1,Duration:1}],CustomPotionColor:7424817} 64
-execute if score $difficulty settings matches 2 run item replace entity @s[type=pillager] weapon.offhand with tipped_arrow{CustomPotionEffects:[{Id:7,Amplifier:0,Duration:1}],CustomPotionColor:7424817} 64
+execute if score $difficulty settings matches 3.. run item replace entity @s[type=pillager] weapon.offhand with tipped_arrow{custom_potion_effects:[{id:"minecraft:instant_damage",amplifier:1,duration:1}],CustomPotionColor:7424817} 64
+execute if score $difficulty settings matches 2 run item replace entity @s[type=pillager] weapon.offhand with tipped_arrow{custom_potion_effects:[{id:"minecraft:instant_damage",amplifier:0,duration:1}],CustomPotionColor:7424817} 64
 execute if score $difficulty settings matches ..1 run item replace entity @s[type=pillager] weapon.offhand with arrow
 attribute @s[type=pillager] generic.knockback_resistance base set 1.0
 effect give @s speed 1000000 0 true

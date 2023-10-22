@@ -584,35 +584,35 @@ scoreboard objectives add lobby_id dummy
 
 ##Summoning the rabbits
 kill @e[type=rabbit,x=0,y=66,z=0,distance=..500]
-#summon rabbit -10 87.5 34 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-#summon rabbit -10 83.5 38 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit -10 79.5 42 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit -10 75.5 46 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit -10 83.5 38 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit -6 87.5 34 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit -6 83.5 38 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit -6 79.5 42 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-#summon rabbit -6 75.5 46 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-#summon rabbit -6 83.5 38 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+#summon rabbit -10 87.5 34 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+#summon rabbit -10 83.5 38 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit -10 79.5 42 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit -10 75.5 46 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit -10 83.5 38 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit -6 87.5 34 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit -6 83.5 38 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit -6 79.5 42 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+#summon rabbit -6 75.5 46 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+#summon rabbit -6 83.5 38 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
 
-#summon rabbit 2 90.5 34 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 89.5 40 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 89.5 45 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 88.5 52 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 88.5 56 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 88.5 60 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 89.5 67 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 89.5 72 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+#summon rabbit 2 90.5 34 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+#summon rabbit 2 89.5 40 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+#summon rabbit 2 89.5 45 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+#summon rabbit 2 88.5 52 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+#summon rabbit 2 88.5 56 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+#summon rabbit 2 88.5 60 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+#summon rabbit 2 89.5 67 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+#summon rabbit 2 89.5 72 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
 
 
-##summon rabbit 6 90.5 34 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 89.5 40 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 89.5 45 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 88.5 52 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 88.5 56 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 88.5 60 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 89.5 67 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 89.5 72 {NoAI:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+##summon rabbit 6 90.5 34 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit 6 89.5 40 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit 6 89.5 45 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit 6 88.5 52 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit 6 88.5 56 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit 6 88.5 60 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit 6 89.5 67 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+##summon rabbit 6 89.5 72 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
 
 team join collision @e[type=rabbit,tag=lobby_die]
 

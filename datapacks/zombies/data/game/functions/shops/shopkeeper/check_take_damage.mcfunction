@@ -1,2 +1,2 @@
 ##Called to see if we should take damage.
-execute if data entity @s ActiveEffects[{Id:26}] unless data entity @s ActiveEffects[{Id:10}] run function game:shops/shopkeeper/take_damage
+execute if data entity @s active_effects[{id:"minecraft:luck"}] unless data entity @s active_effects[{id:"minecraft:regeneration"}] run function game:shops/shopkeeper/take_damage

@@ -1,6 +1,6 @@
 { "type":"minecraft:generic", "pools" : 
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:4075089,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:120},{Id:4,Duration:2,Amplifier:7}]}}],Charged:1b,Unbreakable:1b,delay:20,reload_delay:60,quiver:13}"},
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:4075089,custom_potion_effects:[{id:\"minecraft:luck\",duration:2,amplifier:120},{id:\"minecraft:mining_fatigue\",duration:2,amplifier:7}]}}],Charged:1b,Unbreakable:1b,delay:20,reload_delay:60,quiver:13}"},
               {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#7a8f77","bold":true},{"text":"1","color":"#fffeaf","bold":false},{"text":") ","color":"#7a8f77","bold":true},{"text":"Darkness","color":"#3e2e51","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] }], 
               "name": "minecraft:crossbow" } ] } ] }

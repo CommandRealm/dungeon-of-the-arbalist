@@ -55,7 +55,7 @@ execute as @e[type=arrow] at @s store result score @s calculate run data get ent
 execute as @e[type=arrow] at @s if score @s calculate = @p[tag=shot_bow] calculate run tag @s add temporary_match_3
 
 ##Applying effects
-execute as @e[type=arrow,tag=temporary_match_0,tag=temporary_match_1,tag=temporary_match_2,tag=temporary_match_3] at @s run data merge entity @s {CustomPotionEffects:[{Id:10,Duration:2,Amplifier:20b},{Id:26,Duration:2,Amplifier:45b},{Id:13,Duration:2,Amplifier:100b}],Tags:["player_arrow","dead_player_arrow","tagged_arrow"]}
+execute as @e[type=arrow,tag=temporary_match_0,tag=temporary_match_1,tag=temporary_match_2,tag=temporary_match_3] at @s run data merge entity @s {custom_potion_effects:[{id:"minecraft:regeneration",duration:2,amplifier:20b},{id:"minecraft:luck",duration:2,amplifier:45b},{id:"minecraft:water_breathing",duration:2,amplifier:100b}],Tags:["player_arrow","dead_player_arrow","tagged_arrow"]}
 
 
 ##Copying id

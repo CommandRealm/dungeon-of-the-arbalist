@@ -15,7 +15,7 @@ execute as @e[type=marker,tag=doorway] at @s unless score @s price_left matches 
 execute positioned 4984 79 62 as @e[type=marker,tag=doorway,limit=1,sort=nearest] at @s run function game:door/get_price_increment
 
 
-summon witch 5000 79 49 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Genevieve","color":"gold","bold":true}]'}
+summon witch 5000 79 49 {PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:resistance",duration:10000,amplifier:126,show_particles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Genevieve","color":"gold","bold":true}]'}
 
 
 loot spawn 4998 80 46 loot game:shop_items/stats/speed

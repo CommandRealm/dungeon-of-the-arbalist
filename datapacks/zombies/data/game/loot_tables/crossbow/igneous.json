@@ -1,7 +1,7 @@
 { "type":"minecraft:generic", "pools" : 
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:12012819,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:44},{Id:13,Duration:2,Amplifier:21}]}}],Charged:1b,Unbreakable:1b,delay:4,reload_delay:50,quiver:30}"},
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:12012819,custom_potion_effects:[{id:\"minecraft:luck\",duration:2,amplifier:44},{id:\"minecraft:water_breathing\",duration:2,amplifier:21}]}}],Charged:1b,Unbreakable:1b,delay:4,reload_delay:50,quiver:30}"},
               {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#aea28c","bold":true},{"text":"3","color":"#ac353b","bold":false},{"text":") ","color":"#aea28c","bold":true},{"text":"Igneous","color":"#b74d13","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] },
               {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Damages enemies surrounding a successful hit.","color":"gray","italic":false}]}], 
               "name": "minecraft:crossbow" } ] } ] }

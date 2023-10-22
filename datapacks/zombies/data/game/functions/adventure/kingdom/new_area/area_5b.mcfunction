@@ -4,7 +4,7 @@ tag @e[type=marker,tag=area_5b] add unlocked
 
 
 ##Shops
-summon vindicator 3111 79 154 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Jill","color":"gold","bold":true}]'}
+summon vindicator 3111 79 154 {PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:resistance",duration:10000,amplifier:126,show_particles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Jill","color":"gold","bold":true}]'}
 
 loot spawn 3116 80 156 loot game:crossbow/nature
 data merge entity @e[type=item,x=3116,y=80,z=156,distance=..5,limit=1,sort=nearest,nbt={Item:{id:"minecraft:crossbow"}}] {Item:{tag:{crossbow_id:7,needs_initialization:1b,Motion:[0.0d,0.0d,0.0d]}}}

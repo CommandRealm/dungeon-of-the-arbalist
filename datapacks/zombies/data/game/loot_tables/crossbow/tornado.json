@@ -1,7 +1,7 @@
 { "type":"minecraft:generic", "pools" : 
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:14079702,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:80},{Id:13,Duration:2,Amplifier:3},{Id:4,Duration:2,Amplifier:3}]}}],Charged:1b,Unbreakable:1b,delay:9,reload_delay:70,quiver:19}"},
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:14079702,custom_potion_effects:[{id:\"minecraft:luck\",duration:2,amplifier:80},{id:\"minecraft:water_breathing\",duration:2,amplifier:3},{id:\"minecraft:mining_fatigue\",duration:2,amplifier:3}]}}],Charged:1b,Unbreakable:1b,delay:9,reload_delay:70,quiver:19}"},
               {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#a57f81","bold":true},{"text":"2","color":"#cffffd","bold":false},{"text":") ","color":"#a57f81","bold":true},{"text":"Tornado","color":"#d6d6d6","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}]},
                 {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Pushes enemies.","color":"gray","italic":false}] }], 
               "name": "minecraft:crossbow" } ] } ] }
