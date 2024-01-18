@@ -1,7 +1,7 @@
 { "type":"minecraft:generic", "pools" : 
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:8056971,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:92},{Id:13,Duration:2,Amplifier:20}]}}],Charged:1b,Unbreakable:1b,delay:8,reload_delay:55,quiver:28}"},
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:8056971,custom_potion_effects:[{id:\"minecraft:luck\",duration:2,amplifier:92},{id:\"minecraft:water_breathing\",duration:2,amplifier:20}]}}],Charged:1b,Unbreakable:1b,delay:8,reload_delay:55,quiver:28}"},
               {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#aea28c","bold":true},{"text":"3","color":"#ac353b","bold":false},{"text":") ","color":"#aea28c","bold":true},{"text":"Spontaneous","color":"#7af08b","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] },
               {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Sets enemies on fire surrounding a successful hit after a short time.","color":"gray","italic":false}]}], 
               "name": "minecraft:crossbow" } ] } ] }

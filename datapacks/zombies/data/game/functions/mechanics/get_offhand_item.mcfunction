@@ -14,7 +14,7 @@ item replace entity @s[scores={crossbow_id=3}] weapon.offhand with granite_slab{
 item replace entity @s[scores={crossbow_id=4}] weapon.offhand with white_stained_glass{offhand_item:1,HideFlags:63,display:{Name:'[{"text":""}]'}}
 item replace entity @s[scores={crossbow_id=5}] weapon.offhand with ice{offhand_item:1,HideFlags:63,display:{Name:'[{"text":""}]'}}
 item replace entity @s[scores={crossbow_id=6}] weapon.offhand with glowstone_dust{offhand_item:1,HideFlags:63,display:{Name:'[{"text":""}]'}}
-item replace entity @s[scores={crossbow_id=7}] weapon.offhand with grass{offhand_item:1,HideFlags:63,display:{Name:'[{"text":""}]'}}
+item replace entity @s[scores={crossbow_id=7}] weapon.offhand with minecraft:short_grass{offhand_item:1,HideFlags:63,display:{Name:'[{"text":""}]'}}
 item replace entity @s[scores={crossbow_id=8}] weapon.offhand with blackstone{offhand_item:1,HideFlags:63,display:{Name:'[{"text":""}]'}}
 item replace entity @s[scores={crossbow_id=9}] weapon.offhand with iron_nugget{offhand_item:1,HideFlags:63,display:{Name:'[{"text":""}]'}}
 

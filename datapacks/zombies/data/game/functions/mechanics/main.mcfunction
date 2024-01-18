@@ -213,13 +213,13 @@ execute if entity @a[scores={punch_animation=1..},tag=playing,team=game] run fun
 effect clear @a[tag=playing] hunger
 
 ##If a player has blindness
-execute if entity @e[type=illusioner] if entity @a[tag=playing,nbt={ActiveEffects:[{Id:15}]}] run function game:mechanics/removing_blindness/check
+execute if entity @e[type=illusioner] if entity @a[tag=playing,nbt={active_effects:[{id:"minecraft:blindness"}]}] run function game:mechanics/removing_blindness/check
 
 ##If there is a spawn delay active
 execute if score $spawn_in_progress game matches 1 if entity @e[type=marker,tag=zombie_spawnpoint,scores={spawn_delay=1..},limit=1] run function game:mechanics/spawn_delay/main
 
 ##If there is a skeleton with levitation.
-execute if entity @e[type=skeleton,nbt={ActiveEffects:[{Id:25}]},tag=base_skeleton] run function game:mechanics/skeleton_with_levitation
+execute if entity @e[type=skeleton,nbt={active_effects:[{id:"minecraft:levitation"}]},tag=base_skeleton] run function game:mechanics/skeleton_with_levitation
 
 # seeing if a player is dangling over the edge
 execute as @a[tag=playing,nbt={OnGround:1b}] at @s run function game:mechanics/player_position_check/run

@@ -1,7 +1,7 @@
 { "type":"minecraft:generic", "pools" : 
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:11579568,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:70},{Id:18,Duration:100,Amplifier:0}]}}],Charged:1b,Unbreakable:1b,delay:8,reload_delay:60,quiver:28}"},
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:11579568,custom_potion_effects:[{id:\"minecraft:luck\",duration:2,amplifier:70},{id:\"minecraft:weakness\",duration:100,amplifier:0}]}}],Charged:1b,Unbreakable:1b,delay:8,reload_delay:60,quiver:28}"},
               {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#a57f81","bold":true},{"text":"2","color":"#cffffd","bold":false},{"text":") ","color":"#a57f81","bold":true},{"text":"Steam","color":"#b0b0b0","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] },
               {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Inflicts weakness on enemies.","color":"gray","italic":false}]}], 
               "name": "minecraft:crossbow" } ] } ] }

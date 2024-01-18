@@ -44,7 +44,7 @@ forceload remove all
 
 ##Resetting list objective
 scoreboard objectives setdisplay list
-scoreboard objectives setdisplay belowName
+scoreboard objectives setdisplay below_name
 
 ##removing bossbar
 bossbar remove game:wave

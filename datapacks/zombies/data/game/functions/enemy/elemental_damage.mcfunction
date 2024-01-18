@@ -11,7 +11,7 @@ execute if entity @s[scores={calculate=4}] run particle block ice ~ ~0.75 ~ 0.25
 execute if entity @s[scores={calculate=5}] run particle item yellow_stained_glass ~ ~0.75 ~ 0.25 0.5 0.25 0.2 15
 execute if entity @s[scores={calculate=5}] run particle item yellow_wool ~ ~0.75 ~ 0.25 0.5 0.25 0.15 15
 execute if entity @s[scores={calculate=6}] run particle item green_concrete_powder ~ ~0.75 ~ 0.25 0.5 0.25 0.15 5
-execute if entity @s[scores={calculate=6}] run particle item grass ~ ~0.75 ~ 0.25 0.5 0.25 0.25 10
+execute if entity @s[scores={calculate=6}] run particle item minecraft:short_grass ~ ~0.75 ~ 0.25 0.5 0.25 0.25 10
 execute if entity @s[scores={calculate=6}] run particle item lime_terracotta ~ ~0.75 ~ 0.25 0.5 0.25 0.2 5
 execute if entity @s[scores={calculate=7}] run particle squid_ink ~ ~0.75 ~ 0.25 0.5 0.25 0.1 5
 execute if entity @s[scores={calculate=8}] run particle item iron_block ~ ~0.75 ~ 0.25 0.5 0.25 0.15 5

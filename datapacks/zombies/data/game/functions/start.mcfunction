@@ -34,7 +34,7 @@ execute as @a[tag=tutorial] at @s run scoreboard players operation @s treasure =
 
 scoreboard players set @a[tag=playing] treasure 0
 scoreboard objectives setdisplay list health
-scoreboard objectives setdisplay belowName health
+scoreboard objectives setdisplay below_name health
 
 advancement revoke @a only game:kill_miniboss
 advancement revoke @a only game:enemy_damage/wither_skeleton
@@ -288,7 +288,7 @@ advancement revoke @a only journal:kills/tower_archer
 advancement revoke @a only journal:kills/cobalt_king
 advancement revoke @a only journal:kills/cobalt_king_guard
 advancement revoke @a only journal:kills/golden_guard
-##Resetting belowName selectors.
+##Resetting below_name selectors.
 scoreboard players set $below_name_time game 60
 scoreboard players set $below_name_state game 0
 

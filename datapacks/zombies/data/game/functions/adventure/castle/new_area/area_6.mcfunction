@@ -6,7 +6,7 @@ function game:enemy/spawn_enemy
 
 
 ##Shops
-summon witch 5019 89 34 {PersistenceRequired:1b,NoAI:1b,ActiveEffects:[{Id:11,Duration:10000,Amplifier:126,ShowParticles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Kleith","color":"gold","bold":true}]'}
+summon witch 5019 89 34 {PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:resistance",duration:10000,amplifier:126,show_particles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Kleith","color":"gold","bold":true}]'}
 
 loot spawn 5017 90 33 loot game:shop_items/stats/health
 scoreboard players set @e[type=item,x=5017,y=90,z=33,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 90

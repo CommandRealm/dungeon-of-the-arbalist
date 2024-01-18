@@ -1,7 +1,7 @@
 { "type":"minecraft:generic", "pools" : 
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{Enchantments:[{id:\"minecraft:piercing\",lvl:2}],HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:5791840,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:55},{Id:13,Duration:2,Amplifier:7}]}}],Charged:1b,Unbreakable:1b,delay:11,reload_delay:70,quiver:23}"},
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{Enchantments:[{id:\"minecraft:piercing\",lvl:2}],HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:5791840,custom_potion_effects:[{id:\"minecraft:luck\",duration:2,amplifier:55},{id:\"minecraft:water_breathing\",duration:2,amplifier:7}]}}],Charged:1b,Unbreakable:1b,delay:11,reload_delay:70,quiver:23}"},
               {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#a57f81","bold":true},{"text":"2","color":"#cffffd","bold":false},{"text":") ","color":"#a57f81","bold":true},{"text":"Cumulonimbus","color":"#586060","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] },
               {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Piercing II","color":"gray","italic":false},{"text":"Pushes enemies.","color":"gray","italic":false}]}], 
               "name": "minecraft:crossbow" } ] } ] }
