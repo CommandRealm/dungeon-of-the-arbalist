@@ -17,19 +17,9 @@ execute store result score @s calculate run clear @s gold_nugget{treasure:1}
 scoreboard players operation @s calculate *= $5 number
 scoreboard players operation $total calculate += @s calculate
 
-##Emeralds
+##Iron nuggets
 execute store result score @s calculate run clear @s emerald{treasure:1}
 scoreboard players operation @s calculate *= $20 number
-scoreboard players operation $total calculate += @s calculate
-
-##Diamonds
-execute store result score @s calculate run clear @s diamond{treasure:1}
-scoreboard players operation @s calculate *= $50 number
-scoreboard players operation $total calculate += @s calculate
-
-##Echo Shards
-execute store result score @s calculate run clear @s echo_shard{treasure:1}
-scoreboard players operation @s calculate *= $100 number
 scoreboard players operation $total calculate += @s calculate
 
 ##Adding in the multiplier

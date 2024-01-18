@@ -17,8 +17,9 @@ execute if score $mode settings matches 0 if score $wave game matches 9 run scor
 execute if score $mode settings matches 0 if score $wave game matches 10 run scoreboard players set $calculate calculate 55
 execute if score $mode settings matches 0 if score $wave game matches 11 run scoreboard players set $calculate calculate 50
 execute if score $mode settings matches 0 if score $wave game matches 12 run scoreboard players set $calculate calculate 45
-execute if score $mode settings matches 0 if score $wave game matches 13.. run scoreboard players set $calculate calculate 40
-
+execute if score $mode settings matches 0 if score $wave game matches 13 run scoreboard players set $calculate calculate 40
+execute if score $mode settings matches 0 if score $wave game matches 14 run scoreboard players set $calculate calculate 35
+execute if score $mode settings matches 0 if score $wave game matches 15.. run scoreboard players set $calculate calculate 30
 
 ##If we're on medium our higher, speeding the spawns up a bit
 execute if score $wave game matches 1..3 if score $difficulty settings matches 2.. run scoreboard players set $calculate calculate 90

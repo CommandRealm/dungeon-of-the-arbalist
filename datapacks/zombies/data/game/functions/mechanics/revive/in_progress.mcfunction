@@ -2,14 +2,9 @@
 
 ##Adding the revive point score.
 
-##setting base
-scoreboard players set $calculate calculate 50
-
-##Getting remainder
-scoreboard players operation @s revive_remainder += @s b_revive_time
-execute if score @s revive_remainder matches 50.. run function game:mechanics/revive/revive_timer_remainder
-##Division
-scoreboard players operation $calculate calculate /= $50 number
+scoreboard players set $calculate calculate 1
+scoreboard players operation $calculate calculate *= @s boost_revive
+scoreboard players add $calculate calculate 1
 
 scoreboard players operation @e[type=area_effect_cloud,tag=revive_aec,distance=..5] revive_progress += $calculate calculate
 

@@ -4,11 +4,7 @@
 scoreboard players operation $calculate calculate = @s enemy_health
 scoreboard players operation $calculate calculate /= $8 number
 scoreboard players operation @s enemy_health -= $calculate calculate
-
-execute unless score $wave game matches 15.. run scoreboard players operation $calculate calculate *= $wave game
-execute if score $wave game matches 15.. run scoreboard players operation $calculate calculate *= $15 number
-execute if score $wave game matches 15.. run scoreboard players operation $calculate calculate += $wave game
-
+scoreboard players operation $calculate calculate *= $wave game
 scoreboard players operation @s enemy_health += $calculate calculate
 
 

@@ -14,9 +14,6 @@ tag @s add default_name
 tag @s add enemy
 tag @s add vex
 
-tag @s add on_death_timer
-scoreboard players set @s death_timer 200
-
 ##custom name visible
 data modify entity @s CustomNameVisible set value 1b
 

@@ -200,36 +200,3 @@ execute if score $rand random matches 158 run data modify storage minecraft:gene
 execute if score $rand random matches 159 run data modify storage minecraft:generation name set value "minecraft:cube_blue_town"
 execute if score $rand random matches 160 run data modify storage minecraft:generation name set value "minecraft:cube_nether_shroomlight"
 execute if score $rand random matches 161 run data modify storage minecraft:generation name set value "minecraft:cube_birch_tree"
-
-# newest 27
-
-execute if score $rand random matches 162 run data modify storage minecraft:generation name set value "minecraft:cube_amethyst_cave"
-execute if score $rand random matches 163 run data modify storage minecraft:generation name set value "minecraft:cube_best_dota_cube"
-execute if score $rand random matches 164 run data modify storage minecraft:generation name set value "minecraft:cube_sakura_tree"
-execute if score $rand random matches 165 run data modify storage minecraft:generation name set value "minecraft:cube_jellyfish"
-execute if score $rand random matches 166 run data modify storage minecraft:generation name set value "minecraft:cube_reef_monument"
-execute if score $rand random matches 167 run data modify storage minecraft:generation name set value "minecraft:cube_deep_dark_arches"
-execute if score $rand random matches 168 run data modify storage minecraft:generation name set value "minecraft:cube_small_crimson_cave"
-execute if score $rand random matches 169 run data modify storage minecraft:generation name set value "minecraft:cube_fire_temple"
-execute if score $rand random matches 170 run data modify storage minecraft:generation name set value "minecraft:cube_mesa_market"
-
-execute if score $rand random matches 171 run data modify storage minecraft:generation name set value "minecraft:cube_science_lab"
-execute if score $rand random matches 172 run data modify storage minecraft:generation name set value "minecraft:cube_dark_laser"
-execute if score $rand random matches 173 run data modify storage minecraft:generation name set value "minecraft:cube_colosseum"
-execute if score $rand random matches 174 run data modify storage minecraft:generation name set value "minecraft:cube_penguin"
-execute if score $rand random matches 175 run data modify storage minecraft:generation name set value "minecraft:cube_skating_rink"
-execute if score $rand random matches 176 run data modify storage minecraft:generation name set value "minecraft:cube_night_stars"
-execute if score $rand random matches 177 run data modify storage minecraft:generation name set value "minecraft:cube_windmills"
-execute if score $rand random matches 178 run data modify storage minecraft:generation name set value "minecraft:cube_air_balloon"
-execute if score $rand random matches 179 run data modify storage minecraft:generation name set value "minecraft:cube_bakery"
-
-execute if score $rand random matches 180 run data modify storage minecraft:generation name set value "minecraft:cube_copper_mine"
-execute if score $rand random matches 181 run data modify storage minecraft:generation name set value "minecraft:cube_medieval_punk"
-execute if score $rand random matches 182 run data modify storage minecraft:generation name set value "minecraft:cube_pink_land_but_good"
-execute if score $rand random matches 183 run data modify storage minecraft:generation name set value "minecraft:cube_smh_captonium"
-execute if score $rand random matches 184 run data modify storage minecraft:generation name set value "minecraft:cube_deep_dark_temple"
-execute if score $rand random matches 185 run data modify storage minecraft:generation name set value "minecraft:cube_end_laser"
-execute if score $rand random matches 186 run data modify storage minecraft:generation name set value "minecraft:cube_forest_stronghold"
-execute if score $rand random matches 187 run data modify storage minecraft:generation name set value "minecraft:cube_old_forest_essence"
-execute if score $rand random matches 188 run data modify storage minecraft:generation name set value "minecraft:cube_better_stronghold"
-

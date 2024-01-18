@@ -1,9 +1,6 @@
 ##Generation
 execute if score $time game matches 35 run function game:default/force_load_chunks
-
-execute if score $time game matches 49 run function game:default/clear_map
-
-execute if score $time game matches 50 run function game:default/generation/random/generate
+execute if score $generation_type settings matches 0 if score $time game matches 50 run function game:default/generation/random/generate
 execute if score $time game matches 151 run function game:default/generation/early_generation_end
 execute if score $time game matches 155..276 run function game:default/generation/activate_blocks
 execute if score $time game matches 277 run function game:default/generation/late_generation
