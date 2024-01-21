@@ -6,7 +6,7 @@ execute if score $mode settings matches 1 if entity @e[type=witch,tag=shopkeeper
 execute if score $mode settings matches 2 if entity @e[type=vindicator,tag=shopkeeper] run function game:shops/shopkeeper/main
 
 ##If an enemy takes damage:
-execute as @e[team=enemy,tag=enemy,predicate=game:luck] at @s run function game:enemy/take_damage
+execute as @e[team=enemy,tag=enemy,predicate=game:luck] at @s run function game:enemy/check_take_damage
 
 ##If an enemy was hit melee damaged.
 execute as @e[team=enemy,tag=enemy,nbt={HurtTime:9s}] at @s run function game:enemy/check_hit
@@ -73,7 +73,7 @@ execute as @a[gamemode=adventure,tag=mechanics,scores={try_purchase=1..}] at @s 
 
 
 ##Clearing out subtitle if we're not in range of the door.
-execute unless score $countdown pregame matches 1.. as @a[gamemode=adventure,tag=mechanics,tag=!in_boss_room] at @s unless entity @s[y=0,distance=..20] unless entity @e[tag=raycast,distance=..6] run title @s subtitle [{"text":""}]
+execute unless score $countdown pregame matches 1.. as @a[gamemode=adventure,tag=mechanics,tag=!in_boss_room] at @s unless entity @s[y=0,distance=..20] unless entity @e[tag=raycast,distance=..6] unless score $time game matches 1000..1040 run title @s[tag=!play_alternate_title] subtitle [{"text":""}]
 
 
 ##Upgrade marker function
@@ -150,7 +150,7 @@ execute if score $mode settings matches 2 as @a[tag=playing,gamemode=adventure,t
 execute if entity @e[type=area_effect_cloud,tag=revive_aec,limit=1] run function game:mechanics/revive/main
 
 ##if there is a dead player
-execute if entity @a[tag=playing,team=enemy] run function game:mechanics/dead/main
+execute as @a[tag=playing,team=enemy] at @s run function game:mechanics/dead/main
 
 
 
@@ -221,3 +221,12 @@ execute if score $spawn_in_progress game matches 1 if entity @e[type=marker,tag=
 ##If there is a skeleton with levitation.
 execute if entity @e[type=skeleton,nbt={active_effects:[{id:"minecraft:levitation"}]},tag=base_skeleton] run function game:mechanics/skeleton_with_levitation
 
+# seeing if a player is dangling over the edge
+execute as @a[tag=playing,nbt={OnGround:1b}] at @s run function game:mechanics/player_position_check/run
+
+
+# when the player gets damaged
+execute as @a[advancements={game:enemy_damage/check=true}] at @s run function game:mechanics/enemy_damage_effects/check
+
+# if volition is on: call functions that need to run outside of main enemy function for it
+execute if score $volition game matches 1 run function game:enemy/volition/run_from_main

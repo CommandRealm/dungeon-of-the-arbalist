@@ -5,9 +5,9 @@
 advancement revoke @s only game:enemy_damage/bandit
 
 # removing treasure
-scoreboard players set $mod random 75
+scoreboard players set $mod random 150
 function random:random
-scoreboard players add $rand random 25
+scoreboard players add $rand random 75
 
 tag @s add play_lose_treasure_sound
 

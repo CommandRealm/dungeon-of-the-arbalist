@@ -7,7 +7,7 @@ tellraw @a[team=spectator] [{"text":"Wave ","color":"dark_green"},{"score":{"obj
 tellraw @a[tag=playing,team=game] [{"text":"The next wave will begin shortly. Click ","color":"#46623b"},{"text":"[here]","color":"#799d76","bold":true,"clickEvent":{"action":"run_command","value":"/trigger vote_end set 1"}},{"text":" or drop your compass to vote to skip the delay. ","color":"#46623b"}]
 
 ##Killing remaining enemies
-execute as @e[tag=enemy] at @s run function game:death_timer_over
+execute as @e[tag=enemy,tag=!shopkeeper] at @s run function game:death_timer_over
 
 ##Setting timer for next wave
 scoreboard players set $time game 799
@@ -21,10 +21,10 @@ execute if score $wave game matches 8 run scoreboard players set $time game 659
 execute if score $wave game matches 9 run scoreboard players set $time game 639
 execute if score $wave game matches 10 run scoreboard players set $time game 619
 execute if score $wave game matches 11 run scoreboard players set $time game 609
-execute if score $wave game matches 12 run scoreboard players set $time game 599
-execute if score $wave game matches 13 run scoreboard players set $time game 589
-execute if score $wave game matches 14 run scoreboard players set $time game 579
-execute if score $wave game matches 15.. run scoreboard players set $time game 569
+execute if score $wave game matches 12.. run scoreboard players set $time game 599
+## execute if score $wave game matches 13 run scoreboard players set $time game 589
+## execute if score $wave game matches 14 run scoreboard players set $time game 579
+## execute if score $wave game matches 15.. run scoreboard players set $time game 569
 
 ##removing bossbar
 bossbar remove game:wave
@@ -56,3 +56,27 @@ tag @a remove sent_vote_end_message
 
 ##clearing night vision
 effect clear @a[tag=playing] night_vision
+
+
+# shop resets
+tag @a remove shop_reset
+execute if score $wave game matches 14 run tag @a[tag=playing] add shop_reset
+
+execute if score $wave game matches 24 run tag @a[tag=playing] add shop_reset
+
+execute if score $wave game matches 34 run tag @a[tag=playing] add shop_reset
+
+execute if score $wave game matches 44 run tag @a[tag=playing] add shop_reset
+
+execute if score $wave game matches 54 run tag @a[tag=playing] add shop_reset
+
+execute if score $wave game matches 64 run tag @a[tag=playing] add shop_reset
+
+
+tag @a[tag=playing,tag=shop_reset] add play_alternate_title
+#if there is a shop reset
+execute if entity @a[tag=shop_reset,tag=playing] as @e[type=pillager,tag=shopkeeper,team=!enemy] at @s run function game:shops/refill/refill_shop
+
+# if there is a shop reset
+scoreboard players set $shop_reset game 20
+execute if entity @a[tag=shop_reset,tag=playing] run function game:default/wave/intro/shop_reset/main

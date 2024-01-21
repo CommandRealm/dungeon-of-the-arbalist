@@ -71,6 +71,15 @@ scoreboard players operation @s calculate_2 += @s extra_damage
 scoreboard players add @s[tag=forest_essence_controlled] calculate_2 80
 
 
+## HARROWED HOODLUM MINIBOSS
+# Cancelling damage if it's an invisible hoodie
+execute if entity @s[type=zombie,tag=hoodie_miniboss,tag=invisible_hoodie] run scoreboard players set @s calculate_2 0
+# Turning the hooded zombie invisible if another one exists
+execute if entity @s[type=zombie,tag=hoodie_miniboss,tag=!invisible_hoodie] if entity @e[type=zombie,tag=hoodie_miniboss,tag=invisible_hoodie] run function game:enemy/hoodies/change_visibility
+
+
+
+
 ##Removing our damage score.
 scoreboard players operation @s[tag=!boss] enemy_health -= @s calculate_2
 scoreboard players operation @s[tag=forest_essence_controlled] enemy_health -= @s calculate_2
@@ -82,9 +91,9 @@ scoreboard players set @s[scores={enemy_health=..-1}] enemy_health 0
 
 
 ##Summoning damage indicator
-summon armor_stand ~ ~1.75 ~ {CustomNameVisible:0b,Tags:["damage_indicator","needs_name","on_death_timer"],Invulnerable:1b,Invisible:1b,Small:1b,Marker:1b}
-##Showing how much damage was dealt.
+execute unless entity @s[tag=no_damage_indicator] run summon armor_stand ~ ~1.75 ~ {CustomNameVisible:0b,Tags:["damage_indicator","needs_name","on_death_timer"],Invulnerable:1b,Invisible:1b,Small:1b,Marker:1b}
 loot spawn 0 0 0 loot game:damage_dealt
+
 
 ##Copying the sign to our namee
 data modify entity @e[type=armor_stand,tag=needs_name,sort=nearest,limit=1] CustomName set from entity @e[type=item,x=0,y=0,z=0,distance=..1,sort=nearest,limit=1,nbt={Item:{id:"minecraft:redstone"}}] Item.tag.display.Name
@@ -136,3 +145,7 @@ tag @s remove antimatter
 tag @s add non_melee_damage
 
 tag @s remove hit_by_damage_booster
+
+# phantom damage
+execute if entity @s[type=phantom] run function game:enemy/volition/phantom/take_damage
+

@@ -4,7 +4,7 @@
 scoreboard players add $votes end 1
 
 ##Telling players you voted
-tellraw @a[tag=playing] [{"text":"☣ ","color":"dark_green"},{"selector":"@s"},{"text":" has voted to end the game. Type ","color":"gray"},{"text":"/trigger end","color":"red"},{"text":" to vote.","color":"gray"}]
+execute unless score $starting_players game matches 1 run tellraw @a[tag=playing] [{"text":"☣ ","color":"dark_green"},{"selector":"@s"},{"text":" has voted to end the game. Type ","color":"gray"},{"text":"/trigger end","color":"red"},{"text":" to vote.","color":"gray"}]
 execute as @a[tag=playing] at @s run playsound minecraft:entity.ghast.warn master @s ~ ~ ~ 1 0
 
 execute store result score $current_players game if entity @a[tag=playing,team=game]

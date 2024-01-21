@@ -3,4 +3,4 @@ scoreboard players remove @e[type=#minecraft:leapers,tag=leaper_zombie] attack 1
 execute as @e[type=#minecraft:leapers,tag=leaper_zombie,scores={attack=10}] at @s run function game:enemy/leaper/pause
 execute as @e[type=#minecraft:leapers,tag=leaper_zombie,scores={attack=..0}] at @s unless data entity @s active_effects[{id:"minecraft:levitation"}] unless data entity @s active_effects[{id:"minecraft:slowness",amplifier:127b}] run function game:enemy/leaper/leap
 
-execute as @e[type=zombie,tag=leaper_zombie,nbt={HurtTime:9s}] at @s run scoreboard players add @s attack 20
+execute as @e[type=#minecraft:leapers,tag=leaper_zombie,nbt={HurtTime:9s}] at @s run scoreboard players add @s attack 20

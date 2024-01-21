@@ -1,0 +1,57 @@
+{
+  "journal:zombie": {
+    "criteria": {
+      "requirement": "2021-05-20 11:00:29 -0700"
+    },
+    "done": true
+  },
+  "journal:knight": {
+    "criteria": {
+      "requirement": "2021-05-20 11:02:20 -0700"
+    },
+    "done": true
+  },
+  "journal:spider": {
+    "criteria": {
+      "requirement": "2021-05-20 11:00:44 -0700"
+    },
+    "done": true
+  },
+  "journal:void": {
+    "criteria": {
+      "impossible": "2021-05-20 10:59:33 -0700"
+    },
+    "done": true
+  },
+  "advancements:game-die": {
+    "criteria": {
+      "impossible": "2021-05-20 11:00:50 -0700"
+    },
+    "done": true
+  },
+  "game:hit": {
+    "criteria": {
+      "requirement": "2021-05-20 11:06:32 -0700"
+    },
+    "done": true
+  },
+  "game:inventory_changed": {
+    "criteria": {
+      "requirement": "2021-05-20 11:07:07 -0700"
+    },
+    "done": true
+  },
+  "advancements:root": {
+    "criteria": {
+      "requirement": "2021-05-20 10:59:33 -0700"
+    },
+    "done": true
+  },
+  "journal:root": {
+    "criteria": {
+      "requirement": "2021-05-20 10:59:33 -0700"
+    },
+    "done": true
+  },
+  "DataVersion": 2586
+}

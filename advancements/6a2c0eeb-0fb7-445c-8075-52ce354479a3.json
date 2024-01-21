@@ -1,0 +1,27 @@
+{
+  "armor_statues:enable": {
+    "criteria": {
+      "tick": "2021-02-04 23:36:14 +0000"
+    },
+    "done": true
+  },
+  "vanillatweaks:armor_statues": {
+    "criteria": {
+      "tick": "2021-02-04 23:36:14 +0000"
+    },
+    "done": true
+  },
+  "vanillatweaks:root": {
+    "criteria": {
+      "tick": "2021-02-04 23:36:14 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_by_something": "2021-02-04 23:38:24 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 2586
+}

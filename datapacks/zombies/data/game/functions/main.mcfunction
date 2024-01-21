@@ -22,7 +22,7 @@ execute unless entity @a[tag=playing] if score $game state matches 1 run functio
 
 ##Counting down (kill switch)
 scoreboard players remove $game_end_countdown game 1
-execute if score $game_end_countdown game matches ..12000 run function game:hour_countdown/ending_soon
+execute if score $volition game matches 0 if score $game_end_countdown game matches ..12000 run function game:hour_countdown/ending_soon
 
 ##If training mode is on
 execute if score $difficulty settings matches -1 run function game:training_mode/main

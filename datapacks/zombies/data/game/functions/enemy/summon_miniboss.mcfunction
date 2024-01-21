@@ -23,6 +23,10 @@ execute if entity @s[tag=spider_spawn] run function game:enemy/spider/summon
 
 execute if entity @s[tag=slime_spawn] run function game:enemy/slime/summon
 
+execute if entity @s[tag=piglin_spawn] run function game:enemy/piglins/start
+
+execute if entity @s[tag=hood_spawn] run function game:enemy/hoodies/start
+
 ##Adding miniboss score
 scoreboard players add $summoned_miniboss game 1
 execute if score $summoned_miniboss game matches 1 if score $miniboss_key game matches 0 run tag @e[tag=miniboss,sort=nearest,limit=1] add miniboss_key

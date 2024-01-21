@@ -31,7 +31,14 @@ execute if score $difficulty settings matches 5.. run kill @e[type=item,nbt={Ite
 execute if score $difficulty settings matches 5.. run kill @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:lime_dye"}}]
 execute if score $starting_players game matches 1 run kill @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:lime_dye"}}]
 
+# adding price for items if wave is beyond 10
+execute if score $wave game matches 10.. run function game:default/sho_generation/wave_price_addition
+
+tp @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] @s
 execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+
+
+
 
 ##Killing ourself
 kill @s

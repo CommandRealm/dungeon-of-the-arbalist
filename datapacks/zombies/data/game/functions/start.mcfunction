@@ -37,7 +37,7 @@ scoreboard objectives setdisplay list health
 scoreboard objectives setdisplay below_name health
 
 advancement revoke @a only game:kill_miniboss
-
+advancement revoke @a only game:enemy_damage/wither_skeleton
 
 
 ##Death count objective
@@ -76,6 +76,7 @@ scoreboard players reset @a get_kill
 
 ##Resetting new treasure score
 scoreboard players reset @a new_treasure
+scoreboard players reset @a remove_treasure
 
 ##armor objective 
 scoreboard players add @a[tag=playing] armor 0
@@ -124,6 +125,18 @@ scoreboard players set @a[tag=playing] boost_treasure 0
 scoreboard players set @a[tag=playing] boost_damage 0
 scoreboard players set @a[tag=playing] boost_speed 0
 scoreboard players set @a[tag=playing] boost_revive 0
+
+
+scoreboard players set @a[tag=playing] prestige_health 0
+scoreboard players set @a[tag=playing] prestige_quiver 0
+scoreboard players set @a[tag=playing] prestige_treasure 0
+scoreboard players set @a[tag=playing] prestige_damage 0
+scoreboard players set @a[tag=playing] prestige_speed 0
+scoreboard players set @a[tag=playing] prestige_revive 0
+
+scoreboard players set @a[tag=playing] revive_remainder 0
+scoreboard players set @a[tag=playing] b_revive_time 0
+scoreboard players set @a[tag=playing] b_damage 0
 
 execute as @a[tag=playing] at @s run function game:mechanics/stat_boosts/update_attributes
 
@@ -315,3 +328,13 @@ scoreboard objectives add run dummy
 
 ##Kill switch
 scoreboard players set $game_end_countdown game 72000
+
+# removing shopkeeper death tag
+tag @a remove anger_shopkeepers
+
+# removing shop reset tag
+tag @a remove shop_reset
+
+# seeing if volition is active
+scoreboard players set $volition game 0
+execute if score $mode settings matches 0 if score $difficulty settings matches 3.. run scoreboard players set $volition game 1

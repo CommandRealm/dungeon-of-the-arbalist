@@ -9,7 +9,7 @@ execute if score $wave game matches 8..9 positioned ~-16 ~-16 ~-16 run tag @e[ty
 execute if score $wave game matches 10..11 positioned ~-16 ~-16 ~-16 run tag @e[type=marker,tag=zombie_spawnpoint,dx=31,dy=31,dz=31,sort=random,limit=4] add temporary_tag
 execute if score $wave game matches 12..13 positioned ~-16 ~-16 ~-16 run tag @e[type=marker,tag=zombie_spawnpoint,dx=31,dy=31,dz=31,sort=random,limit=5] add temporary_tag
 execute if score $wave game matches 14 positioned ~-16 ~-16 ~-16 run tag @e[type=marker,tag=zombie_spawnpoint,dx=31,dy=31,dz=31,sort=random,limit=6] add temporary_tag
-execute if score $wave game matches 15 positioned ~-16 ~-16 ~-16 run tag @e[type=marker,tag=zombie_spawnpoint,dx=31,dy=31,dz=31,sort=random,limit=7] add temporary_tag
+execute if score $wave game matches 15.. positioned ~-16 ~-16 ~-16 run tag @e[type=marker,tag=zombie_spawnpoint,dx=31,dy=31,dz=31,sort=random,limit=7] add temporary_tag
 tag @e[type=marker,tag=temporary_tag] add no_delay_spawn
 ##Summoning enemies.
 function game:enemy/spawn_enemy
