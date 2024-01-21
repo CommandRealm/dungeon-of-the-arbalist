@@ -15,7 +15,7 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"43","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Golden Guard","color":"dark_green"}]
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"42","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Golden Guard","color":"dark_green","bold":true}]
             },
             {
               "function": "minecraft:set_lore",

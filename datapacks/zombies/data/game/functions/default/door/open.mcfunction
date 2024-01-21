@@ -13,3 +13,4 @@ execute facing entity @p[tag=playing,gamemode=adventure,tag=temporary_tag] feet 
 ##death timer
 scoreboard players set @s death_timer 30
 tag @s add on_death_timer
+

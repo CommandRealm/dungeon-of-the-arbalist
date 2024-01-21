@@ -3,7 +3,7 @@
 ##Basic functions
 tp @s 7 91 22 45 0
 spawnpoint @s 7 90 22
-scoreboard players set @s has_joined 1
+scoreboard players set @s game_time 1
 clear @s
 gamemode adventure @s
 title @s times 0 25 5
@@ -15,7 +15,8 @@ tag @s remove playing
 ##effect
 effect give @s instant_health 1 5 true
 
-
+# fixing our timer
+scoreboard players operation @s game_time = $status game_time
 
 
 ##attribute resets
@@ -61,3 +62,16 @@ tag @s remove spectatorable
 scoreboard objectives remove back_to_lobby
 execute if score $game state matches 1.. run scoreboard objectives add back_to_lobby trigger
 scoreboard players enable @a[team=spectator] back_to_lobby
+
+
+scoreboard players reset @s intro_text
+# join stuff
+effect give @s darkness infinite 0 true
+tag @s add show_intro_text
+
+title @s title ""
+title @s subtitle ""
+
+# tag
+tag @s remove has_gas_mask
+tag @s remove active_trial

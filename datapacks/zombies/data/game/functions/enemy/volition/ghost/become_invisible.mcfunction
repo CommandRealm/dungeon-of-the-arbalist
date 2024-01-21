@@ -1,6 +1,7 @@
 # called to become invisible again
 
 tag @s remove visible
+tag @s add invisible
 item replace entity @s armor.head with air
 item replace entity @s armor.chest with air
 

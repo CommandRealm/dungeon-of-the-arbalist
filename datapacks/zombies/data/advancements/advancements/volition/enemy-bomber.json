@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:tnt"
+        },
+        "title": {
+            "text": "Chain reaction.",
+            "color": "dark_purple",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Kill a Bomber using another Bomber's head.",
+            "color": "#61369c",
+            "bold": false
+        }
+    },
+    "parent": "advancements:volition/enemy-plague",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

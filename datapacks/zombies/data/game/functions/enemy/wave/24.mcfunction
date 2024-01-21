@@ -1,4 +1,4 @@
-execute store result score $rand random run loot insert 0 1 0 loot game:enemy/wave_volition
+execute store result score $rand random if score $chosen_modifier_enemy calculate matches -1 run loot insert 0 1 0 loot game:enemy/wave_volition
 execute if score $rand random matches ..19 run data modify storage game:enemy SpawnType set value "dota:zombie"
 execute if score $rand random matches 20..25 run data modify storage game:enemy SpawnType set value "dota:spider"
 

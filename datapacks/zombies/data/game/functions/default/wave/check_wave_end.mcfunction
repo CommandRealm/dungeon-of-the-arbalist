@@ -1,4 +1,6 @@
-##Called to see if the wave should end and update the bossbar.
+##Called to see if the wave should end and update the bossbar. (and when an enemy is killed)
+
+scoreboard players remove $enemies_left game 1
 
 function game:default/wave/update_wave_end_bossbar_ui
 

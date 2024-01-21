@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function":"minecraft:set_nbt",
+              "entity":"this",
+              "tag":"{clickable:1,invalid_click:1,SkullOwner:{Id:[I;519484932,-304003122,-1420214208,-914021787],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzI1NTVjYTkwMWFiNjMwMWU3Y2U5Nzg5YjU3ZWJhYjU5MzQ5YzFhY2Q3OTczZjRlYmJkMGMzOGUxMGFkYTFmMSJ9fX0=\"}]}}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"49","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Banshee","color":"#61369c","bold":false}]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [{"text":"A ghost that will only show its face when near the player.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_ghost","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

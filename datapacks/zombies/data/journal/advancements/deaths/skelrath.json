@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"boss\",\"skelrath\"]}",
+          "type": "minecraft:wither_skeleton"
+        }
+      }
+    }
+  }
+}

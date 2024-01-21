@@ -5,14 +5,19 @@
     },
     "title": [
       {
-        "color": "#626269",
+        "color": "dark_green",
         "bold": true,
-        "text": "Dungeon of"
+        "text": "Dungeon"
       },
       {
-        "color": "#53535c",
+        "color": "white",
         "bold": true,
-        "text": " the Arbalist"
+        "text": " of the"
+      },
+      {
+        "color": "gold",
+        "bold": true,
+        "text": " Arbalist"
       }
     ],
     "description": {

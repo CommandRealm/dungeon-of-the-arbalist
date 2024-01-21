@@ -50,5 +50,5 @@ loot replace entity @s enderchest.22 loot lobby:stats/revives
 loot replace entity @s enderchest.23 loot lobby:stats/punch
 
 
-item replace entity @s enderchest.18 with barrier{clickable:1,HideFlags:63,clickable:1,display:{Name:'[{"text":"Back","bold":true,"italic":false,"color":"#ff0000"}]'}}
+item replace entity @s enderchest.18 with barrier{clickable:1,HideFlags:255,display:{Name:'[{"text":"Back","bold":true,"italic":false,"color":"#ff0000"}]'}}
 

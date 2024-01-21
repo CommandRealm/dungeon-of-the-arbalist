@@ -6,11 +6,12 @@ execute if score $end game matches 90 if score $mode settings matches 1 run func
 execute if score $end game matches 90 if score $mode settings matches 2 run function game:adventure/kingdom/start_cutscene
 
 
-effect give @a[tag=playing] resistance 100000 127 true
+effect give @a[tag=playing] resistance infinite 127 true
 
 execute if entity @a[tag=playing,team=dead] run function game:cooldown/game_over
 
 execute if entity @a[tag=playing,team=won] run function game:cooldown/victory
+
 
 
 ##spectate
@@ -30,5 +31,10 @@ gamemode spectator @a[tag=playing,gamemode=!spectator,team=dead]
 execute if score $end game matches 0 as @a[tag=playing] at @s run function game:show_game_statistics
 
 ##If it's on easy or higher, unlock the title
-execute if score $end game matches 0 unless score $difficulty settings matches -1 as @a[tag=playing] at @s run function cosmetics:potential_unlock
+execute if score $end game matches 0 unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 unless score $modifiers settings matches 1 as @a[tag=playing] at @s run function cosmetics:potential_unlock
+execute if score $end game matches 0 run function leaderboards:personal_best_checks
 execute if score $end game matches 0 run function game:end
+
+
+
+

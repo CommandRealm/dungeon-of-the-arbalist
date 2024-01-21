@@ -9,21 +9,21 @@ function game:enemy/spawn_enemy
 summon witch 5019 89 34 {PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:resistance",duration:10000,amplifier:126,show_particles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Kleith","color":"gold","bold":true}]'}
 
 loot spawn 5017 90 33 loot game:shop_items/stats/health
-scoreboard players set @e[type=item,x=5017,y=90,z=33,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 90
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=5017,y=90,z=33,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 90
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] at @s run function game:shops/initialize_item
 
 loot spawn 5017 90 34 loot game:shop_items/health_potion
-scoreboard players set @e[type=item,x=5017,y=90,z=34,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 80
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=5017,y=90,z=34,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 80
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] at @s run function game:shops/initialize_item
 
 loot spawn 5017 90 35 loot game:shop_items/health_potion
-scoreboard players set @e[type=item,x=5018,y=90,z=35,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 80
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=5018,y=90,z=35,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 80
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] at @s run function game:shops/initialize_item
 
 
 loot spawn 5019 90 38 loot game:shop_items/health_potion
-scoreboard players set @e[type=item,x=5019,y=90,z=38,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 80
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=5019,y=90,z=38,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 80
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] at @s run function game:shops/initialize_item
 
 
 

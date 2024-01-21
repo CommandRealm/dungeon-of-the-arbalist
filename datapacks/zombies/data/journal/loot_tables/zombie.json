@@ -10,7 +10,7 @@
             {
               "function":"minecraft:set_nbt",
               "entity":"this",
-              "tag":"{clickable:1,invalid_click:1}"
+              "tag":"{clickable:1,invalid_click:1,journal:1}"
             },
             {
               "function": "minecraft:set_name",

@@ -10,11 +10,11 @@ execute unless entity @e[tag=forest_essence_controlled] at @e[type=area_effect_c
 tag @e[tag=forest_essence_controlled] add boss
 
 ##Buffs
-effect give @e[tag=forest_essence_controlled,type=!skeleton] speed 1000000 0 true
-effect give @e[tag=forest_essence_controlled] strength 1000000 0 true
+effect give @e[tag=forest_essence_controlled,type=!skeleton] speed infinite 0 true
+effect give @e[tag=forest_essence_controlled] strength infinite 0 true
 data modify entity @e[tag=forest_essence_controlled,limit=1,sort=arbitrary] Glowing set value 1b
 attribute @e[tag=forest_essence_controlled,limit=1,sort=arbitrary] generic.knockback_resistance base set 0.5
-##effect give @e[tag=forest_essence_controlled] strength 1000000 0 true
+##effect give @e[tag=forest_essence_controlled] strength infinite 0 true
 
 ##Sound
 execute at @e[tag=forest_essence_controlled] run playsound minecraft:entity.vex.death master @a ~ ~ ~ 1 0.75

@@ -1,0 +1,39 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:fill_player_head",
+                            "entity": "this"
+                        },
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag":"{HideFlags:255,invalid_click:1,clickable:1}"
+                        },
+                        {
+                            "function": "set_name",
+                            "entity":"this",
+                            "name":[{"text":"Your ","color":"dark_green","italic":false},{"text":"wins","color":"green","italic":false},{"text":": ","color":"gray"},{"score":{"objective":"default_dota_wins","name":"@s"},"color":"gold"}]
+                        }
+
+                    ],
+                    "name": "minecraft:player_head"
+                }
+            ]
+
+        }
+    ]
+}

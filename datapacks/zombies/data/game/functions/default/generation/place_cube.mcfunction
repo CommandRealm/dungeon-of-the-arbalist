@@ -6,13 +6,19 @@ execute at @e[type=area_effect_cloud,tag=base_generation_marker] positioned ~-16
 
 
 ##Random number
-execute store result score $rand random run loot insert 0 1 0 loot random:4
+execute store result score $rand random run loot insert 0 1 0 loot random:8
 function random:reset_chest
 
 execute if score $rand random matches 0 run setblock ~ ~-16 ~ minecraft:structure_block{metadata:"",mirror:"NONE",ignoreEntities:0b,powered:0b,seed:0L,rotation:"NONE",posX:-16,posY:1,posZ:-16,sizeX:32,sizeY:32,sizeZ:32,showboundingbox:0b,name:"",id:"minecraft:structure_block",author:"?",mode:"LOAD"}
 execute if score $rand random matches 1 run setblock ~ ~-16 ~ minecraft:structure_block{metadata:"",mirror:"NONE",ignoreEntities:0b,powered:0b,seed:0L,rotation:"CLOCKWISE_90",posX:15,posY:1,posZ:-16,sizeX:32,sizeY:32,sizeZ:32,showboundingbox:0b,name:"",id:"minecraft:structure_block",author:"?",mode:"LOAD"}
 execute if score $rand random matches 2 run setblock ~ ~-16 ~ minecraft:structure_block{metadata:"",mirror:"NONE",ignoreEntities:0b,powered:0b,seed:0L,rotation:"CLOCKWISE_180",posX:15,posY:1,posZ:15,sizeX:32,sizeY:32,sizeZ:32,showboundingbox:0b,name:"",id:"minecraft:structure_block",author:"?",mode:"LOAD"}
 execute if score $rand random matches 3 run setblock ~ ~-16 ~ minecraft:structure_block{metadata:"",mirror:"NONE",ignoreEntities:0b,powered:0b,seed:0L,rotation:"COUNTERCLOCKWISE_90",posX:-16,posY:1,posZ:15,sizeX:32,sizeY:32,sizeZ:32,showboundingbox:0b,name:"",id:"minecraft:structure_block",author:"?",mode:"LOAD"}
+
+#@ posX:-16,posY:1,posZ:15
+execute if score $rand random matches 4 run setblock ~ ~-16 ~ minecraft:structure_block{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:0b,powered:0b,seed:0L,rotation:"NONE",posX:-16,posY:1,posZ:15,sizeX:32,sizeY:32,sizeZ:32,showboundingbox:0b,name:"",id:"minecraft:structure_block",author:"?",mode:"LOAD"}
+execute if score $rand random matches 5 run setblock ~ ~-16 ~ minecraft:structure_block{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:0b,powered:0b,seed:0L,rotation:"CLOCKWISE_90",posX:-16,posY:1,posZ:-16,sizeX:32,sizeY:32,sizeZ:32,showboundingbox:0b,name:"",id:"minecraft:structure_block",author:"?",mode:"LOAD"}
+execute if score $rand random matches 6 run setblock ~ ~-16 ~ minecraft:structure_block{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:0b,powered:0b,seed:0L,rotation:"CLOCKWISE_180",posX:15,posY:1,posZ:-16,sizeX:32,sizeY:32,sizeZ:32,showboundingbox:0b,name:"",id:"minecraft:structure_block",author:"?",mode:"LOAD"}
+execute if score $rand random matches 7 run setblock ~ ~-16 ~ minecraft:structure_block{metadata:"",mirror:"LEFT_RIGHT",ignoreEntities:0b,powered:0b,seed:0L,rotation:"COUNTERCLOCKWISE_90",posX:15,posY:1,posZ:15,sizeX:32,sizeY:32,sizeZ:32,showboundingbox:0b,name:"",id:"minecraft:structure_block",author:"?",mode:"LOAD"}
 
 
 data modify block ~ ~-16 ~ name set from storage minecraft:generation name

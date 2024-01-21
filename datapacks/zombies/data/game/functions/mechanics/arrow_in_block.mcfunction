@@ -17,5 +17,9 @@ execute as @a[tag=playing] at @s if score @s id = @e[type=arrow,tag=missed_arrow
 
 execute if entity @s[tag=grounded_arrow] run function game:mechanics/miss/grounded
 
+
+# if the modifier is on
+execute if score $bouncy_arrows modifiers matches 1 run function game:modifiers/bouncy_arrows/bounce
+
 ##Kill
-kill @s
+execute if score $bouncy_arrows modifiers matches 0 run kill @s

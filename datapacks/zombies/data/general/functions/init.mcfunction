@@ -28,7 +28,7 @@ gamerule doWardenSpawning false
 ##Basic game objectives
 
 ##Has joined will by default be null and with an unless statement it can teleport them.
-scoreboard objectives add has_joined dummy
+scoreboard objectives add game_time dummy
 
 
 scoreboard objectives add has_left minecraft.custom:minecraft.leave_game
@@ -45,7 +45,7 @@ scoreboard objectives add pregame dummy
 scoreboard objectives add ready dummy
 
 ##Pregame right click detection
-scoreboard objectives add pregame_click minecraft.used:minecraft.knowledge_book
+scoreboard objectives add click_book minecraft.used:minecraft.knowledge_book
 
 
 ##Number objective
@@ -65,6 +65,7 @@ scoreboard players set $8 number 8
 scoreboard players set $2 number 2
 scoreboard players set $7 number 7
 scoreboard players set $100 number 100
+scoreboard players set $125 number 125
 scoreboard players set $200 number 200
 scoreboard players set $-1 number -1
 scoreboard players set $wave_spawn_time number 8
@@ -74,6 +75,7 @@ scoreboard players set $50 number 50
 scoreboard players set $-40 number -40
 scoreboard players set $75 number 75
 scoreboard players set $110 number 110
+scoreboard players set $55 number 55
 scoreboard players set $3 number 3
 
 ##Settings
@@ -248,6 +250,9 @@ scoreboard objectives add burning_times dummy
 ##Attack function
 scoreboard objectives add attack dummy
 
+##Attack function
+scoreboard objectives add attack2 dummy
+
 ##Times shot crossbow (it's reset at the start of the game and when specific crossbows are shot.)
 scoreboard objectives add times_shot dummy
 
@@ -306,8 +311,11 @@ scoreboard objectives add health health [{"text":"❤","color":"red"}]
 ##yellow team
 team add yellow
 team modify yellow color yellow
+##aqua team
+team add aqua
+team modify aqua color aqua
 
-##yellow team
+##red team
 team add red
 team modify red color red
 
@@ -352,13 +360,13 @@ scoreboard objectives add boost_damage dummy
 scoreboard objectives add boost_speed dummy
 scoreboard objectives add boost_revive dummy
 
-# stat boost prestige
-scoreboard objectives add prestige_health dummy
-scoreboard objectives add prestige_quiver dummy
-scoreboard objectives add prestige_treasure dummy
-scoreboard objectives add prestige_damage dummy
-scoreboard objectives add prestige_speed dummy
-scoreboard objectives add prestige_revive dummy
+# stat boost mastery
+scoreboard objectives add mastery_health dummy
+scoreboard objectives add mastery_quiver dummy
+scoreboard objectives add mastery_treasure dummy
+scoreboard objectives add mastery_damage dummy
+scoreboard objectives add mastery_speed dummy
+scoreboard objectives add mastery_revive dummy
 
 # damage obj
 scoreboard objectives add b_damage dummy
@@ -441,6 +449,7 @@ scoreboard objectives add drop_compass minecraft.dropped:minecraft.compass
 
 ##parkour timer
 scoreboard objectives add parkour_time dummy
+scoreboard objectives add parkour_start dummy
 
 ##highscore
 scoreboard objectives add parkour_score dummy
@@ -578,41 +587,42 @@ scoreboard objectives add j_gold_guard dummy
 scoreboard objectives add j_tutorial_enemy dummy
 
 
+scoreboard objectives add j_zombie_deaths dummy
+scoreboard objectives add j_spider_deaths dummy
+scoreboard objectives add j_knight_deaths dummy
+
 ##Lobby id
 scoreboard objectives remove lobby_id
 scoreboard objectives add lobby_id dummy
 
 ##Summoning the rabbits
 kill @e[type=rabbit,x=0,y=66,z=0,distance=..500]
-#summon rabbit -10 87.5 34 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-#summon rabbit -10 83.5 38 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit -10 79.5 42 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit -10 75.5 46 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit -10 83.5 38 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit -6 87.5 34 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit -6 83.5 38 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit -6 79.5 42 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-#summon rabbit -6 75.5 46 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-#summon rabbit -6 83.5 38 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-
-#summon rabbit 2 90.5 34 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 89.5 40 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 89.5 45 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 88.5 52 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 88.5 56 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 88.5 60 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 89.5 67 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-#summon rabbit 2 89.5 72 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-
-
-##summon rabbit 6 90.5 34 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 89.5 40 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 89.5 45 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 88.5 52 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 88.5 56 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 88.5 60 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 89.5 67 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
-##summon rabbit 6 89.5 72 {NoAI:1b,Invulnerable:1b,active_effects:[{id:"minecraft:invisibility",duration:100000000,amplifier:0,show_particles:false}],Tags:["lobby_die"]}
+summon rabbit -10 87.5 34 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit -10 83.5 38 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit -10 79.5 42 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit -10 75.5 46 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit -10 83.5 38 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit -6 87.5 34 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit -6 83.5 38 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit -6 79.5 42 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit -6 75.5 46 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit -6 83.5 38 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 2 90.5 34 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 2 89.5 40 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 2 89.5 45 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 2 88.5 52 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 2 88.5 56 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 2 88.5 60 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 2 89.5 67 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 2 89.5 72 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 6 90.5 34 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 6 89.5 40 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 6 89.5 45 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 6 88.5 52 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 6 88.5 56 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 6 88.5 60 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 6 89.5 67 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
+summon rabbit 6 89.5 72 {NoAI:1b,Silent:1b,Invulnerable:1b,ActiveEffects:[{Id:14,Duration:100000000,Amplifier:0,ShowParticles:false}],Tags:["lobby_die"]}
 
 team join collision @e[type=rabbit,tag=lobby_die]
 
@@ -980,3 +990,354 @@ scoreboard objectives add radioactive_miss dummy
 
 # adding objective to see if player is dangling over the edge
 scoreboard objectives add player_pos_check dummy
+
+scoreboard objectives add wind dummy
+scoreboard objectives add wind_delay dummy
+
+# leveling system
+scoreboard objectives add level dummy
+scoreboard objectives add xp_requirement dummy
+scoreboard objectives add xp dummy
+scoreboard objectives add level_animation dummy
+
+# armor trims
+scoreboard objectives add cosmetics_trim dummy
+scoreboard objectives add cosmetics_trim_type dummy
+
+# intro text
+scoreboard objectives add intro_text dummy
+
+
+# new journal entries
+scoreboard objectives add j_piglinh dummy
+scoreboard objectives add j_plague dummy
+scoreboard objectives add j_bomber dummy
+scoreboard objectives add j_bandit dummy
+scoreboard objectives add j_w_knight dummy
+scoreboard objectives add j_s_knight dummy
+scoreboard objectives add j_w_brute dummy
+scoreboard objectives add j_ghost dummy
+scoreboard objectives add j_w_leaper dummy
+scoreboard objectives add j_wind_thief dummy
+scoreboard objectives add j_rogue dummy
+scoreboard objectives add j_lobber dummy
+scoreboard objectives add j_spawner dummy
+scoreboard objectives add j_candlehead dummy
+scoreboard objectives add j_phantom dummy
+scoreboard objectives add j_keeper dummy
+scoreboard objectives add j_fallen dummy
+scoreboard objectives add j_mage dummy
+
+scoreboard objectives add use_shield minecraft.used:minecraft.shield
+scoreboard objectives add fake_strength dummy
+scoreboard objectives add modifier_random dummy
+scoreboard objectives add trial_firetrail_cooldown dummy
+
+scoreboard objectives add trial_collector dummy
+# New leaderboard objectives
+
+scoreboard objectives add leaderboard_hard_wave dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hard_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=hard_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hard_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=hard_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hard_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=hard_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=hard_leaderboard] leaderboard_hard_wave 1000000000
+
+
+
+scoreboard objectives add leaderboard_super_hard_wave dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["super_hard_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=super_hard_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["super_hard_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=super_hard_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["super_hard_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=super_hard_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=super_hard_leaderboard] leaderboard_super_hard_wave 1000000000
+
+
+
+scoreboard objectives add leaderboard_hardcore_wave dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hardcore_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=hardcore_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hardcore_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=hardcore_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hardcore_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=hardcore_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=hardcore_leaderboard] leaderboard_hardcore_wave 1000000000
+
+
+
+scoreboard objectives add leaderboard_nightmare_wave dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["nightmare_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=nightmare_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["nightmare_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=nightmare_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["nightmare_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=nightmare_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=nightmare_leaderboard] leaderboard_nightmare_wave 1000000000
+
+
+
+scoreboard objectives add leaderboard_hard_wave2 dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hard_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=hard_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hard_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=hard_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hard_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=hard_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=hard_leaderboard2] leaderboard_hard_wave2 1000000000
+
+
+
+scoreboard objectives add leaderboard_super_hard_wave2 dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["super_hard_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=super_hard_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["super_hard_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=super_hard_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["super_hard_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=super_hard_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=super_hard_leaderboard2] leaderboard_super_hard_wave2 1000000000
+
+
+
+scoreboard objectives add leaderboard_hardcore_wave2 dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hardcore_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=hardcore_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hardcore_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=hardcore_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["hardcore_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=hardcore_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=hardcore_leaderboard2] leaderboard_hardcore_wave2 1000000000
+
+
+
+scoreboard objectives add leaderboard_nightmare_wave2 dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["nightmare_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=nightmare_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["nightmare_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=nightmare_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["nightmare_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=nightmare_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=nightmare_leaderboard2] leaderboard_nightmare_wave2 1000000000
+
+
+
+scoreboard objectives add castle_score2 dummy
+scoreboard objectives add castle_difficult2 dummy
+
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["castle_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=castle_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["castle_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=castle_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["castle_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=castle_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=castle_leaderboard2] castle_score2 1000000000
+
+
+
+scoreboard objectives add kingdom_score2 dummy
+scoreboard objectives add kingdom_diff2 dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["kingdom_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=kingdom_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["kingdom_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=kingdom_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["kingdom_leaderboard2","lobby_die"]}
+execute as @e[type=armor_stand,tag=kingdom_leaderboard2] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=kingdom_leaderboard2] kingdom_score2 1000000000
+
+
+
+scoreboard objectives add castle_score3 dummy
+scoreboard objectives add castle_difficult3 dummy
+
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["castle_leaderboard3","lobby_die"]}
+execute as @e[type=armor_stand,tag=castle_leaderboard3] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["castle_leaderboard3","lobby_die"]}
+execute as @e[type=armor_stand,tag=castle_leaderboard3] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["castle_leaderboard3","lobby_die"]}
+execute as @e[type=armor_stand,tag=castle_leaderboard3] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=castle_leaderboard3] castle_score3 1000000000
+
+
+
+scoreboard objectives add kingdom_score3 dummy
+scoreboard objectives add kingdom_diff3 dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["kingdom_leaderboard3","lobby_die"]}
+execute as @e[type=armor_stand,tag=kingdom_leaderboard3] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["kingdom_leaderboard3","lobby_die"]}
+execute as @e[type=armor_stand,tag=kingdom_leaderboard3] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["kingdom_leaderboard3","lobby_die"]}
+execute as @e[type=armor_stand,tag=kingdom_leaderboard3] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=kingdom_leaderboard3] kingdom_score3 1000000000
+
+
+
+scoreboard objectives add castle_score4 dummy
+scoreboard objectives add castle_difficult4 dummy
+
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["castle_leaderboard4","lobby_die"]}
+execute as @e[type=armor_stand,tag=castle_leaderboard4] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["castle_leaderboard4","lobby_die"]}
+execute as @e[type=armor_stand,tag=castle_leaderboard4] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["castle_leaderboard4","lobby_die"]}
+execute as @e[type=armor_stand,tag=castle_leaderboard4] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=castle_leaderboard4] castle_score4 1000000000
+
+
+
+scoreboard objectives add kingdom_score4 dummy
+scoreboard objectives add kingdom_diff4 dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["kingdom_leaderboard4","lobby_die"]}
+execute as @e[type=armor_stand,tag=kingdom_leaderboard4] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["kingdom_leaderboard4","lobby_die"]}
+execute as @e[type=armor_stand,tag=kingdom_leaderboard4] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["kingdom_leaderboard4","lobby_die"]}
+execute as @e[type=armor_stand,tag=kingdom_leaderboard4] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=kingdom_leaderboard4] kingdom_score4 1000000000
+
+
+
+scoreboard objectives add gamesplay_score dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["gamesplay_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=gamesplay_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["gamesplay_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=gamesplay_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["gamesplay_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=gamesplay_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=gamesplay_leaderboard] gamesplay_score 1000000000
+
+
+
+scoreboard objectives add accuracy_score dummy
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["accuracy_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=accuracy_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["accuracy_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=accuracy_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["accuracy_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=accuracy_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=accuracy_leaderboard] accuracy_score 1000000000
+
+
+scoreboard objectives add default_dota_wins dummy
+
+
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["dungeon_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=dungeon_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 1
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["dungeon_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=dungeon_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 2
+summon armor_stand 0 15 0 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["dungeon_leaderboard","lobby_die"]}
+execute as @e[type=armor_stand,tag=dungeon_leaderboard] at @s unless score @s leaderboard_pos matches 0.. run scoreboard players set @s leaderboard_pos 3
+
+scoreboard players set @e[type=armor_stand,tag=dungeon_leaderboard] default_dota_wins 1000000000
+
+scoreboard objectives add save_scramble dummy
+scoreboard objectives add wave_reached dummy
+
+# winning trial objectives
+
+scoreboard objectives add win_trial_default dummy
+scoreboard objectives add win_trial_shopless dummy
+scoreboard objectives add win_trial_poverty dummy
+scoreboard objectives add win_trial_firetrail dummy
+scoreboard objectives add win_trial_four_in_the_quiver dummy
+scoreboard objectives add win_trial_gloom dummy
+scoreboard objectives add win_trial_collector dummy
+scoreboard objectives add win_trial_detonation dummy
+scoreboard objectives add win_trial_scramble dummy
+scoreboard objectives add win_trial_random dummy
+
+scoreboard objectives add modifiers dummy
+scoreboard players set $bouncy_arrows modifiers 0
+scoreboard players set $random_crossbow modifiers 0
+scoreboard players set $enemy_per_wave modifiers 0
+scoreboard players set $volition modifiers 0
+scoreboard players set $speedrun modifiers 0
+scoreboard players set $random_items modifiers 0
+scoreboard players set $player_swap modifiers 0
+scoreboard players set $healthshare modifiers 0
+
+scoreboard objectives add last_health dummy
+
+
+##Journal death tracking
+scoreboard objectives add j_zombie_deaths dummy
+scoreboard objectives add j_spider_deaths dummy
+scoreboard objectives add j_knight_deaths dummy
+scoreboard objectives add j_brute_deaths dummy
+scoreboard objectives add j_leaper_deaths dummy
+scoreboard objectives add j_skeleton_deaths dummy
+scoreboard objectives add j_witch_deaths dummy
+scoreboard objectives add j_husk_deaths dummy
+scoreboard objectives add j_evoker_deaths dummy
+scoreboard objectives add j_vex_deaths dummy
+scoreboard objectives add j_hooded_deaths dummy
+scoreboard objectives add j_shopkeeper_deaths dummy
+
+scoreboard objectives add j_spider_queen_deaths dummy
+scoreboard objectives add j_fiery_fiend_deaths dummy
+scoreboard objectives add j_furious_fungus_deaths dummy
+scoreboard objectives add j_polar_family_deaths dummy
+scoreboard objectives add j_daring_dancer_deaths dummy
+scoreboard objectives add j_royal_archer_deaths dummy
+scoreboard objectives add j_static_split_deaths dummy
+scoreboard objectives add j_gravedigger_deaths dummy
+scoreboard objectives add j_ender_king_deaths dummy
+scoreboard objectives add j_scary_swarm_deaths dummy
+
+scoreboard objectives add j_skelrath_deaths dummy
+scoreboard objectives add j_viscean_deaths dummy
+scoreboard objectives add j_e_guardian_deaths dummy
+scoreboard objectives add j_s_guardian_deaths dummy
+scoreboard objectives add j_nixeous_deaths dummy
+scoreboard objectives add j_jockey_deaths dummy
+scoreboard objectives add j_molten_titan_deaths dummy
+scoreboard objectives add j_magma_cube_deaths dummy
+scoreboard objectives add j_forest_essence_deaths dummy
+
+scoreboard objectives add j_witch_shop_deaths dummy
+scoreboard objectives add j_dangerous_duo_deaths dummy
+scoreboard objectives add j_gallant_golem_deaths dummy
+scoreboard objectives add j_erodus_deaths dummy
+scoreboard objectives add j_block_deaths dummy
+scoreboard objectives add j_vindicator_sho_deaths dummy
+scoreboard objectives add j_blacksmith_deaths dummy
+scoreboard objectives add j_tower_archer_deaths dummy
+scoreboard objectives add j_cobalt_king_deaths dummy
+scoreboard objectives add j_king_guard_deaths dummy
+scoreboard objectives add j_torthar_deaths dummy
+scoreboard objectives add j_gold_guard_deaths dummy
+scoreboard objectives add j_tutorial_enemy_deaths dummy

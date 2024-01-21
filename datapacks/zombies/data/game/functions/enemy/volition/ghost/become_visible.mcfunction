@@ -2,6 +2,7 @@
 
 
 tag @s add visible
+tag @s remove invisible
 
 item replace entity @s armor.head with player_head{SkullOwner:{Id:[I;519484932,-304003122,-1420214208,-914021787],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzI1NTVjYTkwMWFiNjMwMWU3Y2U5Nzg5YjU3ZWJhYjU5MzQ5YzFhY2Q3OTczZjRlYmJkMGMzOGUxMGFkYTFmMSJ9fX0="}]}}}
 item replace entity @s armor.chest with leather_chestplate{display:{color:14477545}}

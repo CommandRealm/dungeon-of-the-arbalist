@@ -57,12 +57,12 @@ execute if score $upgrade tutorial matches 1.. run function lobby:tutorial/upgra
 execute unless entity @e[type=blaze,x=0,y=66,z=0,distance=..500] run function lobby:tutorial/summon_blaze
 
 ##Clearing boosters
-clear @a[tag=mechanics,x=0,y=66,z=0,distance=..500] red_dye
-clear @a[tag=mechanics,x=0,y=66,z=0,distance=..500] orange_dye
-clear @a[tag=mechanics,x=0,y=66,z=0,distance=..500] yellow_dye
-clear @a[tag=mechanics,x=0,y=66,z=0,distance=..500] lime_dye
-clear @a[tag=mechanics,x=0,y=66,z=0,distance=..500] light_blue_dye
-clear @a[tag=mechanics,x=0,y=66,z=0,distance=..500] purple_dye
+clear @a[tag=!mechanics,x=0,y=66,z=0,distance=..500] red_dye
+clear @a[tag=!mechanics,x=0,y=66,z=0,distance=..500] orange_dye
+clear @a[tag=!mechanics,x=0,y=66,z=0,distance=..500] yellow_dye
+clear @a[tag=!mechanics,x=0,y=66,z=0,distance=..500] lime_dye
+clear @a[tag=!mechanics,x=0,y=66,z=0,distance=..500] light_blue_dye
+clear @a[tag=!mechanics,x=0,y=66,z=0,distance=..500] purple_dye
 
 ##If there is no summoned stat booster
 execute unless entity @e[type=item,x=11,y=83,z=-59,distance=..1] run function lobby:tutorial/spawn_booster

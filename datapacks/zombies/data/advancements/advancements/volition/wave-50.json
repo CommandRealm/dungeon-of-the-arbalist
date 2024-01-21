@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:emerald_ore"
+        },
+        "title": {
+            "text": "Volition IV",
+            "color": "light_purple",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Reach wave 50.",
+            "color": "#61369c",
+            "bold": false
+        }
+    },
+    "parent": "advancements:volition/wave-40",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

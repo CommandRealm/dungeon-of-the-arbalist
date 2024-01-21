@@ -13,12 +13,12 @@
         "announce_to_chat": false,
         "hidden":true,
         "description": {
-            "text": "",
+        "text": "",
             "color": "#fac84b",
             "bold": false
         }
     },
-    "parent": "journal:golden_guard",
+    "parent": "journal:fallen_arbalist",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:tick"

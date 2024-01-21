@@ -1,14 +1,16 @@
 ##Function is to see if it should start the countdown
 
 ##Toggle ready if player clicked
-execute as @a[scores={pregame_click=1..}] at @s run function lobby:pregame/click
+execute as @a[scores={click_book=1..}] at @s run function lobby:pregame/click
 
 ##Check if player needs book
 execute as @a[x=0,y=66,z=0,distance=..500,gamemode=adventure] at @s unless score $ready_players pregame matches 50.. unless entity @s[nbt={Inventory:[{Slot:4b,id:"minecraft:knowledge_book"}]}] run function lobby:pregame/get_book
 
+execute store result score $players_on pregame if entity @a
+
 ##Actionbar titles
-title @a[x=0,y=66,z=0,distance=..500,gamemode=adventure,scores={ready=0},tag=!parkour,tag=!tutorial] actionbar [{"text":"You will ","color":"gray"},{"text":"not play.","color":"dark_gray"}]
-title @a[x=0,y=66,z=0,distance=..500,gamemode=adventure,scores={ready=1},tag=!parkour,tag=!tutorial] actionbar [{"text":"You will ","color":"white"},{"text":"play.","color":"dark_green"}]
+title @a[x=0,y=66,z=0,distance=..500,gamemode=adventure,scores={ready=0},tag=!parkour,tag=!tutorial] actionbar [{"text":"You will ","color":"gray"},{"text":"not play. ","color":"dark_gray"},{"text":"(","color":"dark_green","bold":true},{"score":{"objective":"pregame","name":"$ready_players"},"color":"green","bold":false},{"text":"/","color":"dark_green","bold":false},{"score":{"objective":"pregame","name":"$players_on"},"color":"green","bold":false},{"text":")","color":"dark_green","bold":true}]
+title @a[x=0,y=66,z=0,distance=..500,gamemode=adventure,scores={ready=1},tag=!parkour,tag=!tutorial] actionbar [{"text":"You will ","color":"white"},{"text":"play. ","color":"dark_green"},{"text":"(","color":"dark_green","bold":true},{"score":{"objective":"pregame","name":"$ready_players"},"color":"green","bold":false},{"text":"/","color":"dark_green","bold":false},{"score":{"objective":"pregame","name":"$players_on"},"color":"green","bold":false},{"text":")","color":"dark_green","bold":true}]
 
 ##Count readied players
 execute store result score $ready_players pregame if entity @a[scores={ready=1..}]
@@ -28,4 +30,4 @@ execute as @a[x=0,y=66,z=0,distance=..500,scores={drop_ready_book=1..}] at @s ru
 
 
 ##Killing arrows
-kill @e[type=arrow,nbt={inGround:1b}]
+execute unless entity @a[tag=mechanics] run kill @e[type=arrow,nbt={inGround:1b}]

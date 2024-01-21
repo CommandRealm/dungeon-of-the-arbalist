@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:spruce_door"
+        },
+        "title": {
+            "text": "Good infrastructure.",
+            "color": "gray",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Buy all doors on a map.",
+            "color": "#61369c",
+            "bold": false
+        }
+    },
+    "parent": "advancements:volition/random-default",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

@@ -26,9 +26,9 @@ execute if score $mode settings matches 0 as @e[type=marker,tag=raycast,tag=door
 
 
 ##Opening door (in the default mode)
-execute unless score $difficulty settings matches -1 if score $mode settings matches 0 as @e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1] at @s if score @s price_left matches ..0 unless entity @s[tag=boss_door] unless entity @s[tag=dark_door] run advancement grant @p[tag=temporary_tag,tag=!tutorial] only advancements:game-spruce_door
-execute unless score $difficulty settings matches -1 if score $mode settings matches 0 as @e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1] at @s if score @s price_left matches ..0 unless entity @s[tag=boss_door] unless entity @s[tag=default_door] run advancement grant @p[tag=temporary_tag,tag=!tutorial] only advancements:game-dark_door
-execute unless score $difficulty settings matches -1 if score $mode settings matches 0 as @e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1] at @s if score @s price_left matches ..0 unless entity @s[tag=dark_door] unless entity @s[tag=default_door] run advancement grant @p[tag=temporary_tag,tag=!tutorial] only advancements:game-boss_door
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if score $mode settings matches 0 as @e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1] at @s if score @s price_left matches ..0 unless entity @s[tag=boss_door] unless entity @s[tag=dark_door] run advancement grant @p[tag=temporary_tag,tag=!tutorial] only advancements:game-spruce_door
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if score $mode settings matches 0 as @e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1] at @s if score @s price_left matches ..0 unless entity @s[tag=boss_door] unless entity @s[tag=default_door] run advancement grant @p[tag=temporary_tag,tag=!tutorial] only advancements:game-dark_door
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if score $mode settings matches 0 as @e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1] at @s if score @s price_left matches ..0 unless entity @s[tag=dark_door] unless entity @s[tag=default_door] run advancement grant @p[tag=temporary_tag,tag=!tutorial] only advancements:game-boss_door
 
 
 execute if score $mode settings matches 0 as @e[type=marker,tag=raycast,tag=doorway,sort=nearest,limit=1] at @s if score @s price_left matches ..0 unless entity @s[tag=boss_door] run function game:default/door/open

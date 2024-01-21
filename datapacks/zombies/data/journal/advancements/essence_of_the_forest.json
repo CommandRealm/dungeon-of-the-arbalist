@@ -2,7 +2,7 @@
     "display": {
       "icon": {
         "item": "minecraft:scute"},
-      "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Essence of the Forest","bold":true,"color":"dark_red"}],
+      "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Forest Essence","bold":true,"color":"dark_red"}],
       "description": [{"text":"Journal entry for Essence of the Forest. You can learn more in the ender chest.","color":"gray"}],
       "show_toast": true,
       "announce_to_chat": false,

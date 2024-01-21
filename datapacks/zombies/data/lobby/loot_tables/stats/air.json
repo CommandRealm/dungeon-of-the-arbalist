@@ -1,6 +1,6 @@
 { "type":"minecraft:generic", "pools" : 
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1,invalid_click:1}"},
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:255,clickable:1,invalid_click:1}"},
               {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Air ","color":"#d6d6d6","italic":false,"bold":false},{"text":"upgrades ","color":"gold"},{"text":"used","color":"gray"},{"text":": ","color":"gray"},{"score":{"objective":"global_air","name":"@s"},"color":"#d6d6d6","italic":false,"bold":true}] }], 
               "name": "minecraft:white_stained_glass" } ] } ] }

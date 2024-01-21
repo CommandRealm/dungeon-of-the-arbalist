@@ -1,14 +1,14 @@
 ##called when we shoot a bow
 
 scoreboard players reset @s shoot_bow
-scoreboard players set @s arrow_delay 60
+scoreboard players set @s arrow_delay 30
 
 ##clear arrow
 clear @s arrow
 
 
 ##iron bars
-item replace entity @s hotbar.7 with iron_bars{HideFlags:63,display:{Name:'[{"text":""}]'}}
+item replace entity @s hotbar.7 with iron_bars{HideFlags:255,display:{Name:'[{"text":""}]'}}
 
 
 

@@ -9,9 +9,9 @@ function game:enemy/spawn_enemy
 execute unless score $starting_players game matches 1 unless score $difficulty settings matches 5.. run summon vindicator 3017 78 87 {PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:resistance",duration:10000,amplifier:126,show_particles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Jacquelin","color":"gold","bold":true}]'}
 
 loot spawn 3018 79.5 87 loot game:shop_items/stats/revive
-scoreboard players set @e[type=item,x=3018,y=79,z=87,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 90
-scoreboard players set @e[type=item,x=3018,y=79,z=87,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_quantity 2147483647
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3018,y=79,z=87,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 90
+scoreboard players set @e[type=item,x=3018,y=79,z=87,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_quantity 2147483647
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 
 ##Resetting the door

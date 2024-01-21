@@ -1,7 +1,8 @@
 
 
 ##Finding cubes with players in them.
-execute if entity @s[team=game] as @e[type=area_effect_cloud,tag=generation_marker,sort=nearest,limit=1] at @s positioned ~-16 ~-16 ~-16 run tag @e[type=marker,tag=zombie_spawnpoint,dx=31,dy=31,dz=31,tag=!boss_room_spawnpoint] add temporary_tag_2
+# execute if entity @s[team=game] as @e[type=area_effect_cloud,tag=generation_marker,sort=nearest,limit=1] at @s positioned ~-16 ~-16 ~-16 run tag @e[type=marker,tag=zombie_spawnpoint,dx=31,dy=31,dz=31,tag=!boss_room_spawnpoint] add temporary_tag_2
+execute if entity @s[team=game] run tag @e[type=marker,tag=zombie_spawnpoint,tag=!boss_room_spawnpoint,distance=..25,tag=spawnable] add temporary_tag_2
 
 ##Making sure that spawn doesn't have a player near it
 tag @e[type=marker,tag=temporary_tag_2] add temporary_tag_3

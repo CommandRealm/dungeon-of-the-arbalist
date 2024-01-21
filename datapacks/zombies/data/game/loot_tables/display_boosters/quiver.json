@@ -16,7 +16,7 @@
             {
               "function":"minecraft:set_lore",
               "entity":"this",
-              "lore":[{"text":"Increases your max quiver size.","italic":false,"color":"gray"},{"text":"Level","italic":false,"color":"#fca50d","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"boost_quiver","name":"@s"},"color":"gold","bold":true,"extra":[{"text":"/","color":"gray","bold":true,"extra":[{"text":"5","color":"gold","bold":true}]}]}]}]},{"text":"✰ ","color":"#9c7948","italic":false,"extra":[{"text":"Prestige","italic":false,"color":"#c0a379","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"prestige_quiver","name":"@s"},"color":"gold","bold":true}]}]}]}]
+              "lore":[{"text":"Increases your max quiver size.","italic":false,"color":"gray"},{"text":"Level","italic":false,"color":"#fca50d","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"boost_quiver","name":"@s"},"color":"gold","bold":true,"extra":[{"text":"/","color":"gray","bold":true,"extra":[{"text":"5","color":"gold","bold":true}]}]}]}]},{"text":"✰ ","color":"#9c7948","italic":false,"extra":[{"text":"Mastery","italic":false,"color":"#c0a379","extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"mastery_quiver","name":"@s"},"color":"gold","bold":true}]}]}]}]
             }
           ]
         }

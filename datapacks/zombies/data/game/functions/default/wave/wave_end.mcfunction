@@ -4,7 +4,7 @@
 ##Tellraw
 tellraw @a[tag=playing] [{"text":"Wave ","color":"dark_green"},{"score":{"objective":"game","name":"$wave"},"color":"green","bold":true},{"text":" has ended.","color":"gray"}]
 tellraw @a[team=spectator] [{"text":"Wave ","color":"dark_green"},{"score":{"objective":"game","name":"$wave"},"color":"green","bold":true},{"text":" has ended.","color":"gray"}]
-tellraw @a[tag=playing,team=game] [{"text":"The next wave will begin shortly. Click ","color":"#46623b"},{"text":"[here]","color":"#799d76","bold":true,"clickEvent":{"action":"run_command","value":"/trigger vote_end set 1"}},{"text":" or drop your compass to vote to skip the delay. ","color":"#46623b"}]
+tellraw @a[tag=playing,team=game] [{"text":"The next wave will begin shortly. Click ","color":"#46623b"},{"text":"[here]","color":"#799d76","bold":true,"clickEvent":{"action":"run_command","value":"/trigger skip set 1"}},{"text":" or drop your compass to vote to skip the delay. ","color":"#46623b"}]
 
 ##Killing remaining enemies
 execute as @e[tag=enemy,tag=!shopkeeper] at @s run function game:death_timer_over
@@ -30,10 +30,10 @@ execute if score $wave game matches 12.. run scoreboard players set $time game 5
 bossbar remove game:wave
 
 ##trigger objective
-scoreboard objectives remove vote_end
-scoreboard objectives add vote_end trigger
-scoreboard players set @a[tag=playing,gamemode=adventure] vote_end 0
-scoreboard players enable @a[tag=playing,gamemode=adventure] vote_end
+scoreboard objectives remove skip
+scoreboard objectives add skip trigger
+scoreboard players set @a[tag=playing,gamemode=adventure] skip 0
+scoreboard players enable @a[tag=playing,gamemode=adventure] skip
 
 ##Resetting spawn points
 scoreboard players reset @e[type=marker,tag=zombie_spawnpoint] spawn_delay
@@ -58,25 +58,37 @@ tag @a remove sent_vote_end_message
 effect clear @a[tag=playing] night_vision
 
 
+# scheduling unlocks
+schedule function game:default/wave/check_armor_trim_unlocks 50t
+
+
 # shop resets
 tag @a remove shop_reset
-execute if score $wave game matches 14 run tag @a[tag=playing] add shop_reset
-
-execute if score $wave game matches 24 run tag @a[tag=playing] add shop_reset
-
-execute if score $wave game matches 34 run tag @a[tag=playing] add shop_reset
-
-execute if score $wave game matches 44 run tag @a[tag=playing] add shop_reset
-
-execute if score $wave game matches 54 run tag @a[tag=playing] add shop_reset
-
-execute if score $wave game matches 64 run tag @a[tag=playing] add shop_reset
-
+scoreboard players remove $waves_till_shop_reset game 1
+execute if score $waves_till_shop_reset game matches 0 run tag @a[tag=playing] add shop_reset
+execute if score $waves_till_shop_reset game matches 0 run scoreboard players set $waves_till_shop_reset game 10
 
 tag @a[tag=playing,tag=shop_reset] add play_alternate_title
+
+
+# if we need to welcome the player to volition
+execute if score $wave game matches 14 if score $volition game matches 1 as @a[tag=playing,team=game,gamemode=adventure] run function game:default/wave/volition/intro_text/start
+
 #if there is a shop reset
-execute if entity @a[tag=shop_reset,tag=playing] as @e[type=pillager,tag=shopkeeper,team=!enemy] at @s run function game:shops/refill/refill_shop
+execute if entity @a[tag=shop_reset,tag=playing] as @e[type=pillager,tag=shopkeeper,team=!enemy,tag=!tutorial_shopkeeper] at @s run function game:shops/refill/refill_shop
+
+# killing item displays from phantoms
+kill @e[type=item_display,tag=die_between_waves]
+
+
+execute if entity @a[tag=shop_reset,tag=playing] run tellraw @a[x=0,y=0,z=0,distance=500..] [{"text":"🧪","color":"#61369c"},{"text":": ","color":"gray"},{"text":"Shops ","color":"gold","bold":false},{"text":"have been","color":"gray"},{"text":" reset","color":"red"},{"text":".","color":"gray"}]
 
 # if there is a shop reset
 scoreboard players set $shop_reset game 20
-execute if entity @a[tag=shop_reset,tag=playing] run function game:default/wave/intro/shop_reset/main
+execute if entity @a[tag=shop_reset,tag=playing] unless score $wave game matches 14 run function game:default/wave/intro/shop_reset/main
+
+# called to break gas masks
+execute if entity @a[tag=playing,tag=has_gas_mask,team=game] run schedule function game:shops/items/gas_mask/call_break 40t
+
+# ending trials
+execute as @a[tag=playing,tag=trial_scramble] at @s run function game:trials/scramble/end_trial

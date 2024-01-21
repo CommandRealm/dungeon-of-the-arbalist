@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod"
+        },
+        "title": {
+            "text": "Relaxing...",
+            "color": "gray",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Go fishing after wave 100.",
+            "color": "#61369c",
+            "bold": false
+        }
+    },
+    "parent": "advancements:volition/random-rich",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

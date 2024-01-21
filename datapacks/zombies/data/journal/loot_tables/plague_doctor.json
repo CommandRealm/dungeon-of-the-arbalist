@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function":"minecraft:set_nbt",
+              "entity":"this",
+              "tag":"{clickable:1,invalid_click:1,SkullOwner:{Id:[I;1348588827,711999720,-2022459919,-1858757912],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTQ2MDFlNjY0ZTJhZjA3NmI1NDU1MzViN2E2ODljYzc5YjEwODI2YWE2NTc1M2ZiYzZmNjU0MmJjOTRjZjcxIn19fQ==\"}]}}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"43","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Plague Doctor","color":"#61369c","bold":false}]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [{"text":"A doctor who poisons his current room after 25 seconds.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_plague","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

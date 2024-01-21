@@ -13,4 +13,7 @@ scoreboard players reset @s end_parkour
 tellraw @s [{"text":"☀","color":"gray"},{"text":" You started the parkour!","color":"green"}]
 
 ##Resetting our timer
-scoreboard players set @s parkour_time 0
+execute store result score $ticks parkour_time run worldborder get
+execute if score $ticks parkour_time matches 59000000.. run function lobby:parkour/set_worldborder
+
+execute store result score @s parkour_start run worldborder get

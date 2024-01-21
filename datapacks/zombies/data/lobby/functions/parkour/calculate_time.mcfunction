@@ -1,6 +1,26 @@
 ##Called to convert our time into seconds and milliseconds.
 
 ##Minutes
+
+
+
+
+execute store result score $test parkour_time run worldborder get
+execute store result score $ticks parkour_time run worldborder get
+scoreboard players operation $ticks parkour_time -= @s parkour_start
+
+# scoreboard players operation $ticks parkour_time -= $58000000 number
+scoreboard players operation $ticks parkour_time /= $5 number
+
+scoreboard players operation @s parkour_time = $ticks parkour_time
+
+
+
+
+
+
+
+
 scoreboard players operation $calculate calculate = @s parkour_time
 scoreboard players operation $calculate calculate /= $minute number
 scoreboard players operation $minute calculate = $calculate calculate

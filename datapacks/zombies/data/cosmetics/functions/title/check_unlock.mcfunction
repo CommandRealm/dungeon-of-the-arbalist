@@ -6,4 +6,4 @@ execute if entity @s[scores={crossbow_id=1..9}] run scoreboard players set $calc
 execute if entity @s[scores={crossbow_id=10..27}] run scoreboard players set $calculate calculate 2
 execute if entity @s[scores={crossbow_id=28..}] run scoreboard players set $calculate calculate 3
 
-execute unless score $difficulty settings matches -1 if score $calculate calculate >= @s reached_tier run function cosmetics:title/unlock
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if score $calculate calculate >= @s reached_tier run function cosmetics:title/unlock

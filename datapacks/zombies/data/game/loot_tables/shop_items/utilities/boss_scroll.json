@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:63,Enchantments:[{id:\"minecraft:aqua_affinity\",lvl:1}],needs_initialization:1b,droppable:1b,shop_item:1b,display:{Name:'[{\"text\":\"Boss\",\"color\":\"#ab0909\",\"italic\":false},{\"text\":\" Scroll \",\"color\":\"#5a4f4f\",\"italic\":false},{\"text\":\"<\",\"color\":\"dark_gray\",\"bold\":true},{\"keybind\":\"key.drop\",\"color\":\"gray\",\"bold\":false},{\"text\":\">\",\"color\":\"dark_gray\",\"bold\":true}]',Lore:['[{\"text\":\"Drop to receive info about the dungeon\\'s boss and minibosses.\",\"color\":\"gray\",\"italic\":false}]']}}"
+              "tag": "{HideFlags:255,Enchantments:[{id:\"minecraft:aqua_affinity\",lvl:1}],needs_initialization:1b,droppable:1b,shop_item:1b,display:{Name:'[{\"text\":\"Boss\",\"color\":\"#ab0909\",\"italic\":false},{\"text\":\" Scroll \",\"color\":\"#5a4f4f\",\"italic\":false},{\"text\":\"<\",\"color\":\"dark_gray\",\"bold\":true},{\"keybind\":\"key.drop\",\"color\":\"gray\",\"bold\":false},{\"text\":\">\",\"color\":\"dark_gray\",\"bold\":true}]',Lore:['[{\"text\":\"Drop to receive info about the dungeon\\'s boss and minibosses.\",\"color\":\"gray\",\"italic\":false}]']}}"
             }
           ]
         }

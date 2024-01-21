@@ -20,7 +20,7 @@ execute as @e[team=enemy,tag=enemy,scores={burning_timer=1..}] at @s run functio
 
 
 ##Extra damage timer
-execute as @e[team=enemy,tag=enemy,scores={e_damage_timer=1..},limit=1] at @s run function game:enemy/extra_damage/main
+execute as @e[team=enemy,tag=enemy,scores={e_damage_timer=1..}] at @s run function game:enemy/extra_damage/main
 
 ##if an enemy has a spontaneous timer active
 execute if entity @e[team=enemy,tag=enemy,scores={spontaneous_time=1..},limit=1] run function game:enemy/effect/spontaneous/main

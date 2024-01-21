@@ -47,6 +47,9 @@ execute if score $time game matches 150 run clone 1778 70 -133 1790 80 -129 1778
 execute if score $time game matches 150 at @a[tag=playing,limit=1] run playsound minecraft:block.metal.break master @a ~ ~ ~ 1 0
 
 
+execute if score $time game matches 172 run effect give @a[tag=playing,limit=1] darkness infinite 0 true
+
+
 ##Ambience sounds
 execute as @a[tag=playing,limit=1,sort=random] at @s run playsound minecraft:ambient.underwater.loop.additions.ultra_rare master @s ~ ~ ~ 0.1 2
 

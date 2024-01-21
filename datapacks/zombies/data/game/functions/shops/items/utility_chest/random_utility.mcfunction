@@ -41,6 +41,11 @@ execute if score $rand_2 random matches 11 run loot give @s loot game:shop_items
 
 execute if score $rand_2 random matches 12 run loot give @s loot game:shop_items/utilities/utility_chest
 
+execute if score $rand_2 random matches 14 run loot give @s loot game:shop_items/utilities/rope
+
+execute if score $rand_2 random matches 15 run loot give @s loot game:shop_items/utilities/gas_mask
+
+execute if score $rand_2 random matches 16 run loot give @s loot game:shop_items/utilities/strength_shield
 
 
 

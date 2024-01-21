@@ -13,11 +13,12 @@ scoreboard objectives add generation dummy
 
 ##Teleport and effects.
 tp @a[tag=playing] 1784 58 -199 -90 90
-effect give @a[tag=playing] levitation 100000 255 true
-effect give @a[tag=playing] resistance 100000 255 true
-effect give @a[tag=playing] blindness 100000 255 true
-effect give @a[tag=playing] slowness 100000 255 true
-effect give @a[tag=playing] jump_boost 100000 200 true
+effect give @a[tag=playing] levitation infinite 255 true
+effect give @a[tag=playing] resistance infinite 255 true
+effect give @a[tag=playing] blindness infinite 255 true
+effect give @a[tag=playing] slowness infinite 255 true
+effect give @a[tag=playing] jump_boost infinite 200 true
+effect give @a[tag=playing,tag=trial_gloom] darkness infinite 255 true
 clear @a[tag=playing]
 
 
@@ -31,7 +32,6 @@ execute if score $generation_type settings matches -1 run scoreboard players set
 
 ##Crossbow id
 scoreboard players set @a[tag=playing] crossbow_id 0
-
 ##shoot crossbow objective
 scoreboard players reset @a[tag=playing] shoot_crossbow
 
@@ -39,7 +39,7 @@ scoreboard players reset @a[tag=playing] shoot_crossbow
 scoreboard players reset @a enemy_spawn_time
 
 ##removing trigger objective
-scoreboard objectives remove vote_end
+scoreboard objectives remove skip
 
 ##activating the cutscene
 scoreboard players set $cutscene game 1
@@ -50,3 +50,4 @@ tag @a remove in_boss_room
 ##Minibosses
 scoreboard players set $miniboss_1 game -1
 scoreboard players set $miniboss_2 game -1
+

@@ -12,3 +12,8 @@ execute if score $cutscene game matches 0 run function game:default/active
 
 ##Containing spectators
 execute as @a[gamemode=spectator] at @s if entity @s[y=-50,distance=..50] run tp @s ~ 0 ~
+
+
+
+# volition intro text
+execute if score $volition game matches 1 as @a[tag=playing,tag=mechanics,scores={intro_text=1..}] at @s run function game:default/wave/volition/intro_text/main

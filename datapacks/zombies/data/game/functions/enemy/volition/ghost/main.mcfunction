@@ -1,7 +1,7 @@
 # main ghost function
 
-execute as @e[type=zombie,tag=ghost,team=enemy,tag=!visible] at @s if entity @a[tag=playing,gamemode=adventure,team=game,distance=..6] run function game:enemy/volition/ghost/become_visible
-execute as @e[type=zombie,tag=ghost,team=enemy,tag=visible] at @s unless entity @a[tag=playing,gamemode=adventure,team=game,distance=..6] run function game:enemy/volition/ghost/become_invisible
+execute as @e[type=zombie,tag=ghost,team=enemy,tag=!visible] at @s if entity @a[tag=playing,gamemode=adventure,team=game,distance=..8] run function game:enemy/volition/ghost/become_visible
+execute as @e[type=zombie,tag=ghost,team=enemy,tag=visible] at @s unless entity @a[tag=playing,gamemode=adventure,team=game,distance=..8] run function game:enemy/volition/ghost/become_invisible
 
 
 

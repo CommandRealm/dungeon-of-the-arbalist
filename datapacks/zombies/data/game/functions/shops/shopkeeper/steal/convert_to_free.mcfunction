@@ -1,5 +1,6 @@
 # called to convert this item to free
 scoreboard players set @s item_price 0
+scoreboard players set @s item_quantity 0
 
 # removing id so it doesn't continue to check
 scoreboard players reset @e[type=marker,sort=nearest,limit=1] id

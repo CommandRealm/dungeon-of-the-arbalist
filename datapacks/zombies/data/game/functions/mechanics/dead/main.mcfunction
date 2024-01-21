@@ -12,7 +12,7 @@ execute if score @s respawn_timer matches 1.. run function game:mechanics/dead/r
 
 
 ##Particles
-particle cloud ~ ~1.25 ~ 0.05 0.05 0.05 0.05 1
+particle cloud ~ ~1.15 ~ 0.05 0.05 0.05 0.05 1 normal
 
 
 # if they sneak give them glowing

@@ -18,7 +18,7 @@
             "bold": false
         }
     },
-    "parent": "advancements:hidden/hidden-titles",
+    "parent": "advancements:hidden/hidden-wave",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

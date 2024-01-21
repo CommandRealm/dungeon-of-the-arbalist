@@ -60,5 +60,8 @@ scoreboard players operation @s local_treasure += $total calculate
 scoreboard players set @s action_bar_delay 20
 
 
+# advancements
+execute if score $volition game matches 1.. unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if score @s treasure matches 20000.. run advancement grant @s only advancements:volition/random-rich
+
 ##Sounds
 function game:mechanics/play_treasure_sound

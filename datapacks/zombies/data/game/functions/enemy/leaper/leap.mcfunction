@@ -48,3 +48,7 @@ playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 0.5 1.5
 
 ##Generating a new leap timer
 function game:enemy/leaper/get_leap_timer
+
+# if we are in the void just kill us
+execute store result score $calculate calculate run data get entity @s Pos[1] 1
+execute if score $calculate calculate matches ..50 run kill @s

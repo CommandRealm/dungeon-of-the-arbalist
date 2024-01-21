@@ -3,7 +3,7 @@
 
 advancement revoke @s only game:dead_player_hit_player
 
-tellraw @a [{"selector":"@s"},{"text":" gave their life for an arbalist.","color":"red"}]
+tellraw @a[x=0,y=0,z=0,distance=500..] [{"selector":"@s"},{"text":" gave their life for an arbalist.","color":"red"}]
 
 ##clearing effects
 effect clear @a[tag=playing,team=game] luck

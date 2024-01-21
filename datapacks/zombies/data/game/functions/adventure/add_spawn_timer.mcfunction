@@ -23,5 +23,5 @@ tag @e[type=marker] remove temporary_tag_2
 
 execute as @a[tag=playing,team=game,distance=..15,limit=10] run scoreboard players add $calculate calculate 30
 
-execute if entity @e[tag=miniboss,distance=..15] run scoreboard players add $calculate calculate 150
+execute if entity @e[tag=miniboss,distance=..15,type=!iron_golem] run scoreboard players add $calculate calculate 150
 scoreboard players remove $calculate calculate 30

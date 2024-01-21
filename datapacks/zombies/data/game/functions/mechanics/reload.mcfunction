@@ -12,7 +12,10 @@ playsound minecraft:item.axe.strip master @s ~ ~ ~ 1 0.75
 
 #Crossbow
 execute store result score @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow"}]}] arrow_delay run data get entity @s Inventory[{Slot:-106b}].tag.reload_delay
+
 #flint
-execute unless entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow"}]}] run scoreboard players operation @s arrow_delay = @s store_reload
+execute unless entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow"}]}] run scoreboard players operation @s arrow_delay = @s[tag=!trial_four_in_the_quiver] store_reload
 
 ##Temporary tag is removed when this function is called.
+
+scoreboard players set @s reload_percent -1

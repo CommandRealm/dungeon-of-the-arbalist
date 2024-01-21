@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:chiseled_polished_blackstone"
+        },
+        "title": {
+            "text": "Now that was hard...",
+            "color": "gray",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Defeat a boss on wave 75 or above...",
+            "color": "#61369c",
+            "bold": false
+        }
+    },
+    "parent": "advancements:volition/random-doors",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

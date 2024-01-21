@@ -3,7 +3,6 @@
 ##start
 execute if score $time game matches 1 run function game:default/start
 
-
 ##Calling pre wave
 execute if score $cutscene game matches 0 run function game:default/pre-wave
 

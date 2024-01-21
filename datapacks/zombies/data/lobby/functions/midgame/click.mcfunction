@@ -8,7 +8,7 @@ tag @s remove tutorial
 tag @s remove mechanics
 
 ##Reset score
-scoreboard players reset @s pregame_click
+scoreboard players reset @s click_book
 
 ##Clearing the book makes the function called quickly after it update the book.
 clear @s knowledge_book
@@ -36,6 +36,8 @@ scoreboard objectives remove back_to_lobby
 scoreboard objectives add back_to_lobby trigger
 
 
+execute if score @s intro_text matches 1.. run function lobby:intro_text/end
+tag @s remove show_intro_text
 
 ##spectator fix
 tag @s add needs_spectator_fix

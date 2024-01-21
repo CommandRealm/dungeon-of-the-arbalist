@@ -25,5 +25,5 @@ execute as @a[tag=playing,gamemode=adventure,nbt={SelectedItem:{id:"minecraft:co
 execute as @e[type=zombie,tag=cpt_king_miniboss,tag=pool_tp,x=3088,y=43,z=150,distance=..5] at @s run function game:adventure/kingdom/pool_tp
 
 
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:vindicator_shopkeeper=false}] at @s unless score $difficulty settings matches -1 if entity @e[type=vindicator,tag=shopkeeper,team=enemy,distance=..7] run advancement grant @s only journal:vindicator_shopkeeper
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:cobalt_king_guard=false}] at @s unless score $difficulty settings matches -1 if entity @e[type=zombie,tag=guards,distance=..7] run advancement grant @s only journal:cobalt_king_guard
+execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:vindicator_shopkeeper=false}] at @s unless score $modifiers settings matches 1 unless score $difficulty settings matches -1 if entity @e[type=vindicator,tag=shopkeeper,team=enemy,distance=..7] run advancement grant @s only journal:vindicator_shopkeeper
+execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:cobalt_king_guard=false}] at @s unless score $modifiers settings matches 1 unless score $difficulty settings matches -1 if entity @e[type=zombie,tag=guards,distance=..7] run advancement grant @s only journal:cobalt_king_guard

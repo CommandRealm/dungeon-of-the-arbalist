@@ -12,6 +12,8 @@ execute if entity @s[scores={enemy_loot_table=1}] run loot spawn ~ ~ ~ loot game
 execute if entity @s[scores={enemy_loot_table=2}] run loot spawn ~ ~ ~ loot game:enemy_drops/baby
 execute if entity @s[scores={enemy_loot_table=3}] run loot spawn ~ ~ ~ loot game:enemy_drops/volition
 
+execute if entity @a[tag=playing,tag=trial_detonation] run function game:trials/detonation/explosion
+
 ##tagging new items
 tag @e[type=item,distance=..1] add die_between_games
 
@@ -22,6 +24,9 @@ execute unless entity @s[tag=tutorial_enemy] if score $mode settings matches 1..
 execute unless entity @s[tag=tutorial_enemy] if score $mode settings matches 1.. if score $difficulty settings matches 2 if score $health_pot game matches 30.. run function game:enemy/drop_health_pot
 execute unless entity @s[tag=tutorial_enemy] if score $mode settings matches 1.. if score $difficulty settings matches 3 if score $health_pot game matches 40.. run function game:enemy/drop_health_pot
 execute unless entity @s[tag=tutorial_enemy] if score $mode settings matches 1.. if score $difficulty settings matches 4 if score $health_pot game matches 45.. run function game:enemy/drop_health_pot
+
+# If this is a modifier run it
+execute if score $random_items modifiers matches 1 run function game:modifiers/random_items/check_drop
 
 ##If we're in the erodus boss fight
 execute if entity @s[x=4974,y=77,z=63,dx=20,dy=20,dz=24] if score $phase boss matches 1 run function game:boss/fight/stone_monster/enemy_die_first_phase
@@ -60,8 +65,15 @@ execute store result score $calculate calculate if entity @a[tag=playing,advance
 execute if entity @s[tag=mob_spawner_hitbox] run function game:enemy/volition/mob_spawner/die
 execute if entity @s[type=phantom,tag=phantom_part] run function game:enemy/volition/phantom/die
 
+# if we are fallen arbalist 
+execute if entity @s[tag=fallen_arbalist] run function game:enemy/volition/fallen_arbalist/die
+
+
 ##If we're a magma cube, tp us first
 tp @s[type=magma_cube] 0 0 0
+
+# if we are a bomber, give advancement to nearby players
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if entity @s[tag=check_bomber_tnt_advancement,tag=exploding_zombie] run advancement grant @a[tag=playing,team=game,distance=..10] only advancements:volition/enemy-bomber
 
 ##Killing us if we're at zero
 kill @s[scores={enemy_health=0}]
@@ -69,3 +81,5 @@ kill @s[scores={enemy_health=0}]
 execute if entity @a[tag=playing,advancements={game:punch_kill=true}] run summon area_effect_cloud ~ ~ ~ {Duration:0,Tags:["punch_kill"]}
 
 
+# if we are an enemy and the wave is over, remove the count by 1
+execute if score $mode settings matches 0 if score $wave_length game matches ..0 if score $time game matches 1000.. if entity @s[tag=enemy,team=enemy,tag=!tutorial_enemy] run function game:default/wave/check_wave_end

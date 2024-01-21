@@ -9,10 +9,9 @@ execute if score $boss boss matches 1 run function game:boss/fight/guardian/star
 execute if score $boss boss matches 2 run function game:boss/fight/stray/start
 execute if score $boss boss matches 3 run function game:boss/fight/magma_cube/start
 execute if score $boss boss matches 4 run function game:boss/fight/forest_essence/start
-execute if score $boss boss matches 5 run function game:boss/fight/ghast/start
 execute if score $mode settings matches 1 run function game:boss/fight/stone_monster/start
 execute if score $mode settings matches 2 run function game:boss/fight/mummy/start
-effect give @e[tag=boss] resistance 10000 127 true
+effect give @e[tag=boss] resistance infinite 127 true
 
 
 #Setting health
@@ -70,3 +69,5 @@ scoreboard players set $attack boss 0
 execute if score $mode settings matches 2 run fill 3158 53 214 3162 59 240 air destroy
 execute if score $mode settings matches 2 run tp @a[x=3157,y=50,z=214,dx=6,dy=15,dz=26,tag=playing,gamemode=adventure] 3160 55 242
 
+# setting health
+scoreboard players set @e[tag=boss] enemy_loot_table 100 

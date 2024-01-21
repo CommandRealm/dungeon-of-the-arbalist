@@ -15,7 +15,7 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"16","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Polar Family","color":"red","bold":true}]
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"15","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Polar Family","color":"red","bold":true}]
             },
             {
               "function": "minecraft:set_lore",

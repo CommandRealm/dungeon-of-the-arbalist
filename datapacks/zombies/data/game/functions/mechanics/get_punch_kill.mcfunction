@@ -2,7 +2,7 @@
 
 
 ##Score and advancement revoke.
-execute unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_punch 1
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s[tag=!tutorial] global_punch 1
 
 
 ##Finding a nearby killed zombie.

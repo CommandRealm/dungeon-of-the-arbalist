@@ -1,0 +1,97 @@
+{
+    "pools": [
+      {
+        "rolls": {
+          "min": 35,
+          "max": 75
+        },
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:gold_nugget",
+            "weight": 60,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 10,
+                  "max": 20
+                }
+              },
+              {"function": "minecraft:set_nbt",
+                "tag": "{treasure:1}"
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:iron_nugget",
+            "weight": 120,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 10,
+                  "max": 50
+                }
+              },
+              {"function": "minecraft:set_nbt",
+                "tag": "{treasure:1}"
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:emerald",
+            "weight": 20,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 1,
+                  "max": 10
+                }
+              },
+              {"function": "minecraft:set_nbt",
+                "tag": "{treasure:1}"
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:diamond",
+            "weight": 6,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 1,
+                  "max": 5
+                }
+              },
+              {"function": "minecraft:set_nbt",
+                "tag": "{treasure:1}"
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:echo_shard",
+            "weight": 1,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 0,
+                  "max": 2
+                }
+              },
+              {"function": "minecraft:set_nbt",
+                "tag": "{treasure:1}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

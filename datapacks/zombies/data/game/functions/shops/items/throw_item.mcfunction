@@ -21,4 +21,7 @@ execute if entity @e[type=item,tag=temporary_match_0,tag=temporary_match_1,tag=t
 ##when a player drops a healing chest
 execute if entity @e[type=item,tag=temporary_match_0,tag=temporary_match_1,tag=temporary_match_2,tag=temporary_match_3,limit=1,nbt={Item:{id:"minecraft:creeper_banner_pattern"}}] at @s run function game:shops/items/boss_scroll/use
 
+
+
+
 kill @e[type=item,tag=temporary_match_0,tag=temporary_match_1,tag=temporary_match_2,tag=temporary_match_3,limit=1]

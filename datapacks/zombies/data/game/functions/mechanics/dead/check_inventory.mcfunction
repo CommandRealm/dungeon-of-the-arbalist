@@ -38,6 +38,7 @@ clear @a[tag=playing] dead_bush
 clear @a[tag=playing] cactus
 clear @a[tag=playing] bamboo
 clear @a[tag=playing] warped_fungus
+clear @a[tag=playing] book
 clear @a[tag=playing] crimson_fungus
 clear @a[tag=playing] warped_roots
 ##No crimson roots because of spontaneous crossbow

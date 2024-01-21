@@ -19,4 +19,4 @@ execute if score $rand_3 random matches 3 run scoreboard players operation $calc
 execute if score $rand_3 random matches 4 run scoreboard players operation $calculate calculate -= $calculate_2 calculate_2
 
 ##Applying the price to our item
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] unless score @s item_price matches 0.. run scoreboard players operation @s item_price = $calculate calculate
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] unless score @s item_price matches 0.. run scoreboard players operation @s item_price = $calculate calculate

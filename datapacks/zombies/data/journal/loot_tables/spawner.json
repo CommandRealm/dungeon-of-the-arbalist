@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:spawner",
+          "functions": [
+            {
+              "function":"minecraft:set_nbt",
+              "entity":"this",
+              "tag":"{clickable:1,invalid_click:1,HideFlags:63}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"54","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Spawner","color":"#61369c"}]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [{"text":"A block that will spawn mobs around it.","color":"green","italic":false},{"text":"Times killed","color":"red","italic":false,"extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"j_spawner","name":"@s"},"bold":true,"color":"dark_red"}]}]}]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

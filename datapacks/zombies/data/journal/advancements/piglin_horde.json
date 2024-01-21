@@ -1,0 +1,18 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:piglin_head"  
+      },
+      "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Piglin Horde","bold":true,"color":"red"}],
+      "description": [{"text":"Journal entry for the Piglin Horde. You can learn more in the ender chest.","color":"gray"}],
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "parent": "journal:hooded",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+}

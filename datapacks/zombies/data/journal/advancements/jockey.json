@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:skeleton_skull"},
-    "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Jockey","bold":false,"color":"dark_green"}],
+    "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Jockey","bold":true,"color":"dark_green"}],
     "description": [{"text":"Journal entry for the Jockey. You can learn more in the ender chest.","color":"gray"}],
     "show_toast": true,
     "announce_to_chat": false,

@@ -6,7 +6,7 @@ execute if score $difficulty settings matches 3.. run item replace entity @s[typ
 execute if score $difficulty settings matches 2 run item replace entity @s[type=pillager] weapon.offhand with tipped_arrow{custom_potion_effects:[{id:"minecraft:instant_damage",amplifier:0,duration:1}],CustomPotionColor:7424817} 64
 execute if score $difficulty settings matches ..1 run item replace entity @s[type=pillager] weapon.offhand with arrow
 attribute @s[type=pillager] generic.knockback_resistance base set 1.0
-effect give @s speed 1000000 0 true
+effect give @s speed infinite 0 true
 item replace entity @s[type=vindicator] weapon.mainhand with iron_axe
 
 tag @s add enemy

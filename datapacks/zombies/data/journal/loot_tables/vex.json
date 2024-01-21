@@ -15,7 +15,7 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"10","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Vex","color":"dark_green"}]
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"58","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Vex","color":"#61369c"}]
             },
             {
               "function": "minecraft:set_lore",

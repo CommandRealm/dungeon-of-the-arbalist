@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:gold_ingot"
+        },
+        "title": {
+            "text": "Wealthy!",
+            "color": "gray",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Hold 20000 treasure at one time.",
+            "color": "#61369c",
+            "bold": false
+        }
+    },
+    "parent": "advancements:volition/random-inflation",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

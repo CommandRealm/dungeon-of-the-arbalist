@@ -12,6 +12,10 @@ execute as @a[tag=playing] at @s run playsound minecraft:entity.zombie.death mas
 scoreboard players set $time game 900
 
 effect give @a[tag=playing] night_vision 15 0 true
+effect give @a[tag=playing,tag=trial_gloom] darkness infinite 0 true
+
+# This is active_trial not the specific one because of scramble
+execute as @a[tag=playing,tag=active_trial] at @s run function game:trials/collector/start
 
 # removing forceloads
 forceload remove all

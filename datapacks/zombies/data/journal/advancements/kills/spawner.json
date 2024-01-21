@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"mob_spawner_hitbox\"]}",
+          "type": "minecraft:magma_cube"
+        }
+      }
+    }
+  }
+}

@@ -20,22 +20,26 @@ execute if score $rand_2 random matches 89..90 run function game:default/shop_ge
 execute if score $rand_2 random matches 91..95 run loot spawn ~ ~-0.25 ~ loot game:crossbow/default
 execute if score $rand_2 random matches 91..95 run data merge entity @e[type=item,nbt={Item:{id:"minecraft:crossbow"}},sort=nearest,limit=1] {Item:{tag:{crossbow_id:0,needs_initialization:1b,Motion:[0.0d,0.0d,0.0d]}}}
 execute if score $rand_2 random matches 91..95 run function game:default/shop_generation/price/super_cheap
-execute if score $rand_2 random matches 96..100 run function game:default/shop_generation/specific/stage_1_crossbow
-##execute if score $rand_2 random matches 96..100 run function game:default/shop_generation/specific/stage_2_crossbow
+execute if score $wave game matches ..14 if score $rand_2 random matches 96..100 run function game:default/shop_generation/specific/stage_1_crossbow
+execute if score $wave game matches 15.. if score $rand_2 random matches 96..98 run function game:default/shop_generation/specific/stage_1_crossbow
+execute if score $wave game matches 15.. if score $rand_2 random matches 99..100 run function game:default/shop_generation/specific/stage_2_crossbow
 
 ##Removing healing items if this is hardcore or nightmare.
-execute if score $difficulty settings matches 5.. run kill @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:potion"}}]
-execute if score $difficulty settings matches 5.. run kill @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:splash_potion"}}]
-execute if score $difficulty settings matches 5.. run kill @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:red_dye"}}]
-execute if score $difficulty settings matches 5.. run kill @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:red_shulker_box"}}]
-execute if score $difficulty settings matches 5.. run kill @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:lime_dye"}}]
-execute if score $starting_players game matches 1 run kill @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:lime_dye"}}]
+execute if score $difficulty settings matches 5.. run kill @e[type=item,tag=!initialized,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:potion"}}]
+execute if score $difficulty settings matches 5.. run kill @e[type=item,tag=!initialized,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:splash_potion"}}]
+execute if score $difficulty settings matches 5.. run kill @e[type=item,tag=!initialized,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:red_dye"}}]
+execute if score $difficulty settings matches 5.. run kill @e[type=item,tag=!initialized,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:red_shulker_box"}}]
+execute if score $difficulty settings matches 5.. run kill @e[type=item,tag=!initialized,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:lime_dye"}}]
+execute if score $starting_players game matches 1 run kill @e[type=item,tag=!initialized,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1,nbt={Item:{id:"minecraft:lime_dye"}}]
 
 # adding price for items if wave is beyond 10
-execute if score $wave game matches 10.. run function game:default/sho_generation/wave_price_addition
+execute if score $wave game matches 10.. run function game:default/shop_generation/wave_price_addition
 
-tp @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] @s
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+# re randomizing item
+execute unless entity @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] run function game:default/shop_generation/create_random_item
+
+tp @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] @s
+execute positioned ~ ~-0.25 ~ as @e[type=item,tag=!initialized,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
 
 
 

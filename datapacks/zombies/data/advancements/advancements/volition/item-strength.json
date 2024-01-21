@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:shield",
+            "nbt":"{BlockEntityTag:{Base:15,Patterns:[{Color:7,Pattern:\"mr\"},{Color:8,Pattern:\"flo\"},{Color:14,Pattern:\"mc\"},{Color:15,Pattern:\"cr\"}]}}"
+        },
+        "title": {
+            "text": "Strong bowstring.",
+            "color": "dark_aqua",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Kill a mob while you have strength.",
+            "color": "#61369c",
+            "bold": false
+        }
+    },
+    "parent": "advancements:volition/item-bundle",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

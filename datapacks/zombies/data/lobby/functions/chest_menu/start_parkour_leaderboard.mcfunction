@@ -37,11 +37,11 @@ execute if data entity @e[type=armor_stand,tag=parkour_leaderboard,scores={leade
 execute if data entity @e[type=armor_stand,tag=parkour_leaderboard,scores={leaderboard_pos=1},limit=1] ArmorItems[3].id run data modify block 0 2 0 Items[{Slot:21b}].tag.invalid_click set value 1
 
 ##If there is no placements.
-execute if data block 0 2 0 Items[{Slot:3b,id:"minecraft:structure_void"}] run item replace block 0 2 0 container.3 with iron_bars{invalid_click:1,clickable:1,HideFlags:63,display:{Name:'[{"text":"1st","color":"gold","bold":true,"italic":false},{"text":" - ","color":"gold","bold":false},{"text":"Unclaimed","bold":false,"italic":false,"color":"red"}]'}}
-execute if data block 0 2 0 Items[{Slot:12b,id:"minecraft:structure_void"}] run item replace block 0 2 0 container.12 with iron_bars{invalid_click:1,clickable:1,HideFlags:63,display:{Name:'[{"text":"2nd","color":"#a5afb8","bold":true,"italic":false},{"text":" - ","color":"gold","bold":false},{"text":"Unclaimed","bold":false,"italic":false,"color":"red"}]'}}
-execute if data block 0 2 0 Items[{Slot:21b,id:"minecraft:structure_void"}] run item replace block 0 2 0 container.21 with iron_bars{invalid_click:1,clickable:1,HideFlags:63,display:{Name:'[{"text":"3rd","color":"#cd7e32","bold":true,"italic":false},{"text":" - ","color":"gold","bold":false},{"text":"Unclaimed","bold":false,"italic":false,"color":"red"}]'}}
+execute if data block 0 2 0 Items[{Slot:3b,id:"minecraft:structure_void"}] run item replace block 0 2 0 container.3 with iron_bars{invalid_click:1,clickable:1,HideFlags:255,display:{Name:'[{"text":"1st","color":"gold","bold":true,"italic":false},{"text":" - ","color":"gold","bold":false},{"text":"Unclaimed","bold":false,"italic":false,"color":"red"}]'}}
+execute if data block 0 2 0 Items[{Slot:12b,id:"minecraft:structure_void"}] run item replace block 0 2 0 container.12 with iron_bars{invalid_click:1,clickable:1,HideFlags:255,display:{Name:'[{"text":"2nd","color":"#a5afb8","bold":true,"italic":false},{"text":" - ","color":"gold","bold":false},{"text":"Unclaimed","bold":false,"italic":false,"color":"red"}]'}}
+execute if data block 0 2 0 Items[{Slot:21b,id:"minecraft:structure_void"}] run item replace block 0 2 0 container.21 with iron_bars{invalid_click:1,clickable:1,HideFlags:255,display:{Name:'[{"text":"3rd","color":"#cd7e32","bold":true,"italic":false},{"text":" - ","color":"gold","bold":false},{"text":"Unclaimed","bold":false,"italic":false,"color":"red"}]'}}
 ##Middle row
-item replace block 0 2 0 container.13 with gold_block{invalid_click:1,clickable:1,HideFlags:63,display:{Name:'[{"text":"Parkour","bold":true,"italic":false,"color":"dark_green"}]'}}
+item replace block 0 2 0 container.13 with gold_block{invalid_click:1,clickable:1,HideFlags:255,display:{Name:'[{"text":"Parkour","bold":true,"italic":false,"color":"dark_green"}]'}}
 
 
 ##Getting our time.
@@ -50,21 +50,21 @@ clear @s tipped_arrow
 scoreboard players operation @s parkour_time = @s parkour_score
 function lobby:parkour/calculate_time
 ##Putting it on a sign, so it's easier to read off later.
-execute if score $minute calculate matches 0 run data modify block 0 10 0 Text1 set value '[{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
-execute if score $minute calculate matches 1.. if score $second calculate matches 10.. run data modify block 0 10 0 Text1 set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
-execute if score $minute calculate matches 1.. if score $second calculate matches ..9 run data modify block 0 10 0 Text1 set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"text":"0","color":"yellow"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
+execute if score $minute calculate matches 0 run data modify block 0 10 0 front_text.messages[0] set value '[{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
+execute if score $minute calculate matches 1.. if score $second calculate matches 10.. run data modify block 0 10 0 front_text.messages[0] set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
+execute if score $minute calculate matches 1.. if score $second calculate matches ..9 run data modify block 0 10 0 front_text.messages[0] set value '[{"score":{"objective":"calculate","name":"$minute"},"color":"yellow"},{"text":":","color":"gold"},{"text":"0","color":"yellow"},{"score":{"objective":"calculate","name":"$second"},"color":"yellow"},{"text":".","color":"gold"},{"score":{"objective":"calculate","name":"$millisecond"},"color":"yellow"}]'
 
 summon area_effect_cloud 0 0 0 {Tags:["die_soon"]}
 
-data modify entity @e[type=area_effect_cloud,tag=die_soon,limit=1] CustomName set from block 0 10 0 Text1
+data modify entity @e[type=area_effect_cloud,tag=die_soon,limit=1] CustomName set from block 0 10 0 front_text.messages[0]
 
 loot replace block 0 2 0 container.14 loot leaderboards:parkour_highscore
 
-execute if score @s parkour_score matches 1000000000 run item replace block 0 2 0 container.14 with iron_bars{Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],invalid_click:1,clickable:1,HideFlags:63,display:{Name:'[{"text":"- ","color":"gray","italic":false},{"text":"You don\'t have a parkour score yet!","color":"red"}]'}}
+execute if score @s parkour_score matches 1000000000 run item replace block 0 2 0 container.14 with iron_bars{Enchantments:[{id:"minecraft:aqua_affinity",lvl:1}],invalid_click:1,clickable:1,HideFlags:255,display:{Name:'[{"text":"- ","color":"gray","italic":false},{"text":"You don\'t have a parkour score yet!","color":"red"}]'}}
 
 kill @e[type=area_effect_cloud,tag=die_soon]
 
-item replace block 0 2 0 container.18 with barrier{clickable:1,HideFlags:63,display:{Name:'[{"text":"Back","bold":true,"italic":false,"color":"#ff0000"}]'}}
+item replace block 0 2 0 container.18 with barrier{clickable:1,HideFlags:255,display:{Name:'[{"text":"Back","bold":true,"italic":false,"color":"#ff0000"}]'}}
 
 
 

@@ -1,0 +1,14 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:fishing_rod_hooked",
+        "conditions": {
+          "item": {}
+        }
+      }
+    },
+    "rewards": {
+      "function": "game:advancement_checks/fishing_rod"
+    }
+  }
+  

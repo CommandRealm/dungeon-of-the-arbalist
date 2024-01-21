@@ -26,12 +26,13 @@ execute as @a[gamemode=adventure,tag=mechanics,scores={shoot_crossbow=1..}] at @
 
 ##If we don't have an arrow
 scoreboard players set @a[tag=playing,gamemode=adventure,team=game] calculate 0
-execute as @a[gamemode=adventure,tag=mechanics,scores={quiver=1..},nbt={Inventory:[{Slot:7b,id:"minecraft:arrow"}]}] at @s store result score @s calculate run data get entity @s Inventory[{Slot:7b}].Count
-execute as @a[gamemode=adventure,tag=mechanics,scores={quiver=1..64},nbt={Inventory:[{Slot:7b,id:"minecraft:arrow"}]}] at @s unless entity @s[y=0,distance=..20] unless score @s calculate = @s quiver run function game:mechanics/get_arrow
-execute as @a[gamemode=adventure,tag=mechanics,scores={quiver=65..},nbt={Inventory:[{Slot:7b,id:"minecraft:arrow"}]}] at @s unless entity @s[y=0,distance=..20] unless score @s calculate matches 64 run function game:mechanics/get_arrow
-execute as @a[gamemode=adventure,tag=mechanics,scores={quiver=1..}] at @s unless entity @s[nbt={Inventory:[{Slot:7b,id:"minecraft:arrow"}]}] unless entity @s[y=0,distance=..20] run function game:mechanics/get_arrow
 
-execute as @a[gamemode=adventure,tag=mechanics,scores={quiver=0}] at @s unless entity @s[nbt={Inventory:[{Slot:7b,id:"minecraft:stick"}]}] unless entity @s[y=0,distance=..20] run function game:mechanics/get_no_arrow_indicator
+# arrows
+execute as @a[gamemode=adventure,tag=mechanics,scores={quiver=1..125},nbt={Inventory:[{Slot:7b,id:"minecraft:arrow"}]}] at @s run function game:mechanics/hotbar_arrow_display/check_arrow_count
+execute as @a[gamemode=adventure,tag=mechanics,scores={quiver=126..},nbt={Inventory:[{Slot:7b,id:"minecraft:spectral_arrow"}]}] at @s run function game:mechanics/hotbar_arrow_display/check_spectral_arrow_count
+execute as @a[gamemode=adventure,tag=mechanics,scores={quiver=1..125}] at @s unless entity @s[nbt={Inventory:[{Slot:7b,id:"minecraft:arrow"}]}] unless entity @s[y=0,distance=..20] run function game:mechanics/hotbar_arrow_display/get_arrow
+execute as @a[gamemode=adventure,tag=mechanics,scores={quiver=126..}] at @s unless entity @s[nbt={Inventory:[{Slot:7b,id:"minecraft:spectral_arrow"}]}] unless entity @s[y=0,distance=..20] run function game:mechanics/hotbar_arrow_display/check_spectral_arrow_count
+execute as @a[gamemode=adventure,tag=mechanics,scores={quiver=..0}] at @s unless entity @s[nbt={Inventory:[{Slot:7b,id:"minecraft:stick"}]}] unless entity @s[y=0,distance=..20] run function game:mechanics/hotbar_arrow_display/get_no_arrow_indicator
 
 ##removing arrow delay
 scoreboard players remove @a[scores={arrow_delay=1..}] arrow_delay 1
@@ -115,7 +116,8 @@ execute as @e[type=item,tag=shop_item] at @s run data modify entity @s Age set v
 
 
 ##Inventory changed advancement to check basic things that aren't related to timing. (like making sure we have armor and iron bars in the back of our inventories.)
-execute if entity @a[tag=playing,advancements={game:inventory_changed=true}] run function game:mechanics/check_inventory
+execute unless entity @a[tag=mechanics,advancements={game:inventory_changed=true}] if entity @a[tag=playing,advancements={game:inventory_changed=true}] run function game:mechanics/check_inventory
+execute if entity @a[tag=mechanics,advancements={game:inventory_changed=true}] run function game:mechanics/check_inventory
 
 
 
@@ -141,7 +143,7 @@ kill @e[type=experience_orb]
 effect clear @a[tag=playing,gamemode=adventure] poison
 
 ##Kill if we fall in the void.
-execute if score $mode settings matches 0 as @a[tag=playing,gamemode=adventure] at @s if entity @s[y=30,distance=..20] run kill @s
+execute if score $mode settings matches 0 as @a[tag=playing,gamemode=adventure] at @s if entity @s[y=30,distance=..20] run function game:mechanics/fall_in_void/check
 execute if score $mode settings matches 2 as @a[tag=playing,gamemode=adventure,tag=in_boss_room] at @s if entity @s[y=20,distance=..25] run kill @s
 
 
@@ -163,8 +165,6 @@ execute as @e[type=arrow,tag=dead_player_arrow] at @s run data merge entity @s {
 execute as @a[gamemode=spectator,tag=needs_spectator_fix] at @s run function game:mechanics/fix_spectator/main
 
 
-##If a player has a stat boost.
-execute if entity @a[tag=mechanics,gamemode=adventure,nbt={Inventory:[{tag:{stat_boost:1b}}]}] run function game:mechanics/stat_boosts/check
 
 ##If there is a miniboss
 execute if entity @e[team=enemy,tag=miniboss,limit=1] run function game:enemy/call_miniboss_functions
@@ -186,19 +186,6 @@ execute if entity @a[tag=playing,scores={desc_delay=1..}] run function game:mech
 ##Detecting a hit.
 execute as @a[tag=playing,team=game,gamemode=adventure,advancements={game:hit=true}] at @s run function game:mechanics/hit
 
-##Unlocking journal entries.
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:zombie=false}] at @s if entity @e[type=zombie,tag=base_zombie,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:zombie
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:spider=false}] at @s if entity @e[type=cave_spider,tag=cave_spider,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:spider
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:knight=false}] at @s if entity @e[type=zombie,tag=knight_zombie,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:knight
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:brute=false}] at @s if entity @e[type=zombie,tag=powerful_zombie,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:brute
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:leaper=false}] at @s if entity @e[type=zombie,tag=leaper_zombie,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:leaper
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:skeleton=false}] at @s if entity @e[type=skeleton,tag=base_skeleton,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:skeleton
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:witch=false}] at @s if entity @e[type=zombie,tag=witch_zombie,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:witch
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:husk=false}] at @s if entity @e[type=husk,tag=husk,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:husk
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:evoker=false}] at @s if entity @e[type=evoker,tag=evoker,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:evoker
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:vex=false}] at @s if entity @e[type=vex,tag=vex,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:vex
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:hooded=false}] at @s if entity @e[type=zombie,tag=scary_zombie,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:hooded
-execute as @a[tag=playing,team=game,gamemode=adventure,advancements={journal:shopkeeper=false}] at @s if entity @e[type=pillager,tag=shopkeeper,team=enemy,distance=..7] unless score $difficulty settings matches -1 run advancement grant @s only journal:shopkeeper
 
 
 ##Below name stuff
@@ -230,3 +217,15 @@ execute as @a[advancements={game:enemy_damage/check=true}] at @s run function ga
 
 # if volition is on: call functions that need to run outside of main enemy function for it
 execute if score $volition game matches 1 run function game:enemy/volition/run_from_main
+
+# wind effect
+execute as @a[tag=playing,scores={wind=1..},gamemode=adventure] at @s run function game:mechanics/wind/main
+
+
+# trials
+execute if entity @a[tag=playing,tag=active_trial,team=game] run function game:trials/main
+
+# modifiers
+execute if score $modifiers settings matches 1 run function game:modifiers/main
+
+

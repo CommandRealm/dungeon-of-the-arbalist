@@ -9,7 +9,6 @@ execute if score $boss boss matches 1 run tellraw @s ["",{"text":"Boss","color":
 execute if score $boss boss matches 2 run tellraw @s ["",{"text":"Boss","color":"dark_red","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Nixeous ","color":"dark_red"},{"text":"the ","color":"gray"},{"text":"Scoundrel","color":"red"}]
 execute if score $boss boss matches 3 run tellraw @s ["",{"text":"Boss","color":"dark_red","bold":true},{"text":": ","color":"gray","bold":false},{"text":"The ","color":"gray"},{"text":"Molten ","color":"dark_red"},{"text":"Titan","color":"red"}]
 execute if score $boss boss matches 4 run tellraw @s ["",{"text":"Boss","color":"dark_red","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Essence ","color":"dark_red"},{"text":"of ","color":"gray"},{"text":"the ","color":"red"},{"text":"Forest","color":"dark_gray"}]
-### INSERT GHAST BOSS
 
 execute if score $boss boss matches 0 run tellraw @s [{"text":"- ","color":"dark_gray"},{"text":"A controller of the ravager. Charges up before each attack.","color":"gray"}]
 execute if score $boss boss matches 1 run tellraw @s [{"text":"- ","color":"dark_gray"},{"text":"An elder guardian who punishes foes by affecting the arena.","color":"gray"}]

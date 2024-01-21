@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:knowledge_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Recipes:[\"cosmetics:armor_trim_6\"],HideFlags:255,Enchantments:[{id:\"minecraft:aqua_affinity\",lvl:1}],droppable:1b,material:\"emerald\",display:{Name:'[{\"text\":\"Emerald\",\"color\":\"green\",\"italic\":false,\"bold\":true},{\"text\":\" Trim \",\"bold\":false,\"color\":\"blue\",\"italic\":false},{\"text\":\"Material \",\"color\":\"light_purple\",\"bold\":false,\"italic\":false},{\"text\":\"<\",\"color\":\"dark_gray\",\"italic\":false,\"bold\":true},{\"keybind\":\"key.use\",\"italic\":false,\"color\":\"gray\",\"bold\":false},{\"text\":\">\",\"italic\":false,\"color\":\"dark_gray\",\"bold\":true}]',Lore:['[{\"text\":\"Drop to unlock.\",\"color\":\"gray\",\"italic\":false}]']}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

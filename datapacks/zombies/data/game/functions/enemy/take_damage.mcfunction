@@ -3,11 +3,13 @@
 ##Getting the amplifier of luck
 execute if data entity @s active_effects[{id:"minecraft:luck"}].amplifier store result score @s calculate_2 run data get entity @s active_effects[{id:"minecraft:luck"}].amplifier 1
 
-##If there is a player with luck
-execute if entity @a[tag=playing,gamemode=adventure,team=game,scores={boost_damage=1..}] run function game:enemy/check_damage_changes
+##checking damage boosters
+function game:enemy/check_damage_changes
 
 
 ######Effects. (it's done here so that it can affect the damage.)
+
+
 ##Seeing if we need to check our ID.
 execute store result score @s calculate run data get entity @s active_effects[{id:"minecraft:conduit_power"}].amplifier 1
 execute if score @s calculate matches 0.. if data entity @s active_effects[{id:"minecraft:conduit_power"}].amplifier run function game:enemy/check_id_damage
@@ -26,8 +28,6 @@ execute store result score @s calculate run data get entity @s active_effects[{i
 execute if entity @s[scores={calculate=0..}] if data entity @s active_effects[{id:"minecraft:hero_of_the_village"}].amplifier run scoreboard players operation @s calculate_2 += @s calculate
 
 
-##If we're a husk and we haven't taken damage yet.
-execute if entity @s[tag=husk,tag=!hit_before] run function game:enemy/husk_first_damage
 
 ##Applying RNG
 execute store result score $rand random run loot insert 0 1 0 loot random:damage_rng
@@ -66,8 +66,12 @@ execute if entity @s[tag=hit_by_damage_booster] run function game:enemy/change_d
 ##removing rng tag
 tag @s remove no_rng
 
+scoreboard players reset @s[tag=skip_one_extra_damage] extra_damage
+
 ##Adding extra damage
 scoreboard players operation @s calculate_2 += @s extra_damage
+
+tag @s remove skip_one_extra_damage
 scoreboard players add @s[tag=forest_essence_controlled] calculate_2 80
 
 
@@ -78,6 +82,8 @@ execute if entity @s[type=zombie,tag=hoodie_miniboss,tag=invisible_hoodie] run s
 execute if entity @s[type=zombie,tag=hoodie_miniboss,tag=!invisible_hoodie] if entity @e[type=zombie,tag=hoodie_miniboss,tag=invisible_hoodie] run function game:enemy/hoodies/change_visibility
 
 
+##If we're a husk and we haven't taken damage yet.
+execute if entity @s[tag=husk,tag=!hit_before] run function game:enemy/husk_first_damage
 
 
 ##Removing our damage score.
@@ -120,7 +126,7 @@ function game:enemy/update_name
 
 
 execute if entity @s[scores={enemy_health=0}] run function game:enemy/die
-
+tag @s remove check_bomber_tnt_advancement
 
 ##Clearing our effect
 effect clear @s luck

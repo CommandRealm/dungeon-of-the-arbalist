@@ -9,6 +9,11 @@ scoreboard players set @s[scores={treasure=..-1}] treasure 0
 # adjusting our new treasure score
 scoreboard players operation @s new_treasure -= @s remove_treasure
 
+# adjusting our new treasure score
+scoreboard players operation @s[advancements={game:enemy_damage/bandit=true}] local_treasure_lost += @s remove_treasure
+
+execute if score @s local_treasure_lost matches 3000.. unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run advancement grant @s only advancements:volition/enemy-bandit
+
 # setting ab delay
 scoreboard players set @s action_bar_delay 20
 

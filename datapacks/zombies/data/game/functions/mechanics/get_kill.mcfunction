@@ -1,12 +1,16 @@
 ##Called when we get a kill.
 
+# resetting our quiver if we have trial on
+execute if entity @s[tag=trial_four_in_the_quiver] run function game:trials/four_in_the_quiver/refill_quiver
 
 scoreboard players reset @s get_kill
 
 ##Specific crossbow kill functions
+execute if score @s crossbow_id matches 7 run function game:mechanics/get_kill_with_specific/nature
+execute if score @s crossbow_id matches 16 run function game:mechanics/get_kill_with_specific/wild
 execute if score @s crossbow_id matches 34 run function game:mechanics/get_kill_with_specific/life
 
-execute unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_kills 1
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s[tag=!tutorial] global_kills 1
 scoreboard players add @s local_kills 1
 
 
@@ -24,6 +28,10 @@ scoreboard players add @s[advancements={journal:kills/evoker=true}] j_evoker 1
 scoreboard players add @s[advancements={journal:kills/vex=true}] j_vex 1
 scoreboard players add @s[advancements={journal:kills/hooded=true}] j_hooded 1
 scoreboard players add @s[advancements={journal:kills/shopkeeper=true}] j_shopkeeper 1
+
+# shopkeeper advancement
+execute if score $volition game matches 1 if score $wave game matches 42.. unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run advancement grant @s[advancements={journal:kills/shopkeeper=true}] only advancements:volition/enemy-shopkeeper
+
 
 scoreboard players add @s[advancements={journal:kills/spider_queen=true}] j_spider_queen 1
 scoreboard players add @s[advancements={journal:kills/fiery_fiend=true}] j_fiery_fiend 1
@@ -57,8 +65,40 @@ scoreboard players add @s[advancements={journal:kills/tower_archer=true}] j_towe
 scoreboard players add @s[advancements={journal:kills/cobalt_king=true}] j_cobalt_king 1
 scoreboard players add @s[advancements={journal:kills/cobalt_king_guard=true}] j_king_guard 1
 scoreboard players add @s[advancements={journal:kills/golden_guard=true}] j_gold_guard 1
+
+# Volition update
+scoreboard players add @s[advancements={journal:kills/piglinh_hoglin=true}] j_piglinh 1
+scoreboard players add @s[advancements={journal:kills/piglinh_piglin=true}] j_piglinh 1
+scoreboard players add @s[advancements={journal:kills/plague_doctor=true}] j_plague 1
+scoreboard players add @s[advancements={journal:kills/bomber=true}] j_bomber 1
+scoreboard players add @s[advancements={journal:kills/bandit=true}] j_bandit 1
+scoreboard players add @s[advancements={journal:kills/withered_knight=true}] j_w_knight 1
+scoreboard players add @s[advancements={journal:kills/skeleton_knight=true}] j_s_knight 1
+scoreboard players add @s[advancements={journal:kills/withered_brute=true}] j_w_brute 1
+scoreboard players add @s[advancements={journal:kills/ghost=true}] j_ghost 1
+scoreboard players add @s[advancements={journal:kills/withered_leaper=true}] j_w_leaper 1
+scoreboard players add @s[advancements={journal:kills/wind_thief=true}] j_wind_thief 1
+scoreboard players add @s[advancements={journal:kills/rogue=true}] j_rogue 1
+scoreboard players add @s[advancements={journal:kills/lobber=true}] j_lobber 1
+scoreboard players add @s[advancements={journal:kills/spawner=true}] j_spawner 1
+scoreboard players add @s[advancements={journal:kills/candlehead=true}] j_candlehead 1
+scoreboard players add @s[advancements={journal:kills/phantom=true}] j_phantom 1
+scoreboard players add @s[advancements={journal:kills/keeper=true}] j_keeper 1
+scoreboard players add @s[advancements={journal:kills/fallen_arbalist=true}] j_fallen 1
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run advancement grant @s[advancements={journal:kills/fallen_arbalist=true}] only advancements:volition/enemy-arbalist
+
+scoreboard players add @s[advancements={journal:kills/mage=true}] j_mage 1
+
+
+# if we have fake strength
+execute if score @s fake_strength matches 1.. unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if score $volition game matches 1.. run advancement grant @s only advancements:volition/item-strength
+
+execute if score $wave_length game matches 1.. unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run advancement grant @s[advancements={journal:kills/plague_doctor=true}] only advancements:volition/enemy-plague
+
+
+
 ##If we killed a miniboss
-execute if entity @s[advancements={game:kill_miniboss=true},tag=!tutorial] unless score $difficulty settings matches -1 run advancement grant @s only advancements:game-miniboss
+execute if entity @s[advancements={game:kill_miniboss=true},tag=!tutorial] unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run advancement grant @s only advancements:game-miniboss
 
 
 ##Removing advancements
@@ -95,12 +135,33 @@ advancement revoke @s only journal:kills/molten_titan
 advancement revoke @s only journal:kills/magma_cube
 advancement revoke @s only journal:kills/essence_of_the_forest
 
-advancement revoke @a only journal:kills/witch_shopkeeper
-advancement revoke @a only journal:kills/gallant_golem
-advancement revoke @a only journal:kills/erodus
-advancement revoke @a only journal:kills/vindicator_shopkeeper
-advancement revoke @a only journal:kills/blacksmith
-advancement revoke @a only journal:kills/tower_archer
-advancement revoke @a only journal:kills/cobalt_king
-advancement revoke @a only journal:kills/cobalt_king_guard
-advancement revoke @a only journal:kills/golden_guard
+advancement revoke @s only journal:kills/witch_shopkeeper
+advancement revoke @s only journal:kills/gallant_golem
+advancement revoke @s only journal:kills/erodus
+advancement revoke @s only journal:kills/vindicator_shopkeeper
+advancement revoke @s only journal:kills/blacksmith
+advancement revoke @s only journal:kills/tower_archer
+advancement revoke @s only journal:kills/cobalt_king
+advancement revoke @s only journal:kills/cobalt_king_guard
+advancement revoke @s only journal:kills/golden_guard
+
+
+advancement revoke @s only journal:kills/piglinh_hoglin
+advancement revoke @s only journal:kills/piglinh_piglin
+advancement revoke @s only journal:kills/plague_doctor
+advancement revoke @s only journal:kills/bomber
+advancement revoke @s only journal:kills/bandit
+advancement revoke @s only journal:kills/withered_knight
+advancement revoke @s only journal:kills/skeleton_knight
+advancement revoke @s only journal:kills/withered_brute
+advancement revoke @s only journal:kills/ghost
+advancement revoke @s only journal:kills/withered_leaper
+advancement revoke @s only journal:kills/wind_thief
+advancement revoke @s only journal:kills/rogue
+advancement revoke @s only journal:kills/lobber
+advancement revoke @s only journal:kills/spawner
+advancement revoke @s only journal:kills/candlehead
+advancement revoke @s only journal:kills/phantom
+advancement revoke @s only journal:kills/keeper
+advancement revoke @s only journal:kills/fallen_arbalist
+advancement revoke @s only journal:kills/mage

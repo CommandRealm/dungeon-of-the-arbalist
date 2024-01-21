@@ -1,6 +1,6 @@
 ##Called to shoot the crossbow.
 
-clear @p[tag=playing,nbt={Inventory:[{id:"minecraft:spectral_arrow"}]},gamemode=adventure] spectral_arrow 1
+clear @p[tag=playing,nbt={Inventory:[{id:"minecraft:spectral_arrow",tag:{boss_arrow:1b}}]},gamemode=adventure] spectral_arrow 1
 
 scoreboard players set $crossbow boss 100
 

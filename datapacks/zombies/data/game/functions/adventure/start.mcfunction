@@ -4,11 +4,11 @@
 ##Teleport and effects.
 execute if score $mode settings matches 1 run tp @a[tag=playing] 5000 0 0 0 90
 execute if score $mode settings matches 2 run tp @a[tag=playing] 3000 0 0 0 90
-effect give @a[tag=playing] levitation 100000 255 true
-effect give @a[tag=playing] resistance 100000 255 true
-effect give @a[tag=playing] blindness 100000 255 true
-effect give @a[tag=playing] slowness 100000 255 true
-effect give @a[tag=playing] jump_boost 100000 200 true
+effect give @a[tag=playing] levitation infinite 255 true
+effect give @a[tag=playing] resistance infinite 255 true
+effect give @a[tag=playing] blindness infinite 255 true
+effect give @a[tag=playing] slowness infinite 255 true
+effect give @a[tag=playing] jump_boost infinite 200 true
 clear @a[tag=playing]
 
 
@@ -58,3 +58,7 @@ scoreboard players set $forge_boss game 0
 scoreboard players set $king_boss game 0
 scoreboard players set $crypt_animation game 0
 scoreboard players set $crypt_animation_played game 0
+
+# number of players
+
+scoreboard players set $finish_time game -1

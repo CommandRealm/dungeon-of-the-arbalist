@@ -1,7 +1,7 @@
 ##Called when the AVALANCHE snow hits (enemy or ground.)
 
 ##Slowness on nearby enemies
-effect give @e[tag=enemy,distance=..2,tag=!boss] levitation 1 7 false
+effect give @e[tag=enemy,distance=..2,tag=!boss] levitation 2 0 false
 
 
 ##Particles and sound

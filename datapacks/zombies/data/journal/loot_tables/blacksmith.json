@@ -15,7 +15,7 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"38","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Blacksmith","color":"red","bold":true}]
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"37","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Blacksmith","color":"red","bold":true}]
             },
             {
               "function": "minecraft:set_lore",

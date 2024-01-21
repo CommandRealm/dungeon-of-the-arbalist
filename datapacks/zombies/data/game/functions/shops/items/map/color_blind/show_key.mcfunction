@@ -15,7 +15,7 @@ tellraw @s [{"text":"                            -=- ","color":"gold"},{"text":"
 
 tellraw @s [{"text":"             F","color":"#f1390e"},{"text":" - ","color":"gray"},{"text":"FIRE","color":"#f1390e","bold":true},{"text":"   W","color":"#0e8ef1"},{"text":" - ","color":"gray"},{"text":"WATER","color":"#0e8ef1","bold":true},{"text":"   E","color":"#b27565"},{"text":" - ","color":"gray"},{"text":"EARTH","color":"#b27565","bold":true}]
 
-tellraw @s [{"text":"             A","color":"#d6d6d6"},{"text":" - ","color":"gray"},{"text":"AIR","color":"#d6d6d6","bold":true},{"text":"   I.","color":"#6fe6ff"},{"text":" - ","color":"gray"},{"text":"ICE","color":"#6fe6ff","bold":true},{"text":"   L","color":"#f0d44f"},{"text":" - ","color":"gray"},{"text":"LIGHTNING","color":"#f0d44f","bold":true}]
+tellraw @s [{"text":"             A","color":"#d6d6d6"},{"text":" - ","color":"gray"},{"text":"AIR","color":"#d6d6d6","bold":true},{"text":"   I.","color":"#6fe6ff"},{"text":" - ","color":"gray"},{"text":"ICE","color":"#6fe6ff","bold":true},{"text":"   L","color":"#f0d44f"},{"text":" - ","color":"gray"},{"text":"ELECTRIC","color":"#f0d44f","bold":true}]
 
 tellraw @s [{"text":"             N","color":"#17b00c"},{"text":" - ","color":"gray"},{"text":"NATURE","color":"#17b00c","bold":true},{"text":"   D","color":"#3e2e51"},{"text":" - ","color":"gray"},{"text":"DARKNESS","color":"#3e2e51","bold":true},{"text":"   M","color":"#8a8a8a"},{"text":" - ","color":"gray"},{"text":"METAL","color":"#8a8a8a","bold":true}]
 

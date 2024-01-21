@@ -27,31 +27,31 @@ execute as @a[tag=playing] at @s run playsound minecraft:block.note_block.hat ma
 
 
 # sounds
-execute if score $shop_reset game matches 19 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.594604
-execute if score $shop_reset game matches 15 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.629961
-execute if score $shop_reset game matches 10 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.793701
-execute if score $shop_reset game matches 7 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.749154
-execute if score $shop_reset game matches 3 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.594604
+execute if score $shop_reset game matches 16 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.594604
+execute if score $shop_reset game matches 12 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.629961
+execute if score $shop_reset game matches 7 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.793701
+execute if score $shop_reset game matches 4 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.749154
+execute if score $shop_reset game matches 0 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.594604
 
-execute if score $shop_reset game matches 19 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.594604
-execute if score $shop_reset game matches 15 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.629961
-execute if score $shop_reset game matches 10 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.793701
-execute if score $shop_reset game matches 7 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.749154
-execute if score $shop_reset game matches 3 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.594604
+execute if score $shop_reset game matches 16 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.594604
+execute if score $shop_reset game matches 12 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.629961
+execute if score $shop_reset game matches 7 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.793701
+execute if score $shop_reset game matches 4 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.749154
+execute if score $shop_reset game matches 0 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.594604
 
-execute if score $shop_reset game matches 19 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.594604
-execute if score $shop_reset game matches 15 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.629961
-execute if score $shop_reset game matches 10 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.793701
-execute if score $shop_reset game matches 7 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.749154
-execute if score $shop_reset game matches 3 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.594604
+execute if score $shop_reset game matches 16 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.594604
+execute if score $shop_reset game matches 12 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.629961
+execute if score $shop_reset game matches 7 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.793701
+execute if score $shop_reset game matches 4 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.749154
+execute if score $shop_reset game matches 0 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.594604
 
 
-execute if score $shop_reset game matches 3 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.749154
-execute if score $shop_reset game matches 3 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.840896
-execute if score $shop_reset game matches 3 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.749154
-execute if score $shop_reset game matches 3 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.840896
-execute if score $shop_reset game matches 3 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.749154
-execute if score $shop_reset game matches 3 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.840896
+execute if score $shop_reset game matches 0 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.749154
+execute if score $shop_reset game matches 0 as @a[tag=playing] at @s run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.840896
+execute if score $shop_reset game matches 0 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.749154
+execute if score $shop_reset game matches 0 as @a[tag=playing] at @s run playsound minecraft:block.note_block.bass master @s ~ ~ ~ 1 0.840896
+execute if score $shop_reset game matches 0 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.749154
+execute if score $shop_reset game matches 0 as @a[tag=playing] at @s run playsound minecraft:block.note_block.guitar master @s ~ ~ ~ 1 0.840896
 
 # scheduling next one
 execute if score $shop_reset game matches -20.. run schedule function game:default/wave/intro/shop_reset/main 1t

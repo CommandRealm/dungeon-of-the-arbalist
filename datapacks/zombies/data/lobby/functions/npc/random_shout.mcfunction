@@ -19,7 +19,7 @@ execute if entity @e[type=pillager,tag=lobby_npc,tag=lobby_pillager,distance=..1
 scoreboard players operation @s old_chat_timer = @s chat_timer
 
 ##advancement
-execute unless score $difficulty settings matches -1 if entity @e[type=pillager,tag=lobby_npc,tag=lobby_pillager,distance=..10,tag=temporary_chat_tag] run advancement grant @s only advancements:lobby-talk
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if entity @e[type=pillager,tag=lobby_npc,tag=lobby_pillager,distance=..10,tag=temporary_chat_tag] run advancement grant @s only advancements:lobby-talk
 
 #Say message
 tellraw @s [{"text":"<","color":"gray"},{"selector":"@e[type=pillager,tag=lobby_npc,tag=lobby_pillager,distance=..10,sort=nearest,limit=1,tag=temporary_chat_tag]","color":"gold","bold":true},{"text":"> ","color":"gray"},{"nbt":"random_shout","storage":"lobby:npc","color":"white"}]

@@ -7,7 +7,7 @@ loot insert 0 1 0 loot game:shopkeeper_names
 data modify entity @e[type=pillager,tag=needs_adjustments,limit=1] CustomName set from block 0 1 0 Items[{Slot:0b}].tag.display.Name
 function random:reset_chest
 
-effect give @e[tag=shopkeeper] resistance 100000 126 true
+effect give @e[tag=shopkeeper] resistance infinite 126 true
 
 ##tag removal
 tag @e[type=pillager,tag=needs_adjustments] remove needs_adjustments

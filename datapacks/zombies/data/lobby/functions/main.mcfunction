@@ -7,7 +7,7 @@ execute if score $game state matches 1 run function lobby:midgame/main
 
 ##Lobby texts
 tag @e[type=area_effect_cloud,tag=lobby_text] remove nearby_player
-execute as @e[type=area_effect_cloud,tag=lobby_text] at @s if entity @a[distance=..15] run tag @s add nearby_player
+execute as @e[type=area_effect_cloud,tag=lobby_text] at @s if entity @a[distance=..25] run tag @s add nearby_player
 execute if entity @e[type=area_effect_cloud,tag=lobby_text,tag=nearby_player] run function lobby:text/main
 
 ##Effects
@@ -19,9 +19,9 @@ execute as @a[x=0,y=66,z=0,distance=..500,gamemode=adventure] at @s run particle
 
 
 ##Counting leash knots
-##execute store result score $leash calculate if entity @e[type=leash_knot,x=0,y=66,z=0,distance=..500]
-##execute as @a[tag=stop_lead_sound] at @s run function lobby:leads/stopsound
-##execute if score $leash calculate matches ..25 run function lobby:leads/reset
+execute store result score $leash calculate if entity @e[type=leash_knot,x=0,y=66,z=0,distance=..500]
+execute as @a[tag=stop_lead_sound] at @s run function lobby:leads/stopsound
+execute if score $leash calculate matches ..25 run function lobby:leads/reset
 
 
 ##If someone starts the parkour.
@@ -44,8 +44,8 @@ execute as @a[gamemode=adventure,x=0,y=66,z=0,distance=..500,nbt={EnderItems:[{t
 execute as @e[type=item,nbt={Item:{tag:{clickable:1}}},x=0,y=66,z=0,distance=..500] at @s run function lobby:chest_menu/dropped_item
 
 ##Invis for rabbits and slimes
-effect give @e[type=slime,x=0,y=66,z=0,distance=..500] invisibility 100000 255 true
-effect give @e[type=rabbit,x=0,y=66,z=0,distance=..500] invisibility 100000 255 true
+effect give @e[type=slime,x=0,y=66,z=0,distance=..500] invisibility infinite 255 true
+effect give @e[type=rabbit,x=0,y=66,z=0,distance=..500] invisibility infinite 255 true
 
 ##Calling main NPC
 function lobby:npc/main
@@ -93,9 +93,9 @@ execute as @a[x=15,y=82,z=-78,distance=..1,gamemode=adventure] at @s run functio
 
 
 ##Advancements
-execute unless score $difficulty settings matches -1 as @a[x=0,y=66,z=0,distance=..500] at @s if block ~ ~ ~ water run advancement grant @s only advancements:lobby-swim
-execute unless score $difficulty settings matches -1 run advancement grant @a[x=23,y=90,z=23,distance=..3.5] only advancements:lobby-credits
-execute unless score $difficulty settings matches -1 run advancement grant @a[x=-4,y=88,z=155,dx=17,dy=5,dz=5] only advancements:lobby-cr
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 as @a[x=0,y=66,z=0,distance=..500] at @s if block ~ ~ ~ water run advancement grant @s only advancements:lobby-swim
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run advancement grant @a[x=23,y=90,z=23,distance=..3.5] only advancements:lobby-credits
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run advancement grant @a[x=-4,y=88,z=155,dx=17,dy=5,dz=5] only advancements:lobby-cr
 
 ##If they have all lobby advancements
 advancement grant @a[advancements={advancements:lobby-all=false,advancements:lobby-swim=true,advancements:lobby-talk=true,advancements:lobby-parkour=true,advancements:lobby-cosmetic=true,advancements:lobby-credits=true,advancements:lobby-cr=true,advancements:lobby-socials=true}] only advancements:lobby-all
@@ -107,3 +107,10 @@ advancement grant @a[advancements={minecraft:completionist/completionist=false,a
 
 
 execute if entity @a[advancements={minecraft:completionist/completionist=true},tag=!playing] run function completionist:completionist_helix
+
+
+# intro text
+execute as @a[scores={intro_text=1..},tag=!playing] at @s run function lobby:intro_text/main
+
+# starting intro text
+execute as @a[tag=show_intro_text,x=7,y=90.5,z=22,distance=1..] at @s run function lobby:intro_text/start

@@ -23,11 +23,21 @@ execute if score $mode settings matches 1 run function game:adventure/castle/sta
 ##Kingdom map start
 execute if score $mode settings matches 2 run function game:adventure/kingdom/start
 
-
-
-
 ##Quiver
 schedule function game:update_quiver_score 1t
+
+
+# random trial
+execute as @a[tag=playing,team=game,tag=trial_random] at @s run function game:trials/random/start
+
+# if we have trials
+function game:trials/check_trials
+execute as @a[tag=playing,team=game,tag=active_trial] at @s run function game:trials/tellraw
+function game:modifiers/tellraw
+
+# if we have scramble
+execute as @a[tag=playing,team=!enemy,tag=trial_scramble] at @s run function game:trials/scramble/new_trial
+
 
 
 ##starting enemy spawn timers

@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:structure_void"
+        },
+        "title": {
+            "text": "",
+            "color": "red",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden":true,
+        "description": {
+          aedfafaewfqaewgqaerghqawerhbqaerthqae4rthbqe4trh  "text": "",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "journal:golden_guard",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

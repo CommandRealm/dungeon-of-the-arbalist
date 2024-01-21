@@ -18,7 +18,7 @@ item replace entity @s weapon.offhand with air
 
 scoreboard players reset @s radioactive_miss
 
-execute unless score $difficulty settings matches -1 run advancement grant @s[tag=!tutorial] only advancements:game-first_upgrade
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run advancement grant @s[tag=!tutorial] only advancements:game-first_upgrade
 
 ##sounds
 execute at @s run playsound minecraft:entity.wither.shoot master @a ~ ~ ~ 0.5 0
@@ -40,33 +40,33 @@ execute if entity @e[tag=hit,type=marker,tag=nature_upgrade_spot] at @s run part
 execute if entity @e[tag=hit,type=marker,tag=darkness_upgrade_spot] at @s run particle squid_ink ~ ~0.75 ~ 0.25 0.5 0.25 0.1 5
 execute if entity @e[tag=hit,type=marker,tag=metal_upgrade_spot] at @s run particle item iron_block ~ ~0.75 ~ 0.25 0.5 0.25 0.15 5
 
-execute if entity @e[tag=hit,type=marker,tag=fire_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_fire 1
-execute if entity @e[tag=hit,type=marker,tag=water_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_water 1
-execute if entity @e[tag=hit,type=marker,tag=earth_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_earth 1
-execute if entity @e[tag=hit,type=marker,tag=air_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_air 1
-execute if entity @e[tag=hit,type=marker,tag=ice_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_ice 1
-execute if entity @e[tag=hit,type=marker,tag=lightning_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_lightning 1
-execute if entity @e[tag=hit,type=marker,tag=nature_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_nature 1
-execute if entity @e[tag=hit,type=marker,tag=darkness_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_darkness 1
-execute if entity @e[tag=hit,type=marker,tag=metal_upgrade_spot] at @s unless score $difficulty settings matches -1 run scoreboard players add @s[tag=!tutorial] global_metal 1
+execute if entity @e[tag=hit,type=marker,tag=fire_upgrade_spot] at @s unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s[tag=!tutorial] global_fire 1
+execute if entity @e[tag=hit,type=marker,tag=water_upgrade_spot] at @s unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s[tag=!tutorial] global_water 1
+execute if entity @e[tag=hit,type=marker,tag=earth_upgrade_spot] at @s unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s[tag=!tutorial] global_earth 1
+execute if entity @e[tag=hit,type=marker,tag=air_upgrade_spot] at @s unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s[tag=!tutorial] global_air 1
+execute if entity @e[tag=hit,type=marker,tag=ice_upgrade_spot] at @s unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s[tag=!tutorial] global_ice 1
+execute if entity @e[tag=hit,type=marker,tag=lightning_upgrade_spot] at @s unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s[tag=!tutorial] global_lightning 1
+execute if entity @e[tag=hit,type=marker,tag=nature_upgrade_spot] at @s unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s[tag=!tutorial] global_nature 1
+execute if entity @e[tag=hit,type=marker,tag=darkness_upgrade_spot] at @s unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s[tag=!tutorial] global_darkness 1
+execute if entity @e[tag=hit,type=marker,tag=metal_upgrade_spot] at @s unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s[tag=!tutorial] global_metal 1
 
 ##Advancements
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=fire_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-fire
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=water_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-water
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=earth_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-earth
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=air_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-air
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=ice_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-ice
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=lightning_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-lightning
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=nature_upgrade_spot] at @s run advancement grant @s[tag=!tutorial] only advancements:upgrade-nature
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=darkness_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-darkness
-execute unless score $difficulty settings matches -1 if entity @e[tag=hit,type=marker,tag=metal_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-metal
-execute unless score $difficulty settings matches -1 run advancement grant @s[advancements={advancements:upgrade-fire=true,advancements:upgrade-water=true,advancements:upgrade-earth=true,advancements:upgrade-air=true,advancements:upgrade-ice=true,advancements:upgrade-lightning=true,advancements:upgrade-nature=true,advancements:upgrade-darkness=true,advancements:upgrade-metal=true}] only advancements:upgrade-all
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if entity @e[tag=hit,type=marker,tag=fire_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-fire
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if entity @e[tag=hit,type=marker,tag=water_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-water
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if entity @e[tag=hit,type=marker,tag=earth_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-earth
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if entity @e[tag=hit,type=marker,tag=air_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-air
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if entity @e[tag=hit,type=marker,tag=ice_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-ice
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if entity @e[tag=hit,type=marker,tag=lightning_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-lightning
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if entity @e[tag=hit,type=marker,tag=nature_upgrade_spot] at @s run advancement grant @s[tag=!tutorial] only advancements:upgrade-nature
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if entity @e[tag=hit,type=marker,tag=darkness_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-darkness
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 if entity @e[tag=hit,type=marker,tag=metal_upgrade_spot] at @s run advancement grant @s only advancements:upgrade-metal
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run advancement grant @s[advancements={advancements:upgrade-fire=true,advancements:upgrade-water=true,advancements:upgrade-earth=true,advancements:upgrade-air=true,advancements:upgrade-ice=true,advancements:upgrade-lightning=true,advancements:upgrade-nature=true,advancements:upgrade-darkness=true,advancements:upgrade-metal=true}] only advancements:upgrade-all
 
 
 
 ##If our quiver is empty, refill it.
 tag @s add temporary_tag
-execute if entity @s[tag=temporary_tag] run function game:mechanics/reload
+execute if entity @s[tag=temporary_tag,tag=!trial_four_in_the_quiver] run function game:mechanics/reload
 
 ##removing temporary_tag 
 tag @s remove temporary_tag
@@ -83,7 +83,7 @@ scoreboard players reset @s times_shot
 
 ##If we upgraded to the golden crossbow
 execute if score @s crossbow_id matches 39 run scoreboard players add @s loot_multiplier 30
-
+execute if entity @s[tag=active_trial] run function game:trials/collector/new_crossbow
 ##Resetting life_kills
 scoreboard players reset @s life_kills
 

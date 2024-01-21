@@ -22,3 +22,6 @@ clear @a[tag=parkour] ender_pearl
 ##Finishing the parkour.
 execute as @a[tag=parkour,x=-13,y=81,z=53,distance=..1] at @s run function lobby:parkour/finish
 
+
+execute store result score $ticks parkour_time run worldborder get
+execute if score $ticks parkour_time matches 59000000.. run function lobby:parkour/set_worldborder

@@ -18,4 +18,21 @@ execute if entity @e[type=skeleton,team=enemy,tag=skeleton_knight] run function 
 # exploding boi
 execute as @e[type=wither_skeleton,team=enemy,tag=exploding_zombie] at @s run function game:enemy/volition/exploding_zombie/main
 
+# rogue
+execute as @e[type=pillager,team=enemy,tag=rogue] at @s run function game:enemy/volition/rogue/main
 
+# lobber
+execute as @e[type=wither_skeleton,team=enemy,tag=lobber] at @s run function game:enemy/volition/lobber/main
+
+# mage
+execute as @e[type=skeleton,team=enemy,tag=mage] at @s run function game:enemy/volition/mage/main
+
+
+# keeper
+execute as @e[type=zombie,team=enemy,tag=keeper] at @s run function game:enemy/volition/keeper/main
+
+# fallen arbalist
+execute as @e[type=zombie,team=enemy,tag=fallen_arbalist] at @s run function game:enemy/volition/fallen_arbalist/main
+
+# if there is an enhanced mob
+execute as @e[type=#minecraft:enemy,tag=enhanced] at @s run function game:enemy/volition/mage/enhanced_mob/main

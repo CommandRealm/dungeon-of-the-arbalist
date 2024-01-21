@@ -18,48 +18,48 @@ clone 3236 63 189 3242 68 195 3157 71 190
 
 loot spawn 3104 71 115 loot game:crossbow/metal
 data merge entity @e[type=item,x=3104,y=71,z=115,distance=..5,limit=1,sort=nearest,nbt={Item:{id:"minecraft:crossbow"}}] {Item:{tag:{crossbow_id:9,needs_initialization:1b,Motion:[0.0d,0.0d,0.0d]}}}
-scoreboard players set @e[type=item,x=3104,y=71,z=115,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 100
-scoreboard players set @e[type=item,x=3104,y=71,z=115,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_quantity 5
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3104,y=71,z=115,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 100
+scoreboard players set @e[type=item,x=3104,y=71,z=115,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_quantity 5
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 
 loot spawn 3104 71 114 loot game:crossbow/ice
 data merge entity @e[type=item,x=3104,y=71,z=114,distance=..5,limit=1,sort=nearest,nbt={Item:{id:"minecraft:crossbow"}}] {Item:{tag:{crossbow_id:5,needs_initialization:1b,Motion:[0.0d,0.0d,0.0d]}}}
-scoreboard players set @e[type=item,x=3104,y=71,z=114,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 90
-scoreboard players set @e[type=item,x=3104,y=71,z=114,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_quantity 5
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3104,y=71,z=114,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 90
+scoreboard players set @e[type=item,x=3104,y=71,z=114,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_quantity 5
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 loot spawn 3104 71 113 loot game:crossbow/fire
 data merge entity @e[type=item,x=3104,y=71,z=113,distance=..5,limit=1,sort=nearest,nbt={Item:{id:"minecraft:crossbow"}}] {Item:{tag:{crossbow_id:1,needs_initialization:1b,Motion:[0.0d,0.0d,0.0d]}}}
-scoreboard players set @e[type=item,x=3104,y=71,z=113,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 90
-scoreboard players set @e[type=item,x=3104,y=71,z=113,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_quantity 5
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3104,y=71,z=113,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 90
+scoreboard players set @e[type=item,x=3104,y=71,z=113,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_quantity 5
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 loot spawn 3108 71 116 loot game:shop_items/stats/quiver
-scoreboard players set @e[type=item,x=3108,y=71,z=116,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 80
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3108,y=71,z=116,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 80
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 loot spawn 3107 71 116 loot game:shop_items/stats/revive
-scoreboard players set @e[type=item,x=3107,y=71,z=116,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 75
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3107,y=71,z=116,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 75
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 summon vindicator 3150 72 125 {PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:resistance",duration:10000,amplifier:126,show_particles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Charlotte","color":"gold","bold":true}]'}
 
 loot spawn 3148 73 124 loot game:shop_items/utilities/throwable_tnt
-scoreboard players set @e[type=item,x=3148,y=73,z=124,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 75
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3148,y=73,z=124,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 75
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 loot spawn 3148 73 125 loot game:shop_items/utilities/treasure_magnet
-scoreboard players set @e[type=item,x=3148,y=73,z=125,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 65
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3148,y=73,z=125,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 65
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 loot spawn 3149 73 126 loot game:shop_items/utilities/rabbits_foot
-scoreboard players set @e[type=item,x=3149,y=73,z=126,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 80
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3149,y=73,z=126,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 80
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 loot spawn 3149 73 127 loot game:shop_items/health_potion
-scoreboard players set @e[type=item,x=3149,y=73,z=128,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 90
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3149,y=73,z=128,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 90
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 
 

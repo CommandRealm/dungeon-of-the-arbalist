@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:diamond_chestplate"
+        },
+        "title": {
+            "text": "End Game.",
+            "color": "dark_red",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden":true,
+        "description": {
+            "text": "Survive Wave 100 in Volition.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:hidden/hidden-titles",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

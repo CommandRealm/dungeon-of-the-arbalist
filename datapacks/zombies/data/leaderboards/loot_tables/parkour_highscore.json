@@ -21,7 +21,7 @@
                         },
                         {
                             "function": "set_nbt",
-                            "tag":"{HideFlags:63,invalid_click:1,clickable:1}"
+                            "tag":"{HideFlags:255,invalid_click:1,clickable:1}"
                         },
                         {
                             "function": "set_name",

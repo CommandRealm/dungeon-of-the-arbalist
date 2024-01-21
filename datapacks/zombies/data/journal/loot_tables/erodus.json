@@ -15,7 +15,7 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"35","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Erodus the Devourer","color":"dark_red","bold":true}]
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"34","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Erodus the Devourer","color":"dark_red","bold":true}]
             },
             {
               "function": "minecraft:set_lore",

@@ -17,5 +17,6 @@ particle item iron_block ~ ~1 ~ 0.33 0.33 0.33 0.15 10
 
 ##tag
 
-tag @s add hit_before
+tag @s[tag=!enhanced] add hit_before
+tag @s remove enhanced
 tag @s add no_rng

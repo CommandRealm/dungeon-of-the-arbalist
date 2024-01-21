@@ -19,7 +19,7 @@ execute if score $force_boss boss matches 0.. run scoreboard players operation $
 
 ##Making sure this isn't the previous boss.
 execute if score $force_boss boss matches -1 if score $boss boss = $last_boss boss run scoreboard players add $boss boss 1
-execute if score $boss boss matches 6.. run scoreboard players set $boss boss 0
+execute if score $boss boss matches 5.. run scoreboard players set $boss boss 0
 
 ##setting last boss for next game
 scoreboard players operation $last_boss boss = $boss boss
@@ -100,9 +100,9 @@ execute if score $boss boss matches 3 run data modify storage game:boss title se
 ####Forest essence
 
 #Block
-execute if score $boss boss matches 4 run setblock ~ ~-16 ~ minecraft:structure_block{metadata:"",mirror:"NONE",ignoreEntities:0b,powered:0b,seed:0L,rotation:"NONE",posX:-16,posY:1,posZ:-16,sizeX:32,sizeY:32,sizeZ:32,showboundingbox:0b,name:"minecraft:cube_boss_forest_essence",id:"minecraft:structure_block",author:"?",mode:"LOAD"}
+execute if score $boss boss matches 4 run setblock ~ ~-16 ~ minecraft:structure_block{metadata:"",mirror:"NONE",ignoreEntities:0b,powered:0b,seed:0L,rotation:"NONE",posX:-16,posY:1,posZ:-16,sizeX:32,sizeY:32,sizeZ:32,showboundingbox:0b,name:"minecraft:cube_boss_updated_forest_essence",id:"minecraft:structure_block",author:"?",mode:"LOAD"}
 #Y level of start game button
-execute if score $boss boss matches 4 run scoreboard players set $y_level boss 52
+execute if score $boss boss matches 4 run scoreboard players set $y_level boss 51
 execute if score $boss boss matches 4 run scoreboard players set $spawn_delay boss 100
 execute if score $boss boss matches 4 run scoreboard players set $cooldown boss 100
 execute if score $boss boss matches 4 run scoreboard players set $set_charge boss 20
@@ -113,24 +113,6 @@ execute if score $boss boss matches 4 run scoreboard players set $phase_2_attack
 execute if score $boss boss matches 4 run bossbar set game:boss name ["",{"text":"[","color":"dark_gray","bold":true},{"text":"☠","color":"dark_red","bold":false},{"text":"]","color":"dark_gray","bold":true},{"text":" - ","color":"gray"},{"text":"Essence ","color":"dark_red"},{"text":"of ","color":"gray"},{"text":"the ","color":"red"},{"text":"Forest","color":"dark_gray"}]
 execute if score $boss boss matches 4 run data modify storage game:boss name set value '[{"text":"Essence","color":"dark_red"}]'
 execute if score $boss boss matches 4 run data modify storage game:boss title set value '[{"text":"of ","color":"gray"},{"text":"the ","color":"red"},{"text":"Forest","color":"dark_gray"}]'
-
-####Ghast
-
-#Block
-execute if score $boss boss matches 5 run setblock ~ ~-16 ~ minecraft:structure_block{metadata:"",mirror:"NONE",ignoreEntities:0b,powered:0b,seed:0L,rotation:"NONE",posX:-16,posY:1,posZ:-16,sizeX:32,sizeY:32,sizeZ:32,showboundingbox:0b,name:"minecraft:cube_boss_ghast",id:"minecraft:structure_block",author:"?",mode:"LOAD"}
-#Y level of start game button
-execute if score $boss boss matches 5 run scoreboard players set $y_level boss 52
-execute if score $boss boss matches 5 run scoreboard players set $spawn_delay boss 200
-execute if score $boss boss matches 5 run scoreboard players set $cooldown boss 100
-execute if score $boss boss matches 5 run scoreboard players set $set_charge boss 20
-execute if score $boss boss matches 5 run scoreboard players set $health boss 3000
-execute if score $boss boss matches 5 run scoreboard players set $phase_1_attacks boss 1
-execute if score $boss boss matches 5 run scoreboard players set $phase_2_attacks boss 3
-
-execute if score $boss boss matches 5 run bossbar set game:boss name ["",{"text":"[","color":"dark_gray","bold":true},{"text":"☠","color":"dark_red","bold":false},{"text":"]","color":"dark_gray","bold":true},{"text":" - ","color":"gray"},{"text":"The ","color":"gray"},{"text":"Molten ","color":"dark_red"},{"text":"Titan","color":"red"}]
-execute if score $boss boss matches 5 run data modify storage game:boss name set value '[{"text":"The","color":"gray"}]'
-execute if score $boss boss matches 5 run data modify storage game:boss title set value '[{"text":"Molten ","color":"dark_red"},{"text":"Titan","color":"red"}]'
-### INSERT SUMMON FOR WITCH IN FRONT OF HUT FOR CUTSCENE
 
 
 ##Giant

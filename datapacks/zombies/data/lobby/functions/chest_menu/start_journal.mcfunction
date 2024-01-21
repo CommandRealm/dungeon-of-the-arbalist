@@ -44,25 +44,25 @@ loot replace entity @s[advancements={journal:leaper=true}] enderchest.4 loot jou
 loot replace entity @s[advancements={journal:skeleton=true}] enderchest.5 loot journal:skeleton
 loot replace entity @s[advancements={journal:witch=true}] enderchest.6 loot journal:witch
 loot replace entity @s[advancements={journal:husk=true}] enderchest.7 loot journal:husk
-loot replace entity @s[advancements={journal:evoker=true}] enderchest.8 loot journal:evoker
-loot replace entity @s[advancements={journal:vex=true}] enderchest.9 loot journal:vex
-loot replace entity @s[advancements={journal:hooded=true}] enderchest.10 loot journal:hooded
-loot replace entity @s[advancements={journal:shopkeeper=true}] enderchest.11 loot journal:shopkeeper
+loot replace entity @s[advancements={journal:shopkeeper=true}] enderchest.8 loot journal:shopkeeper
 
-loot replace entity @s[advancements={journal:spider_queen=true}] enderchest.12 loot journal:spider_queen
-loot replace entity @s[advancements={journal:fiery_fiend=true}] enderchest.13 loot journal:fiery_fiend
-loot replace entity @s[advancements={journal:furious_fungus=true}] enderchest.14 loot journal:furious_fungus
-loot replace entity @s[advancements={journal:polar_family=true}] enderchest.15 loot journal:polar_family
-loot replace entity @s[advancements={journal:daring_dancer=true}] enderchest.16 loot journal:daring_dancer
-loot replace entity @s[advancements={journal:royal_archer=true}] enderchest.17 loot journal:royal_archer
+loot replace entity @s[advancements={journal:hooded=true}] enderchest.9 loot journal:hooded
+loot replace entity @s[advancements={journal:piglin_horde=true}] enderchest.10 loot journal:piglin_horde
+loot replace entity @s[advancements={journal:spider_queen=true}] enderchest.11 loot journal:spider_queen
+loot replace entity @s[advancements={journal:fiery_fiend=true}] enderchest.12 loot journal:fiery_fiend
+loot replace entity @s[advancements={journal:furious_fungus=true}] enderchest.13 loot journal:furious_fungus
+loot replace entity @s[advancements={journal:polar_family=true}] enderchest.14 loot journal:polar_family
+loot replace entity @s[advancements={journal:daring_dancer=true}] enderchest.15 loot journal:daring_dancer
+loot replace entity @s[advancements={journal:royal_archer=true}] enderchest.16 loot journal:royal_archer
 
-loot replace entity @s[advancements={journal:static_splitters=true}] enderchest.19 loot journal:static_splitters
-loot replace entity @s[advancements={journal:gravedigger=true}] enderchest.20 loot journal:gravedigger
-loot replace entity @s[advancements={journal:ender_king=true}] enderchest.21 loot journal:ender_king
-loot replace entity @s[advancements={journal:scary_swarm=true}] enderchest.22 loot journal:scary_swarm
-loot replace entity @s[advancements={journal:skelrath=true}] enderchest.23 loot journal:skelrath
-loot replace entity @s[advancements={journal:viscean=true}] enderchest.24 loot journal:viscean
-loot replace entity @s[advancements={journal:exploding_guardian=true}] enderchest.25 loot journal:exploding_guardian
+loot replace entity @s[advancements={journal:static_splitters=true}] enderchest.17 loot journal:static_splitters
+loot replace entity @s[advancements={journal:gravedigger=true}] enderchest.19 loot journal:gravedigger
+loot replace entity @s[advancements={journal:ender_king=true}] enderchest.20 loot journal:ender_king
+loot replace entity @s[advancements={journal:scary_swarm=true}] enderchest.21 loot journal:scary_swarm
+loot replace entity @s[advancements={journal:skelrath=true}] enderchest.22 loot journal:skelrath
+loot replace entity @s[advancements={journal:viscean=true}] enderchest.23 loot journal:viscean
+loot replace entity @s[advancements={journal:boom_guardian=true}] enderchest.24 loot journal:boom_guardian
+loot replace entity @s[advancements={journal:shield_guardian=true}] enderchest.25 loot journal:shield_guardian
 
 
 item replace entity @s enderchest.18 with barrier{clickable:1,HideFlags:63,display:{Name:'[{"text":"Back","bold":true,"italic":false,"color":"#ff0000"}]'}}

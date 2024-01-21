@@ -1,6 +1,6 @@
 { "type":"minecraft:generic", "pools" : 
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1,invalid_click:1}"},
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:255,clickable:1,invalid_click:1}"},
               {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Punch ","color":"red","italic":false,"bold":false},{"text":"Kills","color":"dark_aqua"},{"text":": ","color":"gray"},{"score":{"objective":"global_punch","name":"@s"},"color":"dark_red","italic":false,"bold":true}] }], 
               "name": "minecraft:salmon_spawn_egg" } ] } ] }

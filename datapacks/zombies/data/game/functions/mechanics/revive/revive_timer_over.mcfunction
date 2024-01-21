@@ -9,6 +9,9 @@ tag @s add temporary_tag
 execute as @a[team=fallen] at @s run scoreboard players operation @s calculate = @s id
 execute as @a[team=fallen] at @s run scoreboard players operation @s calculate -= @e[type=area_effect_cloud,tag=temporary_tag,limit=1,sort=arbitrary] id
 
+# setting @s to calculate 0 just to try to fix a bug
+scoreboard players set @s calculate 0
+
 tag @a remove temporary_tag
 tag @a[tag=playing,team=fallen,scores={calculate=0}] add temporary_tag
 execute if entity @a[tag=in_boss_room,tag=playing] run tag @p[tag=temporary_tag,tag=!in_boss_room] add in_boss_room
@@ -18,7 +21,8 @@ tp @p[tag=temporary_tag,tag=!in_boss_room] @e[type=area_effect_cloud,tag=revive_
 tp @p[tag=temporary_tag,tag=in_boss_room] @e[type=marker,tag=boss_room_spawnpoint,sort=random,limit=1]
 execute as @p[tag=temporary_tag] at @s run tp @s ~ ~ ~ facing entity @p[tag=playing,team=game]
 team join enemy @p[tag=temporary_tag]
-effect give @p[tag=temporary_tag] weakness 1000000 255 true
+title @s subtitle [{"text":" "}]
+effect give @p[tag=temporary_tag] weakness infinite 255 true
 gamemode adventure @p[tag=temporary_tag]
 clear @p[tag=temporary_tag]
 tag @p[tag=temporary_tag] remove mechanics
@@ -38,9 +42,9 @@ team join yellow @e[type=item,tag=temporary_tag,limit=1]
 tag @e[type=item,tag=temporary_tag] remove temporary_tag
 
 
-effect give @p[tag=temporary_tag] invisibility 1000000 255 true
-effect give @p[tag=temporary_tag] weakness 100000 255 true
-effect give @p[tag=temporary_tag] resistance 100000 0 true
+effect give @p[tag=temporary_tag] invisibility infinite 255 true
+effect give @p[tag=temporary_tag] weakness infinite 255 true
+effect give @p[tag=temporary_tag] resistance infinite 0 true
 
 title @p[tag=temporary_tag] title [{"text":""}]
 title @p[tag=temporary_tag] subtitle [{"text":"You died.","color":"red"}]
@@ -64,3 +68,6 @@ tag @s remove revive_aec
 tag @a remove temporary_tag
 tag @s remove temporary_tag
 
+
+# resetting our revive timer score
+scoreboard players reset @s revive_time

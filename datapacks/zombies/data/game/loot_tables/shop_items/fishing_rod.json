@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{shop_item:1b,Unbreakable:1b,display:{Name:'[{\"text\":\"Fishing\",\"color\":\"#126ed6\",\"italic\":false},{\"text\":\" Rod\",\"color\":\"#b73238\"}]',Lore:['[{\"text\":\"Use to catch treasure.\",\"color\":\"gray\",\"italic\":false}]']},Enchantments:[{id:\"lure\",lvl:3}],needs_initialization:1b}"
+              "tag": "{Damage:61,shop_item:1b,HideFlags:255,display:{Name:'[{\"text\":\"Fishing\",\"color\":\"#126ed6\",\"italic\":false},{\"text\":\" Rod\",\"color\":\"#b73238\"}]',Lore:['[{\"text\":\"Use to catch treasure.\",\"color\":\"gray\",\"italic\":false}]']},Enchantments:[{id:\"lure\",lvl:3},{id:\"unbreaking\",lvl:1}],needs_initialization:1b}"
             }
           ]
         }

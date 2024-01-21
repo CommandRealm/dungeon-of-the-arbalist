@@ -13,6 +13,34 @@ scoreboard players set @s parkour_score 1000000000
 scoreboard players set @s castle_score 1000000000
 scoreboard players set @s kingdom_score 1000000000
 
+# new leaderboards
+scoreboard players set @s leaderboard_hard_wave 1000000000
+scoreboard players set @s leaderboard_super_hard_wave 1000000000
+scoreboard players set @s leaderboard_hardcore_wave 1000000000
+scoreboard players set @s leaderboard_nightmare_wave 1000000000
+scoreboard players set @s leaderboard_hard_wave2 1000000000
+scoreboard players set @s leaderboard_super_hard_wave2 1000000000
+scoreboard players set @s leaderboard_hardcore_wave2 1000000000
+scoreboard players set @s leaderboard_nightmare_wave2 1000000000
+scoreboard players set @s castle_score2 1000000000
+scoreboard players set @s castle_difficult2 1000000000
+scoreboard players set @s kingdom_score2 1000000000
+scoreboard players set @s kingdom_diff2 1000000000
+scoreboard players set @s castle_score3 1000000000
+scoreboard players set @s castle_difficult3 1000000000
+scoreboard players set @s kingdom_score3 1000000000
+scoreboard players set @s kingdom_diff3 1000000000
+scoreboard players set @s castle_score4 1000000000
+scoreboard players set @s castle_difficult4 1000000000
+scoreboard players set @s kingdom_score4 1000000000
+scoreboard players set @s kingdom_diff4 1000000000
+scoreboard players set @s gamesplay_score 1000000000
+scoreboard players set @s accuracy_score 1000000000
+
+
+scoreboard players set @s default_dota_wins 1000000000
+
+
 scoreboard players set @s prefix -1
 
 function general:update_roles
@@ -108,6 +136,39 @@ scoreboard players set @s j_king_guard 0
 scoreboard players set @s j_torthar 0
 scoreboard players set @s j_gold_guard 0
 scoreboard players set @s j_tutorial_enemy 0
+
+scoreboard players set @s j_piglinh 0
+scoreboard players set @s j_plague 0
+scoreboard players set @s j_bomber 0
+scoreboard players set @s j_bandit 0
+scoreboard players set @s j_w_knight 0
+scoreboard players set @s j_s_knight 0
+scoreboard players set @s j_w_brute 0
+scoreboard players set @s j_ghost 0
+scoreboard players set @s j_w_leaper 0
+scoreboard players set @s j_wind_thief 0
+scoreboard players set @s j_rogue 0
+scoreboard players set @s j_lobber 0
+scoreboard players set @s j_spawner 0
+scoreboard players set @s j_candlehead 0
+scoreboard players set @s j_phantom 0
+scoreboard players set @s j_keeper 0
+scoreboard players set @s j_fallen 0
+scoreboard players set @s j_mage 0
+
+# resetting our trial wins
+scoreboard players set @s win_trial_default 0
+scoreboard players set @s win_trial_shopless 0
+scoreboard players set @s win_trial_poverty 0
+scoreboard players set @s win_trial_firetrail 0
+scoreboard players set @s win_trial_four_in_the_quiver 0
+scoreboard players set @s win_trial_gloom 0
+scoreboard players set @s win_trial_collector 0
+scoreboard players set @s win_trial_detonation 0
+scoreboard players set @s win_trial_scramble 0
+scoreboard players set @s win_trial_random 0
+
+
 ##Readying us up
 scoreboard players set @s ready 1
 
@@ -213,3 +274,37 @@ tag @s remove punch_14
 tag @s remove punch_15
 tag @s remove punch_16
 tag @s remove punch_17
+
+# trims
+scoreboard players set @s cosmetics_trim -1
+scoreboard players set @s cosmetics_trim_type 0
+tag @s remove trim_type_1
+tag @s remove trim_type_2
+tag @s remove trim_type_3
+tag @s remove trim_type_4
+tag @s remove trim_type_5
+tag @s remove trim_type_6
+tag @s remove trim_type_7
+tag @s remove trim_type_8
+tag @s remove trim_type_9
+tag @s remove trim_0
+tag @s remove trim_10
+tag @s remove trim_11
+tag @s remove trim_12
+tag @s remove trim_13
+tag @s remove trim_14
+tag @s remove trim_15
+tag @s remove trim_1
+tag @s remove trim_2
+tag @s remove trim_3
+tag @s remove trim_4
+tag @s remove trim_5
+tag @s remove trim_6
+tag @s remove trim_7
+tag @s remove trim_8
+tag @s remove trim_9
+
+# making sure we have xp requirements
+scoreboard players set @s xp 0
+scoreboard players set @s level 1
+scoreboard players set @s xp_requirement 1000

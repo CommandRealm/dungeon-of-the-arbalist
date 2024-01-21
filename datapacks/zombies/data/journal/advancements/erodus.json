@@ -4,7 +4,7 @@
         "item": "minecraft:player_head",
         "nbt":"{SkullOwner:{Id:[I;843221916,29705375,-1861374816,442116303],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzI1YzkyZDc1YmI3MTAzYmEwNWYyZTJlZWU5NjJhNTc4NWUwNjljN2Q4ZGRkNTI2ZTE5MmMxMjdlZmI3MzNjYyJ9fX0=\"}]}}}"
       },
-      "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Erodus the Devourer","bold":true,"color":"dark_red"}],
+      "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Erodus","bold":true,"color":"dark_red"}],
       "description": [{"text":"Journal entry for Erodus the Devourer. You can learn more in the ender chest.","color":"gray"}],
       "show_toast": true,
       "announce_to_chat": false,

@@ -1,0 +1,13 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:consume_item",
+        "conditions": {
+          "item": {
+            "potion": "minecraft:healing"
+          }
+        }
+      }
+    }
+  }
+  

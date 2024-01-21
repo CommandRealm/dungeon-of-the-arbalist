@@ -93,7 +93,7 @@ execute if score $rand random matches 3 run data merge entity @e[type=guardian,t
 tag @e[type=guardian,tag=needs_adjustments] remove needs_adjustments
 
 ##Giving guardians resistance
-effect give @e[type=guardian,tag=exploding_guardian] resistance 1000000 126 true
+effect give @e[type=guardian,tag=exploding_guardian] resistance infinite 126 true
 
 
 ##Playing sound

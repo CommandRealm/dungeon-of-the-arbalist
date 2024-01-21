@@ -26,3 +26,8 @@ tellraw @s [{"text":"Accuracy","color":"#d7141d","italic":false,"bold":false},{"
 tellraw @s [{"text":"Kills","color":"#7d2c30","italic":false,"bold":false},{"text":": ","color":"gray"},{"score":{"objective":"local_kills","name":"@s"},"color":"#664244","italic":false,"bold":true}]
 tellraw @s [{"text":"Treasure ","color":"yellow","italic":false,"bold":false},{"text":"collected","color":"green"},{"text":": ","color":"gray"},{"score":{"objective":"local_treasure","name":"@s"},"color":"gold","italic":false,"bold":true}]
 tellraw @s [{"text":"Treasure ","color":"yellow","italic":false,"bold":false},{"text":"spent","color":"red"},{"text":": ","color":"gray"},{"score":{"objective":"local_spent","name":"@s"},"color":"gold","italic":false,"bold":true}]
+
+
+function game:trials/end
+function game:modifiers/tellraw
+function game:trials/tellraw

@@ -9,16 +9,16 @@ function game:enemy/spawn_enemy
 summon witch 5111 90 -32 {PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:resistance",duration:10000,amplifier:126,show_particles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Ravenna","color":"gold","bold":true}]'}
 
 loot spawn 5112 91 -31 loot game:shop_items/stats/looting
-scoreboard players set @e[type=item,x=5112,y=91,z=-31,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 100
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=5112,y=91,z=-31,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 100
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] at @s run function game:shops/initialize_item
 
 loot spawn 5112 91 -30 loot game:shop_items/stats/looting
-scoreboard players set @e[type=item,x=5112,y=91,z=-30,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 100
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=5112,y=91,z=-30,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 100
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] at @s run function game:shops/initialize_item
 
 loot spawn 5112 91 -29 loot game:shop_items/utilities/treasure_zombie
-scoreboard players set @e[type=item,x=5112,y=91,z=-29,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 120
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=5112,y=91,z=-29,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 120
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] at @s run function game:shops/initialize_item
 
 
 

@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"boss\"]}",
+          "type": "minecraft:magma_cube"
+        }
+      }
+    }
+  }
+}

@@ -9,8 +9,8 @@ execute unless entity @e[type=armor_stand,tag=castle_leaderboard,tag=temporary_t
 
 ##Setting first to be our score.
 loot replace entity @e[type=armor_stand,tag=castle_leaderboard,tag=temporary_tag_2,limit=1] armor.head loot game:head
-data modify block 0 10 0 Text2 set value '[{"text":"","italic":false},{"selector":"@p[tag=temporary_tag]"},{"text":"\'s ","color":"yellow"},{"text":"time: ","color":"gray"},{"nbt":"Text1","block":"0 10 0","interpret":true}]'
-data modify entity @e[type=armor_stand,tag=castle_leaderboard,tag=temporary_tag_2,limit=1] CustomName set from block 0 10 0 Text2
+data modify block 0 10 0 front_text.messages[1] set value '[{"text":"","italic":false},{"selector":"@p[tag=temporary_tag]"},{"text":"\'s ","color":"yellow"},{"text":"time: ","color":"gray"},{"nbt":"front_text.messages[0]","block":"0 10 0","interpret":true}]'
+data modify entity @e[type=armor_stand,tag=castle_leaderboard,tag=temporary_tag_2,limit=1] CustomName set from block 0 10 0 front_text.messages[1]
 execute if score $difficulty settings matches 0 run data modify entity @e[type=armor_stand,tag=castle_leaderboard,tag=temporary_tag_2,limit=1] ArmorItems[3].tag.display.Lore append value '[{"text":"Super Easy","color":"dark_green","bold":true,"italic":false}]'
 execute if score $difficulty settings matches 1 run data modify entity @e[type=armor_stand,tag=castle_leaderboard,tag=temporary_tag_2,limit=1] ArmorItems[3].tag.display.Lore append value '[{"text":"Easy","color":"green","bold":true,"italic":false}]'
 execute if score $difficulty settings matches 2 run data modify entity @e[type=armor_stand,tag=castle_leaderboard,tag=temporary_tag_2,limit=1] ArmorItems[3].tag.display.Lore append value '[{"text":"Medium","color":"yellow","bold":true,"italic":false}]'

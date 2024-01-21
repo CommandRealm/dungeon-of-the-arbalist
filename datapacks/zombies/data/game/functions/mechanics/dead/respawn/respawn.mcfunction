@@ -24,9 +24,9 @@ tag @s remove temporary_tag
 scoreboard players reset @s respawn_timer
 
 ##effects
-effect give @s invisibility 100000 255 true
-effect give @s weakness 100000 255 true
-effect give @s resistance 100000 0 true
+effect give @s invisibility infinite 255 true
+effect give @s weakness infinite 255 true
+effect give @s resistance infinite 0 true
 
 ##particles and sound
 execute at @s run particle cloud ~ ~ ~ 0.15 0.15 0.15 0.25 50

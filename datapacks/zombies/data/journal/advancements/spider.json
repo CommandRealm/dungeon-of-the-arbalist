@@ -2,7 +2,7 @@
     "display": {
       "icon": {
         "item": "minecraft:player_head",
-        "nbt":"{SkullOwner:{Id:[I;-1225749303,218581705,-1473077212,-900503062],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTYxN2Y3ZGQ1ZWQxNmYzYmQxODY0NDA1MTdjZDQ0MGExNzAwMTViMWNjNmZjYjJlOTkzYzA1ZGUzM2YifX19}\"}]}}}"
+        "nbt":"{SkullOwner:{Id:[I;1208755157,-1292090154,-1307858249,643126204],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWNjYzRhMzJkNDVkNzRlOGIxNGVmMWZmZDU1Y2Q1ZjM4MWEwNmQ0OTk5MDgxZDUyZWFlYTEyZTEzMjkzZTIwOSJ9fX0=\"}]}}}"
       },
       "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Spider","bold":false,"color":"dark_green"}],
       "description": [{"text":"Journal entry for the Spider. You can learn more in the ender chest.","color":"gray"}],

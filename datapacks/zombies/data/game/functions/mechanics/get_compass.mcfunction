@@ -26,5 +26,5 @@ execute if score $mode settings matches 2 if score @s objective matches 5 run it
 execute if score $mode settings matches 2 if score @s objective matches 6 run item replace entity @s hotbar.8 with compass{display:{Name:'[{"text":"","italic":false},{"text":"Objective","color":"dark_purple","bold":true},{"text":": ","color":"gray"},{"text":"Enter the portal.","color":"gray"}]'},LodestonePos:{X:3160,Y:53,Z:261},LodestoneDimension:"minecraft:overworld",LodestoneTracked:0b}
 
 
-execute if entity @s[scores={drop_compass=1..}] run scoreboard players set @s vote_end 1
+execute if entity @s[scores={drop_compass=1..}] run scoreboard players set @s skip 1
 scoreboard players reset @s drop_compass

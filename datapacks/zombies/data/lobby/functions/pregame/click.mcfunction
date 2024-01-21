@@ -5,7 +5,7 @@ scoreboard players add @s ready 1
 scoreboard players set @s[scores={ready=2..}] ready 0
 
 ##Reset score
-scoreboard players reset @s pregame_click
+scoreboard players reset @s click_book
 
 ##clear books if it's at fifty
 execute if score $ready_players pregame matches 49 if entity @s[scores={ready=1}] run clear @a[scores={ready=0}] knowledge_book

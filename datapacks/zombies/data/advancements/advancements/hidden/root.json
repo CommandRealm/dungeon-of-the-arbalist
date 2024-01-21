@@ -5,14 +5,19 @@
     },
     "title": [
       {
-        "color": "#626269",
+        "color": "dark_red",
         "bold": true,
-        "text": "The Quests"
+        "text": "Quests"
       },
       {
-        "color": "#53535c",
+        "color": "white",
         "bold": true,
-        "text": " of the Arbalist"
+        "text": " of the"
+      },
+      {
+        "color": "gold",
+        "bold": true,
+        "text": " Arbalist"
       }
     ],
     "description": {

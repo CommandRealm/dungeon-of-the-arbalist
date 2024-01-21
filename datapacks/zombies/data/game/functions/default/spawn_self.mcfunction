@@ -8,6 +8,7 @@ tag @e[type=area_effect_cloud,sort=random,limit=1,tag=possible_spawn] add select
 
 ##
 execute at @e[type=area_effect_cloud,tag=selected_spawnpoint] positioned ~-16 ~-16 ~-16 at @e[type=marker,tag=zombie_spawnpoint,sort=random,limit=1,dx=31,dy=31,dz=31] run tp @s ~ ~ ~ facing 2000 ~ 0
+execute at @e[type=area_effect_cloud,tag=selected_spawnpoint] positioned ~-16 ~-16 ~-16 run tag @e[type=marker,tag=zombie_spawnpoint,dx=31,dy=31,dz=31] add spawnable
 execute at @s run tp @s ~ ~ ~ facing entity @e[type=area_effect_cloud,tag=selected_spawnpoint,sort=nearest,limit=1]
 execute at @s run tp @s ~ ~ ~ ~ 10
 

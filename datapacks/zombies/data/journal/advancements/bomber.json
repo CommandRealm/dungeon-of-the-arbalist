@@ -1,0 +1,17 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:tnt"},
+      "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Bomber","bold":false,"color":"#61369c"}],
+      "description": [{"text":"Journal entry for the Bomber. You can learn more in the ender chest.","color":"gray"}],
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "parent": "journal:plague_doctor",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+}

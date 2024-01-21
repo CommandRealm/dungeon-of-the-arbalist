@@ -6,6 +6,7 @@ function random:reset_chest
 
 ##copying random score
 scoreboard players operation $boss_door game = $rand random
+execute if score $speedrun modifiers matches 1 run scoreboard players set $boss_door game 1
 
 
 execute as @e[type=marker,tag=boss_door] at @s run function game:default/generation/door/boss/create_wave_marker

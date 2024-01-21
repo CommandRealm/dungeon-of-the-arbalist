@@ -19,16 +19,16 @@ summon witch 5000 79 49 {PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"min
 
 
 loot spawn 4998 80 46 loot game:shop_items/stats/speed
-scoreboard players set @e[type=item,x=4998,y=80,z=46,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 90
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=4998,y=80,z=46,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 90
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] at @s run function game:shops/initialize_item
 
 loot spawn 4999 80 46 loot game:shop_items/stats/speed
-scoreboard players set @e[type=item,x=4999,y=80,z=46,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 90
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=4999,y=80,z=46,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 90
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] at @s run function game:shops/initialize_item
 
 loot spawn 5000 80 46 loot game:shop_items/stats/quiver
-scoreboard players set @e[type=item,x=5000,y=80,z=46,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 95
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},sort=nearest,limit=1] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=5000,y=80,z=46,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 95
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized,sort=nearest,limit=1] at @s run function game:shops/initialize_item
 
 
 tag @e[type=marker,tag=doorway] add raycast

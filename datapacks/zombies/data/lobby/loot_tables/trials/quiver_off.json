@@ -1,0 +1,26 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "functions": [
+            {
+              "function":"minecraft:set_nbt",
+              "entity":"this",
+              "tag":"{clickable:1,HideFlags:255,display:{Name:'[\"\",{\"text\":\"The \",\"color\":\"dark_gray\",\"italic\":false},{\"text\":\"Quiver\",\"color\":\"#6a232d\",\"bold\":true,\"italic\":false},{\"text\":\" Trial\",\"color\":\"#214f53\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore":[
+              {"text":"🏆 ","color":"gold","bold":true,"italic":false,"extra":[{"text":"Times completed","color":"yellow","bold":false,
+              "extra":[{"text":": ","color":"gray","extra":[{"score":{"objective":"win_trial_four_in_the_quiver","name":"@s"},"color":"white","bold":true}]}]}]},
+              {"text":"Disabled","color":"red","italic":false},
+              {"text":"Description: ","color":"dark_gray","italic":true,"extra":[{"text":"Four arrows in your quiver.","italic":true,"color":"gray"}]},{"text":"Refills when you kill an enemy.","italic":true,"color":"gray"}]}]              }
+          ]
+        }
+      ]
+    }

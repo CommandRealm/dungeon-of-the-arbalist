@@ -5,9 +5,9 @@ execute at @a[tag=playing] run playsound minecraft:entity.evoker.cast_spell mast
 execute at @a[tag=playing] run playsound minecraft:entity.evoker.cast_spell master @a ~ ~ ~ 100000 0.594604
 execute at @a[tag=playing] run playsound minecraft:entity.evoker.cast_spell master @a ~ ~ ~ 100000 0.749154
 execute at @a[tag=playing] run stopsound @s * ambient.underwater.loop.additions.ultra_rare
-execute at @a[tag=playing] run forceload remove all
-execute at @a[tag=playing] run scoreboard players set $cutscene game 0
-execute at @a[tag=playing] run scoreboard players set $time game 1
+forceload remove all
+scoreboard players set $cutscene game 0
+scoreboard players set $time game 1
 
 tag @a[tag=playing] add mechanics
 

@@ -4,7 +4,7 @@
         "item": "minecraft:player_head",
         "nbt":"{SkullOwner:{Id:[I;2122682184,997082587,-1970958691,1383297768],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTlhNjQ1MGY1ZTMyZTE1ZDkyZmJkMjg0MTZkYzJiMjQwNzBhZTZmMDYyMTIxNzk4YjNiYTU0OWM5YzkwNzM3MiJ9fX0=\"}]}}}"
       },
-      "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Torthar the Undead King","bold":true,"color":"dark_red"}],
+      "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Torthar","bold":true,"color":"dark_red"}],
       "description": [{"text":"Journal entry for Torthar the Undead King. You can learn more in the ender chest.","color":"gray"}],
       "show_toast": true,
       "announce_to_chat": false,

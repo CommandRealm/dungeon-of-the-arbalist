@@ -8,7 +8,7 @@ execute if score $difficulty settings matches 5.. run team join dead
 
 
 ##If there is a possibility of us being revived, summon the revive point.
-execute if entity @a[tag=playing,team=game,gamemode=adventure] unless score $difficulty settings matches 5.. run function game:mechanics/revive/summon_revive_point
+execute if entity @s[team=fallen] run function game:mechanics/revive/summon_revive_point
 
 ##Resetting score
 scoreboard players reset @s death
@@ -43,23 +43,23 @@ tag @s add needs_spectator_fix
 
 execute if score $difficulty settings matches 2.. run scoreboard players set @s boost_health 0
 execute if score $difficulty settings matches 2.. run scoreboard players set @s boost_quiver 0
-execute if score $difficulty settings matches 2.. if score @s boost_looting matches 1.. run scoreboard players remove @s loot_multiplier 10
-execute if score $difficulty settings matches 2.. if score @s boost_looting matches 2.. run scoreboard players remove @s loot_multiplier 10
-execute if score $difficulty settings matches 2.. if score @s boost_looting matches 3.. run scoreboard players remove @s loot_multiplier 10
-execute if score $difficulty settings matches 2.. if score @s boost_looting matches 4.. run scoreboard players remove @s loot_multiplier 10
-execute if score $difficulty settings matches 2.. if score @s boost_looting matches 5.. run scoreboard players remove @s loot_multiplier 10
+execute if score $difficulty settings matches 2.. if score @s boost_treasure matches 1.. run scoreboard players remove @s loot_multiplier 10
+execute if score $difficulty settings matches 2.. if score @s boost_treasure matches 2.. run scoreboard players remove @s loot_multiplier 10
+execute if score $difficulty settings matches 2.. if score @s boost_treasure matches 3.. run scoreboard players remove @s loot_multiplier 10
+execute if score $difficulty settings matches 2.. if score @s boost_treasure matches 4.. run scoreboard players remove @s loot_multiplier 10
+execute if score $difficulty settings matches 2.. if score @s boost_treasure matches 5.. run scoreboard players remove @s loot_multiplier 10
 
-execute if score $difficulty settings matches 2.. run scoreboard players set @s boost_looting 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s boost_treasure 0
 execute if score $difficulty settings matches 2.. run scoreboard players set @s boost_damage 0
 execute if score $difficulty settings matches 2.. run scoreboard players set @s boost_speed 0
 execute if score $difficulty settings matches 2.. run scoreboard players set @s boost_revive 0
 
-execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_health 0
-execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_quiver 0
-execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_looting 0
-execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_damage 0
-execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_speed 0
-execute if score $difficulty settings matches 2.. run scoreboard players set @s prestige_revive 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s mastery_health 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s mastery_quiver 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s mastery_treasure 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s mastery_damage 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s mastery_speed 0
+execute if score $difficulty settings matches 2.. run scoreboard players set @s mastery_revive 0
 
 execute if score $difficulty settings matches 2.. run function game:mechanics/stat_boosts/update_attributes
 
@@ -77,6 +77,15 @@ execute if score $difficulty settings matches 2.. run clear @s leather_leggings
 advancement revoke @s only game:dead_player_hit_player
 
 ##adding stat
-execute unless score $difficulty settings matches -1 run scoreboard players add @s global_falls 1
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @s global_falls 1
 
-execute unless score $difficulty settings matches -1 run advancement grant @s only advancements:game-die
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run advancement grant @s only advancements:game-die
+
+
+# Trials:
+execute if entity @s[tag=trial_firetrail] run function game:trials/footprints/clear_trail
+
+# if this is default
+execute if score $mode settings matches 0 run scoreboard players operation @s wave_reached = $wave game
+
+function journal:check_death

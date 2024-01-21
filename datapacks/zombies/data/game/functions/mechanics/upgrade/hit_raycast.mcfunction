@@ -50,8 +50,10 @@ title @s[scores={possible_upgrade=-101,crossbow_id=..27}] subtitle [{"text":"⚠
 title @s[scores={crossbow_id=28..},tag=!play_alternate_title] subtitle [{"text":"(","color":"#b18e00"},{"text":"!","color":"gold"},{"text":") ","color":"#b18e00"},{"text":"Max upgrade!","color":"yellow"}]
 execute if entity @s[scores={possible_upgrade=1..,crossbow_id=..27}] run function game:mechanics/upgrade/upgrade_title
 
+title @s[tag=trial_default] subtitle [{"text":"⚠ ","color":"#6a232d"},{"text":"Disabled by ","color":"gray"},{"text":"trial","color":"#214f53"},{"text":".","color":"gray"}]
+
 ##temporary tag so we know we hit something
 tag @s add temporary_tag
 
 ##Seeing if we dropped our crossbow.
-execute if score @s try_purchase matches 1.. if score @s possible_upgrade matches 1.. run function game:mechanics/upgrade/upgrade_crossbow
+execute if score @s[tag=!trial_default] try_purchase matches 1.. if score @s possible_upgrade matches 1.. run function game:mechanics/upgrade/upgrade_crossbow

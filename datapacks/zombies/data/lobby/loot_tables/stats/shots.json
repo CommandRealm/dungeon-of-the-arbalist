@@ -1,6 +1,6 @@
 { "type":"minecraft:generic", "pools" : 
     [ { "rolls":1, "entries":
         [ { "type": "minecraft:item", "functions":
-            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,clickable:1,invalid_click:1}"},
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:255,clickable:1,invalid_click:1}"},
               {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"Shots ","color":"gray","italic":false,"bold":false},{"text":"fired","color":"#8d7364"},{"text":": ","color":"gray"},{"score":{"objective":"global_shots","name":"@s"},"color":"#605852","italic":false,"bold":true}] }], 
               "name": "minecraft:skeleton_spawn_egg" } ] } ] }

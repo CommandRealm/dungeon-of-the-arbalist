@@ -809,25 +809,25 @@ tag @e[type=marker,tag=zombie_spawnpoint,tag=!unlocked,tag=!area_1,tag=!area_2,t
 ##First area stuff
 summon vindicator 3113 66 23 {PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:resistance",duration:10000,amplifier:126,show_particles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Jeremiah","color":"gold","bold":true}]'}
 loot spawn 3113 67 21 loot game:shop_items/stats/quiver
-scoreboard players set @e[type=item,x=3113,y=67,z=21,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 130
-scoreboard players set @e[type=item,x=3113,y=67,z=21,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_quantity 2147483647
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3113,y=67,z=21,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 130
+scoreboard players set @e[type=item,x=3113,y=67,z=21,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_quantity 2147483647
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 
 summon vindicator 3104 69 63 {PersistenceRequired:1b,NoAI:1b,active_effects:[{id:"minecraft:resistance",duration:10000,amplifier:126,show_particles:false}],HandItems:[],Tags:["shopkeeper","die_between_games"],CustomNameVisible:1b,CustomName:'[{"text":"Vanny","color":"gold","bold":true}]'}
 
 
 loot spawn 3106 70 62 loot game:shop_items/utilities/shield
-scoreboard players set @e[type=item,x=3106,y=70,z=62,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 50
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3106,y=70,z=62,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 50
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 loot spawn 3105 70 62 loot game:shop_items/utilities/knockback_stick
-scoreboard players set @e[type=item,x=3105,y=70,z=62,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 10
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3105,y=70,z=62,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 10
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 loot spawn 3104 70 62 loot game:shop_items/health_potion
-scoreboard players set @e[type=item,x=3104,y=70,z=62,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}}] item_price 70
-execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}}] at @s run function game:shops/initialize_item
+scoreboard players set @e[type=item,x=3104,y=70,z=62,distance=..5,limit=1,sort=nearest,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] item_price 70
+execute as @e[type=item,nbt={Item:{tag:{needs_initialization:1b}}},tag=!initialized] at @s run function game:shops/initialize_item
 
 
 summon marker 3081 70 83 {Tags:["doorway","die_between_games","default_door","raycast"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
@@ -867,4 +867,4 @@ execute if score $difficulty settings matches 5.. run kill @e[type=item,nbt={Ite
 execute if score $difficulty settings matches 5.. run kill @e[type=item,nbt={Item:{id:"minecraft:lime_dye"}},x=0,y=66,z=0,distance=500..]
 execute if score $starting_players game matches 1 run kill @e[type=item,nbt={Item:{id:"minecraft:lime_dye"}},x=0,y=66,z=0,distance=500..]
 
-effect give @e[tag=shopkeeper] resistance 100000 126 true
+effect give @e[tag=shopkeeper] resistance infinite 126 true

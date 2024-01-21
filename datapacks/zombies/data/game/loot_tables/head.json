@@ -21,7 +21,7 @@
                         },
                         {
                             "function": "set_nbt",
-                            "tag":"{display:{Name:'[{\"text\":\"Head\",\"color\":\"yellow\",\"italic\":false}]'},Enchantments:[{id:\"minecraft:feather_falling\",lvl:5}],HideFlags:63}"
+                            "tag":"{display:{Name:'[{\"text\":\"Head\",\"color\":\"yellow\",\"italic\":false}]'},Enchantments:[{id:\"minecraft:feather_falling\",lvl:5}],HideFlags:255}"
                                       }
 
                     ],

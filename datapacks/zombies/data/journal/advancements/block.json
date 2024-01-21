@@ -3,7 +3,7 @@
       "icon": {
         "item": "minecraft:coarse_dirt"
               },
-      "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Block","bold":false,"color":"dark_green"}],
+      "title": [{"text":"Journal","color":"white","bold":true},{"text":": ","color":"gray","bold":false},{"text":"Block","bold":true,"color":"dark_green"}],
       "description": [{"text":"Journal entry for the Block. You can learn more in the ender chest.","color":"gray"}],
       "show_toast": true,
       "announce_to_chat": false,

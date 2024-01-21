@@ -15,3 +15,6 @@ execute unless data entity @s[tag=armor_10] EnderItems[{Slot:13b}] run scoreboar
 execute unless data entity @s[tag=armor_11] EnderItems[{Slot:14b}] run scoreboard players set @s armor 11
 execute unless data entity @s[tag=armor_12] EnderItems[{Slot:15b}] run scoreboard players set @s armor 12
 execute unless data entity @s[tag=armor_13] EnderItems[{Slot:16b}] run scoreboard players set @s armor 13
+
+# updating armor
+function game:mechanics/get_armor

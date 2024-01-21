@@ -1,6 +1,8 @@
 ##Called when this room just opened.
 
 
+
+
 ##Finding zombie spawnpoints and tagging the number of zombies we want in that room.
 execute if score $wave game matches ..3 positioned ~-16 ~-16 ~-16 run tag @e[type=marker,tag=zombie_spawnpoint,dx=31,dy=31,dz=31,sort=random,limit=1] add temporary_tag
 execute if score $wave game matches 4..5 positioned ~-16 ~-16 ~-16 run tag @e[type=marker,tag=zombie_spawnpoint,dx=31,dy=31,dz=31,sort=random,limit=1] add temporary_tag

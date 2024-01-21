@@ -21,8 +21,12 @@ execute as @p[tag=temporary_tag] at @s run function game:mechanics/stat_boosts/u
 title @p[tag=temporary_tag] title [{"text":""}]
 title @p[tag=temporary_tag] subtitle [{"text":"You were revived!","color":"green"}]
 
+# TRIALS
+effect give @p[tag=temporary_tag,tag=trial_gloom] darkness infinite 255 true
+
+
 execute if entity @p[tag=temporary_tag] run tellraw @a[tag=playing] [{"selector":"@p[tag=temporary_tag]"},{"text":" was revived by: ","color":"yellow"},{"selector":"@a[distance=..5,tag=playing,tag=!temporary_tag,team=game]"}]
-execute unless score $difficulty settings matches -1 run scoreboard players add @a[distance=..5,tag=playing,tag=!temporary_tag,team=game] global_revives 1
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @a[distance=..5,tag=playing,tag=!temporary_tag,team=game] global_revives 1
 
 
 ##Adjusting the revived players health.

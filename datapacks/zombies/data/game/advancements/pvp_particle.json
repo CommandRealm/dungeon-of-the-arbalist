@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "minecraft:hero_of_the_village": {}
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "game:pvp/particle"
+  }
+}

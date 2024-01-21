@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shield",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{shield:\"strength\",shop_item:1b,HideFlags:255,BlockEntityTag:{Base:15,Patterns:[{Color:7,Pattern:\"mr\"},{Color:8,Pattern:\"flo\"},{Color:14,Pattern:\"mc\"},{Color:15,Pattern:\"cr\"}]},Damage:307,display:{Name:'[{\"text\":\"Strength \",\"color\":\"dark_red\",\"italic\":false},{\"text\":\"Shield\",\"color\":\"gold\",\"italic\":false}]',Lore:['[{\"text\":\"Use to block damage.\",\"color\":\"gray\",\"italic\":false}]']},needs_initialization:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

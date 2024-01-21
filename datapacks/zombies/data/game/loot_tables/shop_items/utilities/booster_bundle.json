@@ -1,0 +1,19 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:bundle",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{shop_item:1b,display:{Name:'[{\"text\":\"B\",\"color\":\"red\",\"italic\":false},{\"text\":\"o\",\"color\":\"#fca50d\",\"italic\":false},{\"text\":\"o\",\"color\":\"#fffc00\",\"italic\":false},{\"text\":\"s\",\"color\":\"gray\",\"italic\":false},{\"text\":\"t\",\"color\":\"#3eefff\",\"italic\":false},{\"text\":\"e\",\"color\":\"green\",\"italic\":false},{\"text\":\"r\",\"color\":\"#a000eb\",\"italic\":false},{\"text\":\" Bundle\",\"color\":\"#80491d\",\"italic\":false}]',Lore:['[{\"text\":\"Purchase to receive three random boosters.\",\"color\":\"gray\",\"italic\":false}]']},needs_initialization:1b}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

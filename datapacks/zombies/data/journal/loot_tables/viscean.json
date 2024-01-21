@@ -15,7 +15,7 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"24","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Viscean the Overseer","color":"dark_red","bold":true}]
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"23","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Viscean the Overseer","color":"dark_red","bold":true}]
             },
             {
               "function": "minecraft:set_lore",

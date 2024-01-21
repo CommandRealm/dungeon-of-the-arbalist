@@ -3,5 +3,5 @@
         [ { "type": "minecraft:item", "functions":
             [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:63,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:14079702,custom_potion_effects:[{id:\"minecraft:luck\",duration:2,amplifier:57},{id:\"minecraft:water_breathing\",duration:2,amplifier:1},{id:\"minecraft:mining_fatigue\",duration:2,amplifier:3}]}}],Charged:1b,Unbreakable:1b,delay:10,reload_delay:65,quiver:18}"},
               {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#7a8f77","bold":true},{"text":"1","color":"#fffeaf","bold":false},{"text":") ","color":"#7a8f77","bold":true},{"text":"Air","color":"#d6d6d6","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] },
-              {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"Pushes enemies.","color":"gray","italic":false}]}], 
+              {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"DPS","color":"dark_green","italic":false,"bold":false,"extra":[{"text":": ","color":"gray","bold":false},{"score":{"name":"$damage","objective":"calculate"},"color":"white","bold":true}]},{"text":"Pushes enemies.","color":"gray","italic":false}]}], 
               "name": "minecraft:crossbow" } ] } ] }

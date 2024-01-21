@@ -1,0 +1,7 @@
+{ "type":"minecraft:generic", "pools" : 
+    [ { "rolls":1, "entries":
+        [ { "type": "minecraft:item", "functions":
+            [ {"function":"minecraft:set_nbt","entity":"this","tag":"{HideFlags:255,ChargedProjectiles:[{id:\"minecraft:tipped_arrow\",Count:1b,tag:{CustomPotionColor:11744000,CustomPotionEffects:[{Id:26,Duration:2,Amplifier:1}]}}],Charged:1b,Unbreakable:1b,delay:100000,reload_delay:100000,quiver:100000}"},
+              {"function": "minecraft:set_name", "entity": "this", "name": [{"text":"(","italic":false,"color":"#aea28c","bold":true},{"text":"?","color":"#ac353b","bold":false},{"text":") ","color":"#aea28c","bold":true},{"text":"Debug","color":"light_purple","bold":true,"italic":false},{"text":" Crossbow","color":"#6a430f","italic":false,"bold":false}] },
+              {"function": "minecraft:set_lore", "entity":"this","lore":[{"text":"DPS","color":"dark_green","italic":false,"bold":false,"extra":[{"text":": ","color":"gray","bold":false},{"score":{"name":"$damage","objective":"calculate"},"color":"white","bold":true}]},{"text":"Sets enemies on fire.","color":"gray","italic":false}]}], 
+              "name": "minecraft:crossbow" } ] } ] }

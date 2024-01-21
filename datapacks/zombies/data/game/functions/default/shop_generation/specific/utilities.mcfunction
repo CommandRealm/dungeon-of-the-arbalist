@@ -6,8 +6,8 @@ function random:reset_chest
 execute if score $rand random matches 0 run loot spawn ~ ~-0.25 ~ loot game:shop_items/utilities/knockback_stick
 execute if score $rand random matches 0 run function game:default/shop_generation/price/super_cheap
 
-execute if score $rand random matches 1 run loot spawn ~ ~-0.25 ~ loot game:shop_items/utilities/shield
-execute if score $rand random matches 1 run function game:default/shop_generation/price/super_cheap
+execute if score $rand random matches 1 run loot spawn ~ ~-0.25 ~ loot game:shop_items/utilities/strength_shield
+execute if score $rand random matches 1 run function game:default/shop_generation/price/cheap
 
 execute if score $rand random matches 2 run loot spawn ~ ~-0.25 ~ loot game:shop_items/utilities/treasure_magnet
 execute if score $rand random matches 2 run function game:default/shop_generation/price/cheap
@@ -16,7 +16,7 @@ execute if score $rand random matches 3 run loot spawn ~ ~-0.25 ~ loot game:shop
 execute if score $rand random matches 3 run function game:default/shop_generation/price/super_cheap
 
 execute if score $rand random matches 4 run loot spawn ~ ~-0.25 ~ loot game:shop_items/utilities/throwable_ice
-execute if score $rand random matches 4 run function game:default/shop_generation/price/super_cheap
+execute if score $rand random matches 4 run function game:default/shop_generation/price/cheap
 
 execute if score $rand random matches 5 run loot spawn ~ ~-0.25 ~ loot game:shop_items/utilities/key
 execute if score $rand random matches 5 run function game:default/shop_generation/price/super_high
@@ -44,3 +44,12 @@ execute if score $rand random matches 12 run function game:default/shop_generati
 
 execute if score $rand random matches 13 run loot spawn ~ ~-0.25 ~ loot game:shop_items/utilities/healing_chest
 execute if score $rand random matches 13 run function game:default/shop_generation/price/cheap
+
+execute if score $rand random matches 14 run loot spawn ~ ~-0.25 ~ loot game:shop_items/utilities/rope
+execute if score $rand random matches 14 run function game:default/shop_generation/price/medium
+
+execute if score $rand random matches 15 run loot spawn ~ ~-0.25 ~ loot game:shop_items/utilities/gas_mask
+execute if score $rand random matches 15 run function game:default/shop_generation/price/medium_low
+
+execute if score $rand random matches 16 run loot spawn ~ ~-0.25 ~ loot game:shop_items/utilities/booster_bundle
+execute if score $rand random matches 16 run function game:default/shop_generation/price/high_high

@@ -16,7 +16,7 @@ gamemode adventure @a[tag=playing]
 
 ##healing players
 effect give @a[tag=playing] instant_health 1 9 true
-
+scoreboard players set @a[tag=playing] last_health 20
 ##Title
 title @a[tag=playing] times 5 45 5
 
@@ -99,7 +99,7 @@ execute if score $difficulty settings matches 4 run tellraw @a[tag=playing] [{"t
 execute if score $difficulty settings matches 5 run tellraw @a[tag=playing] [{"text":"Difficulty","color":"gold"},{"text":": ","color":"gray"},{"text":"Hardcore","color":"#600011","bold":true}]
 execute if score $difficulty settings matches 6 run tellraw @a[tag=playing] [{"text":"Difficulty","color":"gold"},{"text":": ","color":"gray"},{"text":"Nightmare","color":"#423031","bold":true}]
 
-execute if score $difficulty settings matches -1 run tellraw @a[tag=playing] [{"text":"Welcome to training mode! ","color":"white"},{"text":"In this mode, you won't take damage and will have infinite treasure. Advancements, titles, and leaderboards won't be updated after completing rounds. Once you are finished in training mode, use ","color":"gray","bold":false},{"text":"/trigger end","color":"green"},{"text":" to return to the lobby.","color":"gray"}]
+execute if score $difficulty settings matches -1 run tellraw @a[tag=playing] [{"text":"Welcome to training mode! ","color":"white"},{"text":"In this mode, you won't take damage and will have infinite treasure. Advancements, titles, and leaderboards won't be updated after completing rounds. Once you are finished in training mode, use ","color":"gray","bold":false},{"text":"/trigger end","color":"green","clickEvent": {"action":"run_command","value":"/trigger end"}},{"text":" to return to the lobby.","color":"gray"}]
 
 tag @a remove sent_vote_end_message
 
@@ -127,12 +127,12 @@ scoreboard players set @a[tag=playing] boost_speed 0
 scoreboard players set @a[tag=playing] boost_revive 0
 
 
-scoreboard players set @a[tag=playing] prestige_health 0
-scoreboard players set @a[tag=playing] prestige_quiver 0
-scoreboard players set @a[tag=playing] prestige_treasure 0
-scoreboard players set @a[tag=playing] prestige_damage 0
-scoreboard players set @a[tag=playing] prestige_speed 0
-scoreboard players set @a[tag=playing] prestige_revive 0
+scoreboard players set @a[tag=playing] mastery_health 0
+scoreboard players set @a[tag=playing] mastery_quiver 0
+scoreboard players set @a[tag=playing] mastery_treasure 0
+scoreboard players set @a[tag=playing] mastery_damage 0
+scoreboard players set @a[tag=playing] mastery_speed 0
+scoreboard players set @a[tag=playing] mastery_revive 0
 
 scoreboard players set @a[tag=playing] revive_remainder 0
 scoreboard players set @a[tag=playing] b_revive_time 0
@@ -170,6 +170,7 @@ scoreboard objectives remove local_hits
 scoreboard objectives remove local_kills
 scoreboard objectives remove local_accuracy
 scoreboard objectives remove local_treasure
+scoreboard objectives remove local_treasure_lost
 scoreboard objectives remove local_spent
 
 
@@ -178,6 +179,7 @@ scoreboard objectives add local_hits dummy
 scoreboard objectives add local_kills dummy
 scoreboard objectives add local_accuracy dummy
 scoreboard objectives add local_treasure dummy
+scoreboard objectives add local_treasure_lost dummy
 scoreboard objectives add local_spent dummy
 
 
@@ -186,10 +188,11 @@ scoreboard players set @a[tag=playing] local_hits 0
 scoreboard players set @a[tag=playing] local_kills 0
 scoreboard players set @a[tag=playing] local_accuracy 0
 scoreboard players set @a[tag=playing] local_treasure 0
+scoreboard players set @a[tag=playing] local_treasure_lost 0
 scoreboard players set @a[tag=playing] local_spent 0
 
 ##Stat for playing the gamemode
-execute unless score $difficulty settings matches -1 run scoreboard players add @a[tag=playing] global_games 1
+execute unless score $difficulty settings matches -1 unless score $modifiers settings matches 1 run scoreboard players add @a[tag=playing] global_games 1
 
 ##Advancement
 advancement grant @a only game:hit
@@ -246,6 +249,30 @@ advancement grant @a only journal:kills/cobalt_king
 advancement grant @a only journal:kills/cobalt_king_guard
 advancement grant @a only journal:kills/golden_guard
 
+advancement grant @a only journal:kills/piglinh_hoglin
+advancement grant @a only journal:kills/piglinh_piglin
+advancement grant @a only journal:kills/plague_doctor
+advancement grant @a only journal:kills/bomber
+advancement grant @a only journal:kills/bandit
+advancement grant @a only journal:kills/withered_knight
+advancement grant @a only journal:kills/skeleton_knight
+advancement grant @a only journal:kills/withered_brute
+advancement grant @a only journal:kills/ghost
+advancement grant @a only journal:kills/withered_leaper
+advancement grant @a only journal:kills/wind_thief
+advancement grant @a only journal:kills/rogue
+advancement grant @a only journal:kills/lobber
+advancement grant @a only journal:kills/spawner
+advancement grant @a only journal:kills/candlehead
+advancement grant @a only journal:kills/phantom
+advancement grant @a only journal:kills/keeper
+advancement grant @a only journal:kills/fallen_arbalist
+advancement grant @a only journal:kills/mage
+advancement grant @a only game:drink_health_potion
+# advancement grant @a only game:advancement_triggers/banshee
+# advancement grant @a only game:advancement_triggers/fishing_rod
+# advancement grant @a only game:advancement_triggers/enhanced
+
 advancement revoke @a only journal:kills/zombie
 advancement revoke @a only journal:kills/spider
 advancement revoke @a only journal:kills/knight
@@ -258,6 +285,7 @@ advancement revoke @a only journal:kills/evoker
 advancement revoke @a only journal:kills/vex
 advancement revoke @a only journal:kills/hooded
 advancement revoke @a only journal:kills/shopkeeper
+advancement revoke @a only game:drink_health_potion
 
 advancement revoke @a only journal:kills/spider_queen
 advancement revoke @a only journal:kills/fiery_fiend
@@ -288,7 +316,34 @@ advancement revoke @a only journal:kills/tower_archer
 advancement revoke @a only journal:kills/cobalt_king
 advancement revoke @a only journal:kills/cobalt_king_guard
 advancement revoke @a only journal:kills/golden_guard
-##Resetting below_name selectors.
+
+
+advancement revoke @a only journal:kills/piglinh_hoglin
+advancement revoke @a only journal:kills/piglinh_piglin
+advancement revoke @a only journal:kills/plague_doctor
+advancement revoke @a only journal:kills/bomber
+advancement revoke @a only journal:kills/bandit
+advancement revoke @a only journal:kills/withered_knight
+advancement revoke @a only journal:kills/skeleton_knight
+advancement revoke @a only journal:kills/withered_brute
+advancement revoke @a only journal:kills/ghost
+advancement revoke @a only journal:kills/withered_leaper
+advancement revoke @a only journal:kills/wind_thief
+advancement revoke @a only journal:kills/rogue
+advancement revoke @a only journal:kills/lobber
+advancement revoke @a only journal:kills/spawner
+advancement revoke @a only journal:kills/candlehead
+advancement revoke @a only journal:kills/phantom
+advancement revoke @a only journal:kills/keeper
+advancement revoke @a only journal:kills/fallen_arbalist
+advancement revoke @a only journal:kills/mage
+advancement revoke @a only game:advancement_triggers/banshee
+advancement revoke @a only game:advancement_triggers/enhanced
+advancement revoke @a only game:advancement_triggers/fishing_rod
+
+
+
+##Resetting belowName selectors.
 scoreboard players set $below_name_time game 60
 scoreboard players set $below_name_state game 0
 
@@ -335,6 +390,36 @@ tag @a remove anger_shopkeepers
 # removing shop reset tag
 tag @a remove shop_reset
 
+# its 15 so that it begins at wave 15
+scoreboard players set $waves_till_shop_reset game 14
+
 # seeing if volition is active
 scoreboard players set $volition game 0
 execute if score $mode settings matches 0 if score $difficulty settings matches 3.. run scoreboard players set $volition game 1
+
+
+tag @a remove has_gas_mask
+
+# use shield
+scoreboard players reset @a use_shield
+scoreboard players reset @a fake_strength
+
+
+scoreboard players reset @a trial_firetrail_cooldown
+# getting timer set up
+execute if score $random_crossbow modifiers matches 1 as @a[tag=playing] at @s run function game:modifiers/random_crossbow/get_timer
+
+scoreboard players set @a[tag=playing] trial_collector 1000
+
+# training objectives
+scoreboard objectives remove training
+scoreboard objectives add training trigger
+
+
+execute store result score $players_during_start game if entity @a[tag=playing]
+
+# reset for advancements
+scoreboard players set $wave game 0
+
+# if the modifier is on and it is default
+execute if score $mode settings matches 0 if score $volition modifiers matches 1 run scoreboard players set $volition game 1

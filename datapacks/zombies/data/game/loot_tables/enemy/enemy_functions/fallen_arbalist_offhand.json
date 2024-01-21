@@ -1,0 +1,265 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:oak_planks"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:fire_charge"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:prismarine_shard"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:granite_slab"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:white_stained_glass"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:ice"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:glowstone_dust"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:grass"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:blackstone"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:iron_nugget"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:magma_block"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:prismarine"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:granite"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:light_gray_stained_glass"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:packed_ice"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:glowstone"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:tall_grass"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:black_concrete_powder"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:iron_ingot"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:white_stained_glass_pane"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:water_bucket"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:basalt"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:repeater"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:snow"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:gunpowder"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:scute"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:gray_wool"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:andesite"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:lava_bucket"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:dark_prismarine"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:polished_granite"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:gray_stained_glass"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:blue_ice"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:yellow_stained_glass"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:large_fern"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:black_concrete"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:iron_block"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:obsidian"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:heart_of_the_sea"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:gold_block"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:flint_and_steel"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:end_stone"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:black_stained_glass"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:cobblestone"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:comparator"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:cyan_glazed_terracotta"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:white_concrete_powder"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:white_wool"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:prismarine_crystals"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:light_blue_glazed_terracotta"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:crimson_roots"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:redstone_torch"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:coarse_dirt"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:chiseled_quartz_block"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:bedrock"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:tube_coral_fan"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:snow_block"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:nether_star"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:brown_concrete_powder"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:light_gray_stained_glass_pane"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:netherite_block"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:crying_obsidian"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:slime_block"
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:netherrack"
+          }
+    ]
+}
+    ]
+}

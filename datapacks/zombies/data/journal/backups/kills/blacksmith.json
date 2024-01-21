@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"cpt_forge_miniboss\"]}",
+          "type": "minecraft:zombie_villager"
+        }
+      }
+    }
+  }
+}

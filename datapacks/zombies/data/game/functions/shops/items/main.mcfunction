@@ -23,3 +23,15 @@ execute as @e[type=skeleton,tag=treasure_zombie,nbt={HurtTime:9s}] at @s run fun
 
 ##If there is a whirlpool
 execute if entity @e[type=armor_stand,tag=whirlpool] run function game:shops/items/whirlpool/main
+
+# if player has a rope and is in lava
+execute as @a[tag=playing,team=game,tag=mechanics,nbt={Inventory:[{id:"minecraft:lead",tag:{shop_item:1b}}]}] at @s if block ~ ~ ~ lava run function game:shops/items/use_rope
+
+# if we have gas mask equipped
+execute as @a[tag=playing,tag=has_gas_mask] at @s run function game:shops/items/gas_mask/main
+
+# if we use a shield
+execute as @a[tag=playing,gamemode=adventure,scores={use_shield=1..}] at @s run function game:shops/items/shields/use
+
+# fake strength
+execute if entity @a[tag=playing,gamemode=adventure,scores={fake_strength=1..}] run function game:shops/items/shields/strength/main

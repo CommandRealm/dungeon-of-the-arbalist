@@ -14,14 +14,14 @@ execute if score $second pregame matches ..0 run function lobby:pregame/countdow
 
 
 
-##Check players on and readied
-execute store result score $ready_players pregame if entity @a[scores={ready=1..}]
-execute store result score $players_on pregame if entity @a
 
 ##Make players appear/disappear off of sidebar
 scoreboard players reset @a[scores={ready=0}] readied_players
 scoreboard players set @a[scores={ready=1}] readied_players 1
 
+##Check players on and readied
+execute store result score $ready_players pregame if entity @a[scores={ready=1..}]
+execute store result score $players_on pregame if entity @a
 
 
 ##Countdown ending

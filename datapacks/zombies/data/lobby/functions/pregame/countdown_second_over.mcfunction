@@ -22,3 +22,5 @@ execute if score $display pregame matches 1 as @a at @s run playsound minecraft:
 
 ##Reset score
 scoreboard players set $second pregame 20
+
+execute as @a[scores={intro_text=1..}] at @s run function lobby:intro_text/end

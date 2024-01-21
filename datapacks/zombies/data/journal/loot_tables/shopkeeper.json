@@ -15,7 +15,7 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"12","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Shopkeeper","color":"dark_green"}]
+              "name": [{"text":"Entry ","color":"white","italic":false},{"text":"9","color":"gray","bold":true},{"text":": ","color":"gray"},{"text":"Pillager Shopkeeper","color":"dark_green"}]
             },
             {
               "function": "minecraft:set_lore",

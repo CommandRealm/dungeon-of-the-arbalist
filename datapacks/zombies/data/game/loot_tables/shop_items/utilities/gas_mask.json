@@ -1,0 +1,19 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:leather_helmet",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{Trim:{material:\"netherite\",pattern:\"host\"},HideFlags:255,shop_item:1b,display:{color:2711830,Name:'[{\"text\":\"Gas \",\"color\":\"#296116\",\"italic\":false},{\"text\":\"Mask\",\"color\":\"#214017\",\"italic\":false}]',HideFlags:255,Lore:['[{\"text\":\"Removes negative potion effects and plagues till the end of a wave.\",\"color\":\"gray\",\"italic\":false}]']},needs_initialization:1b}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

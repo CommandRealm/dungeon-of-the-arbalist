@@ -201,7 +201,7 @@ execute if score $rand random matches 159 run data modify storage minecraft:gene
 execute if score $rand random matches 160 run data modify storage minecraft:generation name set value "minecraft:cube_nether_shroomlight"
 execute if score $rand random matches 161 run data modify storage minecraft:generation name set value "minecraft:cube_birch_tree"
 
-# newest 27
+# udpate cubes
 
 execute if score $rand random matches 162 run data modify storage minecraft:generation name set value "minecraft:cube_amethyst_cave"
 execute if score $rand random matches 163 run data modify storage minecraft:generation name set value "minecraft:cube_best_dota_cube"
@@ -233,3 +233,37 @@ execute if score $rand random matches 186 run data modify storage minecraft:gene
 execute if score $rand random matches 187 run data modify storage minecraft:generation name set value "minecraft:cube_old_forest_essence"
 execute if score $rand random matches 188 run data modify storage minecraft:generation name set value "minecraft:cube_better_stronghold"
 
+
+
+
+
+# newest 27
+
+execute if score $rand random matches 189 run data modify storage minecraft:generation name set value "minecraft:cube_joel_earth_temple_map"
+execute if score $rand random matches 190 run data modify storage minecraft:generation name set value "minecraft:cube_dinosaur_skull_with_horn"
+execute if score $rand random matches 191 run data modify storage minecraft:generation name set value "minecraft:cube_tombs"
+execute if score $rand random matches 192 run data modify storage minecraft:generation name set value "minecraft:cube_sunken_pirate_ship"
+execute if score $rand random matches 193 run data modify storage minecraft:generation name set value "minecraft:cube_mangrove_pools"
+execute if score $rand random matches 194 run data modify storage minecraft:generation name set value "minecraft:cube_slime_kingdom"
+execute if score $rand random matches 195 run data modify storage minecraft:generation name set value "minecraft:cube_basalt_lavafalls"
+execute if score $rand random matches 196 run data modify storage minecraft:generation name set value "minecraft:cube_fire_temple_with_crimson"
+execute if score $rand random matches 197 run data modify storage minecraft:generation name set value "minecraft:cube_gold_four_shop"
+
+execute if score $rand random matches 198 run data modify storage minecraft:generation name set value "minecraft:cube_lightning_temple_with_slime"
+execute if score $rand random matches 199 run data modify storage minecraft:generation name set value "minecraft:cube_statue_temple"
+execute if score $rand random matches 200 run data modify storage minecraft:generation name set value "minecraft:cube_troll_cave"
+execute if score $rand random matches 201 run data modify storage minecraft:generation name set value "minecraft:cube_snowy_ice_cave"
+execute if score $rand random matches 202 run data modify storage minecraft:generation name set value "minecraft:cube_ice_city"
+execute if score $rand random matches 203 run data modify storage minecraft:generation name set value "minecraft:cube_jungle_slime_temple"
+execute if score $rand random matches 204 run data modify storage minecraft:generation name set value "minecraft:cube_cloud_air_shop"
+execute if score $rand random matches 205 run data modify storage minecraft:generation name set value "minecraft:cube_death_trap"
+execute if score $rand random matches 206 run data modify storage minecraft:generation name set value "minecraft:cube_redstone_spider_cave"
+execute if score $rand random matches 207 run data modify storage minecraft:generation name set value "minecraft:cube_joel_steampunk"
+execute if score $rand random matches 208 run data modify storage minecraft:generation name set value "minecraft:cube_copper_copper_cave"
+execute if score $rand random matches 209 run data modify storage minecraft:generation name set value "minecraft:cube_seasons"
+execute if score $rand random matches 210 run data modify storage minecraft:generation name set value "minecraft:cube_darkness_doors"
+execute if score $rand random matches 211 run data modify storage minecraft:generation name set value "minecraft:cube_darkness_house_red_carpet"
+execute if score $rand random matches 212 run data modify storage minecraft:generation name set value "minecraft:cube_chip_sewer"
+execute if score $rand random matches 213 run data modify storage minecraft:generation name set value "minecraft:cube_spore_forest"
+execute if score $rand random matches 214 run data modify storage minecraft:generation name set value "minecraft:cube_nature_towers"
+execute if score $rand random matches 215 run data modify storage minecraft:generation name set value "minecraft:cube_beetopia"
