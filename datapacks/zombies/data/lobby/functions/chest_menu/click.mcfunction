@@ -264,7 +264,7 @@ execute if score @s screen matches 18 if entity @s[advancements={advancements:hi
 execute if score @s screen matches 18 if entity @s[advancements={advancements:lobby-all=true}] unless data entity @s EnderItems[{Slot:10b,id:"minecraft:oak_sign"}] run scoreboard players set @s prefix 263
 execute if score @s screen matches 18 if entity @s[advancements={advancements:lobby-all=true}] unless data entity @s EnderItems[{Slot:10b,id:"minecraft:oak_sign"}] run function general:rank
 execute if score @s screen matches 18 if entity @s[advancements={advancements:game-all=true}] unless data entity @s EnderItems[{Slot:11b,id:"minecraft:podzol"}] run scoreboard players set @s cosmetics_punch 18
-execute if score @s screen matches 18 if entity @s[advancements={minecraft:completionist/completionist=true}] unless data entity @s EnderItems[{Slot:12b,id:"minecraft:gold_ingot"}] run function lobby:chest_menu/toggle_completionist_particles
+execute if score @s screen matches 18 if entity @s[advancements={advancements:completionist/completionist=true}] unless data entity @s EnderItems[{Slot:12b,id:"minecraft:gold_ingot"}] run function lobby:chest_menu/toggle_completionist_particles
 
 execute if score @s screen matches 18 if entity @s[advancements={advancements:upgrade-all=true}] unless data entity @s EnderItems[{Slot:14b,id:"minecraft:name_tag"}] run scoreboard players set @s prefix 264
 execute if score @s screen matches 18 if entity @s[advancements={advancements:upgrade-all=true}] unless data entity @s EnderItems[{Slot:14b,id:"minecraft:name_tag"}] run function general:rank

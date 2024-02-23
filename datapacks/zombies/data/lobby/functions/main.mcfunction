@@ -103,10 +103,10 @@ advancement grant @a[advancements={advancements:lobby-all=false,advancements:lob
 execute as @a[x=0,y=66,z=0,distance=..500] at @s unless entity @s[advancements={advancements:hidden/root=false,advancements:hidden/hidden-parkour=false,advancements:hidden/hidden-journal=false,advancements:hidden/hidden-hardcore=false,advancements:hidden/hidden-nightmare=false,advancements:hidden/hidden-titles=false,advancements:hidden/hidden-void=false}] run function lobby:advancements/unlock_hidden_section
 
 ##Unlocking completionist
-advancement grant @a[advancements={minecraft:completionist/completionist=false,advancements:game-all=true,advancements:upgrade-all=true,advancements:lobby-all=true,advancements:wins-all=true}] only minecraft:completionist/completionist
+advancement grant @a[advancements={advancements:completionist/completionist=false,advancements:game-all=true,advancements:upgrade-all=true,advancements:lobby-all=true,advancements:wins-all=true}] only advancements:completionist/completionist
 
 
-execute if entity @a[advancements={minecraft:completionist/completionist=true},tag=!playing] run function completionist:completionist_helix
+execute if entity @a[advancements={advancements:completionist/completionist=true},tag=!playing] run function completionist:completionist_helix
 
 
 # intro text
