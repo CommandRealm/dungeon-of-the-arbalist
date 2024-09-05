@@ -1,6 +1,18 @@
 {
-  "pack": {
-    "pack_format": 10,
-    "description": "Dungeon of the Arbalist's Data Pack"
-  }
+    "pack": {
+        "pack_format": 48,
+        "description": "Dungeon of the Arbalist's Data Pack"
+    },
+    "filter": {
+        "block": [
+            {
+                "namespace": "minecraft",
+                "path": "advancement/.*"
+            },
+            {
+                "namespace": "minecraft",
+                "path": "recipe/.*"
+            }
+        ]
+    }
 }

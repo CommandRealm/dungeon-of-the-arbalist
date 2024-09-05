@@ -1,0 +1,64 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{clickable:1,invalid_click:1}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "Ice ",
+                                    "color": "#6fe6ff",
+                                    "italic": false,
+                                    "bold": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "upgrades ",
+                                    "color": "gold",
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "used",
+                                    "color": "gray",
+                                    "type": "text"
+                                },
+                                {
+                                    "text": ": ",
+                                    "color": "gray",
+                                    "type": "text"
+                                },
+                                {
+                                    "score": {
+                                        "objective": "global_ice",
+                                        "name": "@s"
+                                    },
+                                    "color": "#6fe6ff",
+                                    "italic": false,
+                                    "bold": true,
+                                    "type": "score"
+                                }
+                            ]
+                        }
+                    ],
+                    "name": "minecraft:ice"
+                }
+            ]
+        }
+    ]
+}

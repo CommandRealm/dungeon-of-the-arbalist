@@ -1,0 +1,5 @@
+execute as @e[type=minecraft:villager,tag=lobby_npc,tag=lobby_villager,tag=lobby_area_2,tag=npc_a] at @s run tp @e[type=minecraft:pillager,tag=lobby_npc,tag=lobby_pillager,tag=npc_a,tag=lobby_area_2] ~-50 ~ ~ ~ ~
+execute as @e[type=minecraft:villager,tag=lobby_npc,tag=lobby_villager,tag=lobby_area_2,tag=npc_b] at @s run tp @e[type=minecraft:pillager,tag=lobby_npc,tag=lobby_pillager,tag=npc_b,tag=lobby_area_2] ~-50 ~ ~ ~ ~
+execute as @e[type=minecraft:villager,tag=lobby_npc,tag=lobby_villager,tag=lobby_area_2,tag=npc_c] at @s run tp @e[type=minecraft:pillager,tag=lobby_npc,tag=lobby_pillager,tag=npc_c,tag=lobby_area_2] ~-50 ~ ~ ~ ~
+execute as @e[type=minecraft:villager,tag=lobby_npc,tag=lobby_villager,tag=lobby_area_2,tag=npc_d] at @s run tp @e[type=minecraft:pillager,tag=lobby_npc,tag=lobby_pillager,tag=npc_d,tag=lobby_area_2] ~-50 ~ ~ ~ ~
+return 1

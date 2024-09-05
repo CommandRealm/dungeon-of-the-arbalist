@@ -1,0 +1,59 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{clickable:1,invalid_click:1}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "Treasure ",
+                                    "color": "yellow",
+                                    "italic": false,
+                                    "bold": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "spent",
+                                    "color": "red",
+                                    "type": "text"
+                                },
+                                {
+                                    "text": ": ",
+                                    "color": "gray",
+                                    "type": "text"
+                                },
+                                {
+                                    "score": {
+                                        "objective": "global_spent",
+                                        "name": "@s"
+                                    },
+                                    "color": "gold",
+                                    "italic": false,
+                                    "bold": true,
+                                    "type": "score"
+                                }
+                            ]
+                        }
+                    ],
+                    "name": "minecraft:cat_spawn_egg"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{clickable:1,invalid_click:1}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:profile": {
+                                    "id": [
+                                        448664699,
+                                        -361085172,
+                                        -1904994610,
+                                        -1880265546
+                                    ],
+                                    "properties": [
+                                        {
+                                            "name": "textures",
+                                            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDY3NGM2M2M4ZGI1ZjRjYTYyOGQ2OWEzYjFmOGEzNmUyOWQ4ZmQ3NzVlMWE2YmRiNmNhYmI0YmU0ZGIxMjEifX19"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "Entry ",
+                                    "color": "white",
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "20",
+                                    "color": "gray",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": ": ",
+                                    "color": "gray",
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Gravedigger",
+                                    "color": "red",
+                                    "bold": true,
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "Charges up speed to rise from the ground at lightning speeds.",
+                                    "color": "green",
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Times killed",
+                                    "color": "red",
+                                    "italic": false,
+                                    "extra": [
+                                        {
+                                            "text": ": ",
+                                            "color": "gray",
+                                            "extra": [
+                                                {
+                                                    "score": {
+                                                        "objective": "j_gravedigger",
+                                                        "name": "@s"
+                                                    },
+                                                    "bold": true,
+                                                    "color": "dark_red",
+                                                    "type": "score"
+                                                }
+                                            ],
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "type": "text"
+                                }
+                            ],
+                            "mode": "append"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

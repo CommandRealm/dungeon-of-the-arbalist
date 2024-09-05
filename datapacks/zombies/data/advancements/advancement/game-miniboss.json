@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:chiseled_stone_bricks",
+            "components": null
+        },
+        "title": {
+            "text": "Accomplished!",
+            "color": "green",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Defeat a miniboss.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:game-shop",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

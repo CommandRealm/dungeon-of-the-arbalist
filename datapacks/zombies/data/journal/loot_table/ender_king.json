@@ -1,0 +1,104 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{clickable:1,invalid_click:1}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:profile": {
+                                    "id": [
+                                        -161098630,
+                                        -1416543010,
+                                        -2022906950,
+                                        900703265
+                                    ],
+                                    "properties": [
+                                        {
+                                            "name": "textures",
+                                            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjQ0NmQxZTY4YThiMTI5ZDYzZDNjM2IzNjZlYmQ1Y2ZkMWJmMGY3M2U2ZWQzZmU1YmI0NjkxMjJlZTViNWFhMyJ9fX0="
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "Entry ",
+                                    "color": "white",
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "21",
+                                    "color": "gray",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": ": ",
+                                    "color": "gray",
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Ender King",
+                                    "color": "red",
+                                    "bold": true,
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "Harnesses dark power to warp to those that attempt to flee.",
+                                    "color": "green",
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Times killed",
+                                    "color": "red",
+                                    "italic": false,
+                                    "extra": [
+                                        {
+                                            "text": ": ",
+                                            "color": "gray",
+                                            "extra": [
+                                                {
+                                                    "score": {
+                                                        "objective": "j_ender_king",
+                                                        "name": "@s"
+                                                    },
+                                                    "bold": true,
+                                                    "color": "dark_red",
+                                                    "type": "score"
+                                                }
+                                            ],
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "type": "text"
+                                }
+                            ],
+                            "mode": "append"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

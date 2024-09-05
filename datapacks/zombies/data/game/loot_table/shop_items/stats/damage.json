@@ -1,0 +1,29 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:purple_dye",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{shop_item:1b,stat_boost:1b,needs_initialization:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_name": "{\"color\":\"#a000eb\",\"extra\":[{\"color\":\"gray\",\"text\":\" Booster\"}],\"italic\":false,\"text\":\"Damage\"}",
+                                "minecraft:lore": [
+                                    "{\"color\":\"gray\",\"italic\":false,\"text\":\"Obtain to increase your damage booster.\"}",
+                                    "{\"color\":\"gray\",\"italic\":false,\"text\":\"Makes your crossbow deal more damage.\"}"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+tag @s add punch_15
+tellraw @s [{"text":"- - - - - - - - - - - - - - - - - - - - - - - - - - -","color":"gray","bold":true,"type":"text"},{"text":"\nYou have unlocked a LEGENDARY Punch Kill Effect!","color":"yellow","bold":false,"type":"text"},{"text":"\nPunch Kill Effect ","color":"gray","bold":true,"type":"text"},{"text":"- ","color":"gray","bold":true,"type":"text"},{"text":"Skull","color":"white","bold":true,"type":"text"},{"text":"\nYou can select it inside the Menu Ender Chest!","color":"green","bold":false,"type":"text"}]
+return 1

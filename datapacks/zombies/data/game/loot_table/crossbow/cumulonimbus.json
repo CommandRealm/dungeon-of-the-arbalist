@@ -1,0 +1,116 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{delay:11,reload_delay:70,quiver:23}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:charged_projectiles": [
+                                    {
+                                        "id": "minecraft:tipped_arrow",
+                                        "components": {
+                                            "minecraft:potion_contents": {
+                                                "custom_color": 5791840,
+                                                "custom_effects": [
+                                                    {
+                                                        "id": "minecraft:luck",
+                                                        "duration": 2,
+                                                        "amplifier": 55
+                                                    },
+                                                    {
+                                                        "id": "minecraft:water_breathing",
+                                                        "duration": 2,
+                                                        "amplifier": 7
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "count": 1
+                                    }
+                                ],
+                                "minecraft:enchantments": {
+                                    "levels": {
+                                        "minecraft:piercing": 2
+                                    },
+                                    "show_in_tooltip": false
+                                },
+                                "minecraft:unbreakable": {
+                                    "show_in_tooltip": false
+                                },
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "(",
+                                    "italic": false,
+                                    "color": "#a57f81",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "2",
+                                    "color": "#cffffd",
+                                    "bold": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": ") ",
+                                    "color": "#a57f81",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Cumulonimbus",
+                                    "color": "#586060",
+                                    "bold": true,
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": " Crossbow",
+                                    "color": "#6a430f",
+                                    "italic": false,
+                                    "bold": false,
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "Piercing II",
+                                    "color": "gray",
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Pushes enemies.",
+                                    "color": "gray",
+                                    "italic": false,
+                                    "type": "text"
+                                }
+                            ],
+                            "mode": "append"
+                        }
+                    ],
+                    "name": "minecraft:crossbow"
+                }
+            ]
+        }
+    ]
+}

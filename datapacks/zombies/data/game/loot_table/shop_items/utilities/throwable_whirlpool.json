@@ -1,0 +1,29 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:blue_glazed_terracotta",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{throwable:1b,droppable:1b,shop_item:1b,needs_initialization:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:damage": 50,
+                                "minecraft:custom_name": "{\"color\":\"aqua\",\"extra\":[{\"color\":\"dark_aqua\",\"text\":\" Whirlpool \"},{\"bold\":true,\"color\":\"dark_gray\",\"text\":\"<\"},{\"bold\":false,\"color\":\"gray\",\"keybind\":\"key.drop\"},{\"bold\":true,\"color\":\"dark_gray\",\"text\":\">\"}],\"italic\":false,\"text\":\"Throwable\"}",
+                                "minecraft:lore": [
+                                    "{\"color\":\"gray\",\"italic\":false,\"text\":\"Drop to throw a whirlpool that pulls mobs towards itself.\"}"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

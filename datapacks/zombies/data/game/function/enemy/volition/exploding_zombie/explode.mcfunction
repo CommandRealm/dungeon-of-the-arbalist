@@ -1,0 +1,26 @@
+# called when we should explode
+
+# explosion
+particle minecraft:explosion_emitter ~ ~ ~ 0 0 0 0 1 force @a
+playsound minecraft:entity.generic.explode master @a ~ ~ ~ 1 1
+
+# damaging nearby players
+effect give @a[distance=..2] minecraft:instant_damage 1 1
+effect give @a[distance=..3] minecraft:instant_damage 1 0
+
+# damaging nearby enemy bois
+tag @s add temporary_tag
+tag @e[distance=..4.25,tag=enemy,nbt={Invulnerable:1b}] add temporary_tag
+
+##Dealing damage to enemies.
+execute as @e[distance=..4.25,tag=enemy,tag=!temporary_tag] at @s run effect give @s minecraft:luck 1 127 true
+execute as @e[distance=..4.25,tag=enemy,tag=!temporary_tag] at @s run effect give @s minecraft:bad_omen 1 127 true
+execute as @e[distance=..4.25,tag=enemy,tag=!temporary_tag] at @s run effect give @s minecraft:instant_damage 1 0 true
+execute as @e[distance=..4.25,tag=enemy,tag=!temporary_tag] at @s run effect give @s minecraft:instant_health 1 0 true
+execute as @e[distance=..4.25,tag=enemy,tag=!temporary_tag] at @s run function game:enemy/take_damage
+
+tag @e[distance=..4.25,tag=enemy,tag=temporary_tag] remove temporary_tag
+
+tp @s 0 0 0
+kill @s
+return 1

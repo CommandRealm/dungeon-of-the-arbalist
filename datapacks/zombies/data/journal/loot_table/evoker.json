@@ -1,0 +1,103 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{clickable:1,invalid_click:1}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:profile": {
+                                    "id": [
+                                        -17612447,
+                                        -1953806226,
+                                        -1654419791,
+                                        -89666527
+                                    ],
+                                    "properties": [
+                                        {
+                                            "name": "textures",
+                                            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDk1NDEzNWRjODIyMTM5NzhkYjQ3ODc3OGFlMTIxMzU5MWI5M2QyMjhkMzZkZDU0ZjFlYTFkYTQ4ZTdjYmE2In19fQ=="
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "Entry ",
+                                    "color": "white",
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "9",
+                                    "color": "gray",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": ": ",
+                                    "color": "gray",
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Evoker",
+                                    "color": "dark_green",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "A default evoker.",
+                                    "color": "green",
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Times killed",
+                                    "color": "red",
+                                    "italic": false,
+                                    "extra": [
+                                        {
+                                            "text": ": ",
+                                            "color": "gray",
+                                            "extra": [
+                                                {
+                                                    "score": {
+                                                        "objective": "j_evoker",
+                                                        "name": "@s"
+                                                    },
+                                                    "bold": true,
+                                                    "color": "dark_red",
+                                                    "type": "score"
+                                                }
+                                            ],
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "type": "text"
+                                }
+                            ],
+                            "mode": "append"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

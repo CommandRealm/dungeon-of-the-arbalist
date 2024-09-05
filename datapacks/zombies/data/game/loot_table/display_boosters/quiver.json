@@ -1,0 +1,110 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:orange_dye",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{display_booster:1b,needs_initialization:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_name": "{\"color\":\"#fca50d\",\"extra\":[{\"color\":\"gray\",\"text\":\" Boosters\"}],\"italic\":false,\"text\":\"Quiver\"}"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "Increases your max quiver size.",
+                                    "italic": false,
+                                    "color": "gray",
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Level",
+                                    "italic": false,
+                                    "color": "#fca50d",
+                                    "extra": [
+                                        {
+                                            "text": ": ",
+                                            "color": "gray",
+                                            "extra": [
+                                                {
+                                                    "score": {
+                                                        "objective": "boost_quiver",
+                                                        "name": "@s"
+                                                    },
+                                                    "color": "gold",
+                                                    "bold": true,
+                                                    "extra": [
+                                                        {
+                                                            "text": "/",
+                                                            "color": "gray",
+                                                            "bold": true,
+                                                            "extra": [
+                                                                {
+                                                                    "text": "5",
+                                                                    "color": "gold",
+                                                                    "bold": true,
+                                                                    "type": "text"
+                                                                }
+                                                            ],
+                                                            "type": "text"
+                                                        }
+                                                    ],
+                                                    "type": "score"
+                                                }
+                                            ],
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "\u2730 ",
+                                    "color": "#9c7948",
+                                    "italic": false,
+                                    "extra": [
+                                        {
+                                            "text": "Prestige",
+                                            "italic": false,
+                                            "color": "#c0a379",
+                                            "extra": [
+                                                {
+                                                    "text": ": ",
+                                                    "color": "gray",
+                                                    "extra": [
+                                                        {
+                                                            "score": {
+                                                                "objective": "prestige_quiver",
+                                                                "name": "@s"
+                                                            },
+                                                            "color": "gold",
+                                                            "bold": true,
+                                                            "type": "score"
+                                                        }
+                                                    ],
+                                                    "type": "text"
+                                                }
+                                            ],
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "type": "text"
+                                }
+                            ],
+                            "mode": "append"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

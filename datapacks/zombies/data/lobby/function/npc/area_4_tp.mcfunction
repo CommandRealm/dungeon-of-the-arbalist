@@ -1,0 +1,2 @@
+execute as @e[type=minecraft:villager,tag=lobby_npc,tag=lobby_villager,tag=lobby_area_4,tag=npc_a] at @s run tp @e[type=minecraft:pillager,tag=lobby_npc,tag=lobby_pillager,tag=npc_a,tag=lobby_area_4] ~ ~50 ~ ~ ~
+return 1

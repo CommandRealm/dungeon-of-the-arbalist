@@ -1,0 +1,17 @@
+##called to give or subtract a random amount of treasure.
+
+execute store result score $rand random run loot insert 0 1 0 loot random:healing_chest_result
+function random:reset_chest
+
+execute if score $rand random matches ..6 run tellraw @s [{"text":"Opening the chest caused nothing. ","color":"gold","type":"text"}]
+execute if score $rand random matches 7.. run tellraw @s [{"text":"Opening the chest caused you to gain ","color":"gold","type":"text"},{"text":"health","color":"red","type":"text"}]
+
+
+execute if score $rand random matches 7 run effect give @s minecraft:regeneration 3 4 true
+execute if score $rand random matches 8 run effect give @s minecraft:regeneration 3 3 true
+execute if score $rand random matches 9 run effect give @s minecraft:regeneration 3 2 true
+execute if score $rand random matches 10 run effect give @s minecraft:regeneration 3 1 true
+execute if score $rand random matches 11.. run effect give @s minecraft:regeneration 3 0 true
+##sound
+playsound minecraft:block.ender_chest.open master @a ~ ~ ~ 1 1
+return 1

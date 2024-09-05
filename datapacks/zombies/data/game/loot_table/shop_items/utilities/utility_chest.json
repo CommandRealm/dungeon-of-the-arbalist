@@ -1,0 +1,28 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:ender_chest",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{droppable:1b,shop_item:1b,needs_initialization:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_name": "{\"color\":\"#a26ec3\",\"extra\":[{\"color\":\"#a87a21\",\"italic\":false,\"text\":\"Chest \"},{\"bold\":true,\"color\":\"dark_gray\",\"text\":\"<\"},{\"bold\":false,\"color\":\"gray\",\"keybind\":\"key.drop\"},{\"bold\":true,\"color\":\"dark_gray\",\"text\":\">\"}],\"italic\":false,\"text\":\"Utility \"}",
+                                "minecraft:lore": [
+                                    "{\"color\":\"gray\",\"italic\":false,\"text\":\"Drop to open; chest gives 0-2 random utility items.\"}"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{delay:12,reload_delay:30,quiver:34}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:charged_projectiles": [
+                                    {
+                                        "id": "minecraft:tipped_arrow",
+                                        "components": {
+                                            "minecraft:potion_contents": {
+                                                "custom_color": 16643423,
+                                                "custom_effects": [
+                                                    {
+                                                        "id": "minecraft:luck",
+                                                        "duration": 2,
+                                                        "amplifier": 127
+                                                    },
+                                                    {
+                                                        "id": "minecraft:hero_of_the_village",
+                                                        "duration": 2,
+                                                        "amplifier": 8
+                                                    },
+                                                    {
+                                                        "id": "minecraft:conduit_power",
+                                                        "duration": 2
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "count": 1
+                                    }
+                                ],
+                                "minecraft:unbreakable": {
+                                    "show_in_tooltip": false
+                                },
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "(",
+                                    "italic": false,
+                                    "color": "#aea28c",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "3",
+                                    "color": "#ac353b",
+                                    "bold": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": ") ",
+                                    "color": "#aea28c",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Golden",
+                                    "color": "#fdf55f",
+                                    "bold": true,
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": " Crossbow",
+                                    "color": "#6a430f",
+                                    "italic": false,
+                                    "bold": false,
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "Increases your treasure multiplier.",
+                                    "color": "gray",
+                                    "italic": false,
+                                    "type": "text"
+                                }
+                            ],
+                            "mode": "append"
+                        }
+                    ],
+                    "name": "minecraft:crossbow"
+                }
+            ]
+        }
+    ]
+}

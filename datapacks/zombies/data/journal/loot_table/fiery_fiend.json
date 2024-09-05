@@ -1,0 +1,104 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{clickable:1,invalid_click:1}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:profile": {
+                                    "id": [
+                                        2095810738,
+                                        2136949657,
+                                        -1413910424,
+                                        622570141
+                                    ],
+                                    "properties": [
+                                        {
+                                            "name": "textures",
+                                            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjc4ZWYyZTRjZjJjNDFhMmQxNGJmZGU5Y2FmZjEwMjE5ZjViMWJmNWIzNWE0OWViNTFjNjQ2Nzg4MmNiNWYwIn19fQ=="
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "Entry ",
+                                    "color": "white",
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "14",
+                                    "color": "gray",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": ": ",
+                                    "color": "gray",
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Fiery Fiend",
+                                    "color": "red",
+                                    "bold": true,
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "Living flame that shoots fireballs while hovering over the ground.",
+                                    "color": "green",
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Times killed",
+                                    "color": "red",
+                                    "italic": false,
+                                    "extra": [
+                                        {
+                                            "text": ": ",
+                                            "color": "gray",
+                                            "extra": [
+                                                {
+                                                    "score": {
+                                                        "objective": "j_fiery_fiend",
+                                                        "name": "@s"
+                                                    },
+                                                    "bold": true,
+                                                    "color": "dark_red",
+                                                    "type": "score"
+                                                }
+                                            ],
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "type": "text"
+                                }
+                            ],
+                            "mode": "append"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

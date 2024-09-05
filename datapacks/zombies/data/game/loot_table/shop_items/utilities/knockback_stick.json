@@ -1,0 +1,34 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:wooden_sword",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{shop_item:1b,needs_initialization:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_name": "{\"color\":\"#936800\",\"extra\":[{\"color\":\"#614a14\",\"text\":\" Stick\"}],\"italic\":false,\"text\":\"Knockback\"}",
+                                "minecraft:lore": [
+                                    "{\"color\":\"gray\",\"italic\":false,\"text\":\"Use to knockback mobs.\"}"
+                                ],
+                                "minecraft:enchantments": {
+                                    "levels": {
+                                        "minecraft:knockback": 10
+                                    }
+                                },
+                                "minecraft:unbreakable": {}
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

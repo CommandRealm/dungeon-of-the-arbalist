@@ -1,0 +1,14 @@
+##called to update the bossbar ui after the timer is over
+
+execute store result score $enemies_left game if entity @e[tag=enemy,tag=!tutorial_enemy]
+scoreboard players operation $calculate_2 calculate = $enemies_left game
+scoreboard players operation $calculate_2 calculate -= $enemies_required game
+
+##If no boss, but there are other enemies.
+execute unless score $started boss matches 1 if score $calculate calculate <= $enemies_left game run bossbar set game:wave name [{"text":"=","color":"dark_green","bold":false,"type":"text"},{"text":"-","color":"gray","bold":false,"type":"text"},{"text":"=","color":"dark_green","bold":false,"type":"text"},{"text":" Kill ","color":"red","bold":true,"type":"text"},{"score":{"objective":"calculate","name":"$calculate_2"},"color":"green","bold":true,"type":"score"},{"text":" enemies to end the wave.","color":"dark_green","type":"text"},{"text":" =","color":"dark_green","bold":false,"type":"text"},{"text":"-","color":"gray","bold":false,"type":"text"},{"text":"=","color":"dark_green","bold":false,"type":"text"}]
+##If there are other enemies, and a boss
+execute if score $calculate calculate <= $enemies_left game if score $started boss matches 1 run bossbar set game:wave name [{"text":"=","color":"dark_green","bold":false,"type":"text"},{"text":"-","color":"gray","bold":false,"type":"text"},{"text":"=","color":"dark_green","bold":false,"type":"text"},{"text":" Kill a ","color":"red","bold":true,"type":"text"},{"text":"boss","color":"green","bold":true,"type":"text"},{"text":" to end the wave. ","color":"dark_green","type":"text"},{"text":"=","color":"dark_green","bold":false,"type":"text"},{"text":"-","color":"gray","bold":false,"type":"text"},{"text":"=","color":"dark_green","bold":false,"type":"text"}]
+##If the base enemies are fine, but there is a boss
+execute unless score $calculate calculate <= $enemies_left game if score $started boss matches 1 run bossbar set game:wave name [{"text":"=","color":"dark_green","bold":false,"type":"text"},{"text":"-","color":"gray","bold":false,"type":"text"},{"text":"=","color":"dark_green","bold":false,"type":"text"},{"text":" Kill ","color":"red","bold":true,"type":"text"},{"score":{"objective":"calculate","name":"$calculate_2"},"color":"dark_green","type":"score"},{"text":" enemies and a ","color":"dark_green","type":"text"},{"text":"boss","color":"green","bold":true,"type":"text"},{"text":" to end the wave. ","color":"dark_green","type":"text"},{"text":" =","color":"dark_green","bold":false,"type":"text"},{"text":"-","color":"gray","bold":false,"type":"text"},{"text":"=","color":"dark_green","bold":false,"type":"text"}]
+
+return 1

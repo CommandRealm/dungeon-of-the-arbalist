@@ -1,0 +1,28 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:phantom_membrane",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{droppable:1b,shop_item:1b,needs_initialization:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_name": "{\"color\":\"#cedece\",\"extra\":[{\"color\":\"#70a7d9\",\"italic\":false,\"text\":\" Wave \"},{\"bold\":true,\"color\":\"dark_gray\",\"text\":\"<\"},{\"bold\":false,\"color\":\"gray\",\"keybind\":\"key.drop\"},{\"bold\":true,\"color\":\"dark_gray\",\"text\":\">\"}],\"italic\":false,\"text\":\"Glowing\"}",
+                                "minecraft:lore": [
+                                    "{\"color\":\"gray\",\"italic\":false,\"text\":\"Drop to give all players glowing.\"}"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

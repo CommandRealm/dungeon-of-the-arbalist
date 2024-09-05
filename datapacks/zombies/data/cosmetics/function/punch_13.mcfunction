@@ -1,0 +1,3 @@
+tag @s add punch_13
+tellraw @s [{"text":"- - - - - - - - - - - - - - - - - - - - - - - - - - -","color":"gray","bold":true,"type":"text"},{"text":"\nYou have unlocked an EPIC Punch Kill Effect!","color":"light_purple","bold":false,"type":"text"},{"text":"\nPunch Kill Effect ","color":"gray","bold":true,"type":"text"},{"text":"- ","color":"gray","bold":true,"type":"text"},{"text":"Attack","color":"white","bold":true,"type":"text"},{"text":"\nYou can select it inside the Menu Ender Chest!","color":"green","bold":false,"type":"text"}]
+return 1

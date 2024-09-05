@@ -1,0 +1,61 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{clickable:1}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "- ",
+                                    "color": "gray",
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Revive within ",
+                                    "color": "green",
+                                    "type": "text"
+                                },
+                                {
+                                    "score": {
+                                        "objective": "calculate",
+                                        "name": "$calculate"
+                                    },
+                                    "bold": true,
+                                    "color": "dark_green",
+                                    "type": "score"
+                                },
+                                {
+                                    "text": " seconds.",
+                                    "color": "green",
+                                    "type": "text"
+                                },
+                                {
+                                    "text": " -",
+                                    "color": "gray",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ],
+                    "name": "minecraft:gold_block"
+                }
+            ]
+        }
+    ]
+}

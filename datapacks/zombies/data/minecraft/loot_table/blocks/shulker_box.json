@@ -1,0 +1,70 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                        {
+                            "type": "minecraft:dynamic",
+                            "name": "minecraft:contents",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:match_tool",
+                                    "predicate": {
+                                        "predicates": {
+                                            "minecraft:custom_data": "{drop_contents:1b}"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:item",
+                            "functions": [
+                                {
+                                    "function": "minecraft:copy_name",
+                                    "source": "block_entity"
+                                },
+                                {
+                                    "function": "minecraft:copy_custom_data",
+                                    "source": "block_entity",
+                                    "ops": [
+                                        {
+                                            "source": "Lock",
+                                            "target": "\"minecraft:lock\"",
+                                            "op": "replace"
+                                        },
+                                        {
+                                            "source": "LootTable",
+                                            "target": "\"minecraft:container_loot\".loot_table",
+                                            "op": "replace"
+                                        },
+                                        {
+                                            "source": "LootTableSeed",
+                                            "target": "\"minecraft:container_loot\".seed",
+                                            "op": "replace"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "function": "minecraft:set_contents",
+                                    "entries": [
+                                        {
+                                            "type": "minecraft:dynamic",
+                                            "name": "minecraft:contents"
+                                        }
+                                    ],
+                                    "component": "minecraft:container"
+                                }
+                            ],
+                            "name": "minecraft:shulker_box"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

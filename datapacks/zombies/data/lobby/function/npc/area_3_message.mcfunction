@@ -1,0 +1,5 @@
+#NPC A (Jack)
+execute if entity @e[type=minecraft:pillager,distance=..10,tag=lobby_npc,tag=lobby_pillager,tag=npc_a,tag=temporary_chat_tag,sort=nearest,limit=1] if score @s chat_timer matches 0 run data modify storage lobby:npc random_shout set value "WAA! Who are you?!"
+execute if entity @e[type=minecraft:pillager,distance=..10,tag=lobby_npc,tag=lobby_pillager,tag=npc_a,tag=temporary_chat_tag,sort=nearest,limit=1] if score @s chat_timer matches 1 run data modify storage lobby:npc random_shout set value "Please don't hurt me!"
+execute if entity @e[type=minecraft:pillager,distance=..10,tag=lobby_npc,tag=lobby_pillager,tag=npc_a,tag=temporary_chat_tag,sort=nearest,limit=1] if score @s chat_timer matches 2 run data modify storage lobby:npc random_shout set value "GUARDS!!! Wait, I am a guard..."
+return 1

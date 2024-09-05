@@ -1,0 +1,5 @@
+#Create AEC with name
+execute if score @s global_punch matches 1 run tellraw @a[distance=..10] [{"selector":"@s","color":"dark_green","bold":true,"type":"selector"},{"text":" has reached ","color":"red","bold":false,"type":"text"},{"score":{"name":"@s","objective":"global_punch"},"color":"dark_red","type":"score"},{"text":" melee kill.","color":"red","bold":false,"type":"text"}]
+execute if score @s global_punch matches 2.. run tellraw @a[distance=..10] [{"selector":"@s","color":"dark_green","bold":true,"type":"selector"},{"text":" has reached ","color":"red","bold":false,"type":"text"},{"score":{"name":"@s","objective":"global_punch"},"color":"dark_red","type":"score"},{"text":" melee kills.","color":"red","bold":false,"type":"text"}]
+playsound minecraft:entity.wither_skeleton.death master @a ~ ~ ~ 1 1
+return 1

@@ -1,0 +1,90 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{delay:6,reload_delay:50,quiver:20}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:charged_projectiles": [
+                                    {
+                                        "id": "minecraft:tipped_arrow",
+                                        "components": {
+                                            "minecraft:potion_contents": {
+                                                "custom_color": 15808782,
+                                                "custom_effects": [
+                                                    {
+                                                        "id": "minecraft:luck",
+                                                        "duration": 2,
+                                                        "amplifier": 40
+                                                    },
+                                                    {
+                                                        "id": "minecraft:mining_fatigue",
+                                                        "duration": 2
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "count": 1
+                                    }
+                                ],
+                                "minecraft:unbreakable": {
+                                    "show_in_tooltip": false
+                                },
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "(",
+                                    "italic": false,
+                                    "color": "#7a8f77",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "1",
+                                    "color": "#fffeaf",
+                                    "bold": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": ") ",
+                                    "color": "#7a8f77",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Fire",
+                                    "color": "#f1390e",
+                                    "bold": true,
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": " Crossbow",
+                                    "color": "#6a430f",
+                                    "italic": false,
+                                    "bold": false,
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ],
+                    "name": "minecraft:crossbow"
+                }
+            ]
+        }
+    ]
+}

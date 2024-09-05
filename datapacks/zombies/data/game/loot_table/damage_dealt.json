@@ -1,0 +1,47 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{clickable:1}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "-",
+                                    "color": "gray",
+                                    "bold": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "score": {
+                                        "objective": "calculate_2",
+                                        "name": "@s"
+                                    },
+                                    "color": "#e5111b",
+                                    "bold": true,
+                                    "type": "score"
+                                }
+                            ]
+                        }
+                    ],
+                    "name": "minecraft:redstone"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,110 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:yellow_dye",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{display_booster:1b,needs_initialization:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_name": "{\"color\":\"#fffc00\",\"extra\":[{\"color\":\"gray\",\"text\":\" Boosters\"}],\"italic\":false,\"text\":\"Looting\"}"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "Increases your treasure multiplier.",
+                                    "italic": false,
+                                    "color": "gray",
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Level",
+                                    "italic": false,
+                                    "color": "#fffc00",
+                                    "extra": [
+                                        {
+                                            "text": ": ",
+                                            "color": "gray",
+                                            "extra": [
+                                                {
+                                                    "score": {
+                                                        "objective": "boost_treasure",
+                                                        "name": "@s"
+                                                    },
+                                                    "color": "gold",
+                                                    "bold": true,
+                                                    "extra": [
+                                                        {
+                                                            "text": "/",
+                                                            "color": "gray",
+                                                            "bold": true,
+                                                            "extra": [
+                                                                {
+                                                                    "text": "5",
+                                                                    "color": "gold",
+                                                                    "bold": true,
+                                                                    "type": "text"
+                                                                }
+                                                            ],
+                                                            "type": "text"
+                                                        }
+                                                    ],
+                                                    "type": "score"
+                                                }
+                                            ],
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "\u2730 ",
+                                    "color": "#9c7948",
+                                    "italic": false,
+                                    "extra": [
+                                        {
+                                            "text": "Prestige",
+                                            "italic": false,
+                                            "color": "#c0a379",
+                                            "extra": [
+                                                {
+                                                    "text": ": ",
+                                                    "color": "gray",
+                                                    "extra": [
+                                                        {
+                                                            "score": {
+                                                                "objective": "prestige_treasure",
+                                                                "name": "@s"
+                                                            },
+                                                            "color": "gold",
+                                                            "bold": true,
+                                                            "type": "score"
+                                                        }
+                                                    ],
+                                                    "type": "text"
+                                                }
+                                            ],
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "type": "text"
+                                }
+                            ],
+                            "mode": "append"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

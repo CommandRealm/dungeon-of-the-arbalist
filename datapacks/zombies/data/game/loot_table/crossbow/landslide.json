@@ -1,0 +1,104 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{delay:7,reload_delay:60,quiver:33}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:charged_projectiles": [
+                                    {
+                                        "id": "minecraft:tipped_arrow",
+                                        "components": {
+                                            "minecraft:potion_contents": {
+                                                "custom_color": 7883008,
+                                                "custom_effects": [
+                                                    {
+                                                        "id": "minecraft:luck",
+                                                        "duration": 2,
+                                                        "amplifier": 81
+                                                    },
+                                                    {
+                                                        "id": "minecraft:water_breathing",
+                                                        "duration": 2,
+                                                        "amplifier": 25
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "count": 1
+                                    }
+                                ],
+                                "minecraft:unbreakable": {
+                                    "show_in_tooltip": false
+                                },
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "(",
+                                    "italic": false,
+                                    "color": "#aea28c",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "3",
+                                    "color": "#ac353b",
+                                    "bold": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": ") ",
+                                    "color": "#aea28c",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Landslide",
+                                    "color": "#784900",
+                                    "bold": true,
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": " Crossbow",
+                                    "color": "#6a430f",
+                                    "italic": false,
+                                    "bold": false,
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "Drops a block, which deals damage, above hit enemies.",
+                                    "color": "gray",
+                                    "italic": false,
+                                    "type": "text"
+                                }
+                            ],
+                            "mode": "append"
+                        }
+                    ],
+                    "name": "minecraft:crossbow"
+                }
+            ]
+        }
+    ]
+}

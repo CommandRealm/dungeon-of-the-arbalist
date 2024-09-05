@@ -1,0 +1,22 @@
+##Called to fire the wall.
+execute positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~ ~ {Tags:["die_between_games","boss_minion","obsidian_block_carrier","needs_adjustments"],Invisible:1b,Invulnerable:1b,Marker:1b,Small:1b,NoBasePlate:1b,NoGravity:1b,Passengers:[{id:"minecraft:falling_block",Time:1,NoGravity:1b,BlockState:{Name:"minecraft:crying_obsidian"},Tags:["die_between_games","boss_minion","obsidian_block"]}]}
+execute positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~1 ~ {Tags:["die_between_games","boss_minion","obsidian_block_carrier","needs_adjustments"],Invisible:1b,Invulnerable:1b,Marker:1b,Small:1b,NoBasePlate:1b,NoGravity:1b,Passengers:[{id:"minecraft:falling_block",Time:1,NoGravity:1b,BlockState:{Name:"minecraft:obsidian"},Tags:["die_between_games","boss_minion","obsidian_block"]}]}
+execute positioned ^ ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Tags:["die_between_games","boss_minion","obsidian_block_carrier","needs_adjustments"],Invisible:1b,Invulnerable:1b,Marker:1b,Small:1b,NoBasePlate:1b,NoGravity:1b,Passengers:[{id:"minecraft:falling_block",Time:1,NoGravity:1b,BlockState:{Name:"minecraft:obsidian"},Tags:["die_between_games","boss_minion","obsidian_block"]}]}
+
+execute positioned ^1 ^ ^1 run summon minecraft:armor_stand ~ ~ ~ {Tags:["die_between_games","boss_minion","obsidian_block_carrier","needs_adjustments"],Invisible:1b,Invulnerable:1b,Marker:1b,Small:1b,NoBasePlate:1b,NoGravity:1b,Passengers:[{id:"minecraft:falling_block",Time:1,NoGravity:1b,BlockState:{Name:"minecraft:obsidian"},Tags:["die_between_games","boss_minion","obsidian_block"]}]}
+execute positioned ^1 ^ ^1 run summon minecraft:armor_stand ~ ~1 ~ {Tags:["die_between_games","boss_minion","obsidian_block_carrier","needs_adjustments"],Invisible:1b,Invulnerable:1b,Marker:1b,Small:1b,NoBasePlate:1b,NoGravity:1b,Passengers:[{id:"minecraft:falling_block",Time:1,NoGravity:1b,BlockState:{Name:"minecraft:obsidian"},Tags:["die_between_games","boss_minion","obsidian_block"]}]}
+execute positioned ^1 ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Tags:["die_between_games","boss_minion","obsidian_block_carrier","needs_adjustments"],Invisible:1b,Invulnerable:1b,Marker:1b,Small:1b,NoBasePlate:1b,NoGravity:1b,Passengers:[{id:"minecraft:falling_block",Time:1,NoGravity:1b,BlockState:{Name:"minecraft:obsidian"},Tags:["die_between_games","boss_minion","obsidian_block"]}]}
+
+execute positioned ^-1 ^ ^1 run summon minecraft:armor_stand ~ ~ ~ {Tags:["die_between_games","boss_minion","obsidian_block_carrier","needs_adjustments"],Invisible:1b,Invulnerable:1b,Marker:1b,Small:1b,NoBasePlate:1b,NoGravity:1b,Passengers:[{id:"minecraft:falling_block",Time:1,NoGravity:1b,BlockState:{Name:"minecraft:obsidian"},Tags:["die_between_games","boss_minion","obsidian_block"]}]}
+execute positioned ^-1 ^ ^1 run summon minecraft:armor_stand ~ ~1 ~ {Tags:["die_between_games","boss_minion","obsidian_block_carrier","needs_adjustments"],Invisible:1b,Invulnerable:1b,Marker:1b,Small:1b,NoBasePlate:1b,NoGravity:1b,Passengers:[{id:"minecraft:falling_block",Time:1,NoGravity:1b,BlockState:{Name:"minecraft:obsidian"},Tags:["die_between_games","boss_minion","obsidian_block"]}]}
+execute positioned ^-1 ^ ^1 run summon minecraft:armor_stand ~ ~-1 ~ {Tags:["die_between_games","boss_minion","obsidian_block_carrier","needs_adjustments"],Invisible:1b,Invulnerable:1b,Marker:1b,Small:1b,NoBasePlate:1b,NoGravity:1b,Passengers:[{id:"minecraft:falling_block",Time:1,NoGravity:1b,BlockState:{Name:"minecraft:obsidian"},Tags:["die_between_games","boss_minion","obsidian_block"]}]}
+
+##Sound
+playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 2 0
+
+execute as @e[type=minecraft:armor_stand,tag=needs_adjustments] at @s run data modify entity @s Rotation[0] set from entity @e[type=minecraft:wither_skeleton,tag=boss,limit=1] Rotation[0]
+execute as @e[type=minecraft:armor_stand,tag=needs_adjustments] at @s run data modify entity @s Rotation[1] set from entity @e[type=minecraft:wither_skeleton,tag=boss,limit=1] Rotation[1]
+tag @e[type=minecraft:armor_stand,tag=needs_adjustments] remove needs_adjustments
+
+execute at @e[type=minecraft:wither_skeleton,tag=boss,limit=1] run kill @e[type=minecraft:area_effect_cloud,tag=wave_start_point,sort=nearest,limit=1]
+return 1

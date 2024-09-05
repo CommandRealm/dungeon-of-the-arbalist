@@ -1,0 +1,37 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:splash_potion",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{shop_item:1b,needs_initialization:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:potion_contents": {
+                                    "custom_effects": [
+                                        {
+                                            "id": "minecraft:regeneration",
+                                            "duration": 120,
+                                            "amplifier": 1
+                                        }
+                                    ]
+                                },
+                                "minecraft:custom_name": "{\"color\":\"#f47dff\",\"extra\":[{\"color\":\"#ad16bb\",\"italic\":false,\"text\":\" Potion\"}],\"italic\":false,\"text\":\"Regeneration\"}",
+                                "minecraft:lore": [
+                                    "{\"color\":\"gray\",\"italic\":false,\"text\":\"Use to splash regeneration.\"}"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

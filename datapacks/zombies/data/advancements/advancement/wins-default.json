@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:polished_andesite",
+            "components": null
+        },
+        "title": {
+            "text": "Arbalist.",
+            "color": "gold",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Beat the Dungeon of the Arbalist.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:wins-medium",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

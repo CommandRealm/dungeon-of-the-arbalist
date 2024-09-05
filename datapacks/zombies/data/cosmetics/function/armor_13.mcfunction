@@ -1,0 +1,3 @@
+tag @s add armor_13
+tellraw @s [{"text":"- - - - - - - - - - - - - - - - - - - - - - - - - - -","color":"gray","bold":true,"type":"text"},{"text":"\nYou have unlocked a LEGENDARY Armor Type!","color":"yellow","bold":false,"type":"text"},{"text":"\nArmor ","color":"gray","bold":true,"type":"text"},{"text":"- ","color":"gray","bold":true,"type":"text"},{"text":"Dark Red","color":"white","bold":true,"type":"text"},{"text":"\nYou can select it inside the Menu Ender Chest!","color":"green","bold":false,"type":"text"}]
+return 1

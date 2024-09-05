@@ -1,0 +1,34 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{shop_item:1b,needs_initialization:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_name": "{\"color\":\"#126ed6\",\"extra\":[{\"color\":\"#b73238\",\"text\":\" Rod\"}],\"italic\":false,\"text\":\"Fishing\"}",
+                                "minecraft:lore": [
+                                    "{\"color\":\"gray\",\"italic\":false,\"text\":\"Use to catch treasure.\"}"
+                                ],
+                                "minecraft:enchantments": {
+                                    "levels": {
+                                        "minecraft:lure": 3
+                                    }
+                                },
+                                "minecraft:unbreakable": {}
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

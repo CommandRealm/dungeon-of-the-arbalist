@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:lapis_block",
+            "components": null
+        },
+        "title": {
+            "text": "Going further!",
+            "color": "green",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "description": {
+            "text": "Open a dark oak door in Dungeon of the Arbalist.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:game-spruce_door",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

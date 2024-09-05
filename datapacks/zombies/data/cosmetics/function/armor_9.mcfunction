@@ -1,0 +1,3 @@
+tag @s add armor_9
+tellraw @s [{"text":"- - - - - - - - - - - - - - - - - - - - - - - - - - -","color":"gray","bold":true,"type":"text"},{"text":"\nYou have unlocked an EPIC Armor Type!","color":"light_purple","bold":false,"type":"text"},{"text":"\nArmor ","color":"gray","bold":true,"type":"text"},{"text":"- ","color":"gray","bold":true,"type":"text"},{"text":"Brown","color":"white","bold":true,"type":"text"},{"text":"\nYou can select it inside the Menu Ender Chest!","color":"green","bold":false,"type":"text"}]
+return 1

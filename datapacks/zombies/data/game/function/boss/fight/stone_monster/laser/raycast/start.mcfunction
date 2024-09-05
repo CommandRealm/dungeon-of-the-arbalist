@@ -1,0 +1,4 @@
+##called to start the raycast
+execute as @e[type=minecraft:wither_skeleton,tag=boss,limit=1] at @s anchored eyes run summon minecraft:area_effect_cloud ^ ^ ^1 {Duration:1000000000,Tags:["die_between_games","stone_monster_laser"]}
+execute as @e[type=minecraft:area_effect_cloud,tag=stone_monster_laser] at @s run tp @s ~ ~ ~ facing entity @e[type=minecraft:wither_skeleton,tag=boss,limit=1] eyes
+return 1

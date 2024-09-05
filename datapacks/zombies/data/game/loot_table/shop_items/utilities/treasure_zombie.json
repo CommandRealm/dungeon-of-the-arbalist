@@ -1,0 +1,28 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:zombie_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{droppable:1b,shop_item:1b,needs_initialization:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_name": "{\"color\":\"yellow\",\"extra\":[{\"color\":\"#5c7826\",\"italic\":false,\"text\":\" Zombie \"},{\"bold\":true,\"color\":\"dark_gray\",\"text\":\"<\"},{\"bold\":false,\"color\":\"gray\",\"keybind\":\"key.drop\"},{\"bold\":true,\"color\":\"dark_gray\",\"text\":\">\"}],\"italic\":false,\"text\":\"Treasure\"}",
+                                "minecraft:lore": [
+                                    "{\"color\":\"gray\",\"italic\":false,\"text\":\"Drop to summon a punching bag that gives treasure when hit.\"}"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

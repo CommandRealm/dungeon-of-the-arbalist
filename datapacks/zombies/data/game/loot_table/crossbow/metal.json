@@ -1,0 +1,152 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{delay:12,reload_delay:50,quiver:16}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:charged_projectiles": [
+                                    {
+                                        "id": "minecraft:tipped_arrow",
+                                        "components": {
+                                            "minecraft:potion_contents": {
+                                                "custom_color": 5524556,
+                                                "custom_effects": [
+                                                    {
+                                                        "id": "minecraft:luck",
+                                                        "duration": 2,
+                                                        "amplifier": 42
+                                                    },
+                                                    {
+                                                        "id": "minecraft:mining_fatigue",
+                                                        "duration": 2,
+                                                        "amplifier": 8
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "count": 3
+                                    },
+                                    {
+                                        "id": "minecraft:tipped_arrow",
+                                        "components": {
+                                            "minecraft:potion_contents": {
+                                                "custom_color": 5524556,
+                                                "custom_effects": [
+                                                    {
+                                                        "id": "minecraft:luck",
+                                                        "duration": 2,
+                                                        "amplifier": 42
+                                                    },
+                                                    {
+                                                        "id": "minecraft:mining_fatigue",
+                                                        "duration": 2,
+                                                        "amplifier": 8
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "count": 3
+                                    },
+                                    {
+                                        "id": "minecraft:tipped_arrow",
+                                        "components": {
+                                            "minecraft:potion_contents": {
+                                                "custom_color": 5524556,
+                                                "custom_effects": [
+                                                    {
+                                                        "id": "minecraft:luck",
+                                                        "duration": 2,
+                                                        "amplifier": 42
+                                                    },
+                                                    {
+                                                        "id": "minecraft:mining_fatigue",
+                                                        "duration": 2,
+                                                        "amplifier": 8
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "count": 3
+                                    }
+                                ],
+                                "minecraft:enchantments": {
+                                    "levels": {
+                                        "minecraft:multishot": 1
+                                    },
+                                    "show_in_tooltip": false
+                                },
+                                "minecraft:unbreakable": {
+                                    "show_in_tooltip": false
+                                },
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "(",
+                                    "italic": false,
+                                    "color": "#7a8f77",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "1",
+                                    "color": "#fffeaf",
+                                    "bold": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": ") ",
+                                    "color": "#7a8f77",
+                                    "bold": true,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "Metal",
+                                    "color": "#544c4c",
+                                    "bold": true,
+                                    "italic": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": " Crossbow",
+                                    "color": "#6a430f",
+                                    "italic": false,
+                                    "bold": false,
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "Multishot",
+                                    "color": "gray",
+                                    "italic": false,
+                                    "type": "text"
+                                }
+                            ],
+                            "mode": "append"
+                        }
+                    ],
+                    "name": "minecraft:crossbow"
+                }
+            ]
+        }
+    ]
+}

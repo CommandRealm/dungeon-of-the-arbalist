@@ -1,0 +1,6 @@
+##Clears and kills books and then gives it to self
+clear @s minecraft:knowledge_book
+kill @e[type=minecraft:item,distance=..5,nbt={Item:{id:"minecraft:knowledge_book"}}]
+item replace entity @s[scores={ready=0}] hotbar.4 with minecraft:knowledge_book[minecraft:custom_name='{"bold":true,"color":"white","extra":[{"bold":false,"color":"dark_green","text":" to ready up."}],"italic":false,"text":"Click"}',minecraft:lore=['{"color":"gray","italic":false,"text":"Drop to reset your lobby position."}'],minecraft:recipes=[],minecraft:custom_data={not_clickable:1}]
+item replace entity @s[scores={ready=1}] hotbar.4 with minecraft:knowledge_book[minecraft:custom_name='{"bold":true,"color":"white","extra":[{"bold":false,"color":"gray","text":" to unready."}],"italic":false,"text":"Click"}',minecraft:lore=['{"color":"gray","italic":false,"text":"Drop to reset your lobby position."}'],minecraft:enchantments={levels:{"minecraft:aqua_affinity":1},show_in_tooltip:0b},minecraft:recipes=[],minecraft:hide_additional_tooltip={},minecraft:custom_data={not_clickable:1}]
+return 1

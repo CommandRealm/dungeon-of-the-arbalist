@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:fill_player_head",
+                            "entity": "this"
+                        },
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 1,
+                                "type": "minecraft:uniform"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_name": "{\"color\":\"yellow\",\"italic\":false,\"text\":\"Head\"}",
+                                "minecraft:enchantments": {
+                                    "levels": {
+                                        "minecraft:feather_falling": 5
+                                    },
+                                    "show_in_tooltip": false
+                                },
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        }
+                    ],
+                    "name": "minecraft:player_head"
+                }
+            ]
+        }
+    ]
+}

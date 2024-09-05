@@ -1,0 +1,28 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:tripwire_hook",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{shop_item:1b,needs_initialization:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_name": "{\"color\":\"gold\",\"extra\":[{\"bold\":true,\"color\":\"dark_gray\",\"text\":\"<\"},{\"bold\":false,\"color\":\"gray\",\"keybind\":\"key.drop\"},{\"bold\":true,\"color\":\"dark_gray\",\"text\":\">\"}],\"italic\":false,\"text\":\"Key \"}",
+                                "minecraft:lore": [
+                                    "{\"color\":\"gray\",\"italic\":false,\"text\":\"Drop near a door to open it for free.\"}"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

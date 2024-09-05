@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:netherite_chestplate",
+            "components": null
+        },
+        "title": {
+            "text": "What a nightmare...",
+            "color": "red",
+            "bold": true
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true,
+        "description": {
+            "text": "Beat the game on the Nightmare difficulty.",
+            "color": "#fac84b",
+            "bold": false
+        }
+    },
+    "parent": "advancements:hidden/hidden-hardcore",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

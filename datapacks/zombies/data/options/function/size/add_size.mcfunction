@@ -1,0 +1,19 @@
+setblock -9 90 24 minecraft:air
+playsound minecraft:ui.button.click master @s
+scoreboard players add $grid_size settings 1
+execute if score $grid_size settings matches 3.. run scoreboard players set $grid_size settings 0
+execute if score $grid_size settings matches ..-1 run scoreboard players set $grid_size settings 2
+
+execute if score $grid_size settings matches 0 run setblock -9 90 24 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"","clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"},"type":"text"}','{"text":"Size:","color":"dark_green","bold":true,"type":"text"}','[{"text":"Small ","color":"dark_green","type":"text"},{"text":"(","color":"dark_gray","type":"text"},{"text":"5","color":"green","type":"text"},{"text":"x","color":"gray","type":"text"},{"text":"5","color":"green","type":"text"},{"text":")","color":"dark_gray","type":"text"}]','{"text":"<<<         >>>","color":"#d4d4d4","bold":true,"clickEvent":{"action":"run_command","value":"/execute at @s anchored eyes if score $game state matches 0 run function options:size/click_size"},"type":"text"}']}}
+execute if score $grid_size settings matches 1 run setblock -9 90 24 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"","clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"},"type":"text"}','{"text":"Size:","color":"dark_green","bold":true,"type":"text"}','[{"text":"Medium ","color":"dark_green","type":"text"},{"text":"(","color":"dark_gray","type":"text"},{"text":"7","color":"green","type":"text"},{"text":"x","color":"gray","type":"text"},{"text":"7","color":"green","type":"text"},{"text":")","color":"dark_gray","type":"text"}]','{"text":"<<<         >>>","color":"#d4d4d4","bold":true,"clickEvent":{"action":"run_command","value":"/execute at @s anchored eyes if score $game state matches 0 run function options:size/click_size"},"type":"text"}']}}
+execute if score $grid_size settings matches 2 run setblock -9 90 24 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"","clickEvent":{"action":"run_command","value":"/execute if score $game state matches 1.. run function options:error"},"type":"text"}','{"text":"Size:","color":"dark_green","bold":true,"type":"text"}','[{"text":"Large ","color":"dark_green","type":"text"},{"text":"(","color":"dark_gray","type":"text"},{"text":"9","color":"green","type":"text"},{"text":"x","color":"gray","type":"text"},{"text":"9","color":"green","type":"text"},{"text":")","color":"dark_gray","type":"text"}]','{"text":"<<<         >>>","color":"#d4d4d4","bold":true,"clickEvent":{"action":"run_command","value":"/execute at @s anchored eyes if score $game state matches 0 run function options:size/click_size"},"type":"text"}']}}
+
+
+particle minecraft:cloud -10 65.5 24 0 0 0 0.05 10
+
+kill @e[type=minecraft:armor_stand,tag=display_size]
+execute if score $grid_size settings matches 0 run summon minecraft:armor_stand -10 90.6 24 {DisabledSlots:2039583,Tags:["display_size","model"],Small:1b,Invisible:1b,NoGravity:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:cobbled_deepslate_slab",count:1}]}
+execute if score $grid_size settings matches 1 run summon minecraft:armor_stand -10 90.6 24 {DisabledSlots:2039583,Tags:["display_size","model"],Small:1b,Invisible:1b,NoGravity:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:cobbled_deepslate",count:1}]}
+execute if score $grid_size settings matches 2 run summon minecraft:armor_stand -10 89.825 24 {DisabledSlots:2039583,Tags:["display_size","model"],Small:0b,Invisible:1b,NoGravity:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:cobbled_deepslate",count:1}]}
+
+return 1

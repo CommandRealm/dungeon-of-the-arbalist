@@ -1,0 +1,4 @@
+execute as @e[type=minecraft:iron_golem,tag=pug_golem_miniboss,tag=!pug_charging,tag=!pug_stunned] at @s run function game:enemy/pug_golem/chargeup
+execute as @e[type=minecraft:iron_golem,tag=pug_golem_miniboss,tag=pug_charging,tag=!pug_stunned] at @s run function game:enemy/pug_golem/charging
+execute as @e[type=minecraft:iron_golem,tag=pug_golem_miniboss,tag=pug_stunned,tag=!pug_charging] at @s run function game:enemy/pug_golem/stunned
+return 1

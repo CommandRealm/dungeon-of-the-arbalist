@@ -1,1 +1,0 @@
-execute as @e[tag=check,type=armor_stand] at @s run tp @s ~ ~ ~ ~10 ~

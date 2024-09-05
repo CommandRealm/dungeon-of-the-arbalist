@@ -1,0 +1,7 @@
+##Start for ravager.
+clone 1984 52 12 1986 56 15 2011 62 -2
+particle minecraft:explosion_emitter 2012 63 0.0 0 0 0 0 1
+playsound entity:generic.explode master @a 2012 63 0.0
+summon minecraft:ravager 2012 63 0.0 {Rotation:[90.0f,0.0f],Tags:["boss","enemy"],PersistenceRequired:1b,Passengers:[{id:"minecraft:wither_skeleton",Tags:["enemy","boss"],PersistenceRequired:1b,HandItems:[{id:"minecraft:iron_sword",components:{"minecraft:enchantments":{levels:{"minecraft:sharpness":1}}},count:1},{}],ArmorItems:[{},{},{},{id:"minecraft:player_head",components:{"minecraft:profile":{id:[I;-672593164,1073039141,-1481174912,860659466],properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2JjYmJmOTRkNjAzNzQzYTFlNzE0NzAyNmUxYzEyNDBiZDk4ZmU4N2NjNGVmMDRkY2FiNTFhMzFjMzA5MTRmZCJ9fX0="}]}},count:1}],attributes:[{id:"minecraft:generic.attack_damage",base:0.0d}],active_effects:[{id:"minecraft:weakness",amplifier:126b,duration:100000000,show_particles:0b}]}],Motion:[-1.25d,1.0d,0.0d],attributes:[{id:"minecraft:generic.movement_speed",base:0.08d},{id:"minecraft:generic.follow_range",base:1000.0d},{id:"minecraft:generic.attack_damage",base:6.0d},{id:"minecraft:generic.knockback_resistance",base:1.0d}]}
+
+return 1

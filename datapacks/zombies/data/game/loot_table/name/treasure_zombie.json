@@ -1,0 +1,54 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{clickable:1}"
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "score": {
+                                        "objective": "enemy_health",
+                                        "name": "@s"
+                                    },
+                                    "color": "yellow",
+                                    "bold": true,
+                                    "italic": false,
+                                    "type": "score"
+                                },
+                                {
+                                    "text": " / ",
+                                    "color": "gold",
+                                    "bold": false,
+                                    "type": "text"
+                                },
+                                {
+                                    "text": "100",
+                                    "color": "yellow",
+                                    "bold": true,
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ],
+                    "name": "minecraft:emerald"
+                }
+            ]
+        }
+    ]
+}
